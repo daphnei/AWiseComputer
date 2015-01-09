@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- NMML reference: https://gist.github.com/1763850 -->
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="TextAttack" package="com.text.attack.TextAttack" version="1.0.0" company="Daphne" />
+	
+	<!-- output -->
+	<app main="com.text.attack.Main" file="TextAttack" path="bin" />
+	
+	<window background="#000000" fps="60" />
+	<window width="1200" height="800" unless="mobile" />
+	<window fullscreen="true" /> 
+	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+	
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+	
+	<!-- assets -->
+	<icon path="Assets/openfl.svg" />
+	<assets path="Assets/img" rename="img" />
+	<assets path="Assets/fonts" rename="fonts" include="*.ttf" />
+	<assets path="Assets/audio" rename="audio" type="audio" />
+
+	<!-- optimize output
+	<haxeflag name="-dce full" /> -->
+
+</project>

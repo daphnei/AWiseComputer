@@ -1,0 +1,22 @@
+-main ApplicationMain 
+-cp /usr/lib/haxe/lib/openfl/2,2,1
+-D openfl=2.2.1
+-cp /usr/lib/haxe/lib/lime/2,0,4
+-D lime=2.0.4
+-cp /usr/lib/haxe/lib/actuate/1,8,0
+-D actuate=1.8.0
+-cp src
+-D lime-openal
+-D tools=2.0.4
+-D flash-use-stage
+-D no-compilation
+-D lime-opengl
+-D openfl-flash
+-D lime-curl
+-D web
+-swf-lib bin/flash/obj/assets.swf
+-swf-version 11.2
+-swf bin/flash/bin/TextAttack.swf
+-swf-header 1200:800:60:000000
+-cp bin/flash/haxe
+-debug
