@@ -142,10 +142,10 @@ obj/darwin64/aa4c65b2_MovieClip.o
 obj/darwin64/ea4ac1bd_Player.o
 obj/darwin64/ea4ac1bd_Wall.o
 obj/darwin64/ea4ac1bd_GameState.o
+obj/darwin64/ea4ac1bd_Empty.o
 obj/darwin64/ea4ac1bd_Comet.o
 obj/darwin64/ea4ac1bd_CellType.o
 obj/darwin64/ea4ac1bd_Bullet.o
-obj/darwin64/ea4ac1bd_Direction.o
 obj/darwin64/ea4ac1bd_Bouncer.o
 obj/darwin64/ea4ac1bd_Cell.o
 obj/darwin64/5f0ff9e5_SoundManager.o

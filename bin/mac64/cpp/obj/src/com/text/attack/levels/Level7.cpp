@@ -19,10 +19,12 @@ HX_STACK_THIS(this)
 	HX_STACK_LINE(43)
 	::String p1 = HX_CSTRING("He believed that \"the more man meditates upon good thoughts, the better will be his world and the world at large.\"");		HX_STACK_VAR(p1,"p1");
 	HX_STACK_LINE(44)
-	::String p2 = HX_CSTRING("I believe there is much goodness in the contemplation of symmetry.");		HX_STACK_VAR(p2,"p2");
-	HX_STACK_LINE(46)
+	::String p2 = HX_CSTRING("He contemplated symmetry and concluded that its goodness improved the world");		HX_STACK_VAR(p2,"p2");
+	HX_STACK_LINE(45)
+	::String p3 = HX_CSTRING("I believe in no such thing.");		HX_STACK_VAR(p3,"p3");
+	HX_STACK_LINE(47)
 	Array< ::String > preamble = Array_obj< ::String >::__new().Add(p1).Add(p2);		HX_STACK_VAR(preamble,"preamble");
-	HX_STACK_LINE(48)
+	HX_STACK_LINE(49)
 	super::__construct(HX_CSTRING("............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................V............................V.V..........................V...V.......................................................V...V..........................V.V............................V...................................................................................................................................................................................P..............."),preamble,(int)6);
 }
 ;

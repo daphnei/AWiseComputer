@@ -2,6 +2,8 @@ package com.text.attack.utiltiies;
 
 import openfl.media.Sound;
 import openfl.Assets;
+import openfl.media.SoundChannel;
+
 /**
  * Taken from http://www.colourlovers.com/palette/350919/icecream
  * @author Daphne
@@ -14,6 +16,7 @@ class SoundManager
 
 
 	private var endSound:Sound;
+	private var endSoundChannel:SoundChannel;
 
 	public function new() 
 	{
@@ -36,19 +39,28 @@ class SoundManager
 
 	public function playRandomNote():Void
 	{
+		stopOtherSounds();
+
 		var r:Int = Std.random(singleSounds.length);
 		singleSounds[r].play();
 	}
 
 	public function playRandomChord():Void
 	{
+		stopOtherSounds();
+
 		var r:Int = Std.random(chordSounds.length);
 		chordSounds[r].play();
 	}
 
-
 	public function playEndSound():Void
 	{
-		this.endSound.play();
+		this.endSoundChannel = this.endSound.play();
+	}
+
+	private function stopOtherSounds():Void
+	{
+		if (this.endSoundChannel != null)
+			this.endSoundChannel.stop();
 	}
 }

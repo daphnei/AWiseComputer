@@ -144,10 +144,10 @@
 #include <com/text/attack/world/Player.h>
 #include <com/text/attack/world/Wall.h>
 #include <com/text/attack/world/GameState.h>
+#include <com/text/attack/world/Empty.h>
 #include <com/text/attack/world/Comet.h>
 #include <com/text/attack/world/CellType.h>
 #include <com/text/attack/world/Bullet.h>
-#include <com/text/attack/world/Direction.h>
 #include <com/text/attack/world/Bouncer.h>
 #include <com/text/attack/world/Cell.h>
 #include <com/text/attack/utiltiies/SoundManager.h>
@@ -348,10 +348,10 @@ hx::RegisterResources( hx::GetResources() );
 ::com::text::attack::world::Player_obj::__register();
 ::com::text::attack::world::Wall_obj::__register();
 ::com::text::attack::world::GameState_obj::__register();
+::com::text::attack::world::Empty_obj::__register();
 ::com::text::attack::world::Comet_obj::__register();
 ::com::text::attack::world::CellType_obj::__register();
 ::com::text::attack::world::Bullet_obj::__register();
-::com::text::attack::world::Direction_obj::__register();
 ::com::text::attack::world::Bouncer_obj::__register();
 ::com::text::attack::world::Cell_obj::__register();
 ::com::text::attack::utiltiies::SoundManager_obj::__register();
@@ -456,10 +456,10 @@ hx::RegisterResources( hx::GetResources() );
 ::com::text::attack::utiltiies::SoundManager_obj::__boot();
 ::com::text::attack::world::Cell_obj::__boot();
 ::com::text::attack::world::Bouncer_obj::__boot();
-::com::text::attack::world::Direction_obj::__boot();
 ::com::text::attack::world::Bullet_obj::__boot();
 ::com::text::attack::world::CellType_obj::__boot();
 ::com::text::attack::world::Comet_obj::__boot();
+::com::text::attack::world::Empty_obj::__boot();
 ::com::text::attack::world::GameState_obj::__boot();
 ::com::text::attack::world::Wall_obj::__boot();
 ::com::text::attack::world::Player_obj::__boot();

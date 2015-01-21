@@ -27,14 +27,14 @@ class WorldGrid
 		for (y in 0...World.HEIGHT) {
 			this.grid[y] = new Vector<Cell>(World.WIDTH);
 			for (x in 0...World.WIDTH) {
-				this.set(x, y, new Cell(CellType.Empty, x, y));
+				this.set(x, y, new Empty(x, y));
 			}
 		}
 	}
 	
 	public function clear(x:Int, y:Int):Void
 	{
-		this.set(x, y, new Cell(CellType.Empty, x, y));
+		this.set(x, y, new Empty(x, y));
 	}
 	
 	/**

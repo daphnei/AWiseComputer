@@ -15,7 +15,7 @@ class Level9 extends Level
 	".............................." +
 	".............................." +
 	".............................." +
-	"..............V..............." +
+	".............................." +
 	".............................." +
 	".............................." + 
 	".............................." +
@@ -23,14 +23,14 @@ class Level9 extends Level
 	".............................." +
 	".............................." +
 	".............................." +
-	"..............-..............." +
+	".............................." +
 	".............................." +
 	".............................." + 
 	".............................." +
 	".............................." +
 	".............................." +
 	".............................." +
-	".............................." +
+	"..........VV.V.VV............." +
 	".............................." +
 	".............................." +
 	".............................." +
@@ -46,10 +46,11 @@ class Level9 extends Level
 		var p3 = "Think on this.";*/
 
 		var p1 = "He said, \"Learning without thought is labor lost; thought without learning is perilous.\"";
-		var p2 = "If I am to triumph over him, I must learn as he does.";
-		var p3 = "I learn to shoot diagonnally by pressing two buttons at once.";
+		var p2 = "If I am to triumph over him...";
+		var p3 = "I must continue to study his lessons.";
+		var p4 = "\n> And I must learn to shoot diagonally by pressing two buttons at once.";
 
-		var preamble:Array<String> = [ p1, p2, p3];
+		var preamble:Array<String> = [ p1, p2, p3, p4];
 		
 		super(LEVEL_STRING, preamble, 100);
 	}

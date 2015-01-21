@@ -48,6 +48,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("fonts/me.ttf", AssetType.FONT);
 		className.set ("fonts/me.ttf.bak", __ASSET__fonts_me_ttf_bak);
 		type.set ("fonts/me.ttf.bak", AssetType.BINARY);
+		className.set ("fonts/me2.ttf.bf", __ASSET__fonts_me2_ttf_bf);
+		type.set ("fonts/me2.ttf.bf", AssetType.TEXT);
 		className.set ("fonts/Original me.ttf", __ASSET__fonts_original_me_ttf);
 		type.set ("fonts/Original me.ttf", AssetType.FONT);
 		className.set ("audio/end.wav", __ASSET__audio_end_wav);
@@ -119,6 +121,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.BINARY);
+		id = "fonts/me2.ttf.bf";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
 		id = "fonts/Original me.ttf";
 		className.set (id, __ASSET__fonts_original_me_ttf);
 		
@@ -243,6 +249,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		openfl.text.Font.registerFont (__ASSET__fonts_me_ttf);
 		
+		
 		openfl.text.Font.registerFont (__ASSET__fonts_original_me_ttf);
 		
 		
@@ -284,6 +291,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("fonts/me.ttf.bak", __ASSET__fonts_me_ttf_bak);
 		type.set ("fonts/me.ttf.bak", AssetType.BINARY);
+		
+		className.set ("fonts/me2.ttf.bf", __ASSET__fonts_me2_ttf_bf);
+		type.set ("fonts/me2.ttf.bf", AssetType.TEXT);
 		
 		className.set ("fonts/Original me.ttf", __ASSET__fonts_original_me_ttf);
 		type.set ("fonts/Original me.ttf", AssetType.FONT);
@@ -947,6 +957,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 @:keep @:bind #if display private #end class __ASSET__fonts_me_ttf extends flash.text.Font { }
 @:keep @:bind #if display private #end class __ASSET__fonts_me_ttf_bak extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__fonts_me2_ttf_bf extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__fonts_original_me_ttf extends flash.text.Font { }
 @:keep @:bind #if display private #end class __ASSET__audio_end_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_end_wav_asd extends flash.utils.ByteArray { }
@@ -982,6 +993,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 #if openfl
 @:keep #if display private #end class __ASSET__fonts_me_ttf extends openfl.text.Font { public function new () { super (); fontName = "MyCourier"; } } 
+
 
 @:keep #if display private #end class __ASSET__fonts_original_me_ttf extends openfl.text.Font { public function new () { super (); fontName = "Courier"; } } 
 
@@ -1028,6 +1040,7 @@ class __ASSET__fonts_original_me_ttf extends openfl.text.Font { public function 
 //
 //@:font("Assets/fonts/me.ttf") class __ASSET__fonts_me_ttf extends openfl.text.Font {}
 //@:file("Assets/fonts/me.ttf.bak") class __ASSET__fonts_me_ttf_bak extends lime.utils.ByteArray {}
+//@:file("Assets/fonts/me2.ttf.bf") class __ASSET__fonts_me2_ttf_bf extends lime.utils.ByteArray {}
 //@:font("Assets/fonts/Original me.ttf") class __ASSET__fonts_original_me_ttf extends openfl.text.Font {}
 //@:sound("Assets/audio/end.wav") class __ASSET__audio_end_wav extends openfl.media.Sound {}
 //@:file("Assets/audio/end.wav.asd") class __ASSET__audio_end_wav_asd extends lime.utils.ByteArray {}

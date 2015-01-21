@@ -93,7 +93,7 @@ class World extends MovieClip
 	{
 		this.removeEventListener(Event.ADDED_TO_STAGE, added);
 
-		var font:Font = Assets.getFont ("fonts/me.ttf");
+		var font:Font = Assets.getFont ("fonts/me2.ttf");
 		this.textFormat = new TextFormat(font.fontName);
 
 		#if js
@@ -114,6 +114,13 @@ class World extends MovieClip
 		this.worldVisual.selectable = false;
 		this.worldVisual.embedFonts = true;
 		
+		this.helpText = new TextField();
+		this.helpText.defaultTextFormat = this.textFormat;
+		this.helpText.width = 400;
+		this.helpText.height = 700;
+		this.helpText.selectable = false;
+		this.helpText.embedFonts = true;
+
 		//this.worldVisual.background = true;
 		//this.worldVisual.backgroundColor = 0xff0000;
 		
@@ -238,7 +245,7 @@ class World extends MovieClip
 					this.player = new Player(x, y);
 					newCell = this.player;
 				} else {
-					newCell = new Cell(CellType.Empty, x, y);
+					newCell = new Empty(x, y);
 				}
 				
 				this.grid.set(x, y, newCell);
@@ -321,7 +328,7 @@ class World extends MovieClip
 	
 	public function okToWallWalk():Bool
 	{
-		return this.levelIndex >= 8;
+		return this.levelIndex >= 1000;
 	}
 	
 	private function playingKeyDown():Bool
@@ -393,41 +400,6 @@ class World extends MovieClip
 
 		trace("Done creating the two new comets.");
 		comet.destroy();
-	}
-
-	private function splitBullet(bullet:Bullet, bouncer:Bouncer):Void
-	{
-		var x1:Int = bouncer.x;
-		var y1:Int = bouncer.y;
-		var x2:Int = bouncer.x;
-		var y2:Int = bouncer.y;
-		var dir1:Bullet.Direction;
-		var dir2:Bullet.Direction;
-
-		if (bullet.cellType == CellType.CometLeft || 
-			bullet.cellType == CellType.CometRight) {
-			y1 = bouncer.y - 1;
-			y2 = bouncer.y + 1;
-			dir1 = Bullet.Direction.UP;
-			dir2 = Bullet.Direction.DOWN;
-		} else {
-			x1 = bouncer.x - 1;
-			x2 = bouncer.x + 1;
-			dir1 = Bullet.Direction.LEFT;
-			dir2 = Bullet.Direction.RIGHT;
-		} 
-
-		trace("Creating the two new comets.");
-		var newBullet1:Bullet = new Bullet(x1, y1, dir1);
-		var newBullet2:Bullet = new Bullet(x2, y2, dir2);
-		this.bullets.push(newBullet1);
-		this.bullets.push(newBullet2);
-
-		this.grid.set(x1, y1, newBullet1);
-		this.grid.set(x2, y2, newBullet2);
-
-		trace("Done creating the two new comets.");
-		bullet.destroy();
 	}
 
 	public function rotate(amount:Int):Void
@@ -519,8 +491,7 @@ class World extends MovieClip
 			var bullet = bulletsClone[i];
 			for (bouncer in this.bouncers) { 
 				if ( bullet.newPosCollides(bouncer) ) {
-					//Split the comet in two.
-					splitBullet(bullet, bouncer);
+					//Split the bullet in two or something.
 				}
 			}
 		}
@@ -541,7 +512,7 @@ class World extends MovieClip
 				//Check if the comet collides with a bullet
 				var collidedWithABullet:Bool = false;
 				for (bullet in this.bullets) {
-					var tempBullet:Bullet = new Bullet(bullet.newX, bullet.newY + 1, Bullet.Direction.UP);
+					var tempBullet:Bullet = new Bullet(bullet.newX, bullet.newY + 1, 0, 0);
 					
 					//var needTempBullet:Bool = this.grid.get(tempBullet.x, tempBullet.y).cellType != CellType.Empty;
 					if (comet.newPosCollides(bullet)) {

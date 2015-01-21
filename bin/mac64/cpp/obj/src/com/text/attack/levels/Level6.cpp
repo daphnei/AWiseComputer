@@ -17,7 +17,9 @@ HX_STACK_FRAME("com.text.attack.levels.Level6","new",0x274d74b1,"com.text.attack
 HX_STACK_THIS(this)
 {
 	HX_STACK_LINE(43)
-	::String p1 = HX_CSTRING("I was always told that \"to go too far is as bad as to fall short.\"");		HX_STACK_VAR(p1,"p1");
+	::String p1 = HX_CSTRING("I was told that \"to go too far is as bad as to fall short.\"");		HX_STACK_VAR(p1,"p1");
+	HX_STACK_LINE(44)
+	::String p2 = HX_CSTRING("The stakes continue to grow higher.");		HX_STACK_VAR(p2,"p2");
 	HX_STACK_LINE(46)
 	Array< ::String > preamble = Array_obj< ::String >::__new().Add(p1);		HX_STACK_VAR(preamble,"preamble");
 	HX_STACK_LINE(48)

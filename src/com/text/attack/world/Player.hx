@@ -31,6 +31,11 @@ class Player extends Cell
 	public override function update():Void
 	{
 		var collision:Cell = null;
+
+		var zDown:Bool = World.instance.keyManager.isKeyDown(Keyboard.Z);
+		var xDown:Bool = World.instance.keyManager.isKeyDown(Keyboard.X);
+		var cDown:Bool = World.instance.keyManager.isKeyDown(Keyboard.C);
+
 		if (World.instance.keyManager.isKeyDown(Keyboard.LEFT)) {
 			this.moveClockwise();
 			justShot = false;
@@ -39,15 +44,23 @@ class Player extends Cell
 			this.moveCounterClockwise();
 			justShot = false;
 		}
-		else if (World.instance.keyManager.isKeyDown(Keyboard.Z)) {
-			Bullet.shootLeft();
+		else if (zDown && xDown) {
+			Bullet.shootUpLeft();
 			justShot = false;
 		}
-		else if (World.instance.keyManager.isKeyDown(Keyboard.X)) {
+		else if (xDown && cDown) {
+			Bullet.shootUpRight();
+			justShot = false;
+		}
+		else if (zDown) {
+			Bullet.shootLeft();
+			justShot = true;
+		}
+		else if (xDown) {
 			Bullet.shootUp();
 			justShot = true;
 		}
-		else if (World.instance.keyManager.isKeyDown(Keyboard.C)) {
+		else if (cDown) {
 			Bullet.shootRight();
 			justShot = false;
 		}

@@ -12,6 +12,9 @@
 #ifndef INCLUDED_com_text_attack_world_Comet
 #include <com/text/attack/world/Comet.h>
 #endif
+#ifndef INCLUDED_com_text_attack_world_Empty
+#include <com/text/attack/world/Empty.h>
+#endif
 #ifndef INCLUDED_com_text_attack_world_WorldGrid
 #include <com/text/attack/world/WorldGrid.h>
 #endif
@@ -125,7 +128,7 @@ HX_STACK_THIS(this)
 					HX_STACK_LINE(29)
 					int x = (_g11)++;		HX_STACK_VAR(x,"x");
 					HX_STACK_LINE(30)
-					::com::text::attack::world::Cell _g3 = ::com::text::attack::world::Cell_obj::__new(::com::text::attack::world::CellType_obj::Empty,x,y);		HX_STACK_VAR(_g3,"_g3");
+					::com::text::attack::world::Empty _g3 = ::com::text::attack::world::Empty_obj::__new(x,y);		HX_STACK_VAR(_g3,"_g3");
 					HX_STACK_LINE(30)
 					this->set(x,y,_g3);
 				}
@@ -157,7 +160,7 @@ Void WorldGrid_obj::clear( int x,int y){
 		HX_STACK_ARG(x,"x")
 		HX_STACK_ARG(y,"y")
 		HX_STACK_LINE(37)
-		::com::text::attack::world::Cell _g = ::com::text::attack::world::Cell_obj::__new(::com::text::attack::world::CellType_obj::Empty,x,y);		HX_STACK_VAR(_g,"_g");
+		::com::text::attack::world::Empty _g = ::com::text::attack::world::Empty_obj::__new(x,y);		HX_STACK_VAR(_g,"_g");
 		HX_STACK_LINE(37)
 		this->set(x,y,_g);
 	}

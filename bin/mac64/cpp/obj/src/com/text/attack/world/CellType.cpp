@@ -188,7 +188,7 @@ void CellType_obj::__register()
 void CellType_obj::__boot()
 {
 	Player= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("P"));
-	Empty= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("."));
+	Empty= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("\xe2""\x80""\xa2"""));
 	Block= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("#"));
 	CometDown= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("V"));
 	CometLeft= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("<"));

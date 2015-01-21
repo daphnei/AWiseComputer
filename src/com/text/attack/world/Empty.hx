@@ -7,11 +7,11 @@ import openfl.display.FrameLabel;
  * ...
  * @author Daphne
  */
-class Bouncer extends Cell
+class Empty extends Cell
 {	
 	public function new(x:Int, y:Int) 
 	{
-		super(CellType.Bouncer, x, y);
+		super(CellType.Empty, x, y);
 	}
 
 	public override function getSymbol():Int

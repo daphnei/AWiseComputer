@@ -67,6 +67,7 @@ class HXCPP_CLASS_ATTRIBUTES  World_obj : public ::openfl::_v2::display::MovieCl
 		::com::text::attack::utiltiies::SoundManager soundManager;
 		::openfl::_v2::text::TextField worldVisual;
 		::openfl::_v2::text::TextFormat textFormat;
+		::openfl::_v2::text::TextField helpText;
 		::com::text::attack::world::GameState gameState;
 		int numBulletsAvail;
 		int levelIndex;
@@ -118,6 +119,12 @@ class HXCPP_CLASS_ATTRIBUTES  World_obj : public ::openfl::_v2::display::MovieCl
 
 		virtual Void update( );
 		Dynamic update_dyn();
+
+		virtual Void resolveBulletCollision( );
+		Dynamic resolveBulletCollision_dyn();
+
+		virtual Void resolveCometCollision( );
+		Dynamic resolveCometCollision_dyn();
 
 		static Array< ::Dynamic > LEVELS;
 		static int LEADING_IN_GAME;

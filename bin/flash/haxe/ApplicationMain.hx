@@ -35,6 +35,10 @@ class ApplicationMain {
 		types.push (AssetType.BINARY);
 		
 		
+		urls.push ("fonts/me2.ttf.bf");
+		types.push (AssetType.TEXT);
+		
+		
 		urls.push ("Courier");
 		types.push (AssetType.FONT);
 		

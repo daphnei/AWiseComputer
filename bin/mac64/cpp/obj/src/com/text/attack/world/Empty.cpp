@@ -1,13 +1,13 @@
 #include <hxcpp.h>
 
-#ifndef INCLUDED_com_text_attack_world_Bouncer
-#include <com/text/attack/world/Bouncer.h>
-#endif
 #ifndef INCLUDED_com_text_attack_world_Cell
 #include <com/text/attack/world/Cell.h>
 #endif
 #ifndef INCLUDED_com_text_attack_world_CellType
 #include <com/text/attack/world/CellType.h>
+#endif
+#ifndef INCLUDED_com_text_attack_world_Empty
+#include <com/text/attack/world/Empty.h>
 #endif
 #ifndef INCLUDED_openfl__v2_events_EventDispatcher
 #include <openfl/_v2/events/EventDispatcher.h>
@@ -20,35 +20,35 @@ namespace text{
 namespace attack{
 namespace world{
 
-Void Bouncer_obj::__construct(int x,int y)
+Void Empty_obj::__construct(int x,int y)
 {
-HX_STACK_FRAME("com.text.attack.world.Bouncer","new",0xd54d846e,"com.text.attack.world.Bouncer.new","com/text/attack/world/Bouncer.hx",14,0xcaa3cfa4)
+HX_STACK_FRAME("com.text.attack.world.Empty","new",0x14845211,"com.text.attack.world.Empty.new","com/text/attack/world/Empty.hx",14,0xaeb76ae1)
 HX_STACK_THIS(this)
 HX_STACK_ARG(x,"x")
 HX_STACK_ARG(y,"y")
 {
 	HX_STACK_LINE(14)
-	super::__construct(::com::text::attack::world::CellType_obj::Bouncer,x,y);
+	super::__construct(::com::text::attack::world::CellType_obj::Empty,x,y);
 }
 ;
 	return null();
 }
 
-//Bouncer_obj::~Bouncer_obj() { }
+//Empty_obj::~Empty_obj() { }
 
-Dynamic Bouncer_obj::__CreateEmpty() { return  new Bouncer_obj; }
-hx::ObjectPtr< Bouncer_obj > Bouncer_obj::__new(int x,int y)
-{  hx::ObjectPtr< Bouncer_obj > result = new Bouncer_obj();
+Dynamic Empty_obj::__CreateEmpty() { return  new Empty_obj; }
+hx::ObjectPtr< Empty_obj > Empty_obj::__new(int x,int y)
+{  hx::ObjectPtr< Empty_obj > result = new Empty_obj();
 	result->__construct(x,y);
 	return result;}
 
-Dynamic Bouncer_obj::__Create(hx::DynamicArray inArgs)
-{  hx::ObjectPtr< Bouncer_obj > result = new Bouncer_obj();
+Dynamic Empty_obj::__Create(hx::DynamicArray inArgs)
+{  hx::ObjectPtr< Empty_obj > result = new Empty_obj();
 	result->__construct(inArgs[0],inArgs[1]);
 	return result;}
 
-int Bouncer_obj::getSymbol( ){
-	HX_STACK_FRAME("com.text.attack.world.Bouncer","getSymbol",0x1e996b1c,"com.text.attack.world.Bouncer.getSymbol","com/text/attack/world/Bouncer.hx",19,0xcaa3cfa4)
+int Empty_obj::getSymbol( ){
+	HX_STACK_FRAME("com.text.attack.world.Empty","getSymbol",0xd49294ff,"com.text.attack.world.Empty.getSymbol","com/text/attack/world/Empty.hx",19,0xaeb76ae1)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(19)
 	return HX_CSTRING("\xe2""\x80""\xa2""").charCodeAt((int)0);
@@ -56,11 +56,11 @@ int Bouncer_obj::getSymbol( ){
 
 
 
-Bouncer_obj::Bouncer_obj()
+Empty_obj::Empty_obj()
 {
 }
 
-Dynamic Bouncer_obj::__Field(const ::String &inName,bool inCallProp)
+Dynamic Empty_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 9:
@@ -69,12 +69,12 @@ Dynamic Bouncer_obj::__Field(const ::String &inName,bool inCallProp)
 	return super::__Field(inName,inCallProp);
 }
 
-Dynamic Bouncer_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
+Dynamic Empty_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-void Bouncer_obj::__GetFields(Array< ::String> &outFields)
+void Empty_obj::__GetFields(Array< ::String> &outFields)
 {
 	super::__GetFields(outFields);
 };
@@ -91,21 +91,21 @@ static ::String sMemberFields[] = {
 	String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {
-	HX_MARK_MEMBER_NAME(Bouncer_obj::__mClass,"__mClass");
+	HX_MARK_MEMBER_NAME(Empty_obj::__mClass,"__mClass");
 };
 
 #ifdef HXCPP_VISIT_ALLOCS
 static void sVisitStatics(HX_VISIT_PARAMS) {
-	HX_VISIT_MEMBER_NAME(Bouncer_obj::__mClass,"__mClass");
+	HX_VISIT_MEMBER_NAME(Empty_obj::__mClass,"__mClass");
 };
 
 #endif
 
-Class Bouncer_obj::__mClass;
+Class Empty_obj::__mClass;
 
-void Bouncer_obj::__register()
+void Empty_obj::__register()
 {
-	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("com.text.attack.world.Bouncer"), hx::TCanCast< Bouncer_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("com.text.attack.world.Empty"), hx::TCanCast< Empty_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics
 #ifdef HXCPP_VISIT_ALLOCS
@@ -117,7 +117,7 @@ void Bouncer_obj::__register()
 );
 }
 
-void Bouncer_obj::__boot()
+void Empty_obj::__boot()
 {
 }
 

@@ -1,14 +1,7 @@
 package com.text.attack.world;
-import com.text.attack.world.Bullet.Direction;
 import com.text.attack.world.Player.Wall;
 import openfl.display.FrameLabel;
 
-enum Direction {
-	LEFT;
-	RIGHT;
-	UP;
-	DOWN;
-}
 /**
  * ...
  * @author Daphne
@@ -17,13 +10,15 @@ class Bullet extends Cell
 {	
 	private var justAdded:Bool;
 	
-	private var direction:Direction;
+	private var dirX:Int;
+	private var dirY:Int;
 	
-	public function new(x:Int, y:Int, direction:Direction) 
+	public function new(x:Int, y:Int, dirX:Int, dirY:Int) 
 	{
 		super(CellType.Bullet, x, y);
 		this.justAdded = false;
-		this.direction = direction;
+		this.dirX = dirX;
+		this.dirY = dirY;
 	}
 	
 	public override function update():Void 
@@ -31,35 +26,31 @@ class Bullet extends Cell
 		if (this.justAdded) {
 			this.justAdded = false;
 		}
-		else if (this.direction == Direction.UP) {
+
+
+		else if (this.dirY == -1) {
 			if (this.y == 0) {
 				this.destroy();
-			} else {	
-				this.move(0, -1);
-			}
+			} 
 		}
-		else if (this.direction == Direction.DOWN) {
+		else if (this.dirY == 1) {
 			if (this.y == World.HEIGHT - 1) {
 				this.destroy();
-			} else {	
-				this.move(0, 1);
-			}
+			} 
 		}
-		else if (this.direction == Direction.LEFT) {
+
+		if (this.dirX == -1) {
 			if (this.x == 0) {
 				this.destroy();
-			} else {	
-				this.move(-1, 0);
-
-			}
+			} 
 		}
-		else if (this.direction == Direction.RIGHT) {
+		else if (this.dirX == 1) {
 			if (this.x == World.WIDTH - 1) {
 				this.destroy();
-			} else {	
-				this.move(1, 0);
-			}
+			} 
 		}
+
+		this.move(this.dirX, this.dirY);
 	}
 	
 	public function destroy()
@@ -68,23 +59,14 @@ class Bullet extends Cell
 		World.instance.grid.clear(this.x, this.y);
 	}
 	
-	private static function shoot(dir:Direction)
+	private static function shoot(dirX:Int, dirY:Int)
 	{
 		var player:Player = World.instance.player;
 		var grid:WorldGrid = World.instance.grid;
 		
 		if (World.instance.numBulletsAvail > 0) {
-			var b:Bullet = null;
-			switch (dir) {
-				case Direction.LEFT:
-					b = new Bullet(player.x - 1, player.y, dir);
-				case Direction.RIGHT:
-					b = new Bullet(player.x + 1, player.y, dir);
-				case Direction.UP:
-					b = new Bullet(player.x, player.y - 1, dir);
-				case Direction.DOWN:
-					b = new Bullet(player.x, player.y + 1, dir);
-			}
+			var b:Bullet = new Bullet(player.x + dirX, player.y + dirY, dirX, dirY);
+
 			var oldCell:Cell = grid.set(b.x, b.y, b);
 			
 			if (Comet.isCometType(oldCell.cellType)) {
@@ -99,24 +81,52 @@ class Bullet extends Cell
 	
 	public override function getSymbol():Int
 	{
-		switch (this.direction) {
-			case Direction.UP, Direction.DOWN:
-				return '|'.charCodeAt(0);
-			default:
-				return '-'.charCodeAt(0);
-		}
+		if (this.dirX == 0)
+			return '|'.charCodeAt(0);
+		else if (this.dirY == 0)
+			return '-'.charCodeAt(0);
+		else if (this.dirY * this.dirX > 0)
+			return '`'.charCodeAt(0);
+		else
+			return '/'.charCodeAt(0);
 	}
 	
+	public static function shootUpLeft():Void
+	{
+		var wall:Wall = World.instance.player.wall;
+		switch (wall) {
+			case Player.Wall.BOTTOM:
+				Bullet.shoot(-1, -1);
+			case Player.Wall.LEFT:
+				//Bullet.shoot(Direction.RIGHT);
+			case Player.Wall.RIGHT:
+				//Bullet.shoot(Direction.LEFT);
+		}
+	}
+
+	public static function shootUpRight():Void
+	{
+		var wall:Wall = World.instance.player.wall;
+		switch (wall) {
+			case Player.Wall.BOTTOM:
+				Bullet.shoot(1, -1);
+			case Player.Wall.LEFT:
+				//Bullet.shoot(Direction.RIGHT);
+			case Player.Wall.RIGHT:
+				//Bullet.shoot(Direction.LEFT);
+		}
+	}
+
 	public static function shootUp():Void
 	{
 		var wall:Wall = World.instance.player.wall;
 		switch (wall) {
 			case Player.Wall.BOTTOM:
-				Bullet.shoot(Direction.UP);
+				Bullet.shoot(0, -1);
 			case Player.Wall.LEFT:
-				Bullet.shoot(Direction.RIGHT);
+				//Bullet.shoot(Direction.RIGHT);
 			case Player.Wall.RIGHT:
-				Bullet.shoot(Direction.LEFT);
+				//Bullet.shoot(Direction.LEFT);
 		}
 	}
 	
@@ -125,11 +135,11 @@ class Bullet extends Cell
 		var wall:Wall = World.instance.player.wall;
 		switch (wall) {
 			case Player.Wall.BOTTOM:
-				Bullet.shoot(Direction.LEFT);
+				Bullet.shoot(-1, 0);
 			case Player.Wall.LEFT:
-				Bullet.shoot(Direction.UP);
+				//Bullet.shoot(Direction.UP);
 			case Player.Wall.RIGHT:
-				Bullet.shoot(Direction.DOWN);
+				//Bullet.shoot(Direction.DOWN);
 		}
 	}
 	
@@ -138,11 +148,11 @@ class Bullet extends Cell
 		var wall:Wall = World.instance.player.wall;
 		switch (wall) {
 			case Player.Wall.BOTTOM:
-				Bullet.shoot(Direction.RIGHT);
+				Bullet.shoot(1, 0);
 			case Player.Wall.LEFT:
-				Bullet.shoot(Direction.DOWN);
+				//Bullet.shoot(Direction.DOWN);
 			case Player.Wall.RIGHT:
-				Bullet.shoot(Direction.UP);
+				//Bullet.shoot(Direction.UP);
 		}
 	}
 }
