@@ -48,9 +48,19 @@ class HXCPP_CLASS_ATTRIBUTES  Bitmap_obj : public ::openfl::_v2::display::Displa
 		virtual ::openfl::_v2::display::BitmapData set_bitmapData( ::openfl::_v2::display::BitmapData value);
 		Dynamic set_bitmapData_dyn();
 
+		virtual ::openfl::display::PixelSnapping get_pixelSnapping( );
+		Dynamic get_pixelSnapping_dyn();
+
+		virtual ::openfl::display::PixelSnapping set_pixelSnapping( ::openfl::display::PixelSnapping value);
+		Dynamic set_pixelSnapping_dyn();
+
 		virtual bool set_smoothing( bool value);
 		Dynamic set_smoothing_dyn();
 
+		static Dynamic lime_display_object_get_pixel_snapping;
+		static Dynamic &lime_display_object_get_pixel_snapping_dyn() { return lime_display_object_get_pixel_snapping;}
+		static Dynamic lime_display_object_set_pixel_snapping;
+		static Dynamic &lime_display_object_set_pixel_snapping_dyn() { return lime_display_object_set_pixel_snapping;}
 };
 
 } // end namespace openfl

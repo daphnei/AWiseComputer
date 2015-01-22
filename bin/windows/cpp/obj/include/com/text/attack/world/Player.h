@@ -8,6 +8,7 @@
 #include <com/text/attack/world/Cell.h>
 HX_DECLARE_CLASS4(com,text,attack,world,Cell)
 HX_DECLARE_CLASS4(com,text,attack,world,Player)
+HX_DECLARE_CLASS4(com,text,attack,world,Wall)
 HX_DECLARE_CLASS3(openfl,_v2,events,EventDispatcher)
 HX_DECLARE_CLASS3(openfl,_v2,events,IEventDispatcher)
 namespace com{
@@ -34,10 +35,21 @@ class HXCPP_CLASS_ATTRIBUTES  Player_obj : public ::com::text::attack::world::Ce
 		HX_DO_RTTI;
 		static void __boot();
 		static void __register();
+		void __Mark(HX_MARK_PARAMS);
+		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Player"); }
 
 		bool justShot;
+		::com::text::attack::world::Wall wall;
 		virtual Void update( );
+
+		virtual Void moveClockwise( );
+		Dynamic moveClockwise_dyn();
+
+		virtual Void moveCounterClockwise( );
+		Dynamic moveCounterClockwise_dyn();
+
+		virtual int getSymbol( );
 
 };
 

@@ -36,7 +36,11 @@ class HXCPP_CLASS_ATTRIBUTES  CellType_obj : public hx::Object{
 		static ::com::text::attack::world::CellType Player;
 		static ::com::text::attack::world::CellType Empty;
 		static ::com::text::attack::world::CellType Block;
-		static ::com::text::attack::world::CellType Comet;
+		static ::com::text::attack::world::CellType CometDown;
+		static ::com::text::attack::world::CellType CometLeft;
+		static ::com::text::attack::world::CellType CometRight;
+		static ::com::text::attack::world::CellType CometUp;
+		static ::com::text::attack::world::CellType Bouncer;
 		static ::com::text::attack::world::CellType Bullet;
 };
 

@@ -15,7 +15,7 @@ namespace events{
 
 Void Event_obj::__construct(::String type,hx::Null< bool >  __o_bubbles,hx::Null< bool >  __o_cancelable)
 {
-HX_STACK_FRAME("openfl._v2.events.Event","new",0x1a193ea8,"openfl._v2.events.Event.new","openfl/_v2/events/Event.hx",54,0xcbd58487)
+HX_STACK_FRAME("openfl._v2.events.Event","new",0x1a193ea8,"openfl._v2.events.Event.new","openfl/_v2/events/Event.hx",56,0xcbd58487)
 HX_STACK_THIS(this)
 HX_STACK_ARG(type,"type")
 HX_STACK_ARG(__o_bubbles,"bubbles")
@@ -23,21 +23,21 @@ HX_STACK_ARG(__o_cancelable,"cancelable")
 bool bubbles = __o_bubbles.Default(false);
 bool cancelable = __o_cancelable.Default(false);
 {
-	HX_STACK_LINE(56)
-	this->__type = type;
-	HX_STACK_LINE(57)
-	this->__bubbles = bubbles;
 	HX_STACK_LINE(58)
-	this->__cancelable = cancelable;
+	this->__type = type;
 	HX_STACK_LINE(59)
-	this->__isCancelled = false;
+	this->__bubbles = bubbles;
 	HX_STACK_LINE(60)
-	this->__isCancelledNow = false;
+	this->__cancelable = cancelable;
 	HX_STACK_LINE(61)
-	this->__target = null();
+	this->__isCancelled = false;
 	HX_STACK_LINE(62)
-	this->__currentTarget = null();
+	this->__isCancelledNow = false;
 	HX_STACK_LINE(63)
+	this->__target = null();
+	HX_STACK_LINE(64)
+	this->__currentTarget = null();
+	HX_STACK_LINE(65)
 	this->__eventPhase = ::openfl::events::EventPhase_obj::AT_TARGET;
 }
 ;
@@ -58,15 +58,15 @@ Dynamic Event_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::openfl::_v2::events::Event Event_obj::clone( ){
-	HX_STACK_FRAME("openfl._v2.events.Event","clone",0x7116a3a5,"openfl._v2.events.Event.clone","openfl/_v2/events/Event.hx",68,0xcbd58487)
+	HX_STACK_FRAME("openfl._v2.events.Event","clone",0x7116a3a5,"openfl._v2.events.Event.clone","openfl/_v2/events/Event.hx",70,0xcbd58487)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(70)
+	HX_STACK_LINE(72)
 	::String _g = this->get_type();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(70)
+	HX_STACK_LINE(72)
 	bool _g1 = this->get_bubbles();		HX_STACK_VAR(_g1,"_g1");
-	HX_STACK_LINE(70)
+	HX_STACK_LINE(72)
 	bool _g2 = this->get_cancelable();		HX_STACK_VAR(_g2,"_g2");
-	HX_STACK_LINE(70)
+	HX_STACK_LINE(72)
 	return ::openfl::_v2::events::Event_obj::__new(_g,_g1,_g2);
 }
 
@@ -74,9 +74,9 @@ Dynamic Event_obj::__Create(hx::DynamicArray inArgs)
 HX_DEFINE_DYNAMIC_FUNC0(Event_obj,clone,return )
 
 bool Event_obj::isDefaultPrevented( ){
-	HX_STACK_FRAME("openfl._v2.events.Event","isDefaultPrevented",0x673912f8,"openfl._v2.events.Event.isDefaultPrevented","openfl/_v2/events/Event.hx",77,0xcbd58487)
+	HX_STACK_FRAME("openfl._v2.events.Event","isDefaultPrevented",0x673912f8,"openfl._v2.events.Event.isDefaultPrevented","openfl/_v2/events/Event.hx",79,0xcbd58487)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(77)
+	HX_STACK_LINE(79)
 	return (bool(this->__isCancelled) || bool(this->__isCancelledNow));
 }
 
@@ -85,13 +85,13 @@ HX_DEFINE_DYNAMIC_FUNC0(Event_obj,isDefaultPrevented,return )
 
 Void Event_obj::stopImmediatePropagation( ){
 {
-		HX_STACK_FRAME("openfl._v2.events.Event","stopImmediatePropagation",0xb77b7c35,"openfl._v2.events.Event.stopImmediatePropagation","openfl/_v2/events/Event.hx",84,0xcbd58487)
+		HX_STACK_FRAME("openfl._v2.events.Event","stopImmediatePropagation",0xb77b7c35,"openfl._v2.events.Event.stopImmediatePropagation","openfl/_v2/events/Event.hx",86,0xcbd58487)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(84)
+		HX_STACK_LINE(86)
 		if ((this->get_cancelable())){
-			HX_STACK_LINE(86)
+			HX_STACK_LINE(88)
 			this->__isCancelled = true;
-			HX_STACK_LINE(87)
+			HX_STACK_LINE(89)
 			this->__isCancelledNow = true;
 		}
 	}
@@ -103,11 +103,11 @@ HX_DEFINE_DYNAMIC_FUNC0(Event_obj,stopImmediatePropagation,(void))
 
 Void Event_obj::stopPropagation( ){
 {
-		HX_STACK_FRAME("openfl._v2.events.Event","stopPropagation",0x21c73c32,"openfl._v2.events.Event.stopPropagation","openfl/_v2/events/Event.hx",96,0xcbd58487)
+		HX_STACK_FRAME("openfl._v2.events.Event","stopPropagation",0x21c73c32,"openfl._v2.events.Event.stopPropagation","openfl/_v2/events/Event.hx",98,0xcbd58487)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(96)
+		HX_STACK_LINE(98)
 		if ((this->get_cancelable())){
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(100)
 			this->__isCancelled = true;
 		}
 	}
@@ -118,29 +118,29 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(Event_obj,stopPropagation,(void))
 
 ::String Event_obj::toString( ){
-	HX_STACK_FRAME("openfl._v2.events.Event","toString",0x9fec9d64,"openfl._v2.events.Event.toString","openfl/_v2/events/Event.hx",105,0xcbd58487)
+	HX_STACK_FRAME("openfl._v2.events.Event","toString",0x9fec9d64,"openfl._v2.events.Event.toString","openfl/_v2/events/Event.hx",107,0xcbd58487)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(107)
+	HX_STACK_LINE(109)
 	::String _g = this->get_type();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(107)
+	HX_STACK_LINE(109)
 	::String _g1 = (HX_CSTRING("[Event type=") + _g);		HX_STACK_VAR(_g1,"_g1");
-	HX_STACK_LINE(107)
+	HX_STACK_LINE(109)
 	::String _g2 = (_g1 + HX_CSTRING(" bubbles="));		HX_STACK_VAR(_g2,"_g2");
-	HX_STACK_LINE(107)
+	HX_STACK_LINE(109)
 	bool _g3 = this->get_bubbles();		HX_STACK_VAR(_g3,"_g3");
-	HX_STACK_LINE(107)
+	HX_STACK_LINE(109)
 	::String _g4 = ::Std_obj::string(_g3);		HX_STACK_VAR(_g4,"_g4");
-	HX_STACK_LINE(107)
+	HX_STACK_LINE(109)
 	::String _g5 = (_g2 + _g4);		HX_STACK_VAR(_g5,"_g5");
-	HX_STACK_LINE(107)
+	HX_STACK_LINE(109)
 	::String _g6 = (_g5 + HX_CSTRING(" cancelable="));		HX_STACK_VAR(_g6,"_g6");
-	HX_STACK_LINE(107)
+	HX_STACK_LINE(109)
 	bool _g7 = this->get_cancelable();		HX_STACK_VAR(_g7,"_g7");
-	HX_STACK_LINE(107)
+	HX_STACK_LINE(109)
 	::String _g8 = ::Std_obj::string(_g7);		HX_STACK_VAR(_g8,"_g8");
-	HX_STACK_LINE(107)
+	HX_STACK_LINE(109)
 	::String _g9 = (_g6 + _g8);		HX_STACK_VAR(_g9,"_g9");
-	HX_STACK_LINE(107)
+	HX_STACK_LINE(109)
 	return (_g9 + HX_CSTRING("]"));
 }
 
@@ -148,9 +148,9 @@ HX_DEFINE_DYNAMIC_FUNC0(Event_obj,stopPropagation,(void))
 HX_DEFINE_DYNAMIC_FUNC0(Event_obj,toString,return )
 
 bool Event_obj::__getIsCancelled( ){
-	HX_STACK_FRAME("openfl._v2.events.Event","__getIsCancelled",0x66406029,"openfl._v2.events.Event.__getIsCancelled","openfl/_v2/events/Event.hx",114,0xcbd58487)
+	HX_STACK_FRAME("openfl._v2.events.Event","__getIsCancelled",0x66406029,"openfl._v2.events.Event.__getIsCancelled","openfl/_v2/events/Event.hx",116,0xcbd58487)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(114)
+	HX_STACK_LINE(116)
 	return this->__isCancelled;
 }
 
@@ -158,9 +158,9 @@ bool Event_obj::__getIsCancelled( ){
 HX_DEFINE_DYNAMIC_FUNC0(Event_obj,__getIsCancelled,return )
 
 bool Event_obj::__getIsCancelledNow( ){
-	HX_STACK_FRAME("openfl._v2.events.Event","__getIsCancelledNow",0x9190f06d,"openfl._v2.events.Event.__getIsCancelledNow","openfl/_v2/events/Event.hx",121,0xcbd58487)
+	HX_STACK_FRAME("openfl._v2.events.Event","__getIsCancelledNow",0x9190f06d,"openfl._v2.events.Event.__getIsCancelledNow","openfl/_v2/events/Event.hx",123,0xcbd58487)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(121)
+	HX_STACK_LINE(123)
 	return this->__isCancelledNow;
 }
 
@@ -169,10 +169,10 @@ HX_DEFINE_DYNAMIC_FUNC0(Event_obj,__getIsCancelledNow,return )
 
 Void Event_obj::__setPhase( ::openfl::events::EventPhase value){
 {
-		HX_STACK_FRAME("openfl._v2.events.Event","__setPhase",0x0f6a6f11,"openfl._v2.events.Event.__setPhase","openfl/_v2/events/Event.hx",128,0xcbd58487)
+		HX_STACK_FRAME("openfl._v2.events.Event","__setPhase",0x0f6a6f11,"openfl._v2.events.Event.__setPhase","openfl/_v2/events/Event.hx",130,0xcbd58487)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(value,"value")
-		HX_STACK_LINE(128)
+		HX_STACK_LINE(130)
 		this->__eventPhase = value;
 	}
 return null();
@@ -182,9 +182,9 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Event_obj,__setPhase,(void))
 
 bool Event_obj::get_bubbles( ){
-	HX_STACK_FRAME("openfl._v2.events.Event","get_bubbles",0xdd1a11c6,"openfl._v2.events.Event.get_bubbles","openfl/_v2/events/Event.hx",140,0xcbd58487)
+	HX_STACK_FRAME("openfl._v2.events.Event","get_bubbles",0xdd1a11c6,"openfl._v2.events.Event.get_bubbles","openfl/_v2/events/Event.hx",142,0xcbd58487)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(140)
+	HX_STACK_LINE(142)
 	return this->__bubbles;
 }
 
@@ -192,9 +192,9 @@ bool Event_obj::get_bubbles( ){
 HX_DEFINE_DYNAMIC_FUNC0(Event_obj,get_bubbles,return )
 
 bool Event_obj::get_cancelable( ){
-	HX_STACK_FRAME("openfl._v2.events.Event","get_cancelable",0xdbbb4f15,"openfl._v2.events.Event.get_cancelable","openfl/_v2/events/Event.hx",141,0xcbd58487)
+	HX_STACK_FRAME("openfl._v2.events.Event","get_cancelable",0xdbbb4f15,"openfl._v2.events.Event.get_cancelable","openfl/_v2/events/Event.hx",143,0xcbd58487)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(141)
+	HX_STACK_LINE(143)
 	return this->__cancelable;
 }
 
@@ -202,9 +202,9 @@ bool Event_obj::get_cancelable( ){
 HX_DEFINE_DYNAMIC_FUNC0(Event_obj,get_cancelable,return )
 
 Dynamic Event_obj::get_currentTarget( ){
-	HX_STACK_FRAME("openfl._v2.events.Event","get_currentTarget",0x3ea85c09,"openfl._v2.events.Event.get_currentTarget","openfl/_v2/events/Event.hx",142,0xcbd58487)
+	HX_STACK_FRAME("openfl._v2.events.Event","get_currentTarget",0x3ea85c09,"openfl._v2.events.Event.get_currentTarget","openfl/_v2/events/Event.hx",144,0xcbd58487)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(142)
+	HX_STACK_LINE(144)
 	return this->__currentTarget;
 }
 
@@ -212,10 +212,10 @@ Dynamic Event_obj::get_currentTarget( ){
 HX_DEFINE_DYNAMIC_FUNC0(Event_obj,get_currentTarget,return )
 
 Dynamic Event_obj::set_currentTarget( Dynamic value){
-	HX_STACK_FRAME("openfl._v2.events.Event","set_currentTarget",0x62163415,"openfl._v2.events.Event.set_currentTarget","openfl/_v2/events/Event.hx",143,0xcbd58487)
+	HX_STACK_FRAME("openfl._v2.events.Event","set_currentTarget",0x62163415,"openfl._v2.events.Event.set_currentTarget","openfl/_v2/events/Event.hx",145,0xcbd58487)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(143)
+	HX_STACK_LINE(145)
 	return this->__currentTarget = value;
 }
 
@@ -223,9 +223,9 @@ Dynamic Event_obj::set_currentTarget( Dynamic value){
 HX_DEFINE_DYNAMIC_FUNC1(Event_obj,set_currentTarget,return )
 
 ::openfl::events::EventPhase Event_obj::get_eventPhase( ){
-	HX_STACK_FRAME("openfl._v2.events.Event","get_eventPhase",0x5585e0c2,"openfl._v2.events.Event.get_eventPhase","openfl/_v2/events/Event.hx",144,0xcbd58487)
+	HX_STACK_FRAME("openfl._v2.events.Event","get_eventPhase",0x5585e0c2,"openfl._v2.events.Event.get_eventPhase","openfl/_v2/events/Event.hx",146,0xcbd58487)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(144)
+	HX_STACK_LINE(146)
 	return this->__eventPhase;
 }
 
@@ -233,9 +233,9 @@ HX_DEFINE_DYNAMIC_FUNC1(Event_obj,set_currentTarget,return )
 HX_DEFINE_DYNAMIC_FUNC0(Event_obj,get_eventPhase,return )
 
 Dynamic Event_obj::get_target( ){
-	HX_STACK_FRAME("openfl._v2.events.Event","get_target",0x1388cdd2,"openfl._v2.events.Event.get_target","openfl/_v2/events/Event.hx",145,0xcbd58487)
+	HX_STACK_FRAME("openfl._v2.events.Event","get_target",0x1388cdd2,"openfl._v2.events.Event.get_target","openfl/_v2/events/Event.hx",147,0xcbd58487)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(145)
+	HX_STACK_LINE(147)
 	return this->__target;
 }
 
@@ -243,10 +243,10 @@ Dynamic Event_obj::get_target( ){
 HX_DEFINE_DYNAMIC_FUNC0(Event_obj,get_target,return )
 
 Dynamic Event_obj::set_target( Dynamic value){
-	HX_STACK_FRAME("openfl._v2.events.Event","set_target",0x17066c46,"openfl._v2.events.Event.set_target","openfl/_v2/events/Event.hx",146,0xcbd58487)
+	HX_STACK_FRAME("openfl._v2.events.Event","set_target",0x17066c46,"openfl._v2.events.Event.set_target","openfl/_v2/events/Event.hx",148,0xcbd58487)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(146)
+	HX_STACK_LINE(148)
 	return this->__target = value;
 }
 
@@ -254,9 +254,9 @@ Dynamic Event_obj::set_target( Dynamic value){
 HX_DEFINE_DYNAMIC_FUNC1(Event_obj,set_target,return )
 
 ::String Event_obj::get_type( ){
-	HX_STACK_FRAME("openfl._v2.events.Event","get_type",0x34417afb,"openfl._v2.events.Event.get_type","openfl/_v2/events/Event.hx",147,0xcbd58487)
+	HX_STACK_FRAME("openfl._v2.events.Event","get_type",0x34417afb,"openfl._v2.events.Event.get_type","openfl/_v2/events/Event.hx",149,0xcbd58487)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(147)
+	HX_STACK_LINE(149)
 	return this->__type;
 }
 

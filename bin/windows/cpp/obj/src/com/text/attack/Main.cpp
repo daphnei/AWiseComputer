@@ -42,9 +42,6 @@
 #ifndef INCLUDED_openfl_display_StageAlign
 #include <openfl/display/StageAlign.h>
 #endif
-#ifndef INCLUDED_openfl_display_StageDisplayState
-#include <openfl/display/StageDisplayState.h>
-#endif
 #ifndef INCLUDED_openfl_display_StageScaleMode
 #include <openfl/display/StageScaleMode.h>
 #endif
@@ -54,12 +51,12 @@ namespace attack{
 
 Void Main_obj::__construct()
 {
-HX_STACK_FRAME("com.text.attack.Main","new",0x08adb6bd,"com.text.attack.Main.new","com/text/attack/Main.hx",56,0xbc12e5d2)
+HX_STACK_FRAME("com.text.attack.Main","new",0x08adb6bd,"com.text.attack.Main.new","com/text/attack/Main.hx",58,0xbc12e5d2)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(57)
+	HX_STACK_LINE(59)
 	super::__construct();
-	HX_STACK_LINE(58)
+	HX_STACK_LINE(60)
 	this->addEventListener(::openfl::_v2::events::Event_obj::ADDED_TO_STAGE,this->added_dyn(),null(),null(),null());
 }
 ;
@@ -121,13 +118,23 @@ Void Main_obj::init( ){
 		}
 		HX_STACK_LINE(36)
 		this->inited = true;
-		HX_STACK_LINE(40)
-		::openfl::_v2::Lib_obj::get_current()->get_stage()->set_displayState(::openfl::display::StageDisplayState_obj::FULL_SCREEN_INTERACTIVE);
 		HX_STACK_LINE(43)
 		::com::text::attack::world::World _g = ::com::text::attack::world::World_obj::__new();		HX_STACK_VAR(_g,"_g");
 		HX_STACK_LINE(43)
 		this->world = _g;
 		HX_STACK_LINE(44)
+		int _g1 = this->get_stage()->get_stageWidth();		HX_STACK_VAR(_g1,"_g1");
+		HX_STACK_LINE(44)
+		Float _g2 = (Float(_g1) / Float((int)2));		HX_STACK_VAR(_g2,"_g2");
+		HX_STACK_LINE(44)
+		this->world->set_x(_g2);
+		HX_STACK_LINE(45)
+		int _g3 = this->get_stage()->get_stageHeight();		HX_STACK_VAR(_g3,"_g3");
+		HX_STACK_LINE(45)
+		Float _g4 = (Float(_g3) / Float((int)2));		HX_STACK_VAR(_g4,"_g4");
+		HX_STACK_LINE(45)
+		this->world->set_y(_g4);
+		HX_STACK_LINE(46)
 		this->addChild(this->world);
 	}
 return null();
@@ -138,12 +145,12 @@ HX_DEFINE_DYNAMIC_FUNC0(Main_obj,init,(void))
 
 Void Main_obj::added( Dynamic e){
 {
-		HX_STACK_FRAME("com.text.attack.Main","added",0x5ba9cc5d,"com.text.attack.Main.added","com/text/attack/Main.hx",62,0xbc12e5d2)
+		HX_STACK_FRAME("com.text.attack.Main","added",0x5ba9cc5d,"com.text.attack.Main.added","com/text/attack/Main.hx",64,0xbc12e5d2)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(e,"e")
-		HX_STACK_LINE(63)
+		HX_STACK_LINE(65)
 		this->removeEventListener(::openfl::_v2::events::Event_obj::ADDED_TO_STAGE,this->added_dyn(),null());
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(66)
 		this->get_stage()->addEventListener(::openfl::_v2::events::Event_obj::RESIZE,this->resize_dyn(),null(),null(),null());
 	}
 return null();
@@ -154,14 +161,14 @@ HX_DEFINE_DYNAMIC_FUNC1(Main_obj,added,(void))
 
 Void Main_obj::main( ){
 {
-		HX_STACK_FRAME("com.text.attack.Main","main",0x8ea5e33c,"com.text.attack.Main.main","com/text/attack/Main.hx",73,0xbc12e5d2)
-		HX_STACK_LINE(75)
+		HX_STACK_FRAME("com.text.attack.Main","main",0x8ea5e33c,"com.text.attack.Main.main","com/text/attack/Main.hx",75,0xbc12e5d2)
+		HX_STACK_LINE(77)
 		::openfl::_v2::Lib_obj::get_current()->get_stage()->set_align(::openfl::display::StageAlign_obj::TOP_LEFT);
-		HX_STACK_LINE(76)
+		HX_STACK_LINE(78)
 		::openfl::_v2::Lib_obj::get_current()->get_stage()->set_scaleMode(::openfl::display::StageScaleMode_obj::NO_SCALE);
-		HX_STACK_LINE(77)
+		HX_STACK_LINE(79)
 		::com::text::attack::Main _g = ::com::text::attack::Main_obj::__new();		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(77)
+		HX_STACK_LINE(79)
 		::openfl::_v2::Lib_obj::get_current()->addChild(_g);
 	}
 return null();

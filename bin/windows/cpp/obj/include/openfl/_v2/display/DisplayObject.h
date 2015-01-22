@@ -24,7 +24,6 @@ HX_DECLARE_CLASS3(openfl,_v2,geom,Point)
 HX_DECLARE_CLASS3(openfl,_v2,geom,Rectangle)
 HX_DECLARE_CLASS3(openfl,_v2,geom,Transform)
 HX_DECLARE_CLASS3(openfl,_v2,net,URLLoader)
-HX_DECLARE_CLASS2(openfl,display,PixelSnapping)
 namespace openfl{
 namespace _v2{
 namespace display{
@@ -178,12 +177,6 @@ class HXCPP_CLASS_ATTRIBUTES  DisplayObject_obj : public ::openfl::_v2::events::
 
 		virtual bool set_pedanticBitmapCaching( bool value);
 		Dynamic set_pedanticBitmapCaching_dyn();
-
-		virtual ::openfl::display::PixelSnapping get_pixelSnapping( );
-		Dynamic get_pixelSnapping_dyn();
-
-		virtual ::openfl::display::PixelSnapping set_pixelSnapping( ::openfl::display::PixelSnapping value);
-		Dynamic set_pixelSnapping_dyn();
 
 		virtual Dynamic get_filters( );
 		Dynamic get_filters_dyn();
@@ -358,10 +351,6 @@ class HXCPP_CLASS_ATTRIBUTES  DisplayObject_obj : public ::openfl::_v2::events::
 		static Dynamic &lime_display_object_get_pedantic_bitmap_caching_dyn() { return lime_display_object_get_pedantic_bitmap_caching;}
 		static Dynamic lime_display_object_set_pedantic_bitmap_caching;
 		static Dynamic &lime_display_object_set_pedantic_bitmap_caching_dyn() { return lime_display_object_set_pedantic_bitmap_caching;}
-		static Dynamic lime_display_object_get_pixel_snapping;
-		static Dynamic &lime_display_object_get_pixel_snapping_dyn() { return lime_display_object_get_pixel_snapping;}
-		static Dynamic lime_display_object_set_pixel_snapping;
-		static Dynamic &lime_display_object_set_pixel_snapping_dyn() { return lime_display_object_set_pixel_snapping;}
 		static Dynamic lime_display_object_get_visible;
 		static Dynamic &lime_display_object_get_visible_dyn() { return lime_display_object_get_visible;}
 		static Dynamic lime_display_object_set_visible;

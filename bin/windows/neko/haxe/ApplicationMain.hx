@@ -40,8 +40,8 @@ class ApplicationMain {
 				
 				#if mobile
 				
-				forceWidth = 800;
-				forceHeight = 600;
+				forceWidth = 1200;
+				forceHeight = 800;
 				
 				container = new flash.display.Sprite ();
 				barA = new flash.display.Sprite ();
@@ -62,6 +62,12 @@ class ApplicationMain {
 					
 					var currentPath = haxe.io.Path.directory (Sys.executablePath ());
 					Sys.setCwd (currentPath);
+					
+					if (sys.FileSystem.exists ("icon.png")) {
+						
+						openfl.Lib.setIcon ("icon.png");
+						
+					}
 					
 				} catch (e:Dynamic) {}
 				#elseif linux
@@ -110,7 +116,7 @@ class ApplicationMain {
 				}
 				
 			},
-			800, 600, 
+			1200, 800, 
 			60, 
 			0,
 			(true ? flash.Lib.HARDWARE : 0) |
@@ -231,13 +237,13 @@ class ScaledStage extends flash.display.Stage {
 	
 	private override function get_stageHeight ():Int {
 		
-		return 600;
+		return 800;
 	
 	}
 	
 	private override function get_stageWidth ():Int {
 		
-		return 800;
+		return 1200;
 	
 	}
 	
@@ -308,11 +314,11 @@ class ApplicationMain {
 		wx.App.boot (function () {
 			
 			
-			frame = wx.Frame.create (null, null, "TextAttack", null, { width: 800, height: 600 });
+			frame = wx.Frame.create (null, null, "TextAttack", null, { width: 1200, height: 800 });
 			
 			
 			#if openfl
-			var stage = wx.NMEStage.create (frame, null, null, { width: 800, height: 600 });
+			var stage = wx.NMEStage.create (frame, null, null, { width: 1200, height: 800 });
 			#end
 			
 			var hasMain = false;

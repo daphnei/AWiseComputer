@@ -13,7 +13,7 @@ class Cell extends EventDispatcher
 	
 	public var newY:Int;
 	public var newX:Int;
-	
+		
 	public function new(cellType:CellType, x:Int, y:Int) 
 	{
 		super();

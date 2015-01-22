@@ -10,13 +10,13 @@ namespace world{
 
 Void CellType_obj::__construct(::String symbol)
 {
-HX_STACK_FRAME("com.text.attack.world.CellType","new",0x38d9739c,"com.text.attack.world.CellType.new","com/text/attack/world/CellType.hx",20,0x3288cc32)
+HX_STACK_FRAME("com.text.attack.world.CellType","new",0x38d9739c,"com.text.attack.world.CellType.new","com/text/attack/world/CellType.hx",24,0x3288cc32)
 HX_STACK_THIS(this)
 HX_STACK_ARG(symbol,"symbol")
 {
-	HX_STACK_LINE(21)
+	HX_STACK_LINE(25)
 	Dynamic _g = symbol.charCodeAt((int)0);		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(21)
+	HX_STACK_LINE(25)
 	this->symbol = _g;
 }
 ;
@@ -42,7 +42,15 @@ Dynamic CellType_obj::__Create(hx::DynamicArray inArgs)
 
 ::com::text::attack::world::CellType CellType_obj::Block;
 
-::com::text::attack::world::CellType CellType_obj::Comet;
+::com::text::attack::world::CellType CellType_obj::CometDown;
+
+::com::text::attack::world::CellType CellType_obj::CometLeft;
+
+::com::text::attack::world::CellType CellType_obj::CometRight;
+
+::com::text::attack::world::CellType CellType_obj::CometUp;
+
+::com::text::attack::world::CellType CellType_obj::Bouncer;
 
 ::com::text::attack::world::CellType CellType_obj::Bullet;
 
@@ -57,12 +65,22 @@ Dynamic CellType_obj::__Field(const ::String &inName,bool inCallProp)
 	case 5:
 		if (HX_FIELD_EQ(inName,"Empty") ) { return Empty; }
 		if (HX_FIELD_EQ(inName,"Block") ) { return Block; }
-		if (HX_FIELD_EQ(inName,"Comet") ) { return Comet; }
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"Player") ) { return Player; }
 		if (HX_FIELD_EQ(inName,"Bullet") ) { return Bullet; }
 		if (HX_FIELD_EQ(inName,"symbol") ) { return symbol; }
+		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"CometUp") ) { return CometUp; }
+		if (HX_FIELD_EQ(inName,"Bouncer") ) { return Bouncer; }
+		break;
+	case 9:
+		if (HX_FIELD_EQ(inName,"CometDown") ) { return CometDown; }
+		if (HX_FIELD_EQ(inName,"CometLeft") ) { return CometLeft; }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"CometRight") ) { return CometRight; }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -73,12 +91,22 @@ Dynamic CellType_obj::__SetField(const ::String &inName,const Dynamic &inValue,b
 	case 5:
 		if (HX_FIELD_EQ(inName,"Empty") ) { Empty=inValue.Cast< ::com::text::attack::world::CellType >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"Block") ) { Block=inValue.Cast< ::com::text::attack::world::CellType >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"Comet") ) { Comet=inValue.Cast< ::com::text::attack::world::CellType >(); return inValue; }
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"Player") ) { Player=inValue.Cast< ::com::text::attack::world::CellType >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"Bullet") ) { Bullet=inValue.Cast< ::com::text::attack::world::CellType >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"symbol") ) { symbol=inValue.Cast< int >(); return inValue; }
+		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"CometUp") ) { CometUp=inValue.Cast< ::com::text::attack::world::CellType >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"Bouncer") ) { Bouncer=inValue.Cast< ::com::text::attack::world::CellType >(); return inValue; }
+		break;
+	case 9:
+		if (HX_FIELD_EQ(inName,"CometDown") ) { CometDown=inValue.Cast< ::com::text::attack::world::CellType >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"CometLeft") ) { CometLeft=inValue.Cast< ::com::text::attack::world::CellType >(); return inValue; }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"CometRight") ) { CometRight=inValue.Cast< ::com::text::attack::world::CellType >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -93,7 +121,11 @@ static ::String sStaticFields[] = {
 	HX_CSTRING("Player"),
 	HX_CSTRING("Empty"),
 	HX_CSTRING("Block"),
-	HX_CSTRING("Comet"),
+	HX_CSTRING("CometDown"),
+	HX_CSTRING("CometLeft"),
+	HX_CSTRING("CometRight"),
+	HX_CSTRING("CometUp"),
+	HX_CSTRING("Bouncer"),
 	HX_CSTRING("Bullet"),
 	String(null()) };
 
@@ -113,7 +145,11 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(CellType_obj::Player,"Player");
 	HX_MARK_MEMBER_NAME(CellType_obj::Empty,"Empty");
 	HX_MARK_MEMBER_NAME(CellType_obj::Block,"Block");
-	HX_MARK_MEMBER_NAME(CellType_obj::Comet,"Comet");
+	HX_MARK_MEMBER_NAME(CellType_obj::CometDown,"CometDown");
+	HX_MARK_MEMBER_NAME(CellType_obj::CometLeft,"CometLeft");
+	HX_MARK_MEMBER_NAME(CellType_obj::CometRight,"CometRight");
+	HX_MARK_MEMBER_NAME(CellType_obj::CometUp,"CometUp");
+	HX_MARK_MEMBER_NAME(CellType_obj::Bouncer,"Bouncer");
 	HX_MARK_MEMBER_NAME(CellType_obj::Bullet,"Bullet");
 };
 
@@ -123,7 +159,11 @@ static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(CellType_obj::Player,"Player");
 	HX_VISIT_MEMBER_NAME(CellType_obj::Empty,"Empty");
 	HX_VISIT_MEMBER_NAME(CellType_obj::Block,"Block");
-	HX_VISIT_MEMBER_NAME(CellType_obj::Comet,"Comet");
+	HX_VISIT_MEMBER_NAME(CellType_obj::CometDown,"CometDown");
+	HX_VISIT_MEMBER_NAME(CellType_obj::CometLeft,"CometLeft");
+	HX_VISIT_MEMBER_NAME(CellType_obj::CometRight,"CometRight");
+	HX_VISIT_MEMBER_NAME(CellType_obj::CometUp,"CometUp");
+	HX_VISIT_MEMBER_NAME(CellType_obj::Bouncer,"Bouncer");
 	HX_VISIT_MEMBER_NAME(CellType_obj::Bullet,"Bullet");
 };
 
@@ -148,9 +188,13 @@ void CellType_obj::__register()
 void CellType_obj::__boot()
 {
 	Player= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("P"));
-	Empty= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("."));
+	Empty= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("\xe2""\x80""\xa2"""));
 	Block= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("#"));
-	Comet= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("V"));
+	CometDown= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("V"));
+	CometLeft= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("<"));
+	CometRight= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING(">"));
+	CometUp= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("\xe2""\x88""\xa7"""));
+	Bouncer= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("-"));
 	Bullet= ::com::text::attack::world::CellType_obj::__new(HX_CSTRING("|"));
 }
 

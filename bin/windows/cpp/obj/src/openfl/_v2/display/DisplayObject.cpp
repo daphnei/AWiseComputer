@@ -63,9 +63,6 @@
 #ifndef INCLUDED_openfl__v2_net_URLLoader
 #include <openfl/_v2/net/URLLoader.h>
 #endif
-#ifndef INCLUDED_openfl_display_PixelSnapping
-#include <openfl/display/PixelSnapping.h>
-#endif
 #ifndef INCLUDED_openfl_events_EventPhase
 #include <openfl/events/EventPhase.h>
 #endif
@@ -75,22 +72,22 @@ namespace display{
 
 Void DisplayObject_obj::__construct(Dynamic handle,::String type)
 {
-HX_STACK_FRAME("openfl._v2.display.DisplayObject","new",0xbc292e56,"openfl._v2.display.DisplayObject.new","openfl/_v2/display/DisplayObject.hx",58,0xfffdca5d)
+HX_STACK_FRAME("openfl._v2.display.DisplayObject","new",0xbc292e56,"openfl._v2.display.DisplayObject.new","openfl/_v2/display/DisplayObject.hx",56,0xfffdca5d)
 HX_STACK_THIS(this)
 HX_STACK_ARG(handle,"handle")
 HX_STACK_ARG(type,"type")
 {
-	HX_STACK_LINE(60)
+	HX_STACK_LINE(58)
 	super::__construct(hx::ObjectPtr<OBJ_>(this));
-	HX_STACK_LINE(62)
+	HX_STACK_LINE(60)
 	this->__parent = null();
-	HX_STACK_LINE(63)
+	HX_STACK_LINE(61)
 	this->__handle = handle;
-	HX_STACK_LINE(64)
+	HX_STACK_LINE(62)
 	int _g = ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_id(this->__handle);		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(64)
+	HX_STACK_LINE(62)
 	this->__id = _g;
-	HX_STACK_LINE(65)
+	HX_STACK_LINE(63)
 	this->set_name(((type + HX_CSTRING(" ")) + this->__id));
 }
 ;
@@ -116,47 +113,47 @@ hx::Object *DisplayObject_obj::__ToInterface(const hx::type_info &inType) {
 }
 
 bool DisplayObject_obj::dispatchEvent( ::openfl::_v2::events::Event event){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","dispatchEvent",0x212b7476,"openfl._v2.display.DisplayObject.dispatchEvent","openfl/_v2/display/DisplayObject.hx",70,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","dispatchEvent",0x212b7476,"openfl._v2.display.DisplayObject.dispatchEvent","openfl/_v2/display/DisplayObject.hx",68,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(event,"event")
-	HX_STACK_LINE(72)
+	HX_STACK_LINE(70)
 	bool result = this->__dispatchEvent(event);		HX_STACK_VAR(result,"result");
-	HX_STACK_LINE(74)
+	HX_STACK_LINE(72)
 	if ((event->__getIsCancelled())){
-		HX_STACK_LINE(75)
+		HX_STACK_LINE(73)
 		return true;
 	}
 	struct _Function_1_1{
 		inline static bool Block( hx::ObjectPtr< ::openfl::_v2::display::DisplayObject_obj > __this){
-			HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/DisplayObject.hx",77,0xfffdca5d)
+			HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/DisplayObject.hx",75,0xfffdca5d)
 			{
-				HX_STACK_LINE(77)
+				HX_STACK_LINE(75)
 				::openfl::_v2::display::DisplayObjectContainer _g = __this->get_parent();		HX_STACK_VAR(_g,"_g");
-				HX_STACK_LINE(77)
+				HX_STACK_LINE(75)
 				return (_g != null());
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(77)
+	HX_STACK_LINE(75)
 	if (((  ((event->get_bubbles())) ? bool(_Function_1_1::Block(this)) : bool(false) ))){
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(77)
 		this->get_parent()->dispatchEvent(event);
 	}
-	HX_STACK_LINE(83)
+	HX_STACK_LINE(81)
 	return result;
 }
 
 
 ::openfl::_v2::geom::Rectangle DisplayObject_obj::getBounds( ::openfl::_v2::display::DisplayObject targetCoordinateSpace){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","getBounds",0xedcd4a21,"openfl._v2.display.DisplayObject.getBounds","openfl/_v2/display/DisplayObject.hx",88,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","getBounds",0xedcd4a21,"openfl._v2.display.DisplayObject.getBounds","openfl/_v2/display/DisplayObject.hx",86,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(targetCoordinateSpace,"targetCoordinateSpace")
-	HX_STACK_LINE(90)
+	HX_STACK_LINE(88)
 	::openfl::_v2::geom::Rectangle result = ::openfl::_v2::geom::Rectangle_obj::__new(null(),null(),null(),null());		HX_STACK_VAR(result,"result");
-	HX_STACK_LINE(91)
+	HX_STACK_LINE(89)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_bounds(this->__handle,targetCoordinateSpace->__handle,result,true);
-	HX_STACK_LINE(92)
+	HX_STACK_LINE(90)
 	return result;
 }
 
@@ -164,14 +161,14 @@ bool DisplayObject_obj::dispatchEvent( ::openfl::_v2::events::Event event){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,getBounds,return )
 
 ::openfl::_v2::geom::Rectangle DisplayObject_obj::getRect( ::openfl::_v2::display::DisplayObject targetCoordinateSpace){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","getRect",0xd1048dd0,"openfl._v2.display.DisplayObject.getRect","openfl/_v2/display/DisplayObject.hx",97,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","getRect",0xd1048dd0,"openfl._v2.display.DisplayObject.getRect","openfl/_v2/display/DisplayObject.hx",95,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(targetCoordinateSpace,"targetCoordinateSpace")
-	HX_STACK_LINE(99)
+	HX_STACK_LINE(97)
 	::openfl::_v2::geom::Rectangle result = ::openfl::_v2::geom::Rectangle_obj::__new(null(),null(),null(),null());		HX_STACK_VAR(result,"result");
-	HX_STACK_LINE(100)
+	HX_STACK_LINE(98)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_bounds(this->__handle,targetCoordinateSpace->__handle,result,false);
-	HX_STACK_LINE(101)
+	HX_STACK_LINE(99)
 	return result;
 }
 
@@ -179,14 +176,14 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,getBounds,return )
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,getRect,return )
 
 ::openfl::_v2::geom::Point DisplayObject_obj::globalToLocal( ::openfl::_v2::geom::Point point){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","globalToLocal",0xc674fc43,"openfl._v2.display.DisplayObject.globalToLocal","openfl/_v2/display/DisplayObject.hx",106,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","globalToLocal",0xc674fc43,"openfl._v2.display.DisplayObject.globalToLocal","openfl/_v2/display/DisplayObject.hx",104,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(point,"point")
-	HX_STACK_LINE(108)
+	HX_STACK_LINE(106)
 	::openfl::_v2::geom::Point result = point->clone();		HX_STACK_VAR(result,"result");
-	HX_STACK_LINE(109)
+	HX_STACK_LINE(107)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_global_to_local(this->__handle,result);
-	HX_STACK_LINE(110)
+	HX_STACK_LINE(108)
 	return result;
 }
 
@@ -194,16 +191,16 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,getRect,return )
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,globalToLocal,return )
 
 bool DisplayObject_obj::hitTestObject( ::openfl::_v2::display::DisplayObject obj){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","hitTestObject",0x322b025a,"openfl._v2.display.DisplayObject.hitTestObject","openfl/_v2/display/DisplayObject.hx",115,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","hitTestObject",0x322b025a,"openfl._v2.display.DisplayObject.hitTestObject","openfl/_v2/display/DisplayObject.hx",113,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(obj,"obj")
 	struct _Function_1_1{
 		inline static bool Block( ::openfl::_v2::display::DisplayObject &obj){
-			HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/DisplayObject.hx",117,0xfffdca5d)
+			HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/DisplayObject.hx",115,0xfffdca5d)
 			{
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(115)
 				::openfl::_v2::display::DisplayObjectContainer _g = obj->get_parent();		HX_STACK_VAR(_g,"_g");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(115)
 				return (_g != null());
 			}
 			return null();
@@ -211,26 +208,26 @@ bool DisplayObject_obj::hitTestObject( ::openfl::_v2::display::DisplayObject obj
 	};
 	struct _Function_1_2{
 		inline static bool Block( hx::ObjectPtr< ::openfl::_v2::display::DisplayObject_obj > __this){
-			HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/DisplayObject.hx",117,0xfffdca5d)
+			HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/DisplayObject.hx",115,0xfffdca5d)
 			{
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(115)
 				::openfl::_v2::display::DisplayObjectContainer _g1 = __this->get_parent();		HX_STACK_VAR(_g1,"_g1");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(115)
 				return (_g1 != null());
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(117)
+	HX_STACK_LINE(115)
 	if (((  (((  (((obj != null()))) ? bool(_Function_1_1::Block(obj)) : bool(false) ))) ? bool(_Function_1_2::Block(this)) : bool(false) ))){
-		HX_STACK_LINE(119)
+		HX_STACK_LINE(117)
 		::openfl::_v2::geom::Rectangle currentBounds = this->getBounds(hx::ObjectPtr<OBJ_>(this));		HX_STACK_VAR(currentBounds,"currentBounds");
-		HX_STACK_LINE(120)
+		HX_STACK_LINE(118)
 		::openfl::_v2::geom::Rectangle targetBounds = obj->getBounds(hx::ObjectPtr<OBJ_>(this));		HX_STACK_VAR(targetBounds,"targetBounds");
-		HX_STACK_LINE(122)
+		HX_STACK_LINE(120)
 		return currentBounds->intersects(targetBounds);
 	}
-	HX_STACK_LINE(126)
+	HX_STACK_LINE(124)
 	return false;
 }
 
@@ -239,13 +236,13 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,hitTestObject,return )
 
 bool DisplayObject_obj::hitTestPoint( Float x,Float y,hx::Null< bool >  __o_shapeFlag){
 bool shapeFlag = __o_shapeFlag.Default(false);
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","hitTestPoint",0x5ac7dd15,"openfl._v2.display.DisplayObject.hitTestPoint","openfl/_v2/display/DisplayObject.hx",133,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","hitTestPoint",0x5ac7dd15,"openfl._v2.display.DisplayObject.hitTestPoint","openfl/_v2/display/DisplayObject.hx",131,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(x,"x")
 	HX_STACK_ARG(y,"y")
 	HX_STACK_ARG(shapeFlag,"shapeFlag")
 {
-		HX_STACK_LINE(133)
+		HX_STACK_LINE(131)
 		return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_hit_test_point(this->__handle,x,y,shapeFlag,true);
 	}
 }
@@ -254,14 +251,14 @@ bool shapeFlag = __o_shapeFlag.Default(false);
 HX_DEFINE_DYNAMIC_FUNC3(DisplayObject_obj,hitTestPoint,return )
 
 ::openfl::_v2::geom::Point DisplayObject_obj::localToGlobal( ::openfl::_v2::geom::Point point){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","localToGlobal",0xa2b1ef3f,"openfl._v2.display.DisplayObject.localToGlobal","openfl/_v2/display/DisplayObject.hx",138,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","localToGlobal",0xa2b1ef3f,"openfl._v2.display.DisplayObject.localToGlobal","openfl/_v2/display/DisplayObject.hx",136,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(point,"point")
-	HX_STACK_LINE(140)
+	HX_STACK_LINE(138)
 	::openfl::_v2::geom::Point result = point->clone();		HX_STACK_VAR(result,"result");
-	HX_STACK_LINE(141)
+	HX_STACK_LINE(139)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_local_to_global(this->__handle,result);
-	HX_STACK_LINE(142)
+	HX_STACK_LINE(140)
 	return result;
 }
 
@@ -269,17 +266,17 @@ HX_DEFINE_DYNAMIC_FUNC3(DisplayObject_obj,hitTestPoint,return )
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,localToGlobal,return )
 
 ::String DisplayObject_obj::toString( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","toString",0x04d316f6,"openfl._v2.display.DisplayObject.toString","openfl/_v2/display/DisplayObject.hx",149,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","toString",0x04d316f6,"openfl._v2.display.DisplayObject.toString","openfl/_v2/display/DisplayObject.hx",147,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(149)
+	HX_STACK_LINE(147)
 	return this->get_name();
 }
 
 
 ::openfl::_v2::display::InteractiveObject DisplayObject_obj::__asInteractiveObject( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__asInteractiveObject",0x4e80b545,"openfl._v2.display.DisplayObject.__asInteractiveObject","openfl/_v2/display/DisplayObject.hx",156,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__asInteractiveObject",0x4e80b545,"openfl._v2.display.DisplayObject.__asInteractiveObject","openfl/_v2/display/DisplayObject.hx",154,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(156)
+	HX_STACK_LINE(154)
 	return null();
 }
 
@@ -288,10 +285,10 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,__asInteractiveObject,return )
 
 Void DisplayObject_obj::__broadcast( ::openfl::_v2::events::Event event){
 {
-		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__broadcast",0x8d3b2fd7,"openfl._v2.display.DisplayObject.__broadcast","openfl/_v2/display/DisplayObject.hx",163,0xfffdca5d)
+		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__broadcast",0x8d3b2fd7,"openfl._v2.display.DisplayObject.__broadcast","openfl/_v2/display/DisplayObject.hx",161,0xfffdca5d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
-		HX_STACK_LINE(163)
+		HX_STACK_LINE(161)
 		this->__dispatchEvent(event);
 	}
 return null();
@@ -301,10 +298,10 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,__broadcast,(void))
 
 bool DisplayObject_obj::__contains( ::openfl::_v2::display::DisplayObject child){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__contains",0xb26dba09,"openfl._v2.display.DisplayObject.__contains","openfl/_v2/display/DisplayObject.hx",170,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__contains",0xb26dba09,"openfl._v2.display.DisplayObject.__contains","openfl/_v2/display/DisplayObject.hx",168,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(child,"child")
-	HX_STACK_LINE(170)
+	HX_STACK_LINE(168)
 	return false;
 }
 
@@ -312,19 +309,19 @@ bool DisplayObject_obj::__contains( ::openfl::_v2::display::DisplayObject child)
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,__contains,return )
 
 bool DisplayObject_obj::__dispatchEvent( ::openfl::_v2::events::Event event){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__dispatchEvent",0xe9fc76d6,"openfl._v2.display.DisplayObject.__dispatchEvent","openfl/_v2/display/DisplayObject.hx",175,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__dispatchEvent",0xe9fc76d6,"openfl._v2.display.DisplayObject.__dispatchEvent","openfl/_v2/display/DisplayObject.hx",173,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(event,"event")
-	HX_STACK_LINE(177)
+	HX_STACK_LINE(175)
 	Dynamic _g = event->get_target();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(177)
+	HX_STACK_LINE(175)
 	if (((_g == null()))){
-		HX_STACK_LINE(179)
+		HX_STACK_LINE(177)
 		event->set_target(hx::ObjectPtr<OBJ_>(this));
 	}
-	HX_STACK_LINE(183)
+	HX_STACK_LINE(181)
 	event->set_currentTarget(hx::ObjectPtr<OBJ_>(this));
-	HX_STACK_LINE(184)
+	HX_STACK_LINE(182)
 	return this->super::dispatchEvent(event);
 }
 
@@ -333,7 +330,7 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,__dispatchEvent,return )
 
 Void DisplayObject_obj::__drawToSurface( Dynamic surface,::openfl::_v2::geom::Matrix matrix,::openfl::_v2::geom::ColorTransform colorTransform,::String blendMode,::openfl::_v2::geom::Rectangle clipRect,bool smoothing){
 {
-		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__drawToSurface",0x0f9c6124,"openfl._v2.display.DisplayObject.__drawToSurface","openfl/_v2/display/DisplayObject.hx",191,0xfffdca5d)
+		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__drawToSurface",0x0f9c6124,"openfl._v2.display.DisplayObject.__drawToSurface","openfl/_v2/display/DisplayObject.hx",189,0xfffdca5d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(surface,"surface")
 		HX_STACK_ARG(matrix,"matrix")
@@ -341,7 +338,7 @@ Void DisplayObject_obj::__drawToSurface( Dynamic surface,::openfl::_v2::geom::Ma
 		HX_STACK_ARG(blendMode,"blendMode")
 		HX_STACK_ARG(clipRect,"clipRect")
 		HX_STACK_ARG(smoothing,"smoothing")
-		HX_STACK_LINE(191)
+		HX_STACK_LINE(189)
 		::openfl::_v2::display::DisplayObject_obj::lime_display_object_draw_to_surface(this->__handle,surface,matrix,colorTransform,blendMode,clipRect);
 	}
 return null();
@@ -351,15 +348,15 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC6(DisplayObject_obj,__drawToSurface,(void))
 
 ::openfl::_v2::display::DisplayObject DisplayObject_obj::__findByID( int id){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__findByID",0x19a96635,"openfl._v2.display.DisplayObject.__findByID","openfl/_v2/display/DisplayObject.hx",196,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__findByID",0x19a96635,"openfl._v2.display.DisplayObject.__findByID","openfl/_v2/display/DisplayObject.hx",194,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(id,"id")
-	HX_STACK_LINE(200)
+	HX_STACK_LINE(198)
 	if (((this->__id == id))){
-		HX_STACK_LINE(202)
+		HX_STACK_LINE(200)
 		return hx::ObjectPtr<OBJ_>(this);
 	}
-	HX_STACK_LINE(206)
+	HX_STACK_LINE(204)
 	return null();
 }
 
@@ -368,75 +365,75 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,__findByID,return )
 
 Void DisplayObject_obj::__fireEvent( ::openfl::_v2::events::Event event){
 {
-		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__fireEvent",0x1f8ebd5a,"openfl._v2.display.DisplayObject.__fireEvent","openfl/_v2/display/DisplayObject.hx",211,0xfffdca5d)
+		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__fireEvent",0x1f8ebd5a,"openfl._v2.display.DisplayObject.__fireEvent","openfl/_v2/display/DisplayObject.hx",209,0xfffdca5d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
-		HX_STACK_LINE(213)
+		HX_STACK_LINE(211)
 		Array< ::Dynamic > stack = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(stack,"stack");
-		HX_STACK_LINE(215)
+		HX_STACK_LINE(213)
 		if (((this->__parent != null()))){
-			HX_STACK_LINE(217)
+			HX_STACK_LINE(215)
 			this->__parent->__getInteractiveObjectStack(stack);
 		}
-		HX_STACK_LINE(221)
+		HX_STACK_LINE(219)
 		int length = stack->length;		HX_STACK_VAR(length,"length");
-		HX_STACK_LINE(223)
+		HX_STACK_LINE(221)
 		if (((stack->length > (int)0))){
-			HX_STACK_LINE(225)
+			HX_STACK_LINE(223)
 			event->__setPhase(::openfl::events::EventPhase_obj::CAPTURING_PHASE);
-			HX_STACK_LINE(226)
+			HX_STACK_LINE(224)
 			event->set_target(hx::ObjectPtr<OBJ_>(this));
-			HX_STACK_LINE(227)
+			HX_STACK_LINE(225)
 			int i = (length - (int)1);		HX_STACK_VAR(i,"i");
-			HX_STACK_LINE(229)
+			HX_STACK_LINE(227)
 			while((true)){
-				HX_STACK_LINE(229)
+				HX_STACK_LINE(227)
 				if ((!(((i >= (int)0))))){
-					HX_STACK_LINE(229)
+					HX_STACK_LINE(227)
 					break;
 				}
-				HX_STACK_LINE(231)
+				HX_STACK_LINE(229)
 				stack->__get(i).StaticCast< ::openfl::_v2::display::InteractiveObject >()->__dispatchEvent(event);
-				HX_STACK_LINE(233)
+				HX_STACK_LINE(231)
 				if ((event->__getIsCancelled())){
-					HX_STACK_LINE(235)
+					HX_STACK_LINE(233)
 					return null();
 				}
-				HX_STACK_LINE(239)
+				HX_STACK_LINE(237)
 				(i)--;
 			}
 		}
-		HX_STACK_LINE(245)
+		HX_STACK_LINE(243)
 		event->__setPhase(::openfl::events::EventPhase_obj::AT_TARGET);
-		HX_STACK_LINE(246)
+		HX_STACK_LINE(244)
 		this->__dispatchEvent(event);
-		HX_STACK_LINE(248)
+		HX_STACK_LINE(246)
 		if ((event->__getIsCancelled())){
-			HX_STACK_LINE(250)
+			HX_STACK_LINE(248)
 			return null();
 		}
-		HX_STACK_LINE(254)
+		HX_STACK_LINE(252)
 		if ((event->get_bubbles())){
-			HX_STACK_LINE(256)
+			HX_STACK_LINE(254)
 			event->__setPhase(::openfl::events::EventPhase_obj::BUBBLING_PHASE);
-			HX_STACK_LINE(258)
+			HX_STACK_LINE(256)
 			{
-				HX_STACK_LINE(258)
+				HX_STACK_LINE(256)
 				int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-				HX_STACK_LINE(258)
+				HX_STACK_LINE(256)
 				while((true)){
-					HX_STACK_LINE(258)
+					HX_STACK_LINE(256)
 					if ((!(((_g < length))))){
-						HX_STACK_LINE(258)
+						HX_STACK_LINE(256)
 						break;
 					}
-					HX_STACK_LINE(258)
+					HX_STACK_LINE(256)
 					int i = (_g)++;		HX_STACK_VAR(i,"i");
-					HX_STACK_LINE(260)
+					HX_STACK_LINE(258)
 					stack->__get(i).StaticCast< ::openfl::_v2::display::InteractiveObject >()->__dispatchEvent(event);
-					HX_STACK_LINE(262)
+					HX_STACK_LINE(260)
 					if ((event->__getIsCancelled())){
-						HX_STACK_LINE(264)
+						HX_STACK_LINE(262)
 						return null();
 					}
 				}
@@ -450,13 +447,13 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,__fireEvent,(void))
 
 ::openfl::_v2::geom::ColorTransform DisplayObject_obj::__getColorTransform( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getColorTransform",0xb20ed995,"openfl._v2.display.DisplayObject.__getColorTransform","openfl/_v2/display/DisplayObject.hx",275,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getColorTransform",0xb20ed995,"openfl._v2.display.DisplayObject.__getColorTransform","openfl/_v2/display/DisplayObject.hx",273,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(277)
+	HX_STACK_LINE(275)
 	::openfl::_v2::geom::ColorTransform colorTransform = ::openfl::_v2::geom::ColorTransform_obj::__new(null(),null(),null(),null(),null(),null(),null(),null());		HX_STACK_VAR(colorTransform,"colorTransform");
-	HX_STACK_LINE(278)
+	HX_STACK_LINE(276)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_color_transform(this->__handle,colorTransform,false);
-	HX_STACK_LINE(279)
+	HX_STACK_LINE(277)
 	return colorTransform;
 }
 
@@ -464,13 +461,13 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,__fireEvent,(void))
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,__getColorTransform,return )
 
 ::openfl::_v2::geom::ColorTransform DisplayObject_obj::__getConcatenatedColorTransform( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getConcatenatedColorTransform",0xbcaacd04,"openfl._v2.display.DisplayObject.__getConcatenatedColorTransform","openfl/_v2/display/DisplayObject.hx",284,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getConcatenatedColorTransform",0xbcaacd04,"openfl._v2.display.DisplayObject.__getConcatenatedColorTransform","openfl/_v2/display/DisplayObject.hx",282,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(286)
+	HX_STACK_LINE(284)
 	::openfl::_v2::geom::ColorTransform colorTransform = ::openfl::_v2::geom::ColorTransform_obj::__new(null(),null(),null(),null(),null(),null(),null(),null());		HX_STACK_VAR(colorTransform,"colorTransform");
-	HX_STACK_LINE(287)
+	HX_STACK_LINE(285)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_color_transform(this->__handle,colorTransform,true);
-	HX_STACK_LINE(288)
+	HX_STACK_LINE(286)
 	return colorTransform;
 }
 
@@ -478,13 +475,13 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,__getColorTransform,return )
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,__getConcatenatedColorTransform,return )
 
 ::openfl::_v2::geom::Matrix DisplayObject_obj::__getConcatenatedMatrix( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getConcatenatedMatrix",0xc6e3b8bc,"openfl._v2.display.DisplayObject.__getConcatenatedMatrix","openfl/_v2/display/DisplayObject.hx",293,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getConcatenatedMatrix",0xc6e3b8bc,"openfl._v2.display.DisplayObject.__getConcatenatedMatrix","openfl/_v2/display/DisplayObject.hx",291,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(295)
+	HX_STACK_LINE(293)
 	::openfl::_v2::geom::Matrix matrix = ::openfl::_v2::geom::Matrix_obj::__new(null(),null(),null(),null(),null(),null());		HX_STACK_VAR(matrix,"matrix");
-	HX_STACK_LINE(296)
+	HX_STACK_LINE(294)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_matrix(this->__handle,matrix,true);
-	HX_STACK_LINE(297)
+	HX_STACK_LINE(295)
 	return matrix;
 }
 
@@ -493,19 +490,19 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,__getConcatenatedMatrix,return )
 
 Void DisplayObject_obj::__getInteractiveObjectStack( Array< ::Dynamic > stack){
 {
-		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getInteractiveObjectStack",0x91c3b353,"openfl._v2.display.DisplayObject.__getInteractiveObjectStack","openfl/_v2/display/DisplayObject.hx",302,0xfffdca5d)
+		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getInteractiveObjectStack",0x91c3b353,"openfl._v2.display.DisplayObject.__getInteractiveObjectStack","openfl/_v2/display/DisplayObject.hx",300,0xfffdca5d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(stack,"stack")
-		HX_STACK_LINE(304)
+		HX_STACK_LINE(302)
 		::openfl::_v2::display::InteractiveObject interactive = this->__asInteractiveObject();		HX_STACK_VAR(interactive,"interactive");
-		HX_STACK_LINE(306)
+		HX_STACK_LINE(304)
 		if (((interactive != null()))){
-			HX_STACK_LINE(308)
+			HX_STACK_LINE(306)
 			stack->push(interactive);
 		}
-		HX_STACK_LINE(312)
+		HX_STACK_LINE(310)
 		if (((this->__parent != null()))){
-			HX_STACK_LINE(314)
+			HX_STACK_LINE(312)
 			this->__parent->__getInteractiveObjectStack(stack);
 		}
 	}
@@ -516,13 +513,13 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,__getInteractiveObjectStack,(void))
 
 ::openfl::_v2::geom::Matrix DisplayObject_obj::__getMatrix( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getMatrix",0xe6404c4d,"openfl._v2.display.DisplayObject.__getMatrix","openfl/_v2/display/DisplayObject.hx",321,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getMatrix",0xe6404c4d,"openfl._v2.display.DisplayObject.__getMatrix","openfl/_v2/display/DisplayObject.hx",319,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(323)
+	HX_STACK_LINE(321)
 	::openfl::_v2::geom::Matrix matrix = ::openfl::_v2::geom::Matrix_obj::__new(null(),null(),null(),null(),null(),null());		HX_STACK_VAR(matrix,"matrix");
-	HX_STACK_LINE(324)
+	HX_STACK_LINE(322)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_matrix(this->__handle,matrix,false);
-	HX_STACK_LINE(325)
+	HX_STACK_LINE(323)
 	return matrix;
 }
 
@@ -531,13 +528,13 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,__getMatrix,return )
 
 Void DisplayObject_obj::__getObjectsUnderPoint( ::openfl::_v2::geom::Point point,Array< ::Dynamic > result){
 {
-		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getObjectsUnderPoint",0x5a4ca780,"openfl._v2.display.DisplayObject.__getObjectsUnderPoint","openfl/_v2/display/DisplayObject.hx",332,0xfffdca5d)
+		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getObjectsUnderPoint",0x5a4ca780,"openfl._v2.display.DisplayObject.__getObjectsUnderPoint","openfl/_v2/display/DisplayObject.hx",330,0xfffdca5d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(point,"point")
 		HX_STACK_ARG(result,"result")
-		HX_STACK_LINE(332)
+		HX_STACK_LINE(330)
 		if ((::openfl::_v2::display::DisplayObject_obj::lime_display_object_hit_test_point(this->__handle,point->x,point->y,true,false))){
-			HX_STACK_LINE(334)
+			HX_STACK_LINE(332)
 			result->push(hx::ObjectPtr<OBJ_>(this));
 		}
 	}
@@ -548,13 +545,13 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC2(DisplayObject_obj,__getObjectsUnderPoint,(void))
 
 ::openfl::_v2::geom::Rectangle DisplayObject_obj::__getPixelBounds( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getPixelBounds",0x606ae80f,"openfl._v2.display.DisplayObject.__getPixelBounds","openfl/_v2/display/DisplayObject.hx",341,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__getPixelBounds",0x606ae80f,"openfl._v2.display.DisplayObject.__getPixelBounds","openfl/_v2/display/DisplayObject.hx",339,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(343)
+	HX_STACK_LINE(341)
 	::openfl::_v2::geom::Rectangle bounds = ::openfl::_v2::geom::Rectangle_obj::__new(null(),null(),null(),null());		HX_STACK_VAR(bounds,"bounds");
-	HX_STACK_LINE(344)
+	HX_STACK_LINE(342)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_pixel_bounds(this->__handle,bounds);
-	HX_STACK_LINE(345)
+	HX_STACK_LINE(343)
 	return bounds;
 }
 
@@ -563,26 +560,26 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,__getPixelBounds,return )
 
 Void DisplayObject_obj::__onAdded( ::openfl::_v2::display::DisplayObject object,bool isOnStage){
 {
-		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__onAdded",0x3f28fe77,"openfl._v2.display.DisplayObject.__onAdded","openfl/_v2/display/DisplayObject.hx",350,0xfffdca5d)
+		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__onAdded",0x3f28fe77,"openfl._v2.display.DisplayObject.__onAdded","openfl/_v2/display/DisplayObject.hx",348,0xfffdca5d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(object,"object")
 		HX_STACK_ARG(isOnStage,"isOnStage")
-		HX_STACK_LINE(352)
+		HX_STACK_LINE(350)
 		if (((object == hx::ObjectPtr<OBJ_>(this)))){
-			HX_STACK_LINE(354)
+			HX_STACK_LINE(352)
 			::openfl::_v2::events::Event event = ::openfl::_v2::events::Event_obj::__new(::openfl::_v2::events::Event_obj::ADDED,true,false);		HX_STACK_VAR(event,"event");
-			HX_STACK_LINE(355)
+			HX_STACK_LINE(353)
 			event->set_target(hx::ObjectPtr<OBJ_>(this));
-			HX_STACK_LINE(356)
+			HX_STACK_LINE(354)
 			this->dispatchEvent(event);
 		}
-		HX_STACK_LINE(360)
+		HX_STACK_LINE(358)
 		if ((isOnStage)){
-			HX_STACK_LINE(362)
+			HX_STACK_LINE(360)
 			::openfl::_v2::events::Event event = ::openfl::_v2::events::Event_obj::__new(::openfl::_v2::events::Event_obj::ADDED_TO_STAGE,false,false);		HX_STACK_VAR(event,"event");
-			HX_STACK_LINE(363)
+			HX_STACK_LINE(361)
 			event->set_target(hx::ObjectPtr<OBJ_>(this));
-			HX_STACK_LINE(364)
+			HX_STACK_LINE(362)
 			this->dispatchEvent(event);
 		}
 	}
@@ -594,26 +591,26 @@ HX_DEFINE_DYNAMIC_FUNC2(DisplayObject_obj,__onAdded,(void))
 
 Void DisplayObject_obj::__onRemoved( ::openfl::_v2::display::DisplayObject object,bool wasOnStage){
 {
-		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__onRemoved",0x78cc6517,"openfl._v2.display.DisplayObject.__onRemoved","openfl/_v2/display/DisplayObject.hx",371,0xfffdca5d)
+		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__onRemoved",0x78cc6517,"openfl._v2.display.DisplayObject.__onRemoved","openfl/_v2/display/DisplayObject.hx",369,0xfffdca5d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(object,"object")
 		HX_STACK_ARG(wasOnStage,"wasOnStage")
-		HX_STACK_LINE(373)
+		HX_STACK_LINE(371)
 		if (((object == hx::ObjectPtr<OBJ_>(this)))){
-			HX_STACK_LINE(375)
+			HX_STACK_LINE(373)
 			::openfl::_v2::events::Event event = ::openfl::_v2::events::Event_obj::__new(::openfl::_v2::events::Event_obj::REMOVED,true,false);		HX_STACK_VAR(event,"event");
-			HX_STACK_LINE(376)
+			HX_STACK_LINE(374)
 			event->set_target(hx::ObjectPtr<OBJ_>(this));
-			HX_STACK_LINE(377)
+			HX_STACK_LINE(375)
 			this->dispatchEvent(event);
 		}
-		HX_STACK_LINE(381)
+		HX_STACK_LINE(379)
 		if ((wasOnStage)){
-			HX_STACK_LINE(383)
+			HX_STACK_LINE(381)
 			::openfl::_v2::events::Event event = ::openfl::_v2::events::Event_obj::__new(::openfl::_v2::events::Event_obj::REMOVED_FROM_STAGE,false,false);		HX_STACK_VAR(event,"event");
-			HX_STACK_LINE(384)
+			HX_STACK_LINE(382)
 			event->set_target(hx::ObjectPtr<OBJ_>(this));
-			HX_STACK_LINE(385)
+			HX_STACK_LINE(383)
 			this->dispatchEvent(event);
 		}
 	}
@@ -625,10 +622,10 @@ HX_DEFINE_DYNAMIC_FUNC2(DisplayObject_obj,__onRemoved,(void))
 
 Void DisplayObject_obj::__setColorTransform( ::openfl::_v2::geom::ColorTransform colorTransform){
 {
-		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__setColorTransform",0xd57cb1a1,"openfl._v2.display.DisplayObject.__setColorTransform","openfl/_v2/display/DisplayObject.hx",394,0xfffdca5d)
+		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__setColorTransform",0xd57cb1a1,"openfl._v2.display.DisplayObject.__setColorTransform","openfl/_v2/display/DisplayObject.hx",392,0xfffdca5d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(colorTransform,"colorTransform")
-		HX_STACK_LINE(394)
+		HX_STACK_LINE(392)
 		::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_color_transform(this->__handle,colorTransform);
 	}
 return null();
@@ -639,10 +636,10 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,__setColorTransform,(void))
 
 Void DisplayObject_obj::__setMatrix( ::openfl::_v2::geom::Matrix matrix){
 {
-		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__setMatrix",0xc9913859,"openfl._v2.display.DisplayObject.__setMatrix","openfl/_v2/display/DisplayObject.hx",401,0xfffdca5d)
+		HX_STACK_FRAME("openfl._v2.display.DisplayObject","__setMatrix",0xc9913859,"openfl._v2.display.DisplayObject.__setMatrix","openfl/_v2/display/DisplayObject.hx",399,0xfffdca5d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(matrix,"matrix")
-		HX_STACK_LINE(401)
+		HX_STACK_LINE(399)
 		::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_matrix(this->__handle,matrix);
 	}
 return null();
@@ -652,37 +649,37 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,__setMatrix,(void))
 
 ::openfl::_v2::display::DisplayObjectContainer DisplayObject_obj::__setParent( ::openfl::_v2::display::DisplayObjectContainer parent){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__setParent",0xfb470742,"openfl._v2.display.DisplayObject.__setParent","openfl/_v2/display/DisplayObject.hx",406,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","__setParent",0xfb470742,"openfl._v2.display.DisplayObject.__setParent","openfl/_v2/display/DisplayObject.hx",404,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(parent,"parent")
-	HX_STACK_LINE(408)
+	HX_STACK_LINE(406)
 	if (((parent == this->__parent))){
-		HX_STACK_LINE(410)
+		HX_STACK_LINE(408)
 		return parent;
 	}
-	HX_STACK_LINE(414)
+	HX_STACK_LINE(412)
 	if (((this->__parent != null()))){
-		HX_STACK_LINE(416)
+		HX_STACK_LINE(414)
 		this->__parent->__removeChildFromArray(hx::ObjectPtr<OBJ_>(this));
-		HX_STACK_LINE(417)
+		HX_STACK_LINE(415)
 		::openfl::_v2::display::Stage _g = this->get_stage();		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(417)
+		HX_STACK_LINE(415)
 		bool _g1 = (_g != null());		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(417)
+		HX_STACK_LINE(415)
 		this->__onRemoved(hx::ObjectPtr<OBJ_>(this),_g1);
 	}
-	HX_STACK_LINE(421)
+	HX_STACK_LINE(419)
 	this->__parent = parent;
-	HX_STACK_LINE(423)
+	HX_STACK_LINE(421)
 	if (((parent != null()))){
-		HX_STACK_LINE(425)
+		HX_STACK_LINE(423)
 		::openfl::_v2::display::Stage _g2 = this->get_stage();		HX_STACK_VAR(_g2,"_g2");
-		HX_STACK_LINE(425)
+		HX_STACK_LINE(423)
 		bool _g3 = (_g2 != null());		HX_STACK_VAR(_g3,"_g3");
-		HX_STACK_LINE(425)
+		HX_STACK_LINE(423)
 		this->__onAdded(hx::ObjectPtr<OBJ_>(this),_g3);
 	}
-	HX_STACK_LINE(429)
+	HX_STACK_LINE(427)
 	return parent;
 }
 
@@ -690,9 +687,9 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,__setMatrix,(void))
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,__setParent,return )
 
 Float DisplayObject_obj::get_alpha( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_alpha",0x70993e2b,"openfl._v2.display.DisplayObject.get_alpha","openfl/_v2/display/DisplayObject.hx",441,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_alpha",0x70993e2b,"openfl._v2.display.DisplayObject.get_alpha","openfl/_v2/display/DisplayObject.hx",439,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(441)
+	HX_STACK_LINE(439)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_alpha(this->__handle);
 }
 
@@ -700,12 +697,12 @@ Float DisplayObject_obj::get_alpha( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_alpha,return )
 
 Float DisplayObject_obj::set_alpha( Float value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_alpha",0x53ea2a37,"openfl._v2.display.DisplayObject.set_alpha","openfl/_v2/display/DisplayObject.hx",442,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_alpha",0x53ea2a37,"openfl._v2.display.DisplayObject.set_alpha","openfl/_v2/display/DisplayObject.hx",440,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(444)
+	HX_STACK_LINE(442)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_alpha(this->__handle,value);
-	HX_STACK_LINE(445)
+	HX_STACK_LINE(443)
 	return value;
 }
 
@@ -713,16 +710,16 @@ Float DisplayObject_obj::set_alpha( Float value){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_alpha,return )
 
 Dynamic DisplayObject_obj::get_opaqueBackground( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_opaqueBackground",0xd76baa82,"openfl._v2.display.DisplayObject.get_opaqueBackground","openfl/_v2/display/DisplayObject.hx",450,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_opaqueBackground",0xd76baa82,"openfl._v2.display.DisplayObject.get_opaqueBackground","openfl/_v2/display/DisplayObject.hx",448,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(452)
+	HX_STACK_LINE(450)
 	int i = ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_bg(this->__handle);		HX_STACK_VAR(i,"i");
-	HX_STACK_LINE(454)
+	HX_STACK_LINE(452)
 	if (((((int(i) & int((int)16777216))) == (int)0))){
-		HX_STACK_LINE(456)
+		HX_STACK_LINE(454)
 		return null();
 	}
-	HX_STACK_LINE(460)
+	HX_STACK_LINE(458)
 	return (int(i) & int((int)16777215));
 }
 
@@ -730,19 +727,19 @@ Dynamic DisplayObject_obj::get_opaqueBackground( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_opaqueBackground,return )
 
 Dynamic DisplayObject_obj::set_opaqueBackground( Dynamic value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_opaqueBackground",0xa42361f6,"openfl._v2.display.DisplayObject.set_opaqueBackground","openfl/_v2/display/DisplayObject.hx",465,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_opaqueBackground",0xa42361f6,"openfl._v2.display.DisplayObject.set_opaqueBackground","openfl/_v2/display/DisplayObject.hx",463,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(467)
+	HX_STACK_LINE(465)
 	if (((value == null()))){
-		HX_STACK_LINE(469)
+		HX_STACK_LINE(467)
 		::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_bg(this->__handle,(int)0);
 	}
 	else{
-		HX_STACK_LINE(473)
+		HX_STACK_LINE(471)
 		::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_bg(this->__handle,value);
 	}
-	HX_STACK_LINE(477)
+	HX_STACK_LINE(475)
 	return value;
 }
 
@@ -750,11 +747,11 @@ Dynamic DisplayObject_obj::set_opaqueBackground( Dynamic value){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_opaqueBackground,return )
 
 ::openfl::_v2::display::BlendMode DisplayObject_obj::get_blendMode( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_blendMode",0x286265a1,"openfl._v2.display.DisplayObject.get_blendMode","openfl/_v2/display/DisplayObject.hx",482,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_blendMode",0x286265a1,"openfl._v2.display.DisplayObject.get_blendMode","openfl/_v2/display/DisplayObject.hx",480,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(484)
+	HX_STACK_LINE(482)
 	int i = ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_blend_mode(this->__handle);		HX_STACK_VAR(i,"i");
-	HX_STACK_LINE(485)
+	HX_STACK_LINE(483)
 	return ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::_v2::display::BlendMode >(),i,null());
 }
 
@@ -762,14 +759,14 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_opaqueBackground,return )
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_blendMode,return )
 
 ::openfl::_v2::display::BlendMode DisplayObject_obj::set_blendMode( ::openfl::_v2::display::BlendMode value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_blendMode",0x6d6847ad,"openfl._v2.display.DisplayObject.set_blendMode","openfl/_v2/display/DisplayObject.hx",490,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_blendMode",0x6d6847ad,"openfl._v2.display.DisplayObject.set_blendMode","openfl/_v2/display/DisplayObject.hx",488,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(492)
+	HX_STACK_LINE(490)
 	int _g = value->__Index();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(492)
+	HX_STACK_LINE(490)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_blend_mode(this->__handle,_g);
-	HX_STACK_LINE(493)
+	HX_STACK_LINE(491)
 	return value;
 }
 
@@ -777,9 +774,9 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_blendMode,return )
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_blendMode,return )
 
 bool DisplayObject_obj::get_cacheAsBitmap( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_cacheAsBitmap",0xe9e92eb0,"openfl._v2.display.DisplayObject.get_cacheAsBitmap","openfl/_v2/display/DisplayObject.hx",498,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_cacheAsBitmap",0xe9e92eb0,"openfl._v2.display.DisplayObject.get_cacheAsBitmap","openfl/_v2/display/DisplayObject.hx",496,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(498)
+	HX_STACK_LINE(496)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_cache_as_bitmap(this->__handle);
 }
 
@@ -787,12 +784,12 @@ bool DisplayObject_obj::get_cacheAsBitmap( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_cacheAsBitmap,return )
 
 bool DisplayObject_obj::set_cacheAsBitmap( bool value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_cacheAsBitmap",0x0d5706bc,"openfl._v2.display.DisplayObject.set_cacheAsBitmap","openfl/_v2/display/DisplayObject.hx",499,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_cacheAsBitmap",0x0d5706bc,"openfl._v2.display.DisplayObject.set_cacheAsBitmap","openfl/_v2/display/DisplayObject.hx",497,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(501)
+	HX_STACK_LINE(499)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_cache_as_bitmap(this->__handle,value);
-	HX_STACK_LINE(502)
+	HX_STACK_LINE(500)
 	return value;
 }
 
@@ -800,9 +797,9 @@ bool DisplayObject_obj::set_cacheAsBitmap( bool value){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_cacheAsBitmap,return )
 
 bool DisplayObject_obj::get_pedanticBitmapCaching( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_pedanticBitmapCaching",0xc56e05eb,"openfl._v2.display.DisplayObject.get_pedanticBitmapCaching","openfl/_v2/display/DisplayObject.hx",507,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_pedanticBitmapCaching",0xc56e05eb,"openfl._v2.display.DisplayObject.get_pedanticBitmapCaching","openfl/_v2/display/DisplayObject.hx",505,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(507)
+	HX_STACK_LINE(505)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_pedantic_bitmap_caching(this->__handle);
 }
 
@@ -810,86 +807,52 @@ bool DisplayObject_obj::get_pedanticBitmapCaching( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_pedanticBitmapCaching,return )
 
 bool DisplayObject_obj::set_pedanticBitmapCaching( bool value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_pedanticBitmapCaching",0x31c4c9f7,"openfl._v2.display.DisplayObject.set_pedanticBitmapCaching","openfl/_v2/display/DisplayObject.hx",508,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_pedanticBitmapCaching",0x31c4c9f7,"openfl._v2.display.DisplayObject.set_pedanticBitmapCaching","openfl/_v2/display/DisplayObject.hx",506,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(510)
+	HX_STACK_LINE(508)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_pedantic_bitmap_caching(this->__handle,value);
-	HX_STACK_LINE(511)
+	HX_STACK_LINE(509)
 	return value;
 }
 
 
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_pedanticBitmapCaching,return )
 
-::openfl::display::PixelSnapping DisplayObject_obj::get_pixelSnapping( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_pixelSnapping",0x387b5a2f,"openfl._v2.display.DisplayObject.get_pixelSnapping","openfl/_v2/display/DisplayObject.hx",516,0xfffdca5d)
-	HX_STACK_THIS(this)
-	HX_STACK_LINE(518)
-	int i = ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_pixel_snapping(this->__handle);		HX_STACK_VAR(i,"i");
-	HX_STACK_LINE(519)
-	return ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::display::PixelSnapping >(),i,null());
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_pixelSnapping,return )
-
-::openfl::display::PixelSnapping DisplayObject_obj::set_pixelSnapping( ::openfl::display::PixelSnapping value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_pixelSnapping",0x5be9323b,"openfl._v2.display.DisplayObject.set_pixelSnapping","openfl/_v2/display/DisplayObject.hx",524,0xfffdca5d)
-	HX_STACK_THIS(this)
-	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(526)
-	if (((value == null()))){
-		HX_STACK_LINE(528)
-		::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_pixel_snapping(this->__handle,(int)0);
-	}
-	else{
-		HX_STACK_LINE(532)
-		int _g = value->__Index();		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(532)
-		::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_pixel_snapping(this->__handle,_g);
-	}
-	HX_STACK_LINE(536)
-	return value;
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_pixelSnapping,return )
-
 Dynamic DisplayObject_obj::get_filters( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_filters",0x0f3645c8,"openfl._v2.display.DisplayObject.get_filters","openfl/_v2/display/DisplayObject.hx",541,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_filters",0x0f3645c8,"openfl._v2.display.DisplayObject.get_filters","openfl/_v2/display/DisplayObject.hx",514,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(543)
+	HX_STACK_LINE(516)
 	if (((this->__filters == null()))){
-		HX_STACK_LINE(543)
+		HX_STACK_LINE(516)
 		return Dynamic( Array_obj<Dynamic>::__new());
 	}
-	HX_STACK_LINE(544)
+	HX_STACK_LINE(517)
 	Dynamic result = Dynamic( Array_obj<Dynamic>::__new() );		HX_STACK_VAR(result,"result");
-	HX_STACK_LINE(546)
+	HX_STACK_LINE(519)
 	{
-		HX_STACK_LINE(546)
+		HX_STACK_LINE(519)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(546)
+		HX_STACK_LINE(519)
 		Dynamic _g1 = this->__filters;		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(546)
+		HX_STACK_LINE(519)
 		while((true)){
-			HX_STACK_LINE(546)
+			HX_STACK_LINE(519)
 			if ((!(((_g < _g1->__Field(HX_CSTRING("length"),true)))))){
-				HX_STACK_LINE(546)
+				HX_STACK_LINE(519)
 				break;
 			}
-			HX_STACK_LINE(546)
+			HX_STACK_LINE(519)
 			Dynamic filter = _g1->__GetItem(_g);		HX_STACK_VAR(filter,"filter");
-			HX_STACK_LINE(546)
+			HX_STACK_LINE(519)
 			++(_g);
-			HX_STACK_LINE(548)
+			HX_STACK_LINE(521)
 			Dynamic _g2 = filter->__Field(HX_CSTRING("clone"),true)();		HX_STACK_VAR(_g2,"_g2");
-			HX_STACK_LINE(548)
+			HX_STACK_LINE(521)
 			result->__Field(HX_CSTRING("push"),true)(_g2);
 		}
 	}
-	HX_STACK_LINE(552)
+	HX_STACK_LINE(525)
 	return result;
 }
 
@@ -897,49 +860,49 @@ Dynamic DisplayObject_obj::get_filters( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_filters,return )
 
 Dynamic DisplayObject_obj::set_filters( Dynamic value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_filters",0x19a34cd4,"openfl._v2.display.DisplayObject.set_filters","openfl/_v2/display/DisplayObject.hx",557,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_filters",0x19a34cd4,"openfl._v2.display.DisplayObject.set_filters","openfl/_v2/display/DisplayObject.hx",530,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(559)
+	HX_STACK_LINE(532)
 	Dynamic _g = this->get_filters();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(559)
+	HX_STACK_LINE(532)
 	if (((  ((!(((_g == null()))))) ? bool((value == null())) : bool(true) ))){
-		HX_STACK_LINE(561)
+		HX_STACK_LINE(534)
 		this->__filters = null();
 	}
 	else{
-		HX_STACK_LINE(565)
+		HX_STACK_LINE(538)
 		Dynamic _g1 = Dynamic( Array_obj<Dynamic>::__new() );		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(565)
+		HX_STACK_LINE(538)
 		this->__filters = _g1;
-		HX_STACK_LINE(567)
+		HX_STACK_LINE(540)
 		{
-			HX_STACK_LINE(567)
+			HX_STACK_LINE(540)
 			int _g2 = (int)0;		HX_STACK_VAR(_g2,"_g2");
-			HX_STACK_LINE(567)
+			HX_STACK_LINE(540)
 			while((true)){
-				HX_STACK_LINE(567)
+				HX_STACK_LINE(540)
 				if ((!(((_g2 < value->__Field(HX_CSTRING("length"),true)))))){
-					HX_STACK_LINE(567)
+					HX_STACK_LINE(540)
 					break;
 				}
-				HX_STACK_LINE(567)
+				HX_STACK_LINE(540)
 				Dynamic filter = value->__GetItem(_g2);		HX_STACK_VAR(filter,"filter");
-				HX_STACK_LINE(567)
+				HX_STACK_LINE(540)
 				++(_g2);
-				HX_STACK_LINE(569)
+				HX_STACK_LINE(542)
 				if (((filter != null()))){
-					HX_STACK_LINE(571)
+					HX_STACK_LINE(544)
 					Dynamic _g21 = filter->__Field(HX_CSTRING("clone"),true)();		HX_STACK_VAR(_g21,"_g21");
-					HX_STACK_LINE(571)
+					HX_STACK_LINE(544)
 					this->__filters->__Field(HX_CSTRING("push"),true)(_g21);
 				}
 			}
 		}
 	}
-	HX_STACK_LINE(579)
+	HX_STACK_LINE(552)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_filters(this->__handle,this->__filters);
-	HX_STACK_LINE(580)
+	HX_STACK_LINE(553)
 	return this->get_filters();
 }
 
@@ -947,18 +910,18 @@ Dynamic DisplayObject_obj::set_filters( Dynamic value){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_filters,return )
 
 ::openfl::_v2::display::Graphics DisplayObject_obj::get_graphics( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_graphics",0x3e27e01e,"openfl._v2.display.DisplayObject.get_graphics","openfl/_v2/display/DisplayObject.hx",585,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_graphics",0x3e27e01e,"openfl._v2.display.DisplayObject.get_graphics","openfl/_v2/display/DisplayObject.hx",558,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(587)
+	HX_STACK_LINE(560)
 	if (((this->__graphicsCache == null()))){
-		HX_STACK_LINE(589)
+		HX_STACK_LINE(562)
 		Dynamic _g = ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_graphics(this->__handle);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(589)
+		HX_STACK_LINE(562)
 		::openfl::_v2::display::Graphics _g1 = ::openfl::_v2::display::Graphics_obj::__new(_g);		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(589)
+		HX_STACK_LINE(562)
 		this->__graphicsCache = _g1;
 	}
-	HX_STACK_LINE(593)
+	HX_STACK_LINE(566)
 	return this->__graphicsCache;
 }
 
@@ -966,9 +929,9 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_filters,return )
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_graphics,return )
 
 Float DisplayObject_obj::get_height( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_height",0xd58d647a,"openfl._v2.display.DisplayObject.get_height","openfl/_v2/display/DisplayObject.hx",598,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_height",0xd58d647a,"openfl._v2.display.DisplayObject.get_height","openfl/_v2/display/DisplayObject.hx",571,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(598)
+	HX_STACK_LINE(571)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_height(this->__handle);
 }
 
@@ -976,12 +939,12 @@ Float DisplayObject_obj::get_height( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_height,return )
 
 Float DisplayObject_obj::set_height( Float value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_height",0xd90b02ee,"openfl._v2.display.DisplayObject.set_height","openfl/_v2/display/DisplayObject.hx",599,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_height",0xd90b02ee,"openfl._v2.display.DisplayObject.set_height","openfl/_v2/display/DisplayObject.hx",572,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(601)
+	HX_STACK_LINE(574)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_height(this->__handle,value);
-	HX_STACK_LINE(602)
+	HX_STACK_LINE(575)
 	return value;
 }
 
@@ -989,14 +952,14 @@ Float DisplayObject_obj::set_height( Float value){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_height,return )
 
 ::openfl::_v2::display::DisplayObject DisplayObject_obj::set_mask( ::openfl::_v2::display::DisplayObject value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_mask",0x42d29c33,"openfl._v2.display.DisplayObject.set_mask","openfl/_v2/display/DisplayObject.hx",607,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_mask",0x42d29c33,"openfl._v2.display.DisplayObject.set_mask","openfl/_v2/display/DisplayObject.hx",580,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(609)
+	HX_STACK_LINE(582)
 	this->mask = value;
-	HX_STACK_LINE(610)
+	HX_STACK_LINE(583)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_mask(this->__handle,(  (((value == null()))) ? Dynamic(null()) : Dynamic(value->__handle) ));
-	HX_STACK_LINE(611)
+	HX_STACK_LINE(584)
 	return value;
 }
 
@@ -1004,9 +967,9 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_height,return )
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_mask,return )
 
 Float DisplayObject_obj::get_mouseX( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_mouseX",0x9f4fa726,"openfl._v2.display.DisplayObject.get_mouseX","openfl/_v2/display/DisplayObject.hx",616,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_mouseX",0x9f4fa726,"openfl._v2.display.DisplayObject.get_mouseX","openfl/_v2/display/DisplayObject.hx",589,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(616)
+	HX_STACK_LINE(589)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_mouse_x(this->__handle);
 }
 
@@ -1014,9 +977,9 @@ Float DisplayObject_obj::get_mouseX( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_mouseX,return )
 
 Float DisplayObject_obj::get_mouseY( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_mouseY",0x9f4fa727,"openfl._v2.display.DisplayObject.get_mouseY","openfl/_v2/display/DisplayObject.hx",617,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_mouseY",0x9f4fa727,"openfl._v2.display.DisplayObject.get_mouseY","openfl/_v2/display/DisplayObject.hx",590,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(617)
+	HX_STACK_LINE(590)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_mouse_y(this->__handle);
 }
 
@@ -1024,9 +987,9 @@ Float DisplayObject_obj::get_mouseY( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_mouseY,return )
 
 ::String DisplayObject_obj::get_name( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_name",0x951e741e,"openfl._v2.display.DisplayObject.get_name","openfl/_v2/display/DisplayObject.hx",620,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_name",0x951e741e,"openfl._v2.display.DisplayObject.get_name","openfl/_v2/display/DisplayObject.hx",593,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(620)
+	HX_STACK_LINE(593)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_name(this->__handle);
 }
 
@@ -1034,12 +997,12 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_mouseY,return )
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_name,return )
 
 ::String DisplayObject_obj::set_name( ::String value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_name",0x437bcd92,"openfl._v2.display.DisplayObject.set_name","openfl/_v2/display/DisplayObject.hx",621,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_name",0x437bcd92,"openfl._v2.display.DisplayObject.set_name","openfl/_v2/display/DisplayObject.hx",594,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(623)
+	HX_STACK_LINE(596)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_name(this->__handle,value);
-	HX_STACK_LINE(624)
+	HX_STACK_LINE(597)
 	return value;
 }
 
@@ -1047,9 +1010,9 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_name,return )
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_name,return )
 
 ::openfl::_v2::display::DisplayObjectContainer DisplayObject_obj::get_parent( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_parent",0xc0bf61bd,"openfl._v2.display.DisplayObject.get_parent","openfl/_v2/display/DisplayObject.hx",629,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_parent",0xc0bf61bd,"openfl._v2.display.DisplayObject.get_parent","openfl/_v2/display/DisplayObject.hx",602,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(629)
+	HX_STACK_LINE(602)
 	return this->__parent;
 }
 
@@ -1057,16 +1020,16 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_name,return )
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_parent,return )
 
 ::openfl::_v2::display::DisplayObject DisplayObject_obj::get_root( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_root",0x97cdeff5,"openfl._v2.display.DisplayObject.get_root","openfl/_v2/display/DisplayObject.hx",632,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_root",0x97cdeff5,"openfl._v2.display.DisplayObject.get_root","openfl/_v2/display/DisplayObject.hx",605,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(634)
+	HX_STACK_LINE(607)
 	::openfl::_v2::display::Stage _g = this->get_stage();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(634)
+	HX_STACK_LINE(607)
 	if (((_g != null()))){
-		HX_STACK_LINE(636)
+		HX_STACK_LINE(609)
 		return ::openfl::_v2::Lib_obj::get_current();
 	}
-	HX_STACK_LINE(640)
+	HX_STACK_LINE(613)
 	return null();
 }
 
@@ -1074,9 +1037,9 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_parent,return )
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_root,return )
 
 Float DisplayObject_obj::get_rotation( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_rotation",0x34462491,"openfl._v2.display.DisplayObject.get_rotation","openfl/_v2/display/DisplayObject.hx",645,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_rotation",0x34462491,"openfl._v2.display.DisplayObject.get_rotation","openfl/_v2/display/DisplayObject.hx",618,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(645)
+	HX_STACK_LINE(618)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_rotation(this->__handle);
 }
 
@@ -1084,12 +1047,12 @@ Float DisplayObject_obj::get_rotation( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_rotation,return )
 
 Float DisplayObject_obj::set_rotation( Float value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_rotation",0x493f4805,"openfl._v2.display.DisplayObject.set_rotation","openfl/_v2/display/DisplayObject.hx",646,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_rotation",0x493f4805,"openfl._v2.display.DisplayObject.set_rotation","openfl/_v2/display/DisplayObject.hx",619,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(648)
+	HX_STACK_LINE(621)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_rotation(this->__handle,value);
-	HX_STACK_LINE(649)
+	HX_STACK_LINE(622)
 	return value;
 }
 
@@ -1097,18 +1060,18 @@ Float DisplayObject_obj::set_rotation( Float value){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_rotation,return )
 
 ::openfl::_v2::geom::Rectangle DisplayObject_obj::get_scale9Grid( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_scale9Grid",0x1828f2e8,"openfl._v2.display.DisplayObject.get_scale9Grid","openfl/_v2/display/DisplayObject.hx",654,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_scale9Grid",0x1828f2e8,"openfl._v2.display.DisplayObject.get_scale9Grid","openfl/_v2/display/DisplayObject.hx",627,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(654)
+	HX_STACK_LINE(627)
 	if (((this->__scale9Grid == null()))){
-		HX_STACK_LINE(654)
+		HX_STACK_LINE(627)
 		return null();
 	}
 	else{
-		HX_STACK_LINE(654)
+		HX_STACK_LINE(627)
 		return this->__scale9Grid->clone();
 	}
-	HX_STACK_LINE(654)
+	HX_STACK_LINE(627)
 	return null();
 }
 
@@ -1116,25 +1079,25 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_rotation,return )
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_scale9Grid,return )
 
 ::openfl::_v2::geom::Rectangle DisplayObject_obj::set_scale9Grid( ::openfl::_v2::geom::Rectangle value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_scale9Grid",0x3848db5c,"openfl._v2.display.DisplayObject.set_scale9Grid","openfl/_v2/display/DisplayObject.hx",655,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_scale9Grid",0x3848db5c,"openfl._v2.display.DisplayObject.set_scale9Grid","openfl/_v2/display/DisplayObject.hx",628,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(657)
+	HX_STACK_LINE(630)
 	::openfl::_v2::geom::Rectangle _g;		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(657)
+	HX_STACK_LINE(630)
 	if (((value == null()))){
-		HX_STACK_LINE(657)
+		HX_STACK_LINE(630)
 		_g = null();
 	}
 	else{
-		HX_STACK_LINE(657)
+		HX_STACK_LINE(630)
 		_g = value->clone();
 	}
-	HX_STACK_LINE(657)
+	HX_STACK_LINE(630)
 	this->__scale9Grid = _g;
-	HX_STACK_LINE(658)
+	HX_STACK_LINE(631)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_scale9_grid(this->__handle,this->__scale9Grid);
-	HX_STACK_LINE(659)
+	HX_STACK_LINE(632)
 	return value;
 }
 
@@ -1142,9 +1105,9 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_scale9Grid,return )
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_scale9Grid,return )
 
 Float DisplayObject_obj::get_scaleX( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_scaleX",0x0f674721,"openfl._v2.display.DisplayObject.get_scaleX","openfl/_v2/display/DisplayObject.hx",664,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_scaleX",0x0f674721,"openfl._v2.display.DisplayObject.get_scaleX","openfl/_v2/display/DisplayObject.hx",637,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(664)
+	HX_STACK_LINE(637)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_scale_x(this->__handle);
 }
 
@@ -1152,12 +1115,12 @@ Float DisplayObject_obj::get_scaleX( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_scaleX,return )
 
 Float DisplayObject_obj::set_scaleX( Float value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_scaleX",0x12e4e595,"openfl._v2.display.DisplayObject.set_scaleX","openfl/_v2/display/DisplayObject.hx",665,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_scaleX",0x12e4e595,"openfl._v2.display.DisplayObject.set_scaleX","openfl/_v2/display/DisplayObject.hx",638,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(667)
+	HX_STACK_LINE(640)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_scale_x(this->__handle,value);
-	HX_STACK_LINE(668)
+	HX_STACK_LINE(641)
 	return value;
 }
 
@@ -1165,9 +1128,9 @@ Float DisplayObject_obj::set_scaleX( Float value){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_scaleX,return )
 
 Float DisplayObject_obj::get_scaleY( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_scaleY",0x0f674722,"openfl._v2.display.DisplayObject.get_scaleY","openfl/_v2/display/DisplayObject.hx",673,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_scaleY",0x0f674722,"openfl._v2.display.DisplayObject.get_scaleY","openfl/_v2/display/DisplayObject.hx",646,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(673)
+	HX_STACK_LINE(646)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_scale_y(this->__handle);
 }
 
@@ -1175,12 +1138,12 @@ Float DisplayObject_obj::get_scaleY( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_scaleY,return )
 
 Float DisplayObject_obj::set_scaleY( Float value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_scaleY",0x12e4e596,"openfl._v2.display.DisplayObject.set_scaleY","openfl/_v2/display/DisplayObject.hx",674,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_scaleY",0x12e4e596,"openfl._v2.display.DisplayObject.set_scaleY","openfl/_v2/display/DisplayObject.hx",647,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(676)
+	HX_STACK_LINE(649)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_scale_y(this->__handle,value);
-	HX_STACK_LINE(677)
+	HX_STACK_LINE(650)
 	return value;
 }
 
@@ -1188,18 +1151,18 @@ Float DisplayObject_obj::set_scaleY( Float value){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_scaleY,return )
 
 ::openfl::_v2::geom::Rectangle DisplayObject_obj::get_scrollRect( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_scrollRect",0x926d7de4,"openfl._v2.display.DisplayObject.get_scrollRect","openfl/_v2/display/DisplayObject.hx",682,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_scrollRect",0x926d7de4,"openfl._v2.display.DisplayObject.get_scrollRect","openfl/_v2/display/DisplayObject.hx",655,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(682)
+	HX_STACK_LINE(655)
 	if (((this->__scrollRect == null()))){
-		HX_STACK_LINE(682)
+		HX_STACK_LINE(655)
 		return null();
 	}
 	else{
-		HX_STACK_LINE(682)
+		HX_STACK_LINE(655)
 		return this->__scrollRect->clone();
 	}
-	HX_STACK_LINE(682)
+	HX_STACK_LINE(655)
 	return null();
 }
 
@@ -1207,25 +1170,25 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_scaleY,return )
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_scrollRect,return )
 
 ::openfl::_v2::geom::Rectangle DisplayObject_obj::set_scrollRect( ::openfl::_v2::geom::Rectangle value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_scrollRect",0xb28d6658,"openfl._v2.display.DisplayObject.set_scrollRect","openfl/_v2/display/DisplayObject.hx",683,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_scrollRect",0xb28d6658,"openfl._v2.display.DisplayObject.set_scrollRect","openfl/_v2/display/DisplayObject.hx",656,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(685)
+	HX_STACK_LINE(658)
 	::openfl::_v2::geom::Rectangle _g;		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(685)
+	HX_STACK_LINE(658)
 	if (((value == null()))){
-		HX_STACK_LINE(685)
+		HX_STACK_LINE(658)
 		_g = null();
 	}
 	else{
-		HX_STACK_LINE(685)
+		HX_STACK_LINE(658)
 		_g = value->clone();
 	}
-	HX_STACK_LINE(685)
+	HX_STACK_LINE(658)
 	this->__scrollRect = _g;
-	HX_STACK_LINE(686)
+	HX_STACK_LINE(659)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_scroll_rect(this->__handle,this->__scrollRect);
-	HX_STACK_LINE(687)
+	HX_STACK_LINE(660)
 	return value;
 }
 
@@ -1233,14 +1196,14 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_scrollRect,return )
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_scrollRect,return )
 
 ::openfl::_v2::display::Stage DisplayObject_obj::get_stage( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_stage",0xd30e018b,"openfl._v2.display.DisplayObject.get_stage","openfl/_v2/display/DisplayObject.hx",692,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_stage",0xd30e018b,"openfl._v2.display.DisplayObject.get_stage","openfl/_v2/display/DisplayObject.hx",665,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(694)
+	HX_STACK_LINE(667)
 	if (((this->__parent != null()))){
-		HX_STACK_LINE(696)
+		HX_STACK_LINE(669)
 		return this->__parent->get_stage();
 	}
-	HX_STACK_LINE(700)
+	HX_STACK_LINE(673)
 	return null();
 }
 
@@ -1248,9 +1211,9 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_scrollRect,return )
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_stage,return )
 
 ::openfl::_v2::geom::Transform DisplayObject_obj::get_transform( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_transform",0x61bdaeb9,"openfl._v2.display.DisplayObject.get_transform","openfl/_v2/display/DisplayObject.hx",705,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_transform",0x61bdaeb9,"openfl._v2.display.DisplayObject.get_transform","openfl/_v2/display/DisplayObject.hx",678,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(705)
+	HX_STACK_LINE(678)
 	return ::openfl::_v2::geom::Transform_obj::__new(hx::ObjectPtr<OBJ_>(this));
 }
 
@@ -1258,18 +1221,18 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_stage,return )
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_transform,return )
 
 ::openfl::_v2::geom::Transform DisplayObject_obj::set_transform( ::openfl::_v2::geom::Transform value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_transform",0xa6c390c5,"openfl._v2.display.DisplayObject.set_transform","openfl/_v2/display/DisplayObject.hx",706,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_transform",0xa6c390c5,"openfl._v2.display.DisplayObject.set_transform","openfl/_v2/display/DisplayObject.hx",679,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(708)
+	HX_STACK_LINE(681)
 	::openfl::_v2::geom::Matrix _g = value->get_matrix();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(708)
+	HX_STACK_LINE(681)
 	this->__setMatrix(_g);
-	HX_STACK_LINE(709)
+	HX_STACK_LINE(682)
 	::openfl::_v2::geom::ColorTransform _g1 = value->get_colorTransform();		HX_STACK_VAR(_g1,"_g1");
-	HX_STACK_LINE(709)
+	HX_STACK_LINE(682)
 	this->__setColorTransform(_g1);
-	HX_STACK_LINE(710)
+	HX_STACK_LINE(683)
 	return value;
 }
 
@@ -1277,9 +1240,9 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_transform,return )
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_transform,return )
 
 bool DisplayObject_obj::get_visible( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_visible",0xa9141c7f,"openfl._v2.display.DisplayObject.get_visible","openfl/_v2/display/DisplayObject.hx",715,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_visible",0xa9141c7f,"openfl._v2.display.DisplayObject.get_visible","openfl/_v2/display/DisplayObject.hx",688,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(715)
+	HX_STACK_LINE(688)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_visible(this->__handle);
 }
 
@@ -1287,12 +1250,12 @@ bool DisplayObject_obj::get_visible( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_visible,return )
 
 bool DisplayObject_obj::set_visible( bool value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_visible",0xb381238b,"openfl._v2.display.DisplayObject.set_visible","openfl/_v2/display/DisplayObject.hx",716,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_visible",0xb381238b,"openfl._v2.display.DisplayObject.set_visible","openfl/_v2/display/DisplayObject.hx",689,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(718)
+	HX_STACK_LINE(691)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_visible(this->__handle,value);
-	HX_STACK_LINE(719)
+	HX_STACK_LINE(692)
 	return value;
 }
 
@@ -1300,9 +1263,9 @@ bool DisplayObject_obj::set_visible( bool value){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_visible,return )
 
 Float DisplayObject_obj::get_width( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_width",0x19654cd3,"openfl._v2.display.DisplayObject.get_width","openfl/_v2/display/DisplayObject.hx",724,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_width",0x19654cd3,"openfl._v2.display.DisplayObject.get_width","openfl/_v2/display/DisplayObject.hx",697,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(724)
+	HX_STACK_LINE(697)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_width(this->__handle);
 }
 
@@ -1310,12 +1273,12 @@ Float DisplayObject_obj::get_width( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_width,return )
 
 Float DisplayObject_obj::set_width( Float value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_width",0xfcb638df,"openfl._v2.display.DisplayObject.set_width","openfl/_v2/display/DisplayObject.hx",725,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_width",0xfcb638df,"openfl._v2.display.DisplayObject.set_width","openfl/_v2/display/DisplayObject.hx",698,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(727)
+	HX_STACK_LINE(700)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_width(this->__handle,value);
-	HX_STACK_LINE(728)
+	HX_STACK_LINE(701)
 	return value;
 }
 
@@ -1323,9 +1286,9 @@ Float DisplayObject_obj::set_width( Float value){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_width,return )
 
 Float DisplayObject_obj::get_x( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_x",0xf3c1ecc5,"openfl._v2.display.DisplayObject.get_x","openfl/_v2/display/DisplayObject.hx",733,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_x",0xf3c1ecc5,"openfl._v2.display.DisplayObject.get_x","openfl/_v2/display/DisplayObject.hx",706,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(733)
+	HX_STACK_LINE(706)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_x(this->__handle);
 }
 
@@ -1333,12 +1296,12 @@ Float DisplayObject_obj::get_x( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_x,return )
 
 Float DisplayObject_obj::set_x( Float value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_x",0xdc90e2d1,"openfl._v2.display.DisplayObject.set_x","openfl/_v2/display/DisplayObject.hx",734,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_x",0xdc90e2d1,"openfl._v2.display.DisplayObject.set_x","openfl/_v2/display/DisplayObject.hx",707,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(736)
+	HX_STACK_LINE(709)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_x(this->__handle,value);
-	HX_STACK_LINE(737)
+	HX_STACK_LINE(710)
 	return value;
 }
 
@@ -1346,9 +1309,9 @@ Float DisplayObject_obj::set_x( Float value){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_x,return )
 
 Float DisplayObject_obj::get_y( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_y",0xf3c1ecc6,"openfl._v2.display.DisplayObject.get_y","openfl/_v2/display/DisplayObject.hx",742,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_y",0xf3c1ecc6,"openfl._v2.display.DisplayObject.get_y","openfl/_v2/display/DisplayObject.hx",715,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(742)
+	HX_STACK_LINE(715)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_y(this->__handle);
 }
 
@@ -1356,12 +1319,12 @@ Float DisplayObject_obj::get_y( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_y,return )
 
 Float DisplayObject_obj::set_y( Float value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_y",0xdc90e2d2,"openfl._v2.display.DisplayObject.set_y","openfl/_v2/display/DisplayObject.hx",743,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_y",0xdc90e2d2,"openfl._v2.display.DisplayObject.set_y","openfl/_v2/display/DisplayObject.hx",716,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(745)
+	HX_STACK_LINE(718)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_y(this->__handle,value);
-	HX_STACK_LINE(746)
+	HX_STACK_LINE(719)
 	return value;
 }
 
@@ -1369,9 +1332,9 @@ Float DisplayObject_obj::set_y( Float value){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,set_y,return )
 
 Float DisplayObject_obj::get_z( ){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_z",0xf3c1ecc7,"openfl._v2.display.DisplayObject.get_z","openfl/_v2/display/DisplayObject.hx",751,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","get_z",0xf3c1ecc7,"openfl._v2.display.DisplayObject.get_z","openfl/_v2/display/DisplayObject.hx",724,0xfffdca5d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(751)
+	HX_STACK_LINE(724)
 	return ::openfl::_v2::display::DisplayObject_obj::lime_display_object_get_z(this->__handle);
 }
 
@@ -1379,12 +1342,12 @@ Float DisplayObject_obj::get_z( ){
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_z,return )
 
 Float DisplayObject_obj::set_z( Float value){
-	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_z",0xdc90e2d3,"openfl._v2.display.DisplayObject.set_z","openfl/_v2/display/DisplayObject.hx",752,0xfffdca5d)
+	HX_STACK_FRAME("openfl._v2.display.DisplayObject","set_z",0xdc90e2d3,"openfl._v2.display.DisplayObject.set_z","openfl/_v2/display/DisplayObject.hx",725,0xfffdca5d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(754)
+	HX_STACK_LINE(727)
 	::openfl::_v2::display::DisplayObject_obj::lime_display_object_set_z(this->__handle,value);
-	HX_STACK_LINE(755)
+	HX_STACK_LINE(728)
 	return value;
 }
 
@@ -1458,10 +1421,6 @@ Dynamic DisplayObject_obj::lime_display_object_set_cache_as_bitmap;
 Dynamic DisplayObject_obj::lime_display_object_get_pedantic_bitmap_caching;
 
 Dynamic DisplayObject_obj::lime_display_object_set_pedantic_bitmap_caching;
-
-Dynamic DisplayObject_obj::lime_display_object_get_pixel_snapping;
-
-Dynamic DisplayObject_obj::lime_display_object_set_pixel_snapping;
 
 Dynamic DisplayObject_obj::lime_display_object_get_visible;
 
@@ -1639,7 +1598,6 @@ Dynamic DisplayObject_obj::__Field(const ::String &inName,bool inCallProp)
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"cacheAsBitmap") ) { return get_cacheAsBitmap(); }
-		if (HX_FIELD_EQ(inName,"pixelSnapping") ) { return get_pixelSnapping(); }
 		if (HX_FIELD_EQ(inName,"dispatchEvent") ) { return dispatchEvent_dyn(); }
 		if (HX_FIELD_EQ(inName,"globalToLocal") ) { return globalToLocal_dyn(); }
 		if (HX_FIELD_EQ(inName,"hitTestObject") ) { return hitTestObject_dyn(); }
@@ -1667,8 +1625,6 @@ Dynamic DisplayObject_obj::__Field(const ::String &inName,bool inCallProp)
 	case 17:
 		if (HX_FIELD_EQ(inName,"get_cacheAsBitmap") ) { return get_cacheAsBitmap_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_cacheAsBitmap") ) { return set_cacheAsBitmap_dyn(); }
-		if (HX_FIELD_EQ(inName,"get_pixelSnapping") ) { return get_pixelSnapping_dyn(); }
-		if (HX_FIELD_EQ(inName,"set_pixelSnapping") ) { return set_pixelSnapping_dyn(); }
 		break;
 	case 19:
 		if (HX_FIELD_EQ(inName,"__getColorTransform") ) { return __getColorTransform_dyn(); }
@@ -1757,10 +1713,6 @@ Dynamic DisplayObject_obj::__Field(const ::String &inName,bool inCallProp)
 	case 36:
 		if (HX_FIELD_EQ(inName,"lime_display_object_get_pixel_bounds") ) { return lime_display_object_get_pixel_bounds; }
 		break;
-	case 38:
-		if (HX_FIELD_EQ(inName,"lime_display_object_get_pixel_snapping") ) { return lime_display_object_get_pixel_snapping; }
-		if (HX_FIELD_EQ(inName,"lime_display_object_set_pixel_snapping") ) { return lime_display_object_set_pixel_snapping; }
-		break;
 	case 39:
 		if (HX_FIELD_EQ(inName,"lime_display_object_get_cache_as_bitmap") ) { return lime_display_object_get_cache_as_bitmap; }
 		if (HX_FIELD_EQ(inName,"lime_display_object_set_cache_as_bitmap") ) { return lime_display_object_set_cache_as_bitmap; }
@@ -1827,7 +1779,6 @@ Dynamic DisplayObject_obj::__SetField(const ::String &inName,const Dynamic &inVa
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"cacheAsBitmap") ) { return set_cacheAsBitmap(inValue); }
-		if (HX_FIELD_EQ(inName,"pixelSnapping") ) { return set_pixelSnapping(inValue); }
 		break;
 	case 15:
 		if (HX_FIELD_EQ(inName,"__graphicsCache") ) { __graphicsCache=inValue.Cast< ::openfl::_v2::display::Graphics >(); return inValue; }
@@ -1901,10 +1852,6 @@ Dynamic DisplayObject_obj::__SetField(const ::String &inName,const Dynamic &inVa
 	case 36:
 		if (HX_FIELD_EQ(inName,"lime_display_object_get_pixel_bounds") ) { lime_display_object_get_pixel_bounds=inValue.Cast< Dynamic >(); return inValue; }
 		break;
-	case 38:
-		if (HX_FIELD_EQ(inName,"lime_display_object_get_pixel_snapping") ) { lime_display_object_get_pixel_snapping=inValue.Cast< Dynamic >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"lime_display_object_set_pixel_snapping") ) { lime_display_object_set_pixel_snapping=inValue.Cast< Dynamic >(); return inValue; }
-		break;
 	case 39:
 		if (HX_FIELD_EQ(inName,"lime_display_object_get_cache_as_bitmap") ) { lime_display_object_get_cache_as_bitmap=inValue.Cast< Dynamic >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"lime_display_object_set_cache_as_bitmap") ) { lime_display_object_set_cache_as_bitmap=inValue.Cast< Dynamic >(); return inValue; }
@@ -1934,7 +1881,6 @@ void DisplayObject_obj::__GetFields(Array< ::String> &outFields)
 	outFields->push(HX_CSTRING("opaqueBackground"));
 	outFields->push(HX_CSTRING("parent"));
 	outFields->push(HX_CSTRING("pedanticBitmapCaching"));
-	outFields->push(HX_CSTRING("pixelSnapping"));
 	outFields->push(HX_CSTRING("root"));
 	outFields->push(HX_CSTRING("rotation"));
 	outFields->push(HX_CSTRING("scale9Grid"));
@@ -1993,8 +1939,6 @@ static ::String sStaticFields[] = {
 	HX_CSTRING("lime_display_object_set_cache_as_bitmap"),
 	HX_CSTRING("lime_display_object_get_pedantic_bitmap_caching"),
 	HX_CSTRING("lime_display_object_set_pedantic_bitmap_caching"),
-	HX_CSTRING("lime_display_object_get_pixel_snapping"),
-	HX_CSTRING("lime_display_object_set_pixel_snapping"),
 	HX_CSTRING("lime_display_object_get_visible"),
 	HX_CSTRING("lime_display_object_set_visible"),
 	HX_CSTRING("lime_display_object_set_filters"),
@@ -2086,8 +2030,6 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("set_cacheAsBitmap"),
 	HX_CSTRING("get_pedanticBitmapCaching"),
 	HX_CSTRING("set_pedanticBitmapCaching"),
-	HX_CSTRING("get_pixelSnapping"),
-	HX_CSTRING("set_pixelSnapping"),
 	HX_CSTRING("get_filters"),
 	HX_CSTRING("set_filters"),
 	HX_CSTRING("get_graphics"),
@@ -2161,8 +2103,6 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(DisplayObject_obj::lime_display_object_set_cache_as_bitmap,"lime_display_object_set_cache_as_bitmap");
 	HX_MARK_MEMBER_NAME(DisplayObject_obj::lime_display_object_get_pedantic_bitmap_caching,"lime_display_object_get_pedantic_bitmap_caching");
 	HX_MARK_MEMBER_NAME(DisplayObject_obj::lime_display_object_set_pedantic_bitmap_caching,"lime_display_object_set_pedantic_bitmap_caching");
-	HX_MARK_MEMBER_NAME(DisplayObject_obj::lime_display_object_get_pixel_snapping,"lime_display_object_get_pixel_snapping");
-	HX_MARK_MEMBER_NAME(DisplayObject_obj::lime_display_object_set_pixel_snapping,"lime_display_object_set_pixel_snapping");
 	HX_MARK_MEMBER_NAME(DisplayObject_obj::lime_display_object_get_visible,"lime_display_object_get_visible");
 	HX_MARK_MEMBER_NAME(DisplayObject_obj::lime_display_object_set_visible,"lime_display_object_set_visible");
 	HX_MARK_MEMBER_NAME(DisplayObject_obj::lime_display_object_set_filters,"lime_display_object_set_filters");
@@ -2217,8 +2157,6 @@ static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(DisplayObject_obj::lime_display_object_set_cache_as_bitmap,"lime_display_object_set_cache_as_bitmap");
 	HX_VISIT_MEMBER_NAME(DisplayObject_obj::lime_display_object_get_pedantic_bitmap_caching,"lime_display_object_get_pedantic_bitmap_caching");
 	HX_VISIT_MEMBER_NAME(DisplayObject_obj::lime_display_object_set_pedantic_bitmap_caching,"lime_display_object_set_pedantic_bitmap_caching");
-	HX_VISIT_MEMBER_NAME(DisplayObject_obj::lime_display_object_get_pixel_snapping,"lime_display_object_get_pixel_snapping");
-	HX_VISIT_MEMBER_NAME(DisplayObject_obj::lime_display_object_set_pixel_snapping,"lime_display_object_set_pixel_snapping");
 	HX_VISIT_MEMBER_NAME(DisplayObject_obj::lime_display_object_get_visible,"lime_display_object_get_visible");
 	HX_VISIT_MEMBER_NAME(DisplayObject_obj::lime_display_object_set_visible,"lime_display_object_set_visible");
 	HX_VISIT_MEMBER_NAME(DisplayObject_obj::lime_display_object_set_filters,"lime_display_object_set_filters");
@@ -2290,8 +2228,6 @@ void DisplayObject_obj::__boot()
 	lime_display_object_set_cache_as_bitmap= ::openfl::_v2::Lib_obj::load(HX_CSTRING("lime"),HX_CSTRING("lime_display_object_set_cache_as_bitmap"),(int)2);
 	lime_display_object_get_pedantic_bitmap_caching= ::openfl::_v2::Lib_obj::load(HX_CSTRING("lime"),HX_CSTRING("lime_display_object_get_pedantic_bitmap_caching"),(int)1);
 	lime_display_object_set_pedantic_bitmap_caching= ::openfl::_v2::Lib_obj::load(HX_CSTRING("lime"),HX_CSTRING("lime_display_object_set_pedantic_bitmap_caching"),(int)2);
-	lime_display_object_get_pixel_snapping= ::openfl::_v2::Lib_obj::load(HX_CSTRING("lime"),HX_CSTRING("lime_display_object_get_pixel_snapping"),(int)1);
-	lime_display_object_set_pixel_snapping= ::openfl::_v2::Lib_obj::load(HX_CSTRING("lime"),HX_CSTRING("lime_display_object_set_pixel_snapping"),(int)2);
 	lime_display_object_get_visible= ::openfl::_v2::Lib_obj::load(HX_CSTRING("lime"),HX_CSTRING("lime_display_object_get_visible"),(int)1);
 	lime_display_object_set_visible= ::openfl::_v2::Lib_obj::load(HX_CSTRING("lime"),HX_CSTRING("lime_display_object_set_visible"),(int)2);
 	lime_display_object_set_filters= ::openfl::_v2::Lib_obj::load(HX_CSTRING("lime"),HX_CSTRING("lime_display_object_set_filters"),(int)2);

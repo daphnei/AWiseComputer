@@ -7,6 +7,7 @@
 
 #include <com/text/attack/world/Cell.h>
 HX_DECLARE_CLASS4(com,text,attack,world,Cell)
+HX_DECLARE_CLASS4(com,text,attack,world,CellType)
 HX_DECLARE_CLASS4(com,text,attack,world,Comet)
 HX_DECLARE_CLASS3(openfl,_v2,events,EventDispatcher)
 HX_DECLARE_CLASS3(openfl,_v2,events,IEventDispatcher)
@@ -21,12 +22,12 @@ class HXCPP_CLASS_ATTRIBUTES  Comet_obj : public ::com::text::attack::world::Cel
 		typedef ::com::text::attack::world::Cell_obj super;
 		typedef Comet_obj OBJ_;
 		Comet_obj();
-		Void __construct(int x,int y);
+		Void __construct(int x,int y,::com::text::attack::world::CellType cellType);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true)
 			{ return hx::Object::operator new(inSize,inContainer); }
-		static hx::ObjectPtr< Comet_obj > __new(int x,int y);
+		static hx::ObjectPtr< Comet_obj > __new(int x,int y,::com::text::attack::world::CellType cellType);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~Comet_obj();
@@ -40,6 +41,9 @@ class HXCPP_CLASS_ATTRIBUTES  Comet_obj : public ::com::text::attack::world::Cel
 
 		virtual Void destroy( );
 		Dynamic destroy_dyn();
+
+		static bool isCometType( ::com::text::attack::world::CellType cellType);
+		static Dynamic isCometType_dyn();
 
 };
 

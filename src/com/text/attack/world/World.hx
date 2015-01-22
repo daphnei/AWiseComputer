@@ -16,6 +16,7 @@ import com.text.attack.utiltiies.GameColors;
 import openfl.text.TextFormatAlign;
 import openfl.Assets;
 import com.text.attack.utiltiies.SoundManager;
+import com.text.attack.utiltiies.Point;
 
 /**
  * http://www.newgrounds.com/audio/listen/550294 
@@ -79,7 +80,7 @@ class World extends MovieClip
 	public var levelIndex:Int;
 	
 	public var levelJumpString:String;
-	
+		
 	public function new() 
 	{
 		super();
@@ -198,6 +199,8 @@ class World extends MovieClip
 	 */
 	private function startPlay():Void
 	{	
+		trace("Starting the level");
+		
 		var level:Level = LEVELS[this.levelIndex];
 		
 		this.setWorldVisualFormat(false);

@@ -102,47 +102,47 @@ namespace display{
 
 Void Stage_obj::__construct(Dynamic handle,int width,int height)
 {
-HX_STACK_FRAME("openfl._v2.display.Stage","new",0x282fb5f3,"openfl._v2.display.Stage.new","openfl/_v2/display/Stage.hx",96,0xd25d2a60)
+HX_STACK_FRAME("openfl._v2.display.Stage","new",0x282fb5f3,"openfl._v2.display.Stage.new","openfl/_v2/display/Stage.hx",99,0xd25d2a60)
 HX_STACK_THIS(this)
 HX_STACK_ARG(handle,"handle")
 HX_STACK_ARG(width,"width")
 HX_STACK_ARG(height,"height")
 {
-	HX_STACK_LINE(98)
-	super::__construct(handle,HX_CSTRING("Stage"));
-	HX_STACK_LINE(100)
-	this->__mouseOverObjects = Array_obj< ::Dynamic >::__new();
 	HX_STACK_LINE(101)
-	this->__focusOverObjects = Array_obj< ::Dynamic >::__new();
-	HX_STACK_LINE(102)
-	this->active = true;
+	super::__construct(handle,HX_CSTRING("Stage"));
 	HX_STACK_LINE(103)
-	this->allowsFullScreen = true;
+	this->__mouseOverObjects = Array_obj< ::Dynamic >::__new();
 	HX_STACK_LINE(104)
+	this->__focusOverObjects = Array_obj< ::Dynamic >::__new();
+	HX_STACK_LINE(105)
+	this->active = true;
+	HX_STACK_LINE(106)
+	this->allowsFullScreen = true;
+	HX_STACK_LINE(107)
 	this->pauseWhenDeactivated = true;
-	HX_STACK_LINE(110)
-	this->renderRequest = null();
 	HX_STACK_LINE(113)
-	::openfl::_v2::display::Stage_obj::lime_set_stage_handler(this->__handle,this->__processStageEvent_dyn(),width,height);
-	HX_STACK_LINE(114)
-	this->__invalid = false;
-	HX_STACK_LINE(115)
-	this->__lastRender = (int)0;
+	this->renderRequest = null();
 	HX_STACK_LINE(116)
-	this->__lastDown = Array_obj< ::Dynamic >::__new();
+	::openfl::_v2::display::Stage_obj::lime_set_stage_handler(this->__handle,this->__processStageEvent_dyn(),width,height);
 	HX_STACK_LINE(117)
-	this->__lastClickTime = 0.0;
+	this->__invalid = false;
 	HX_STACK_LINE(118)
-	this->__nextRender = (int)0;
+	this->__lastRender = (int)0;
 	HX_STACK_LINE(119)
+	this->__lastDown = Array_obj< ::Dynamic >::__new();
+	HX_STACK_LINE(120)
+	this->__lastClickTime = (int)0;
+	HX_STACK_LINE(121)
+	this->__nextRender = (int)0;
+	HX_STACK_LINE(122)
 	this->set_frameRate((int)100);
-	HX_STACK_LINE(120)
+	HX_STACK_LINE(123)
 	::haxe::ds::IntMap _g = ::haxe::ds::IntMap_obj::__new();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(120)
+	HX_STACK_LINE(123)
 	this->__touchInfo = _g;
-	HX_STACK_LINE(121)
+	HX_STACK_LINE(124)
 	::haxe::ds::IntMap _g1 = ::haxe::ds::IntMap_obj::__new();		HX_STACK_VAR(_g1,"_g1");
-	HX_STACK_LINE(121)
+	HX_STACK_LINE(124)
 	this->__joyAxisData = _g1;
 }
 ;
@@ -164,9 +164,9 @@ Dynamic Stage_obj::__Create(hx::DynamicArray inArgs)
 
 Void Stage_obj::invalidate( ){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","invalidate",0xd8bc5c48,"openfl._v2.display.Stage.invalidate","openfl/_v2/display/Stage.hx",145,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","invalidate",0xd8bc5c48,"openfl._v2.display.Stage.invalidate","openfl/_v2/display/Stage.hx",148,0xd25d2a60)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(145)
+		HX_STACK_LINE(148)
 		this->__invalid = true;
 	}
 return null();
@@ -177,11 +177,11 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,invalidate,(void))
 
 Void Stage_obj::resize( int width,int height){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","resize",0xba86f241,"openfl._v2.display.Stage.resize","openfl/_v2/display/Stage.hx",152,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","resize",0xba86f241,"openfl._v2.display.Stage.resize","openfl/_v2/display/Stage.hx",155,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(width,"width")
 		HX_STACK_ARG(height,"height")
-		HX_STACK_LINE(152)
+		HX_STACK_LINE(155)
 		::openfl::_v2::display::Stage_obj::lime_stage_resize_window(this->__handle,width,height);
 	}
 return null();
@@ -192,11 +192,11 @@ HX_DEFINE_DYNAMIC_FUNC2(Stage_obj,resize,(void))
 
 Void Stage_obj::setResolution( int width,int height){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","setResolution",0xac052ec1,"openfl._v2.display.Stage.setResolution","openfl/_v2/display/Stage.hx",158,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","setResolution",0xac052ec1,"openfl._v2.display.Stage.setResolution","openfl/_v2/display/Stage.hx",161,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(width,"width")
 		HX_STACK_ARG(height,"height")
-		HX_STACK_LINE(158)
+		HX_STACK_LINE(161)
 		::openfl::_v2::display::Stage_obj::lime_stage_set_resolution(this->__handle,width,height);
 	}
 return null();
@@ -207,10 +207,10 @@ HX_DEFINE_DYNAMIC_FUNC2(Stage_obj,setResolution,(void))
 
 Void Stage_obj::setScreenMode( ::openfl::_v2::system::ScreenMode mode){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","setScreenMode",0xff535a84,"openfl._v2.display.Stage.setScreenMode","openfl/_v2/display/Stage.hx",163,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","setScreenMode",0xff535a84,"openfl._v2.display.Stage.setScreenMode","openfl/_v2/display/Stage.hx",166,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(mode,"mode")
-		HX_STACK_LINE(163)
+		HX_STACK_LINE(166)
 		::openfl::_v2::display::Stage_obj::lime_stage_set_screenmode(this->__handle,mode->width,mode->height,mode->refreshRate,(int)0);
 	}
 return null();
@@ -221,10 +221,10 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,setScreenMode,(void))
 
 Void Stage_obj::setFullscreen( bool full){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","setFullscreen",0x387033d0,"openfl._v2.display.Stage.setFullscreen","openfl/_v2/display/Stage.hx",168,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","setFullscreen",0x387033d0,"openfl._v2.display.Stage.setFullscreen","openfl/_v2/display/Stage.hx",171,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(full,"full")
-		HX_STACK_LINE(168)
+		HX_STACK_LINE(171)
 		::openfl::_v2::display::Stage_obj::lime_stage_set_fullscreen(this->__handle,full);
 	}
 return null();
@@ -235,10 +235,10 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,setFullscreen,(void))
 
 Void Stage_obj::showCursor( bool show){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","showCursor",0xf9ef7680,"openfl._v2.display.Stage.showCursor","openfl/_v2/display/Stage.hx",189,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","showCursor",0xf9ef7680,"openfl._v2.display.Stage.showCursor","openfl/_v2/display/Stage.hx",192,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(show,"show")
-		HX_STACK_LINE(189)
+		HX_STACK_LINE(192)
 		::openfl::_v2::display::Stage_obj::lime_stage_show_cursor(this->__handle,show);
 	}
 return null();
@@ -249,57 +249,57 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,showCursor,(void))
 
 Void Stage_obj::__checkFocusInOuts( Dynamic event,Array< ::Dynamic > stack){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__checkFocusInOuts",0x558f8fa7,"openfl._v2.display.Stage.__checkFocusInOuts","openfl/_v2/display/Stage.hx",194,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__checkFocusInOuts",0x558f8fa7,"openfl._v2.display.Stage.__checkFocusInOuts","openfl/_v2/display/Stage.hx",197,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
 		HX_STACK_ARG(stack,"stack")
-		HX_STACK_LINE(196)
+		HX_STACK_LINE(199)
 		int newLength = stack->length;		HX_STACK_VAR(newLength,"newLength");
-		HX_STACK_LINE(197)
+		HX_STACK_LINE(200)
 		::openfl::_v2::display::InteractiveObject newObject;		HX_STACK_VAR(newObject,"newObject");
-		HX_STACK_LINE(197)
+		HX_STACK_LINE(200)
 		if (((newLength > (int)0))){
-			HX_STACK_LINE(197)
+			HX_STACK_LINE(200)
 			newObject = stack->__get((newLength - (int)1)).StaticCast< ::openfl::_v2::display::InteractiveObject >();
 		}
 		else{
-			HX_STACK_LINE(197)
+			HX_STACK_LINE(200)
 			newObject = null();
 		}
-		HX_STACK_LINE(198)
+		HX_STACK_LINE(201)
 		int oldLength = this->__focusOverObjects->length;		HX_STACK_VAR(oldLength,"oldLength");
-		HX_STACK_LINE(199)
+		HX_STACK_LINE(202)
 		::openfl::_v2::display::InteractiveObject oldObject;		HX_STACK_VAR(oldObject,"oldObject");
-		HX_STACK_LINE(199)
+		HX_STACK_LINE(202)
 		if (((oldLength > (int)0))){
-			HX_STACK_LINE(199)
+			HX_STACK_LINE(202)
 			oldObject = this->__focusOverObjects->__get((oldLength - (int)1)).StaticCast< ::openfl::_v2::display::InteractiveObject >();
 		}
 		else{
-			HX_STACK_LINE(199)
+			HX_STACK_LINE(202)
 			oldObject = null();
 		}
-		HX_STACK_LINE(201)
+		HX_STACK_LINE(204)
 		if (((newObject != oldObject))){
-			HX_STACK_LINE(203)
+			HX_STACK_LINE(206)
 			if (((oldObject != null()))){
-				HX_STACK_LINE(205)
+				HX_STACK_LINE(208)
 				::openfl::events::FocusEvent focusOut = ::openfl::events::FocusEvent_obj::__new(::openfl::events::FocusEvent_obj::FOCUS_OUT,true,false,newObject,(event->__Field(HX_CSTRING("flags"),true) > (int)0),event->__Field(HX_CSTRING("code"),true));		HX_STACK_VAR(focusOut,"focusOut");
-				HX_STACK_LINE(206)
+				HX_STACK_LINE(209)
 				focusOut->set_target(oldObject);
-				HX_STACK_LINE(207)
+				HX_STACK_LINE(210)
 				oldObject->__fireEvent(focusOut);
 			}
-			HX_STACK_LINE(211)
+			HX_STACK_LINE(214)
 			if (((newObject != null()))){
-				HX_STACK_LINE(213)
+				HX_STACK_LINE(216)
 				::openfl::events::FocusEvent focusIn = ::openfl::events::FocusEvent_obj::__new(::openfl::events::FocusEvent_obj::FOCUS_IN,true,false,oldObject,(event->__Field(HX_CSTRING("flags"),true) > (int)0),event->__Field(HX_CSTRING("code"),true));		HX_STACK_VAR(focusIn,"focusIn");
-				HX_STACK_LINE(214)
+				HX_STACK_LINE(217)
 				focusIn->set_target(newObject);
-				HX_STACK_LINE(215)
+				HX_STACK_LINE(218)
 				newObject->__fireEvent(focusIn);
 			}
-			HX_STACK_LINE(219)
+			HX_STACK_LINE(222)
 			this->__focusOverObjects = stack;
 		}
 	}
@@ -310,132 +310,132 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC2(Stage_obj,__checkFocusInOuts,(void))
 
 bool Stage_obj::__checkInOuts( ::openfl::_v2::events::MouseEvent event,Array< ::Dynamic > stack,::openfl::_v2::display::TouchInfo touchInfo){
-	HX_STACK_FRAME("openfl._v2.display.Stage","__checkInOuts",0x4deb89c5,"openfl._v2.display.Stage.__checkInOuts","openfl/_v2/display/Stage.hx",226,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","__checkInOuts",0x4deb89c5,"openfl._v2.display.Stage.__checkInOuts","openfl/_v2/display/Stage.hx",229,0xd25d2a60)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(event,"event")
 	HX_STACK_ARG(stack,"stack")
 	HX_STACK_ARG(touchInfo,"touchInfo")
-	HX_STACK_LINE(228)
+	HX_STACK_LINE(231)
 	Array< ::Dynamic > prev;		HX_STACK_VAR(prev,"prev");
-	HX_STACK_LINE(228)
+	HX_STACK_LINE(231)
 	if (((touchInfo == null()))){
-		HX_STACK_LINE(228)
+		HX_STACK_LINE(231)
 		prev = this->__mouseOverObjects;
 	}
 	else{
-		HX_STACK_LINE(228)
+		HX_STACK_LINE(231)
 		prev = touchInfo->touchOverObjects;
 	}
-	HX_STACK_LINE(229)
+	HX_STACK_LINE(232)
 	Array< ::String > events;		HX_STACK_VAR(events,"events");
-	HX_STACK_LINE(229)
+	HX_STACK_LINE(232)
 	if (((touchInfo == null()))){
-		HX_STACK_LINE(229)
+		HX_STACK_LINE(232)
 		events = ::openfl::_v2::display::Stage_obj::__mouseChanges;
 	}
 	else{
-		HX_STACK_LINE(229)
+		HX_STACK_LINE(232)
 		events = ::openfl::_v2::display::Stage_obj::__touchChanges;
 	}
-	HX_STACK_LINE(231)
+	HX_STACK_LINE(234)
 	int newLength = stack->length;		HX_STACK_VAR(newLength,"newLength");
-	HX_STACK_LINE(232)
+	HX_STACK_LINE(235)
 	::openfl::_v2::display::InteractiveObject newObject;		HX_STACK_VAR(newObject,"newObject");
-	HX_STACK_LINE(232)
+	HX_STACK_LINE(235)
 	if (((newLength > (int)0))){
-		HX_STACK_LINE(232)
+		HX_STACK_LINE(235)
 		newObject = stack->__get((newLength - (int)1)).StaticCast< ::openfl::_v2::display::InteractiveObject >();
 	}
 	else{
-		HX_STACK_LINE(232)
+		HX_STACK_LINE(235)
 		newObject = null();
 	}
-	HX_STACK_LINE(233)
+	HX_STACK_LINE(236)
 	int oldLength = prev->length;		HX_STACK_VAR(oldLength,"oldLength");
-	HX_STACK_LINE(234)
+	HX_STACK_LINE(237)
 	::openfl::_v2::display::InteractiveObject oldObject;		HX_STACK_VAR(oldObject,"oldObject");
-	HX_STACK_LINE(234)
+	HX_STACK_LINE(237)
 	if (((oldLength > (int)0))){
-		HX_STACK_LINE(234)
+		HX_STACK_LINE(237)
 		oldObject = prev->__get((oldLength - (int)1)).StaticCast< ::openfl::_v2::display::InteractiveObject >();
 	}
 	else{
-		HX_STACK_LINE(234)
+		HX_STACK_LINE(237)
 		oldObject = null();
 	}
-	HX_STACK_LINE(236)
+	HX_STACK_LINE(239)
 	if (((newObject != oldObject))){
-		HX_STACK_LINE(238)
+		HX_STACK_LINE(241)
 		if (((oldObject != null()))){
-			HX_STACK_LINE(240)
+			HX_STACK_LINE(243)
 			::openfl::_v2::events::MouseEvent _g = event->__createSimilar(events->__get((int)0),newObject,oldObject);		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(240)
+			HX_STACK_LINE(243)
 			oldObject->__fireEvent(_g);
 		}
-		HX_STACK_LINE(244)
+		HX_STACK_LINE(247)
 		if (((newObject != null()))){
-			HX_STACK_LINE(246)
+			HX_STACK_LINE(249)
 			::openfl::_v2::events::MouseEvent _g1 = event->__createSimilar(events->__get((int)1),newObject,newObject);		HX_STACK_VAR(_g1,"_g1");
-			HX_STACK_LINE(246)
+			HX_STACK_LINE(249)
 			newObject->__fireEvent(_g1);
 		}
-		HX_STACK_LINE(250)
+		HX_STACK_LINE(253)
 		int common = (int)0;		HX_STACK_VAR(common,"common");
-		HX_STACK_LINE(251)
+		HX_STACK_LINE(254)
 		while((true)){
-			HX_STACK_LINE(251)
+			HX_STACK_LINE(254)
 			if ((!(((bool((bool((common < newLength)) && bool((common < oldLength)))) && bool((stack->__get(common).StaticCast< ::openfl::_v2::display::InteractiveObject >() == prev->__get(common).StaticCast< ::openfl::_v2::display::InteractiveObject >()))))))){
-				HX_STACK_LINE(251)
+				HX_STACK_LINE(254)
 				break;
 			}
-			HX_STACK_LINE(253)
+			HX_STACK_LINE(256)
 			(common)++;
 		}
-		HX_STACK_LINE(257)
-		::openfl::_v2::events::MouseEvent rollOut = event->__createSimilar(events->__get((int)2),newObject,oldObject);		HX_STACK_VAR(rollOut,"rollOut");
-		HX_STACK_LINE(259)
-		int i = (oldLength - (int)1);		HX_STACK_VAR(i,"i");
 		HX_STACK_LINE(260)
+		::openfl::_v2::events::MouseEvent rollOut = event->__createSimilar(events->__get((int)2),newObject,oldObject);		HX_STACK_VAR(rollOut,"rollOut");
+		HX_STACK_LINE(262)
+		int i = (oldLength - (int)1);		HX_STACK_VAR(i,"i");
+		HX_STACK_LINE(263)
 		while((true)){
-			HX_STACK_LINE(260)
+			HX_STACK_LINE(263)
 			if ((!(((i >= common))))){
-				HX_STACK_LINE(260)
+				HX_STACK_LINE(263)
 				break;
 			}
-			HX_STACK_LINE(262)
+			HX_STACK_LINE(265)
 			prev->__get(i).StaticCast< ::openfl::_v2::display::InteractiveObject >()->__dispatchEvent(rollOut);
-			HX_STACK_LINE(263)
+			HX_STACK_LINE(266)
 			(i)--;
 		}
-		HX_STACK_LINE(267)
-		::openfl::_v2::events::MouseEvent rollOver = event->__createSimilar(events->__get((int)3),oldObject,null());		HX_STACK_VAR(rollOver,"rollOver");
-		HX_STACK_LINE(269)
-		int i1 = (newLength - (int)1);		HX_STACK_VAR(i1,"i1");
 		HX_STACK_LINE(270)
+		::openfl::_v2::events::MouseEvent rollOver = event->__createSimilar(events->__get((int)3),oldObject,null());		HX_STACK_VAR(rollOver,"rollOver");
+		HX_STACK_LINE(272)
+		int i1 = (newLength - (int)1);		HX_STACK_VAR(i1,"i1");
+		HX_STACK_LINE(273)
 		while((true)){
-			HX_STACK_LINE(270)
+			HX_STACK_LINE(273)
 			if ((!(((i1 >= common))))){
-				HX_STACK_LINE(270)
+				HX_STACK_LINE(273)
 				break;
 			}
-			HX_STACK_LINE(272)
+			HX_STACK_LINE(275)
 			stack->__get(i1).StaticCast< ::openfl::_v2::display::InteractiveObject >()->__dispatchEvent(rollOver);
-			HX_STACK_LINE(273)
+			HX_STACK_LINE(276)
 			(i1)--;
 		}
-		HX_STACK_LINE(277)
+		HX_STACK_LINE(280)
 		if (((touchInfo == null()))){
-			HX_STACK_LINE(279)
+			HX_STACK_LINE(282)
 			this->__mouseOverObjects = stack;
 		}
 		else{
-			HX_STACK_LINE(283)
+			HX_STACK_LINE(286)
 			touchInfo->touchOverObjects = stack;
 		}
-		HX_STACK_LINE(287)
+		HX_STACK_LINE(290)
 		return false;
 	}
-	HX_STACK_LINE(291)
+	HX_STACK_LINE(294)
 	return true;
 }
 
@@ -444,33 +444,33 @@ HX_DEFINE_DYNAMIC_FUNC3(Stage_obj,__checkInOuts,return )
 
 Void Stage_obj::__checkRender( ){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__checkRender",0xccf73a71,"openfl._v2.display.Stage.__checkRender","openfl/_v2/display/Stage.hx",298,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__checkRender",0xccf73a71,"openfl._v2.display.Stage.__checkRender","openfl/_v2/display/Stage.hx",301,0xd25d2a60)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(298)
+		HX_STACK_LINE(301)
 		if (((this->frameRate > (int)0))){
-			HX_STACK_LINE(300)
+			HX_STACK_LINE(303)
 			Float now = ::haxe::Timer_obj::stamp();		HX_STACK_VAR(now,"now");
-			HX_STACK_LINE(301)
+			HX_STACK_LINE(304)
 			if (((now >= this->__nextRender))){
-				HX_STACK_LINE(303)
+				HX_STACK_LINE(306)
 				this->__lastRender = now;
-				HX_STACK_LINE(305)
+				HX_STACK_LINE(308)
 				while((true)){
-					HX_STACK_LINE(305)
+					HX_STACK_LINE(308)
 					if ((!(((this->__nextRender < this->__lastRender))))){
-						HX_STACK_LINE(305)
+						HX_STACK_LINE(308)
 						break;
 					}
-					HX_STACK_LINE(307)
+					HX_STACK_LINE(310)
 					hx::AddEq(this->__nextRender,this->__framePeriod);
 				}
-				HX_STACK_LINE(311)
+				HX_STACK_LINE(314)
 				if (((this->renderRequest_dyn() != null()))){
-					HX_STACK_LINE(313)
+					HX_STACK_LINE(316)
 					this->renderRequest();
 				}
 				else{
-					HX_STACK_LINE(317)
+					HX_STACK_LINE(320)
 					this->__render(true);
 				}
 			}
@@ -483,161 +483,161 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,__checkRender,(void))
 
 Float Stage_obj::__doProcessStageEvent( Dynamic event){
-	HX_STACK_FRAME("openfl._v2.display.Stage","__doProcessStageEvent",0x6805e6f3,"openfl._v2.display.Stage.__doProcessStageEvent","openfl/_v2/display/Stage.hx",343,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","__doProcessStageEvent",0x6805e6f3,"openfl._v2.display.Stage.__doProcessStageEvent","openfl/_v2/display/Stage.hx",346,0xd25d2a60)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(event,"event")
-	HX_STACK_LINE(345)
-	Float result = 0.0;		HX_STACK_VAR(result,"result");
-	HX_STACK_LINE(346)
-	Dynamic _g = ::Reflect_obj::field(event,HX_CSTRING("type"));		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(346)
-	int type = ::Std_obj::_int(_g);		HX_STACK_VAR(type,"type");
 	HX_STACK_LINE(348)
+	Float result = 0.0;		HX_STACK_VAR(result,"result");
+	HX_STACK_LINE(349)
+	Dynamic _g = ::Reflect_obj::field(event,HX_CSTRING("type"));		HX_STACK_VAR(_g,"_g");
+	HX_STACK_LINE(349)
+	int type = ::Std_obj::_int(_g);		HX_STACK_VAR(type,"type");
+	HX_STACK_LINE(351)
 	try
 	{
 	HX_STACK_CATCHABLE(Dynamic, 0);
 	{
-		HX_STACK_LINE(350)
+		HX_STACK_LINE(353)
 		switch( (int)(type)){
 			case (int)2: {
-				HX_STACK_LINE(354)
+				HX_STACK_LINE(357)
 				if (((this->onKey_dyn() != null()))){
-					HX_STACK_LINE(355)
+					HX_STACK_LINE(358)
 					this->onKey(event->__Field(HX_CSTRING("code"),true),event->__Field(HX_CSTRING("down"),true),event->__Field(HX_CSTRING("char"),true),event->__Field(HX_CSTRING("flags"),true));
 				}
 			}
 			;break;
 			case (int)1: {
-				HX_STACK_LINE(359)
+				HX_STACK_LINE(362)
 				this->__onKey(event,::openfl::_v2::events::KeyboardEvent_obj::KEY_DOWN);
 			}
 			;break;
 			case (int)3: {
-				HX_STACK_LINE(363)
+				HX_STACK_LINE(366)
 				this->__onKey(event,::openfl::_v2::events::KeyboardEvent_obj::KEY_UP);
 			}
 			;break;
 			case (int)4: {
-				HX_STACK_LINE(367)
+				HX_STACK_LINE(370)
 				this->__onMouse(event,::openfl::_v2::events::MouseEvent_obj::MOUSE_MOVE,true);
 			}
 			;break;
 			case (int)5: {
-				HX_STACK_LINE(371)
+				HX_STACK_LINE(374)
 				this->__onMouse(event,::openfl::_v2::events::MouseEvent_obj::MOUSE_DOWN,true);
 			}
 			;break;
 			case (int)6: {
-				HX_STACK_LINE(375)
+				HX_STACK_LINE(378)
 				this->__onMouse(event,::openfl::_v2::events::MouseEvent_obj::CLICK,true);
 			}
 			;break;
 			case (int)7: {
-				HX_STACK_LINE(379)
+				HX_STACK_LINE(382)
 				this->__onMouse(event,::openfl::_v2::events::MouseEvent_obj::MOUSE_UP,true);
 			}
 			;break;
 			case (int)8: {
-				HX_STACK_LINE(383)
+				HX_STACK_LINE(386)
 				this->__onResize(event->__Field(HX_CSTRING("x"),true),event->__Field(HX_CSTRING("y"),true));
-				HX_STACK_LINE(384)
+				HX_STACK_LINE(387)
 				if (((this->renderRequest_dyn() == null()))){
-					HX_STACK_LINE(386)
+					HX_STACK_LINE(389)
 					this->__render(false);
 				}
 			}
 			;break;
 			case (int)9: {
-				HX_STACK_LINE(392)
+				HX_STACK_LINE(395)
 				this->__pollTimers();
 			}
 			;break;
 			case (int)10: {
-				HX_STACK_LINE(396)
+				HX_STACK_LINE(399)
 				if (((this->onQuit_dyn() != null()))){
-					HX_STACK_LINE(397)
+					HX_STACK_LINE(400)
 					this->onQuit();
 				}
 			}
 			;break;
 			case (int)11: {
-				HX_STACK_LINE(401)
+				HX_STACK_LINE(404)
 				this->__onFocus(event);
 			}
 			;break;
 			case (int)12: {
-				HX_STACK_LINE(405)
+				HX_STACK_LINE(408)
 				if ((::openfl::_v2::display::Stage_obj::shouldRotateInterface(event->__Field(HX_CSTRING("value"),true)))){
-					HX_STACK_LINE(406)
+					HX_STACK_LINE(409)
 					event->__FieldRef(HX_CSTRING("result")) = (int)2;
 				}
 			}
 			;break;
 			case (int)14: {
-				HX_STACK_LINE(410)
+				HX_STACK_LINE(413)
 				this->__render(true);
 			}
 			;break;
 			case (int)15: {
-				HX_STACK_LINE(414)
+				HX_STACK_LINE(417)
 				::openfl::_v2::display::TouchInfo touchInfo = ::openfl::_v2::display::TouchInfo_obj::__new();		HX_STACK_VAR(touchInfo,"touchInfo");
-				HX_STACK_LINE(415)
+				HX_STACK_LINE(418)
 				{
-					HX_STACK_LINE(415)
+					HX_STACK_LINE(418)
 					int key = event->__Field(HX_CSTRING("value"),true);		HX_STACK_VAR(key,"key");
-					HX_STACK_LINE(415)
+					HX_STACK_LINE(418)
 					this->__touchInfo->set(key,touchInfo);
 				}
-				HX_STACK_LINE(416)
+				HX_STACK_LINE(419)
 				this->__onTouch(event,::openfl::_v2::events::TouchEvent_obj::TOUCH_BEGIN,touchInfo);
-				HX_STACK_LINE(418)
+				HX_STACK_LINE(421)
 				if (((((int(event->__Field(HX_CSTRING("flags"),true)) & int((int)32768))) > (int)0))){
-					HX_STACK_LINE(420)
+					HX_STACK_LINE(423)
 					this->__onMouse(event,::openfl::_v2::events::MouseEvent_obj::MOUSE_DOWN,false);
 				}
 			}
 			;break;
 			case (int)16: {
-				HX_STACK_LINE(426)
+				HX_STACK_LINE(429)
 				::openfl::_v2::display::TouchInfo touchInfo;		HX_STACK_VAR(touchInfo,"touchInfo");
-				HX_STACK_LINE(426)
+				HX_STACK_LINE(429)
 				{
-					HX_STACK_LINE(426)
+					HX_STACK_LINE(429)
 					int key = event->__Field(HX_CSTRING("value"),true);		HX_STACK_VAR(key,"key");
-					HX_STACK_LINE(426)
+					HX_STACK_LINE(429)
 					touchInfo = this->__touchInfo->get(key);
 				}
-				HX_STACK_LINE(427)
+				HX_STACK_LINE(430)
 				this->__onTouch(event,::openfl::_v2::events::TouchEvent_obj::TOUCH_MOVE,touchInfo);
-				HX_STACK_LINE(429)
+				HX_STACK_LINE(432)
 				if (((((int(event->__Field(HX_CSTRING("flags"),true)) & int((int)32768))) > (int)0))){
-					HX_STACK_LINE(431)
+					HX_STACK_LINE(434)
 					this->__onMouse(event,::openfl::_v2::events::MouseEvent_obj::MOUSE_MOVE,false);
 				}
 			}
 			;break;
 			case (int)17: {
-				HX_STACK_LINE(437)
+				HX_STACK_LINE(440)
 				::openfl::_v2::display::TouchInfo touchInfo;		HX_STACK_VAR(touchInfo,"touchInfo");
-				HX_STACK_LINE(437)
+				HX_STACK_LINE(440)
 				{
-					HX_STACK_LINE(437)
+					HX_STACK_LINE(440)
 					int key = event->__Field(HX_CSTRING("value"),true);		HX_STACK_VAR(key,"key");
-					HX_STACK_LINE(437)
+					HX_STACK_LINE(440)
 					touchInfo = this->__touchInfo->get(key);
 				}
-				HX_STACK_LINE(438)
+				HX_STACK_LINE(441)
 				this->__onTouch(event,::openfl::_v2::events::TouchEvent_obj::TOUCH_END,touchInfo);
-				HX_STACK_LINE(439)
+				HX_STACK_LINE(442)
 				{
-					HX_STACK_LINE(439)
+					HX_STACK_LINE(442)
 					int key = event->__Field(HX_CSTRING("value"),true);		HX_STACK_VAR(key,"key");
-					HX_STACK_LINE(439)
+					HX_STACK_LINE(442)
 					this->__touchInfo->remove(key);
 				}
-				HX_STACK_LINE(441)
+				HX_STACK_LINE(444)
 				if (((((int(event->__Field(HX_CSTRING("flags"),true)) & int((int)32768))) > (int)0))){
-					HX_STACK_LINE(443)
+					HX_STACK_LINE(446)
 					this->__onMouse(event,::openfl::_v2::events::MouseEvent_obj::MOUSE_UP,false);
 				}
 			}
@@ -646,81 +646,81 @@ Float Stage_obj::__doProcessStageEvent( Dynamic event){
 			}
 			;break;
 			case (int)19: {
-				HX_STACK_LINE(453)
+				HX_STACK_LINE(456)
 				this->__onChange(event);
 			}
 			;break;
 			case (int)20: {
-				HX_STACK_LINE(457)
+				HX_STACK_LINE(460)
 				this->__setActive(true);
 			}
 			;break;
 			case (int)21: {
-				HX_STACK_LINE(461)
+				HX_STACK_LINE(464)
 				this->__setActive(false);
 			}
 			;break;
 			case (int)22: {
-				HX_STACK_LINE(465)
+				HX_STACK_LINE(468)
 				::openfl::_v2::events::Event _g1 = ::openfl::_v2::events::Event_obj::__new(::openfl::events::FocusEvent_obj::FOCUS_IN,null(),null());		HX_STACK_VAR(_g1,"_g1");
-				HX_STACK_LINE(465)
+				HX_STACK_LINE(468)
 				this->__dispatchEvent(_g1);
 			}
 			;break;
 			case (int)23: {
-				HX_STACK_LINE(469)
+				HX_STACK_LINE(472)
 				::openfl::_v2::events::Event _g2 = ::openfl::_v2::events::Event_obj::__new(::openfl::events::FocusEvent_obj::FOCUS_OUT,null(),null());		HX_STACK_VAR(_g2,"_g2");
-				HX_STACK_LINE(469)
+				HX_STACK_LINE(472)
 				this->__dispatchEvent(_g2);
 			}
 			;break;
 			case (int)24: {
-				HX_STACK_LINE(473)
+				HX_STACK_LINE(476)
 				this->__onJoystick(event,HX_CSTRING("axisMove"));
 			}
 			;break;
 			case (int)25: {
-				HX_STACK_LINE(477)
+				HX_STACK_LINE(480)
 				this->__onJoystick(event,HX_CSTRING("ballMove"));
 			}
 			;break;
 			case (int)26: {
-				HX_STACK_LINE(481)
+				HX_STACK_LINE(484)
 				this->__onJoystick(event,HX_CSTRING("hatMove"));
 			}
 			;break;
 			case (int)27: {
-				HX_STACK_LINE(485)
+				HX_STACK_LINE(488)
 				this->__onJoystick(event,HX_CSTRING("buttonDown"));
 			}
 			;break;
 			case (int)28: {
-				HX_STACK_LINE(489)
+				HX_STACK_LINE(492)
 				this->__onJoystick(event,HX_CSTRING("buttonUp"));
 			}
 			;break;
 			case (int)29: {
-				HX_STACK_LINE(493)
+				HX_STACK_LINE(496)
 				this->__onJoystick(event,HX_CSTRING("deviceAdded"));
 			}
 			;break;
 			case (int)30: {
-				HX_STACK_LINE(497)
+				HX_STACK_LINE(500)
 				this->__onJoystick(event,HX_CSTRING("deviceRemoved"));
 			}
 			;break;
 			case (int)31: {
-				HX_STACK_LINE(501)
+				HX_STACK_LINE(504)
 				this->__onSysWM(event);
 			}
 			;break;
 			case (int)32: {
-				HX_STACK_LINE(505)
+				HX_STACK_LINE(508)
 				this->__onRenderContext(false);
 			}
 			;break;
 			case (int)33: {
-				HX_STACK_LINE(509)
+				HX_STACK_LINE(512)
 				this->__onRenderContext(true);
 			}
 			;break;
@@ -731,16 +731,16 @@ Float Stage_obj::__doProcessStageEvent( Dynamic event){
 		{
 			HX_STACK_BEGIN_CATCH
 			Dynamic error = __e;{
-				HX_STACK_LINE(517)
+				HX_STACK_LINE(520)
 				::openfl::_v2::Lib_obj::rethrow(error);
 			}
 		}
 	}
-	HX_STACK_LINE(521)
+	HX_STACK_LINE(524)
 	Float _g3 = this->__updateNextWake();		HX_STACK_VAR(_g3,"_g3");
-	HX_STACK_LINE(521)
+	HX_STACK_LINE(524)
 	result = _g3;
-	HX_STACK_LINE(522)
+	HX_STACK_LINE(525)
 	return result;
 }
 
@@ -748,12 +748,12 @@ Float Stage_obj::__doProcessStageEvent( Dynamic event){
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,__doProcessStageEvent,return )
 
 Dynamic Stage_obj::__processStageEvent( Dynamic event){
-	HX_STACK_FRAME("openfl._v2.display.Stage","__processStageEvent",0x5f87683e,"openfl._v2.display.Stage.__processStageEvent","openfl/_v2/display/Stage.hx",527,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","__processStageEvent",0x5f87683e,"openfl._v2.display.Stage.__processStageEvent","openfl/_v2/display/Stage.hx",530,0xd25d2a60)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(event,"event")
-	HX_STACK_LINE(529)
+	HX_STACK_LINE(532)
 	this->__doProcessStageEvent(event);
-	HX_STACK_LINE(530)
+	HX_STACK_LINE(533)
 	return null();
 }
 
@@ -762,60 +762,60 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,__processStageEvent,return )
 
 Void Stage_obj::__drag( ::openfl::_v2::geom::Point mouse){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__drag",0xa3742761,"openfl._v2.display.Stage.__drag","openfl/_v2/display/Stage.hx",535,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__drag",0xa3742761,"openfl._v2.display.Stage.__drag","openfl/_v2/display/Stage.hx",538,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(mouse,"mouse")
-		HX_STACK_LINE(537)
+		HX_STACK_LINE(540)
 		::openfl::_v2::display::DisplayObjectContainer parent = this->__dragObject->get_parent();		HX_STACK_VAR(parent,"parent");
-		HX_STACK_LINE(538)
+		HX_STACK_LINE(541)
 		if (((parent != null()))){
-			HX_STACK_LINE(540)
+			HX_STACK_LINE(543)
 			::openfl::_v2::geom::Point _g = parent->globalToLocal(mouse);		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(540)
+			HX_STACK_LINE(543)
 			mouse = _g;
 		}
-		HX_STACK_LINE(544)
-		Float x = (mouse->x + this->__dragOffsetX);		HX_STACK_VAR(x,"x");
-		HX_STACK_LINE(545)
-		Float y = (mouse->y + this->__dragOffsetY);		HX_STACK_VAR(y,"y");
 		HX_STACK_LINE(547)
+		Float x = (mouse->x + this->__dragOffsetX);		HX_STACK_VAR(x,"x");
+		HX_STACK_LINE(548)
+		Float y = (mouse->y + this->__dragOffsetY);		HX_STACK_VAR(y,"y");
+		HX_STACK_LINE(550)
 		if (((this->__dragBounds != null()))){
-			HX_STACK_LINE(549)
+			HX_STACK_LINE(552)
 			if (((x < this->__dragBounds->x))){
-				HX_STACK_LINE(551)
+				HX_STACK_LINE(554)
 				x = this->__dragBounds->x;
 			}
 			else{
-				HX_STACK_LINE(553)
+				HX_STACK_LINE(556)
 				Float _g1 = this->__dragBounds->get_right();		HX_STACK_VAR(_g1,"_g1");
-				HX_STACK_LINE(553)
+				HX_STACK_LINE(556)
 				if (((x > _g1))){
-					HX_STACK_LINE(555)
+					HX_STACK_LINE(558)
 					Float _g2 = this->__dragBounds->get_right();		HX_STACK_VAR(_g2,"_g2");
-					HX_STACK_LINE(555)
+					HX_STACK_LINE(558)
 					x = _g2;
 				}
 			}
-			HX_STACK_LINE(559)
+			HX_STACK_LINE(562)
 			if (((y < this->__dragBounds->y))){
-				HX_STACK_LINE(561)
+				HX_STACK_LINE(564)
 				y = this->__dragBounds->y;
 			}
 			else{
-				HX_STACK_LINE(563)
+				HX_STACK_LINE(566)
 				Float _g3 = this->__dragBounds->get_bottom();		HX_STACK_VAR(_g3,"_g3");
-				HX_STACK_LINE(563)
+				HX_STACK_LINE(566)
 				if (((y > _g3))){
-					HX_STACK_LINE(565)
+					HX_STACK_LINE(568)
 					Float _g4 = this->__dragBounds->get_bottom();		HX_STACK_VAR(_g4,"_g4");
-					HX_STACK_LINE(565)
+					HX_STACK_LINE(568)
 					y = _g4;
 				}
 			}
 		}
-		HX_STACK_LINE(571)
+		HX_STACK_LINE(574)
 		this->__dragObject->set_x(x);
-		HX_STACK_LINE(572)
+		HX_STACK_LINE(575)
 		this->__dragObject->set_y(y);
 	}
 return null();
@@ -825,29 +825,29 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,__drag,(void))
 
 Float Stage_obj::__nextFrameDue( Float otherTimers){
-	HX_STACK_FRAME("openfl._v2.display.Stage","__nextFrameDue",0xe5a9be07,"openfl._v2.display.Stage.__nextFrameDue","openfl/_v2/display/Stage.hx",577,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","__nextFrameDue",0xe5a9be07,"openfl._v2.display.Stage.__nextFrameDue","openfl/_v2/display/Stage.hx",580,0xd25d2a60)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(otherTimers,"otherTimers")
-	HX_STACK_LINE(579)
+	HX_STACK_LINE(582)
 	if (((bool(!(this->active)) && bool(this->pauseWhenDeactivated)))){
-		HX_STACK_LINE(581)
+		HX_STACK_LINE(584)
 		return otherTimers;
 	}
-	HX_STACK_LINE(585)
+	HX_STACK_LINE(588)
 	if (((this->frameRate > (int)0))){
-		HX_STACK_LINE(587)
+		HX_STACK_LINE(590)
 		Float _g = ::haxe::Timer_obj::stamp();		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(587)
+		HX_STACK_LINE(590)
 		Float _g1 = (this->__nextRender - _g);		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(587)
+		HX_STACK_LINE(590)
 		Float next = (_g1 - ::openfl::_v2::display::Stage_obj::__earlyWakeup);		HX_STACK_VAR(next,"next");
-		HX_STACK_LINE(588)
+		HX_STACK_LINE(591)
 		if (((next < otherTimers))){
-			HX_STACK_LINE(590)
+			HX_STACK_LINE(593)
 			return next;
 		}
 	}
-	HX_STACK_LINE(596)
+	HX_STACK_LINE(599)
 	return otherTimers;
 }
 
@@ -856,16 +856,16 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,__nextFrameDue,return )
 
 Void Stage_obj::__onChange( Dynamic event){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__onChange",0x8bea3ddc,"openfl._v2.display.Stage.__onChange","openfl/_v2/display/Stage.hx",601,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__onChange",0x8bea3ddc,"openfl._v2.display.Stage.__onChange","openfl/_v2/display/Stage.hx",604,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
-		HX_STACK_LINE(603)
+		HX_STACK_LINE(606)
 		::openfl::_v2::display::DisplayObject object = this->__findByID(event->__Field(HX_CSTRING("id"),true));		HX_STACK_VAR(object,"object");
-		HX_STACK_LINE(605)
+		HX_STACK_LINE(608)
 		if (((object != null()))){
-			HX_STACK_LINE(607)
+			HX_STACK_LINE(610)
 			::openfl::_v2::events::Event _g = ::openfl::_v2::events::Event_obj::__new(::openfl::_v2::events::Event_obj::CHANGE,true,null());		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(607)
+			HX_STACK_LINE(610)
 			object->__fireEvent(_g);
 		}
 	}
@@ -877,37 +877,37 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,__onChange,(void))
 
 Void Stage_obj::__onFocus( Dynamic event){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__onFocus",0xae3e24ec,"openfl._v2.display.Stage.__onFocus","openfl/_v2/display/Stage.hx",614,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__onFocus",0xae3e24ec,"openfl._v2.display.Stage.__onFocus","openfl/_v2/display/Stage.hx",617,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
-		HX_STACK_LINE(616)
-		Array< ::Dynamic > stack = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(stack,"stack");
-		HX_STACK_LINE(617)
-		::openfl::_v2::display::DisplayObject object = this->__findByID(event->__Field(HX_CSTRING("id"),true));		HX_STACK_VAR(object,"object");
 		HX_STACK_LINE(619)
+		Array< ::Dynamic > stack = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(stack,"stack");
+		HX_STACK_LINE(620)
+		::openfl::_v2::display::DisplayObject object = this->__findByID(event->__Field(HX_CSTRING("id"),true));		HX_STACK_VAR(object,"object");
+		HX_STACK_LINE(622)
 		if (((object != null()))){
-			HX_STACK_LINE(621)
+			HX_STACK_LINE(624)
 			object->__getInteractiveObjectStack(stack);
 		}
-		HX_STACK_LINE(625)
+		HX_STACK_LINE(628)
 		if (((bool((stack->length > (int)0)) && bool(((bool((event->__Field(HX_CSTRING("value"),true) == (int)1)) || bool((event->__Field(HX_CSTRING("value"),true) == (int)2)))))))){
-			HX_STACK_LINE(627)
+			HX_STACK_LINE(630)
 			::openfl::_v2::display::InteractiveObject object1 = stack->__get((int)0).StaticCast< ::openfl::_v2::display::InteractiveObject >();		HX_STACK_VAR(object1,"object1");
-			HX_STACK_LINE(628)
-			::openfl::events::FocusEvent focusEvent = ::openfl::events::FocusEvent_obj::__new((  (((event->__Field(HX_CSTRING("value"),true) == (int)1))) ? ::String(::openfl::events::FocusEvent_obj::MOUSE_FOCUS_CHANGE) : ::String(::openfl::events::FocusEvent_obj::KEY_FOCUS_CHANGE) ),true,true,(  (((this->__focusOverObjects->length == (int)0))) ? ::openfl::_v2::display::InteractiveObject(null()) : ::openfl::_v2::display::InteractiveObject(this->__focusOverObjects->__get((int)0).StaticCast< ::openfl::_v2::display::InteractiveObject >()) ),(event->__Field(HX_CSTRING("flags"),true) > (int)0),event->__Field(HX_CSTRING("code"),true));		HX_STACK_VAR(focusEvent,"focusEvent");
-			HX_STACK_LINE(629)
-			object1->__fireEvent(focusEvent);
 			HX_STACK_LINE(631)
+			::openfl::events::FocusEvent focusEvent = ::openfl::events::FocusEvent_obj::__new((  (((event->__Field(HX_CSTRING("value"),true) == (int)1))) ? ::String(::openfl::events::FocusEvent_obj::MOUSE_FOCUS_CHANGE) : ::String(::openfl::events::FocusEvent_obj::KEY_FOCUS_CHANGE) ),true,true,(  (((this->__focusOverObjects->length == (int)0))) ? ::openfl::_v2::display::InteractiveObject(null()) : ::openfl::_v2::display::InteractiveObject(this->__focusOverObjects->__get((int)0).StaticCast< ::openfl::_v2::display::InteractiveObject >()) ),(event->__Field(HX_CSTRING("flags"),true) > (int)0),event->__Field(HX_CSTRING("code"),true));		HX_STACK_VAR(focusEvent,"focusEvent");
+			HX_STACK_LINE(632)
+			object1->__fireEvent(focusEvent);
+			HX_STACK_LINE(634)
 			if ((focusEvent->__getIsCancelled())){
-				HX_STACK_LINE(633)
+				HX_STACK_LINE(636)
 				event->__FieldRef(HX_CSTRING("result")) = (int)1;
-				HX_STACK_LINE(634)
+				HX_STACK_LINE(637)
 				return null();
 			}
 		}
-		HX_STACK_LINE(640)
+		HX_STACK_LINE(643)
 		stack->reverse();
-		HX_STACK_LINE(641)
+		HX_STACK_LINE(644)
 		this->__checkFocusInOuts(event,stack);
 	}
 return null();
@@ -918,211 +918,211 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,__onFocus,(void))
 
 Void Stage_obj::__onJoystick( Dynamic event,::String type){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__onJoystick",0x3efe8028,"openfl._v2.display.Stage.__onJoystick","openfl/_v2/display/Stage.hx",646,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__onJoystick",0x3efe8028,"openfl._v2.display.Stage.__onJoystick","openfl/_v2/display/Stage.hx",649,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
 		HX_STACK_ARG(type,"type")
-		HX_STACK_LINE(648)
+		HX_STACK_LINE(651)
 		::openfl::events::JoystickEvent joystickEvent = null();		HX_STACK_VAR(joystickEvent,"joystickEvent");
-		HX_STACK_LINE(650)
+		HX_STACK_LINE(653)
 		::String _switch_1 = (type);
 		if (  ( _switch_1==HX_CSTRING("axisMove"))){
-			HX_STACK_LINE(654)
+			HX_STACK_LINE(657)
 			Array< Float > data;		HX_STACK_VAR(data,"data");
-			HX_STACK_LINE(654)
+			HX_STACK_LINE(657)
 			{
-				HX_STACK_LINE(654)
+				HX_STACK_LINE(657)
 				int key = event->__Field(HX_CSTRING("id"),true);		HX_STACK_VAR(key,"key");
-				HX_STACK_LINE(654)
+				HX_STACK_LINE(657)
 				data = this->__joyAxisData->get(key);
 			}
-			HX_STACK_LINE(655)
+			HX_STACK_LINE(658)
 			if (((data == null()))){
-				HX_STACK_LINE(657)
+				HX_STACK_LINE(660)
 				data = Array_obj< Float >::__new().Add(0.0).Add(0.0).Add(0.0).Add(0.0);
 			}
-			HX_STACK_LINE(661)
+			HX_STACK_LINE(664)
 			Float value = (Float(event->__Field(HX_CSTRING("value"),true)) / Float((int)32767));		HX_STACK_VAR(value,"value");
-			HX_STACK_LINE(662)
+			HX_STACK_LINE(665)
 			if (((value < (int)-1))){
-				HX_STACK_LINE(662)
+				HX_STACK_LINE(665)
 				value = (int)-1;
 			}
-			HX_STACK_LINE(664)
+			HX_STACK_LINE(667)
 			while((true)){
-				HX_STACK_LINE(664)
+				HX_STACK_LINE(667)
 				if ((!(((data->length < event->__Field(HX_CSTRING("code"),true)))))){
-					HX_STACK_LINE(664)
+					HX_STACK_LINE(667)
 					break;
 				}
-				HX_STACK_LINE(666)
+				HX_STACK_LINE(669)
 				data->push((int)0);
 			}
-			HX_STACK_LINE(670)
+			HX_STACK_LINE(673)
 			::String cachedAxisData = HX_CSTRING("");		HX_STACK_VAR(cachedAxisData,"cachedAxisData");
 			struct _Function_2_1{
 				inline static bool Block( hx::ObjectPtr< ::openfl::_v2::display::Stage_obj > __this,Dynamic &event){
-					HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/Stage.hx",671,0xd25d2a60)
+					HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/Stage.hx",674,0xd25d2a60)
 					{
-						HX_STACK_LINE(671)
+						HX_STACK_LINE(674)
 						int key = event->__Field(HX_CSTRING("id"),true);		HX_STACK_VAR(key,"key");
-						HX_STACK_LINE(671)
+						HX_STACK_LINE(674)
 						return __this->__joyAxisData->exists(key);
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(671)
+			HX_STACK_LINE(674)
 			if ((_Function_2_1::Block(this,event))){
 				struct _Function_3_1{
 					inline static Array< Float > Block( hx::ObjectPtr< ::openfl::_v2::display::Stage_obj > __this,Dynamic &event){
-						HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/Stage.hx",671,0xd25d2a60)
+						HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/Stage.hx",674,0xd25d2a60)
 						{
-							HX_STACK_LINE(671)
+							HX_STACK_LINE(674)
 							int key = event->__Field(HX_CSTRING("id"),true);		HX_STACK_VAR(key,"key");
-							HX_STACK_LINE(671)
+							HX_STACK_LINE(674)
 							return __this->__joyAxisData->get(key);
 						}
 						return null();
 					}
 				};
-				HX_STACK_LINE(671)
+				HX_STACK_LINE(674)
 				::String _g = (_Function_3_1::Block(this,event))->toString();		HX_STACK_VAR(_g,"_g");
-				HX_STACK_LINE(671)
+				HX_STACK_LINE(674)
 				cachedAxisData = _g;
 			}
-			HX_STACK_LINE(672)
+			HX_STACK_LINE(675)
 			data[event->__Field(HX_CSTRING("code"),true)] = value;
 			struct _Function_2_2{
 				inline static bool Block( hx::ObjectPtr< ::openfl::_v2::display::Stage_obj > __this,Dynamic &event){
-					HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/Stage.hx",673,0xd25d2a60)
+					HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/Stage.hx",676,0xd25d2a60)
 					{
-						HX_STACK_LINE(673)
+						HX_STACK_LINE(676)
 						int key = event->__Field(HX_CSTRING("id"),true);		HX_STACK_VAR(key,"key");
-						HX_STACK_LINE(673)
+						HX_STACK_LINE(676)
 						return __this->__joyAxisData->exists(key);
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(673)
+			HX_STACK_LINE(676)
 			if ((_Function_2_2::Block(this,event))){
-				HX_STACK_LINE(675)
+				HX_STACK_LINE(678)
 				{
-					HX_STACK_LINE(675)
+					HX_STACK_LINE(678)
 					int key = event->__Field(HX_CSTRING("id"),true);		HX_STACK_VAR(key,"key");
-					HX_STACK_LINE(675)
+					HX_STACK_LINE(678)
 					this->__joyAxisData->set(key,data);
 				}
 				struct _Function_3_1{
 					inline static Array< Float > Block( hx::ObjectPtr< ::openfl::_v2::display::Stage_obj > __this,Dynamic &event){
-						HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/Stage.hx",677,0xd25d2a60)
+						HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/Stage.hx",680,0xd25d2a60)
 						{
-							HX_STACK_LINE(677)
+							HX_STACK_LINE(680)
 							int key = event->__Field(HX_CSTRING("id"),true);		HX_STACK_VAR(key,"key");
-							HX_STACK_LINE(677)
+							HX_STACK_LINE(680)
 							return __this->__joyAxisData->get(key);
 						}
 						return null();
 					}
 				};
-				HX_STACK_LINE(677)
+				HX_STACK_LINE(680)
 				::String _g1 = (_Function_3_1::Block(this,event))->toString();		HX_STACK_VAR(_g1,"_g1");
-				HX_STACK_LINE(677)
+				HX_STACK_LINE(680)
 				if (((_g1 == cachedAxisData))){
-					HX_STACK_LINE(679)
+					HX_STACK_LINE(682)
 					return null();
 				}
 				else{
-					HX_STACK_LINE(683)
+					HX_STACK_LINE(686)
 					::openfl::events::JoystickEvent _g2 = ::openfl::events::JoystickEvent_obj::__new(type,false,false,event->__Field(HX_CSTRING("id"),true),(int)0,data->__get((int)0),data->__get((int)1),data->__get((int)2));		HX_STACK_VAR(_g2,"_g2");
-					HX_STACK_LINE(683)
+					HX_STACK_LINE(686)
 					joystickEvent = _g2;
-					HX_STACK_LINE(684)
+					HX_STACK_LINE(687)
 					Array< Float > _g3 = data->copy();		HX_STACK_VAR(_g3,"_g3");
-					HX_STACK_LINE(684)
+					HX_STACK_LINE(687)
 					joystickEvent->axis = _g3;
 				}
 			}
 			else{
-				HX_STACK_LINE(689)
+				HX_STACK_LINE(692)
 				{
-					HX_STACK_LINE(689)
+					HX_STACK_LINE(692)
 					int key = event->__Field(HX_CSTRING("id"),true);		HX_STACK_VAR(key,"key");
-					HX_STACK_LINE(689)
+					HX_STACK_LINE(692)
 					this->__joyAxisData->set(key,data);
 				}
-				HX_STACK_LINE(690)
+				HX_STACK_LINE(693)
 				::openfl::events::JoystickEvent _g4 = ::openfl::events::JoystickEvent_obj::__new(type,false,false,event->__Field(HX_CSTRING("id"),true),(int)0,data->__get((int)0),data->__get((int)1),data->__get((int)2));		HX_STACK_VAR(_g4,"_g4");
-				HX_STACK_LINE(690)
+				HX_STACK_LINE(693)
 				joystickEvent = _g4;
-				HX_STACK_LINE(691)
+				HX_STACK_LINE(694)
 				Array< Float > _g5 = data->copy();		HX_STACK_VAR(_g5,"_g5");
-				HX_STACK_LINE(691)
+				HX_STACK_LINE(694)
 				joystickEvent->axis = _g5;
 			}
 		}
 		else if (  ( _switch_1==HX_CSTRING("ballMove"))){
-			HX_STACK_LINE(696)
+			HX_STACK_LINE(699)
 			::openfl::events::JoystickEvent _g6 = ::openfl::events::JoystickEvent_obj::__new(type,false,false,event->__Field(HX_CSTRING("id"),true),event->__Field(HX_CSTRING("code"),true),event->__Field(HX_CSTRING("x"),true),event->__Field(HX_CSTRING("y"),true),null());		HX_STACK_VAR(_g6,"_g6");
-			HX_STACK_LINE(696)
+			HX_STACK_LINE(699)
 			joystickEvent = _g6;
 		}
 		else if (  ( _switch_1==HX_CSTRING("deviceAdded"))){
-			HX_STACK_LINE(700)
+			HX_STACK_LINE(703)
 			::openfl::events::JoystickEvent _g7 = ::openfl::events::JoystickEvent_obj::__new(type,false,false,event->__Field(HX_CSTRING("id"),true),null(),null(),null(),null());		HX_STACK_VAR(_g7,"_g7");
-			HX_STACK_LINE(700)
+			HX_STACK_LINE(703)
 			joystickEvent = _g7;
 		}
 		else if (  ( _switch_1==HX_CSTRING("deviceRemoved"))){
-			HX_STACK_LINE(704)
+			HX_STACK_LINE(707)
 			::openfl::events::JoystickEvent _g8 = ::openfl::events::JoystickEvent_obj::__new(type,false,false,event->__Field(HX_CSTRING("id"),true),null(),null(),null(),null());		HX_STACK_VAR(_g8,"_g8");
-			HX_STACK_LINE(704)
+			HX_STACK_LINE(707)
 			joystickEvent = _g8;
 		}
 		else if (  ( _switch_1==HX_CSTRING("hatMove"))){
-			HX_STACK_LINE(708)
-			int x = (int)0;		HX_STACK_VAR(x,"x");
-			HX_STACK_LINE(709)
-			int y = (int)0;		HX_STACK_VAR(y,"y");
 			HX_STACK_LINE(711)
+			int x = (int)0;		HX_STACK_VAR(x,"x");
+			HX_STACK_LINE(712)
+			int y = (int)0;		HX_STACK_VAR(y,"y");
+			HX_STACK_LINE(714)
 			if (((((int(event->__Field(HX_CSTRING("value"),true)) & int((int)1))) != (int)0))){
-				HX_STACK_LINE(713)
+				HX_STACK_LINE(716)
 				y = (int)-1;
 			}
 			else{
-				HX_STACK_LINE(715)
+				HX_STACK_LINE(718)
 				if (((((int(event->__Field(HX_CSTRING("value"),true)) & int((int)4))) != (int)0))){
-					HX_STACK_LINE(717)
+					HX_STACK_LINE(720)
 					y = (int)1;
 				}
 			}
-			HX_STACK_LINE(721)
+			HX_STACK_LINE(724)
 			if (((((int(event->__Field(HX_CSTRING("value"),true)) & int((int)2))) != (int)0))){
-				HX_STACK_LINE(723)
+				HX_STACK_LINE(726)
 				x = (int)1;
 			}
 			else{
-				HX_STACK_LINE(725)
+				HX_STACK_LINE(728)
 				if (((((int(event->__Field(HX_CSTRING("value"),true)) & int((int)8))) != (int)0))){
-					HX_STACK_LINE(727)
+					HX_STACK_LINE(730)
 					x = (int)-1;
 				}
 			}
-			HX_STACK_LINE(731)
+			HX_STACK_LINE(734)
 			::openfl::events::JoystickEvent _g9 = ::openfl::events::JoystickEvent_obj::__new(type,false,false,event->__Field(HX_CSTRING("id"),true),event->__Field(HX_CSTRING("code"),true),x,y,null());		HX_STACK_VAR(_g9,"_g9");
-			HX_STACK_LINE(731)
+			HX_STACK_LINE(734)
 			joystickEvent = _g9;
 		}
 		else  {
-			HX_STACK_LINE(773)
+			HX_STACK_LINE(776)
 			::openfl::events::JoystickEvent _g10 = ::openfl::events::JoystickEvent_obj::__new(type,false,false,event->__Field(HX_CSTRING("id"),true),event->__Field(HX_CSTRING("code"),true),null(),null(),null());		HX_STACK_VAR(_g10,"_g10");
-			HX_STACK_LINE(773)
+			HX_STACK_LINE(776)
 			joystickEvent = _g10;
 		}
 ;
 ;
-		HX_STACK_LINE(777)
+		HX_STACK_LINE(780)
 		this->__dispatchEvent(joystickEvent);
 	}
 return null();
@@ -1133,53 +1133,53 @@ HX_DEFINE_DYNAMIC_FUNC2(Stage_obj,__onJoystick,(void))
 
 Void Stage_obj::__onKey( Dynamic event,::String type){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__onKey",0xb4e121b3,"openfl._v2.display.Stage.__onKey","openfl/_v2/display/Stage.hx",782,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__onKey",0xb4e121b3,"openfl._v2.display.Stage.__onKey","openfl/_v2/display/Stage.hx",785,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
 		HX_STACK_ARG(type,"type")
-		HX_STACK_LINE(784)
-		Array< ::Dynamic > stack = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(stack,"stack");
-		HX_STACK_LINE(785)
-		::openfl::_v2::display::DisplayObject object = this->__findByID(event->__Field(HX_CSTRING("id"),true));		HX_STACK_VAR(object,"object");
 		HX_STACK_LINE(787)
+		Array< ::Dynamic > stack = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(stack,"stack");
+		HX_STACK_LINE(788)
+		::openfl::_v2::display::DisplayObject object = this->__findByID(event->__Field(HX_CSTRING("id"),true));		HX_STACK_VAR(object,"object");
+		HX_STACK_LINE(790)
 		if (((object != null()))){
-			HX_STACK_LINE(789)
+			HX_STACK_LINE(792)
 			object->__getInteractiveObjectStack(stack);
 		}
-		HX_STACK_LINE(793)
+		HX_STACK_LINE(796)
 		if (((stack->length > (int)0))){
-			HX_STACK_LINE(795)
+			HX_STACK_LINE(798)
 			Dynamic value = event->__Field(HX_CSTRING("value"),true);		HX_STACK_VAR(value,"value");
-			HX_STACK_LINE(796)
+			HX_STACK_LINE(799)
 			if (((bool((event->__Field(HX_CSTRING("value"),true) >= (int)96)) && bool((event->__Field(HX_CSTRING("value"),true) <= (int)122))))){
-				HX_STACK_LINE(796)
+				HX_STACK_LINE(799)
 				hx::SubEq(event->__FieldRef(HX_CSTRING("value")),(int)32);
 			}
-			HX_STACK_LINE(798)
-			::openfl::_v2::display::InteractiveObject object1 = stack->__get((int)0).StaticCast< ::openfl::_v2::display::InteractiveObject >();		HX_STACK_VAR(object1,"object1");
-			HX_STACK_LINE(799)
-			int flags = event->__Field(HX_CSTRING("flags"),true);		HX_STACK_VAR(flags,"flags");
 			HX_STACK_LINE(801)
-			::openfl::_v2::events::KeyboardEvent keyboardEvent = ::openfl::_v2::events::KeyboardEvent_obj::__new(type,true,true,event->__Field(HX_CSTRING("code"),true),event->__Field(HX_CSTRING("value"),true),(  (((((int(flags) & int(::openfl::_v2::display::Stage_obj::efLocationRight))) == (int)0))) ? int((int)1) : int((int)0) ),(((int(flags) & int(::openfl::_v2::display::Stage_obj::efCtrlDown))) != (int)0),(((int(flags) & int(::openfl::_v2::display::Stage_obj::efAltDown))) != (int)0),(((int(flags) & int(::openfl::_v2::display::Stage_obj::efShiftDown))) != (int)0),null(),null());		HX_STACK_VAR(keyboardEvent,"keyboardEvent");
+			::openfl::_v2::display::InteractiveObject object1 = stack->__get((int)0).StaticCast< ::openfl::_v2::display::InteractiveObject >();		HX_STACK_VAR(object1,"object1");
 			HX_STACK_LINE(802)
-			object1->__fireEvent(keyboardEvent);
+			int flags = event->__Field(HX_CSTRING("flags"),true);		HX_STACK_VAR(flags,"flags");
 			HX_STACK_LINE(804)
+			::openfl::_v2::events::KeyboardEvent keyboardEvent = ::openfl::_v2::events::KeyboardEvent_obj::__new(type,true,true,event->__Field(HX_CSTRING("code"),true),event->__Field(HX_CSTRING("value"),true),(  (((((int(flags) & int(::openfl::_v2::display::Stage_obj::efLocationRight))) == (int)0))) ? int((int)1) : int((int)0) ),(((int(flags) & int(::openfl::_v2::display::Stage_obj::efCtrlDown))) != (int)0),(((int(flags) & int(::openfl::_v2::display::Stage_obj::efAltDown))) != (int)0),(((int(flags) & int(::openfl::_v2::display::Stage_obj::efShiftDown))) != (int)0),null(),null());		HX_STACK_VAR(keyboardEvent,"keyboardEvent");
+			HX_STACK_LINE(805)
+			object1->__fireEvent(keyboardEvent);
+			HX_STACK_LINE(807)
 			if ((keyboardEvent->__getIsCancelled())){
-				HX_STACK_LINE(806)
+				HX_STACK_LINE(809)
 				event->__FieldRef(HX_CSTRING("result")) = (int)1;
 			}
 			else{
-				HX_STACK_LINE(811)
+				HX_STACK_LINE(814)
 				if (((bool((bool((((int(flags) & int(::openfl::_v2::display::Stage_obj::efAltDown))) > (int)0)) && bool((type == ::openfl::_v2::events::KeyboardEvent_obj::KEY_DOWN)))) && bool((event->__Field(HX_CSTRING("code"),true) == (int)13))))){
-					HX_STACK_LINE(813)
+					HX_STACK_LINE(816)
 					::openfl::display::StageDisplayState _g = this->get_displayState();		HX_STACK_VAR(_g,"_g");
-					HX_STACK_LINE(813)
+					HX_STACK_LINE(816)
 					if (((_g == ::openfl::display::StageDisplayState_obj::NORMAL))){
-						HX_STACK_LINE(815)
+						HX_STACK_LINE(818)
 						this->set_displayState(::openfl::display::StageDisplayState_obj::FULL_SCREEN_INTERACTIVE);
 					}
 					else{
-						HX_STACK_LINE(819)
+						HX_STACK_LINE(822)
 						this->set_displayState(::openfl::display::StageDisplayState_obj::NORMAL);
 					}
 				}
@@ -1194,151 +1194,155 @@ HX_DEFINE_DYNAMIC_FUNC2(Stage_obj,__onKey,(void))
 
 Void Stage_obj::__onMouse( Dynamic event,::String type,bool fromMouse){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__onMouse",0xb619db39,"openfl._v2.display.Stage.__onMouse","openfl/_v2/display/Stage.hx",831,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__onMouse",0xb619db39,"openfl._v2.display.Stage.__onMouse","openfl/_v2/display/Stage.hx",834,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
 		HX_STACK_ARG(type,"type")
 		HX_STACK_ARG(fromMouse,"fromMouse")
-		HX_STACK_LINE(833)
+		HX_STACK_LINE(836)
 		int button = event->__Field(HX_CSTRING("value"),true);		HX_STACK_VAR(button,"button");
-		HX_STACK_LINE(835)
+		HX_STACK_LINE(838)
 		if ((!(fromMouse))){
-			HX_STACK_LINE(836)
+			HX_STACK_LINE(839)
 			button = (int)0;
 		}
-		HX_STACK_LINE(838)
+		HX_STACK_LINE(841)
 		int wheel = (int)0;		HX_STACK_VAR(wheel,"wheel");
-		HX_STACK_LINE(840)
+		HX_STACK_LINE(843)
 		if (((type == ::openfl::_v2::events::MouseEvent_obj::MOUSE_DOWN))){
-			HX_STACK_LINE(842)
+			HX_STACK_LINE(845)
 			if (((button > (int)2))){
-				HX_STACK_LINE(844)
+				HX_STACK_LINE(847)
 				return null();
 			}
-			HX_STACK_LINE(848)
+			HX_STACK_LINE(851)
 			type = ::openfl::_v2::display::Stage_obj::sDownEvents->__get(button);
 		}
 		else{
-			HX_STACK_LINE(850)
+			HX_STACK_LINE(853)
 			if (((type == ::openfl::_v2::events::MouseEvent_obj::MOUSE_UP))){
-				HX_STACK_LINE(852)
+				HX_STACK_LINE(855)
 				if (((button > (int)2))){
-					HX_STACK_LINE(854)
+					HX_STACK_LINE(857)
 					type = ::openfl::_v2::events::MouseEvent_obj::MOUSE_WHEEL;
-					HX_STACK_LINE(855)
+					HX_STACK_LINE(858)
 					if (((button == (int)3))){
-						HX_STACK_LINE(855)
+						HX_STACK_LINE(858)
 						wheel = (int)1;
 					}
 					else{
-						HX_STACK_LINE(855)
+						HX_STACK_LINE(858)
 						wheel = (int)-1;
 					}
 				}
 				else{
-					HX_STACK_LINE(859)
+					HX_STACK_LINE(862)
 					type = ::openfl::_v2::display::Stage_obj::sUpEvents->__get(button);
 				}
 			}
 		}
-		HX_STACK_LINE(865)
+		HX_STACK_LINE(868)
 		if (((this->__dragObject != null()))){
-			HX_STACK_LINE(867)
+			HX_STACK_LINE(870)
 			::openfl::_v2::geom::Point _g = ::openfl::_v2::geom::Point_obj::__new(event->__Field(HX_CSTRING("x"),true),event->__Field(HX_CSTRING("y"),true));		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(867)
+			HX_STACK_LINE(870)
 			this->__drag(_g);
 		}
-		HX_STACK_LINE(871)
-		Array< ::Dynamic > stack = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(stack,"stack");
-		HX_STACK_LINE(872)
-		::openfl::_v2::display::DisplayObject object = this->__findByID(event->__Field(HX_CSTRING("id"),true));		HX_STACK_VAR(object,"object");
 		HX_STACK_LINE(874)
+		Array< ::Dynamic > stack = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(stack,"stack");
+		HX_STACK_LINE(875)
+		::openfl::_v2::display::DisplayObject object = this->__findByID(event->__Field(HX_CSTRING("id"),true));		HX_STACK_VAR(object,"object");
+		HX_STACK_LINE(877)
 		if (((object != null()))){
-			HX_STACK_LINE(876)
+			HX_STACK_LINE(879)
 			object->__getInteractiveObjectStack(stack);
 		}
-		HX_STACK_LINE(880)
+		HX_STACK_LINE(883)
 		::openfl::_v2::geom::Point local = null();		HX_STACK_VAR(local,"local");
-		HX_STACK_LINE(882)
+		HX_STACK_LINE(885)
 		if (((stack->length > (int)0))){
-			HX_STACK_LINE(884)
-			::openfl::_v2::display::InteractiveObject object1 = stack->__get((int)0).StaticCast< ::openfl::_v2::display::InteractiveObject >();		HX_STACK_VAR(object1,"object1");
-			HX_STACK_LINE(885)
-			stack->reverse();
-			HX_STACK_LINE(886)
-			::openfl::_v2::geom::Point _g1 = ::openfl::_v2::geom::Point_obj::__new(event->__Field(HX_CSTRING("x"),true),event->__Field(HX_CSTRING("y"),true));		HX_STACK_VAR(_g1,"_g1");
-			HX_STACK_LINE(886)
-			::openfl::_v2::geom::Point _g2 = object1->globalToLocal(_g1);		HX_STACK_VAR(_g2,"_g2");
-			HX_STACK_LINE(886)
-			local = _g2;
 			HX_STACK_LINE(887)
-			::openfl::_v2::events::MouseEvent mouseEvent = ::openfl::_v2::events::MouseEvent_obj::__create(type,event,local,object1);		HX_STACK_VAR(mouseEvent,"mouseEvent");
+			::openfl::_v2::display::InteractiveObject object1 = stack->__get((int)0).StaticCast< ::openfl::_v2::display::InteractiveObject >();		HX_STACK_VAR(object1,"object1");
 			HX_STACK_LINE(888)
-			mouseEvent->delta = wheel;
+			stack->reverse();
+			HX_STACK_LINE(889)
+			::openfl::_v2::geom::Point _g1 = ::openfl::_v2::geom::Point_obj::__new(event->__Field(HX_CSTRING("x"),true),event->__Field(HX_CSTRING("y"),true));		HX_STACK_VAR(_g1,"_g1");
+			HX_STACK_LINE(889)
+			::openfl::_v2::geom::Point _g2 = object1->globalToLocal(_g1);		HX_STACK_VAR(_g2,"_g2");
+			HX_STACK_LINE(889)
+			local = _g2;
 			HX_STACK_LINE(890)
+			::openfl::_v2::events::MouseEvent mouseEvent = ::openfl::_v2::events::MouseEvent_obj::__create(type,event,local,object1);		HX_STACK_VAR(mouseEvent,"mouseEvent");
+			HX_STACK_LINE(891)
+			mouseEvent->delta = wheel;
+			HX_STACK_LINE(893)
 			if (((bool(fromMouse) || bool((((int(event->__Field(HX_CSTRING("flags"),true)) & int((int)32768))) > (int)0))))){
-				HX_STACK_LINE(892)
+				HX_STACK_LINE(895)
 				this->__checkInOuts(mouseEvent,stack,null());
 			}
-			HX_STACK_LINE(896)
+			HX_STACK_LINE(899)
 			object1->__fireEvent(mouseEvent);
 		}
 		else{
-			HX_STACK_LINE(900)
+			HX_STACK_LINE(903)
 			::openfl::_v2::geom::Point _g3 = ::openfl::_v2::geom::Point_obj::__new(event->__Field(HX_CSTRING("x"),true),event->__Field(HX_CSTRING("y"),true));		HX_STACK_VAR(_g3,"_g3");
-			HX_STACK_LINE(900)
+			HX_STACK_LINE(903)
 			local = _g3;
-			HX_STACK_LINE(901)
-			::openfl::_v2::events::MouseEvent mouseEvent = ::openfl::_v2::events::MouseEvent_obj::__create(type,event,local,null());		HX_STACK_VAR(mouseEvent,"mouseEvent");
-			HX_STACK_LINE(902)
-			mouseEvent->delta = wheel;
 			HX_STACK_LINE(904)
+			::openfl::_v2::events::MouseEvent mouseEvent = ::openfl::_v2::events::MouseEvent_obj::__create(type,event,local,null());		HX_STACK_VAR(mouseEvent,"mouseEvent");
+			HX_STACK_LINE(905)
+			mouseEvent->delta = wheel;
+			HX_STACK_LINE(907)
 			if (((bool(fromMouse) || bool((((int(event->__Field(HX_CSTRING("flags"),true)) & int((int)32768))) > (int)0))))){
-				HX_STACK_LINE(906)
+				HX_STACK_LINE(909)
 				this->__checkInOuts(mouseEvent,stack,null());
 			}
 		}
-		HX_STACK_LINE(912)
+		HX_STACK_LINE(915)
 		::openfl::_v2::display::InteractiveObject clickObject;		HX_STACK_VAR(clickObject,"clickObject");
-		HX_STACK_LINE(912)
+		HX_STACK_LINE(915)
 		if (((stack->length > (int)0))){
-			HX_STACK_LINE(912)
+			HX_STACK_LINE(915)
 			clickObject = stack->__get((stack->length - (int)1)).StaticCast< ::openfl::_v2::display::InteractiveObject >();
 		}
 		else{
-			HX_STACK_LINE(912)
+			HX_STACK_LINE(915)
 			clickObject = hx::ObjectPtr<OBJ_>(this);
 		}
-		HX_STACK_LINE(914)
+		HX_STACK_LINE(917)
 		if (((bool(((bool((bool((type == ::openfl::_v2::events::MouseEvent_obj::MOUSE_DOWN)) || bool((type == ::openfl::_v2::events::MouseEvent_obj::MIDDLE_MOUSE_DOWN)))) || bool((type == ::openfl::_v2::events::MouseEvent_obj::RIGHT_MOUSE_DOWN))))) && bool((button < (int)3))))){
-			HX_STACK_LINE(916)
+			HX_STACK_LINE(919)
 			this->__lastDown[button] = clickObject;
 		}
 		else{
-			HX_STACK_LINE(918)
+			HX_STACK_LINE(921)
 			if (((bool(((bool((bool((type == ::openfl::_v2::events::MouseEvent_obj::MOUSE_UP)) || bool((type == ::openfl::_v2::events::MouseEvent_obj::MIDDLE_MOUSE_UP)))) || bool((type == ::openfl::_v2::events::MouseEvent_obj::RIGHT_MOUSE_UP))))) && bool((button < (int)3))))){
-				HX_STACK_LINE(920)
+				HX_STACK_LINE(923)
 				if (((clickObject == this->__lastDown->__get(button).StaticCast< ::openfl::_v2::display::InteractiveObject >()))){
-					HX_STACK_LINE(922)
-					::openfl::_v2::events::MouseEvent mouseEvent = ::openfl::_v2::events::MouseEvent_obj::__create(::openfl::_v2::display::Stage_obj::sClickEvents->__get(button),event,local,clickObject);		HX_STACK_VAR(mouseEvent,"mouseEvent");
-					HX_STACK_LINE(923)
-					clickObject->__fireEvent(mouseEvent);
 					HX_STACK_LINE(925)
+					::openfl::_v2::events::MouseEvent mouseEvent = ::openfl::_v2::events::MouseEvent_obj::__create(::openfl::_v2::display::Stage_obj::sClickEvents->__get(button),event,local,clickObject);		HX_STACK_VAR(mouseEvent,"mouseEvent");
+					HX_STACK_LINE(926)
+					clickObject->__fireEvent(mouseEvent);
+					HX_STACK_LINE(928)
 					if (((bool((button == (int)0)) && bool(clickObject->doubleClickEnabled)))){
-						HX_STACK_LINE(927)
-						Float now = ::haxe::Timer_obj::stamp();		HX_STACK_VAR(now,"now");
-						HX_STACK_LINE(928)
-						if ((((now - this->__lastClickTime) < 0.25))){
-							HX_STACK_LINE(930)
+						HX_STACK_LINE(930)
+						int now = ::openfl::_v2::Lib_obj::getTimer();		HX_STACK_VAR(now,"now");
+						HX_STACK_LINE(931)
+						if ((((now - this->__lastClickTime) < (int)500))){
+							HX_STACK_LINE(933)
 							::openfl::_v2::events::MouseEvent mouseEvent1 = ::openfl::_v2::events::MouseEvent_obj::__create(::openfl::_v2::events::MouseEvent_obj::DOUBLE_CLICK,event,local,clickObject);		HX_STACK_VAR(mouseEvent1,"mouseEvent1");
-							HX_STACK_LINE(931)
+							HX_STACK_LINE(934)
 							clickObject->__fireEvent(mouseEvent1);
+							HX_STACK_LINE(935)
+							this->__lastClickTime = (int)0;
 						}
-						HX_STACK_LINE(935)
-						this->__lastClickTime = now;
+						else{
+							HX_STACK_LINE(939)
+							this->__lastClickTime = now;
+						}
 					}
 				}
-				HX_STACK_LINE(941)
+				HX_STACK_LINE(947)
 				this->__lastDown[button] = null();
 			}
 		}
@@ -1351,12 +1355,12 @@ HX_DEFINE_DYNAMIC_FUNC3(Stage_obj,__onMouse,(void))
 
 Void Stage_obj::__onRenderContext( bool active){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__onRenderContext",0xd3c3024d,"openfl._v2.display.Stage.__onRenderContext","openfl/_v2/display/Stage.hx",948,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__onRenderContext",0xd3c3024d,"openfl._v2.display.Stage.__onRenderContext","openfl/_v2/display/Stage.hx",954,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(active,"active")
-		HX_STACK_LINE(950)
+		HX_STACK_LINE(956)
 		::openfl::_v2::events::Event event = ::openfl::_v2::events::Event_obj::__new((  ((!(active))) ? ::String(HX_CSTRING("glcontextlost")) : ::String(HX_CSTRING("glcontextrestored")) ),null(),null());		HX_STACK_VAR(event,"event");
-		HX_STACK_LINE(951)
+		HX_STACK_LINE(957)
 		this->__dispatchEvent(event);
 	}
 return null();
@@ -1367,13 +1371,13 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,__onRenderContext,(void))
 
 Void Stage_obj::__onResize( Float width,Float height){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__onResize",0xdcf30660,"openfl._v2.display.Stage.__onResize","openfl/_v2/display/Stage.hx",956,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__onResize",0xdcf30660,"openfl._v2.display.Stage.__onResize","openfl/_v2/display/Stage.hx",962,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(width,"width")
 		HX_STACK_ARG(height,"height")
-		HX_STACK_LINE(958)
+		HX_STACK_LINE(964)
 		::openfl::_v2::events::Event event = ::openfl::_v2::events::Event_obj::__new(::openfl::_v2::events::Event_obj::RESIZE,null(),null());		HX_STACK_VAR(event,"event");
-		HX_STACK_LINE(959)
+		HX_STACK_LINE(965)
 		this->__dispatchEvent(event);
 	}
 return null();
@@ -1384,12 +1388,12 @@ HX_DEFINE_DYNAMIC_FUNC2(Stage_obj,__onResize,(void))
 
 Void Stage_obj::__onSysWM( Dynamic event){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__onSysWM",0x311bdb77,"openfl._v2.display.Stage.__onSysWM","openfl/_v2/display/Stage.hx",964,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__onSysWM",0x311bdb77,"openfl._v2.display.Stage.__onSysWM","openfl/_v2/display/Stage.hx",970,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
-		HX_STACK_LINE(966)
+		HX_STACK_LINE(972)
 		::openfl::_v2::events::SystemEvent event1 = ::openfl::_v2::events::SystemEvent_obj::__new(::openfl::_v2::events::SystemEvent_obj::SYSTEM,false,false,event->__Field(HX_CSTRING("value"),true));		HX_STACK_VAR(event1,"event1");
-		HX_STACK_LINE(967)
+		HX_STACK_LINE(973)
 		this->__dispatchEvent(event1);
 	}
 return null();
@@ -1400,51 +1404,51 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,__onSysWM,(void))
 
 Void Stage_obj::__onTouch( Dynamic event,::String type,::openfl::_v2::display::TouchInfo touchInfo){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__onTouch",0xbde7dcd3,"openfl._v2.display.Stage.__onTouch","openfl/_v2/display/Stage.hx",972,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__onTouch",0xbde7dcd3,"openfl._v2.display.Stage.__onTouch","openfl/_v2/display/Stage.hx",978,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
 		HX_STACK_ARG(type,"type")
 		HX_STACK_ARG(touchInfo,"touchInfo")
-		HX_STACK_LINE(974)
+		HX_STACK_LINE(980)
 		Array< ::Dynamic > stack = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(stack,"stack");
-		HX_STACK_LINE(975)
+		HX_STACK_LINE(981)
 		::openfl::_v2::display::DisplayObject object = this->__findByID(event->__Field(HX_CSTRING("id"),true));		HX_STACK_VAR(object,"object");
-		HX_STACK_LINE(977)
+		HX_STACK_LINE(983)
 		if (((object != null()))){
-			HX_STACK_LINE(979)
+			HX_STACK_LINE(985)
 			object->__getInteractiveObjectStack(stack);
 		}
-		HX_STACK_LINE(983)
+		HX_STACK_LINE(989)
 		if (((stack->length > (int)0))){
-			HX_STACK_LINE(985)
+			HX_STACK_LINE(991)
 			::openfl::_v2::display::InteractiveObject object1 = stack->__get((int)0).StaticCast< ::openfl::_v2::display::InteractiveObject >();		HX_STACK_VAR(object1,"object1");
-			HX_STACK_LINE(986)
-			stack->reverse();
-			HX_STACK_LINE(987)
-			::openfl::_v2::geom::Point _g = ::openfl::_v2::geom::Point_obj::__new(event->__Field(HX_CSTRING("x"),true),event->__Field(HX_CSTRING("y"),true));		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(987)
-			::openfl::_v2::geom::Point local = object1->globalToLocal(_g);		HX_STACK_VAR(local,"local");
-			HX_STACK_LINE(988)
-			::openfl::_v2::events::TouchEvent touchEvent = ::openfl::_v2::events::TouchEvent_obj::__create(type,event,local,object1,event->__Field(HX_CSTRING("scaleX"),true),event->__Field(HX_CSTRING("scaleY"),true));		HX_STACK_VAR(touchEvent,"touchEvent");
-			HX_STACK_LINE(989)
-			touchEvent->touchPointID = event->__Field(HX_CSTRING("value"),true);
-			HX_STACK_LINE(990)
-			touchEvent->isPrimaryTouchPoint = (((int(event->__Field(HX_CSTRING("flags"),true)) & int((int)32768))) > (int)0);
 			HX_STACK_LINE(992)
-			this->__checkInOuts(touchEvent,stack,touchInfo);
+			stack->reverse();
 			HX_STACK_LINE(993)
+			::openfl::_v2::geom::Point _g = ::openfl::_v2::geom::Point_obj::__new(event->__Field(HX_CSTRING("x"),true),event->__Field(HX_CSTRING("y"),true));		HX_STACK_VAR(_g,"_g");
+			HX_STACK_LINE(993)
+			::openfl::_v2::geom::Point local = object1->globalToLocal(_g);		HX_STACK_VAR(local,"local");
+			HX_STACK_LINE(994)
+			::openfl::_v2::events::TouchEvent touchEvent = ::openfl::_v2::events::TouchEvent_obj::__create(type,event,local,object1,event->__Field(HX_CSTRING("scaleX"),true),event->__Field(HX_CSTRING("scaleY"),true));		HX_STACK_VAR(touchEvent,"touchEvent");
+			HX_STACK_LINE(995)
+			touchEvent->touchPointID = event->__Field(HX_CSTRING("value"),true);
+			HX_STACK_LINE(996)
+			touchEvent->isPrimaryTouchPoint = (((int(event->__Field(HX_CSTRING("flags"),true)) & int((int)32768))) > (int)0);
+			HX_STACK_LINE(998)
+			this->__checkInOuts(touchEvent,stack,touchInfo);
+			HX_STACK_LINE(999)
 			object1->__fireEvent(touchEvent);
 		}
 		else{
-			HX_STACK_LINE(997)
+			HX_STACK_LINE(1003)
 			::openfl::_v2::geom::Point _g1 = ::openfl::_v2::geom::Point_obj::__new(event->__Field(HX_CSTRING("x"),true),event->__Field(HX_CSTRING("y"),true));		HX_STACK_VAR(_g1,"_g1");
-			HX_STACK_LINE(997)
+			HX_STACK_LINE(1003)
 			::openfl::_v2::events::TouchEvent touchEvent = ::openfl::_v2::events::TouchEvent_obj::__create(type,event,_g1,null(),event->__Field(HX_CSTRING("scaleX"),true),event->__Field(HX_CSTRING("scaleY"),true));		HX_STACK_VAR(touchEvent,"touchEvent");
-			HX_STACK_LINE(998)
+			HX_STACK_LINE(1004)
 			touchEvent->touchPointID = event->__Field(HX_CSTRING("value"),true);
-			HX_STACK_LINE(999)
+			HX_STACK_LINE(1005)
 			touchEvent->isPrimaryTouchPoint = (((int(event->__Field(HX_CSTRING("flags"),true)) & int((int)32768))) > (int)0);
-			HX_STACK_LINE(1000)
+			HX_STACK_LINE(1006)
 			this->__checkInOuts(touchEvent,stack,touchInfo);
 		}
 	}
@@ -1456,20 +1460,20 @@ HX_DEFINE_DYNAMIC_FUNC3(Stage_obj,__onTouch,(void))
 
 Void Stage_obj::__pollTimers( ){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__pollTimers",0x5c5383da,"openfl._v2.display.Stage.__pollTimers","openfl/_v2/display/Stage.hx",1007,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__pollTimers",0x5c5383da,"openfl._v2.display.Stage.__pollTimers","openfl/_v2/display/Stage.hx",1013,0xd25d2a60)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(1009)
+		HX_STACK_LINE(1015)
 		if ((::openfl::_v2::display::Stage_obj::__exiting)){
-			HX_STACK_LINE(1011)
+			HX_STACK_LINE(1017)
 			return null();
 		}
-		HX_STACK_LINE(1016)
+		HX_STACK_LINE(1022)
 		::haxe::Timer_obj::__checkTimers();
-		HX_STACK_LINE(1018)
+		HX_STACK_LINE(1024)
 		::openfl::_v2::media::SoundChannel_obj::__pollComplete();
-		HX_STACK_LINE(1019)
+		HX_STACK_LINE(1025)
 		::openfl::_v2::net::URLLoader_obj::__pollData();
-		HX_STACK_LINE(1020)
+		HX_STACK_LINE(1026)
 		this->__checkRender();
 	}
 return null();
@@ -1480,31 +1484,31 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,__pollTimers,(void))
 
 Void Stage_obj::__render( bool sendEnterFrame){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__render",0xabb4dc03,"openfl._v2.display.Stage.__render","openfl/_v2/display/Stage.hx",1025,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__render",0xabb4dc03,"openfl._v2.display.Stage.__render","openfl/_v2/display/Stage.hx",1031,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(sendEnterFrame,"sendEnterFrame")
-		HX_STACK_LINE(1027)
+		HX_STACK_LINE(1033)
 		if ((!(this->active))){
-			HX_STACK_LINE(1029)
+			HX_STACK_LINE(1035)
 			return null();
 		}
-		HX_STACK_LINE(1033)
+		HX_STACK_LINE(1039)
 		if ((sendEnterFrame)){
-			HX_STACK_LINE(1035)
+			HX_STACK_LINE(1041)
 			::openfl::_v2::events::Event _g = ::openfl::_v2::events::Event_obj::__new(::openfl::_v2::events::Event_obj::ENTER_FRAME,null(),null());		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(1035)
+			HX_STACK_LINE(1041)
 			this->__broadcast(_g);
 		}
-		HX_STACK_LINE(1039)
+		HX_STACK_LINE(1045)
 		if ((this->__invalid)){
-			HX_STACK_LINE(1041)
+			HX_STACK_LINE(1047)
 			this->__invalid = false;
-			HX_STACK_LINE(1042)
+			HX_STACK_LINE(1048)
 			::openfl::_v2::events::Event _g1 = ::openfl::_v2::events::Event_obj::__new(::openfl::_v2::events::Event_obj::RENDER,null(),null());		HX_STACK_VAR(_g1,"_g1");
-			HX_STACK_LINE(1042)
+			HX_STACK_LINE(1048)
 			this->__broadcast(_g1);
 		}
-		HX_STACK_LINE(1046)
+		HX_STACK_LINE(1052)
 		::openfl::_v2::display::Stage_obj::lime_render_stage(this->__handle);
 	}
 return null();
@@ -1515,29 +1519,29 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,__render,(void))
 
 Void Stage_obj::__setActive( bool value){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__setActive",0xb282307b,"openfl._v2.display.Stage.__setActive","openfl/_v2/display/Stage.hx",1053,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__setActive",0xb282307b,"openfl._v2.display.Stage.__setActive","openfl/_v2/display/Stage.hx",1059,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(value,"value")
-		HX_STACK_LINE(1053)
+		HX_STACK_LINE(1059)
 		if (((this->active != value))){
-			HX_STACK_LINE(1055)
+			HX_STACK_LINE(1061)
 			this->active = value;
-			HX_STACK_LINE(1057)
+			HX_STACK_LINE(1063)
 			if ((!(this->active))){
-				HX_STACK_LINE(1059)
+				HX_STACK_LINE(1065)
 				Float _g = ::haxe::Timer_obj::stamp();		HX_STACK_VAR(_g,"_g");
-				HX_STACK_LINE(1059)
+				HX_STACK_LINE(1065)
 				this->__lastRender = _g;
-				HX_STACK_LINE(1060)
+				HX_STACK_LINE(1066)
 				this->__nextRender = (this->__lastRender + this->__framePeriod);
 			}
-			HX_STACK_LINE(1064)
+			HX_STACK_LINE(1070)
 			::openfl::_v2::events::Event event = ::openfl::_v2::events::Event_obj::__new((  ((this->active)) ? ::String(::openfl::_v2::events::Event_obj::ACTIVATE) : ::String(::openfl::_v2::events::Event_obj::DEACTIVATE) ),null(),null());		HX_STACK_VAR(event,"event");
-			HX_STACK_LINE(1065)
+			HX_STACK_LINE(1071)
 			this->__broadcast(event);
-			HX_STACK_LINE(1067)
+			HX_STACK_LINE(1073)
 			if ((value)){
-				HX_STACK_LINE(1069)
+				HX_STACK_LINE(1075)
 				this->__pollTimers();
 			}
 			else{
@@ -1552,70 +1556,70 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,__setActive,(void))
 
 Void Stage_obj::__startDrag( ::openfl::_v2::display::Sprite sprite,bool lockCenter,::openfl::_v2::geom::Rectangle bounds){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__startDrag",0x37f81ee9,"openfl._v2.display.Stage.__startDrag","openfl/_v2/display/Stage.hx",1101,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__startDrag",0x37f81ee9,"openfl._v2.display.Stage.__startDrag","openfl/_v2/display/Stage.hx",1107,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(sprite,"sprite")
 		HX_STACK_ARG(lockCenter,"lockCenter")
 		HX_STACK_ARG(bounds,"bounds")
-		HX_STACK_LINE(1103)
+		HX_STACK_LINE(1109)
 		::openfl::_v2::geom::Rectangle _g;		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(1103)
+		HX_STACK_LINE(1109)
 		if (((bounds == null()))){
-			HX_STACK_LINE(1103)
+			HX_STACK_LINE(1109)
 			_g = null();
 		}
 		else{
-			HX_STACK_LINE(1103)
+			HX_STACK_LINE(1109)
 			_g = bounds->clone();
 		}
-		HX_STACK_LINE(1103)
+		HX_STACK_LINE(1109)
 		this->__dragBounds = _g;
-		HX_STACK_LINE(1104)
+		HX_STACK_LINE(1110)
 		this->__dragObject = sprite;
-		HX_STACK_LINE(1106)
+		HX_STACK_LINE(1112)
 		if (((this->__dragObject != null()))){
-			HX_STACK_LINE(1108)
+			HX_STACK_LINE(1114)
 			if ((lockCenter)){
-				HX_STACK_LINE(1110)
+				HX_STACK_LINE(1116)
 				Float _g1 = -(this->__dragObject->get_width());		HX_STACK_VAR(_g1,"_g1");
-				HX_STACK_LINE(1110)
+				HX_STACK_LINE(1116)
 				Float _g2 = (Float(_g1) / Float((int)2));		HX_STACK_VAR(_g2,"_g2");
-				HX_STACK_LINE(1110)
+				HX_STACK_LINE(1116)
 				this->__dragOffsetX = _g2;
-				HX_STACK_LINE(1111)
+				HX_STACK_LINE(1117)
 				Float _g3 = -(this->__dragObject->get_height());		HX_STACK_VAR(_g3,"_g3");
-				HX_STACK_LINE(1111)
+				HX_STACK_LINE(1117)
 				Float _g4 = (Float(_g3) / Float((int)2));		HX_STACK_VAR(_g4,"_g4");
-				HX_STACK_LINE(1111)
+				HX_STACK_LINE(1117)
 				this->__dragOffsetY = _g4;
 			}
 			else{
-				HX_STACK_LINE(1115)
+				HX_STACK_LINE(1121)
 				Float _g5 = this->get_mouseX();		HX_STACK_VAR(_g5,"_g5");
-				HX_STACK_LINE(1115)
+				HX_STACK_LINE(1121)
 				Float _g6 = this->get_mouseY();		HX_STACK_VAR(_g6,"_g6");
-				HX_STACK_LINE(1115)
+				HX_STACK_LINE(1121)
 				::openfl::_v2::geom::Point mouse = ::openfl::_v2::geom::Point_obj::__new(_g5,_g6);		HX_STACK_VAR(mouse,"mouse");
-				HX_STACK_LINE(1116)
+				HX_STACK_LINE(1122)
 				::openfl::_v2::display::DisplayObjectContainer parent = this->__dragObject->get_parent();		HX_STACK_VAR(parent,"parent");
-				HX_STACK_LINE(1118)
+				HX_STACK_LINE(1124)
 				if (((parent != null()))){
-					HX_STACK_LINE(1120)
+					HX_STACK_LINE(1126)
 					::openfl::_v2::geom::Point _g7 = parent->globalToLocal(mouse);		HX_STACK_VAR(_g7,"_g7");
-					HX_STACK_LINE(1120)
+					HX_STACK_LINE(1126)
 					mouse = _g7;
 				}
-				HX_STACK_LINE(1124)
+				HX_STACK_LINE(1130)
 				Float _g8 = this->__dragObject->get_x();		HX_STACK_VAR(_g8,"_g8");
-				HX_STACK_LINE(1124)
+				HX_STACK_LINE(1130)
 				Float _g9 = (_g8 - mouse->x);		HX_STACK_VAR(_g9,"_g9");
-				HX_STACK_LINE(1124)
+				HX_STACK_LINE(1130)
 				this->__dragOffsetX = _g9;
-				HX_STACK_LINE(1125)
+				HX_STACK_LINE(1131)
 				Float _g10 = this->__dragObject->get_y();		HX_STACK_VAR(_g10,"_g10");
-				HX_STACK_LINE(1125)
+				HX_STACK_LINE(1131)
 				Float _g11 = (_g10 - mouse->y);		HX_STACK_VAR(_g11,"_g11");
-				HX_STACK_LINE(1125)
+				HX_STACK_LINE(1131)
 				this->__dragOffsetY = _g11;
 			}
 		}
@@ -1628,12 +1632,12 @@ HX_DEFINE_DYNAMIC_FUNC3(Stage_obj,__startDrag,(void))
 
 Void Stage_obj::__stopDrag( ::openfl::_v2::display::Sprite sprite){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","__stopDrag",0x89f52703,"openfl._v2.display.Stage.__stopDrag","openfl/_v2/display/Stage.hx",1134,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","__stopDrag",0x89f52703,"openfl._v2.display.Stage.__stopDrag","openfl/_v2/display/Stage.hx",1140,0xd25d2a60)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(sprite,"sprite")
-		HX_STACK_LINE(1136)
+		HX_STACK_LINE(1142)
 		this->__dragBounds = null();
-		HX_STACK_LINE(1137)
+		HX_STACK_LINE(1143)
 		this->__dragObject = null();
 	}
 return null();
@@ -1643,44 +1647,44 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,__stopDrag,(void))
 
 Float Stage_obj::__updateNextWake( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","__updateNextWake",0x04885b8d,"openfl._v2.display.Stage.__updateNextWake","openfl/_v2/display/Stage.hx",1142,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","__updateNextWake",0x04885b8d,"openfl._v2.display.Stage.__updateNextWake","openfl/_v2/display/Stage.hx",1148,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1147)
+	HX_STACK_LINE(1153)
 	Float nextWake = ::haxe::Timer_obj::__nextWake(315000000.0);		HX_STACK_VAR(nextWake,"nextWake");
-	HX_STACK_LINE(1149)
+	HX_STACK_LINE(1155)
 	if (((bool((nextWake > 0.001)) && bool((::openfl::_v2::media::SoundChannel_obj::__dynamicSoundCount > (int)0))))){
-		HX_STACK_LINE(1151)
+		HX_STACK_LINE(1157)
 		nextWake = 0.001;
 	}
 	struct _Function_1_1{
 		inline static bool Block( ){
-			HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/Stage.hx",1155,0xd25d2a60)
+			HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/Stage.hx",1161,0xd25d2a60)
 			{
-				HX_STACK_LINE(1155)
+				HX_STACK_LINE(1161)
 				return (  ((!(::openfl::_v2::media::SoundChannel_obj::__completePending()))) ? bool(::openfl::_v2::net::URLLoader_obj::__loadPending()) : bool(true) );
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(1155)
+	HX_STACK_LINE(1161)
 	if (((  (((nextWake > 0.02))) ? bool(_Function_1_1::Block()) : bool(false) ))){
-		HX_STACK_LINE(1157)
+		HX_STACK_LINE(1163)
 		if (((bool(this->active) || bool(!(this->pauseWhenDeactivated))))){
-			HX_STACK_LINE(1157)
+			HX_STACK_LINE(1163)
 			nextWake = 0.020;
 		}
 		else{
-			HX_STACK_LINE(1157)
+			HX_STACK_LINE(1163)
 			nextWake = 0.500;
 		}
 	}
-	HX_STACK_LINE(1161)
+	HX_STACK_LINE(1167)
 	Float _g = this->__nextFrameDue(nextWake);		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(1161)
+	HX_STACK_LINE(1167)
 	nextWake = _g;
-	HX_STACK_LINE(1162)
+	HX_STACK_LINE(1168)
 	::openfl::_v2::display::Stage_obj::lime_stage_set_next_wake(this->__handle,nextWake);
-	HX_STACK_LINE(1163)
+	HX_STACK_LINE(1169)
 	return nextWake;
 }
 
@@ -1688,11 +1692,11 @@ Float Stage_obj::__updateNextWake( ){
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,__updateNextWake,return )
 
 ::openfl::display::StageAlign Stage_obj::get_align( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","get_align",0xf76388ef,"openfl._v2.display.Stage.get_align","openfl/_v2/display/Stage.hx",1176,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","get_align",0xf76388ef,"openfl._v2.display.Stage.get_align","openfl/_v2/display/Stage.hx",1182,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1178)
+	HX_STACK_LINE(1184)
 	int i = ::openfl::_v2::display::Stage_obj::lime_stage_get_align(this->__handle);		HX_STACK_VAR(i,"i");
-	HX_STACK_LINE(1179)
+	HX_STACK_LINE(1185)
 	return ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::display::StageAlign >(),i,null());
 }
 
@@ -1700,14 +1704,14 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,__updateNextWake,return )
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_align,return )
 
 ::openfl::display::StageAlign Stage_obj::set_align( ::openfl::display::StageAlign value){
-	HX_STACK_FRAME("openfl._v2.display.Stage","set_align",0xdab474fb,"openfl._v2.display.Stage.set_align","openfl/_v2/display/Stage.hx",1184,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","set_align",0xdab474fb,"openfl._v2.display.Stage.set_align","openfl/_v2/display/Stage.hx",1190,0xd25d2a60)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(1186)
+	HX_STACK_LINE(1192)
 	int _g = value->__Index();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(1186)
+	HX_STACK_LINE(1192)
 	::openfl::_v2::display::Stage_obj::lime_stage_set_align(this->__handle,_g);
-	HX_STACK_LINE(1187)
+	HX_STACK_LINE(1193)
 	return value;
 }
 
@@ -1715,9 +1719,9 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_align,return )
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_align,return )
 
 int Stage_obj::get_color( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","get_color",0x202ea38d,"openfl._v2.display.Stage.get_color","openfl/_v2/display/Stage.hx",1194,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","get_color",0x202ea38d,"openfl._v2.display.Stage.get_color","openfl/_v2/display/Stage.hx",1200,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1194)
+	HX_STACK_LINE(1200)
 	return this->get_opaqueBackground();
 }
 
@@ -1725,10 +1729,10 @@ int Stage_obj::get_color( ){
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_color,return )
 
 int Stage_obj::set_color( int value){
-	HX_STACK_FRAME("openfl._v2.display.Stage","set_color",0x037f8f99,"openfl._v2.display.Stage.set_color","openfl/_v2/display/Stage.hx",1201,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","set_color",0x037f8f99,"openfl._v2.display.Stage.set_color","openfl/_v2/display/Stage.hx",1207,0xd25d2a60)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(1201)
+	HX_STACK_LINE(1207)
 	return this->set_opaqueBackground(value);
 }
 
@@ -1736,11 +1740,11 @@ int Stage_obj::set_color( int value){
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_color,return )
 
 ::openfl::display::StageDisplayState Stage_obj::get_displayState( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","get_displayState",0x35631385,"openfl._v2.display.Stage.get_displayState","openfl/_v2/display/Stage.hx",1206,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","get_displayState",0x35631385,"openfl._v2.display.Stage.get_displayState","openfl/_v2/display/Stage.hx",1212,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1208)
+	HX_STACK_LINE(1214)
 	int i = ::openfl::_v2::display::Stage_obj::lime_stage_get_display_state(this->__handle);		HX_STACK_VAR(i,"i");
-	HX_STACK_LINE(1209)
+	HX_STACK_LINE(1215)
 	return ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::display::StageDisplayState >(),i,null());
 }
 
@@ -1748,14 +1752,14 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_color,return )
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_displayState,return )
 
 ::openfl::display::StageDisplayState Stage_obj::set_displayState( ::openfl::display::StageDisplayState value){
-	HX_STACK_FRAME("openfl._v2.display.Stage","set_displayState",0x8ba500f9,"openfl._v2.display.Stage.set_displayState","openfl/_v2/display/Stage.hx",1214,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","set_displayState",0x8ba500f9,"openfl._v2.display.Stage.set_displayState","openfl/_v2/display/Stage.hx",1220,0xd25d2a60)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(1216)
+	HX_STACK_LINE(1222)
 	int _g = value->__Index();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(1216)
+	HX_STACK_LINE(1222)
 	::openfl::_v2::display::Stage_obj::lime_stage_set_display_state(this->__handle,_g);
-	HX_STACK_LINE(1217)
+	HX_STACK_LINE(1223)
 	return value;
 }
 
@@ -1763,9 +1767,9 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_displayState,return )
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_displayState,return )
 
 Float Stage_obj::get_dpiScale( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","get_dpiScale",0xd269ae03,"openfl._v2.display.Stage.get_dpiScale","openfl/_v2/display/Stage.hx",1224,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","get_dpiScale",0xd269ae03,"openfl._v2.display.Stage.get_dpiScale","openfl/_v2/display/Stage.hx",1230,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1224)
+	HX_STACK_LINE(1230)
 	return ::openfl::_v2::display::Stage_obj::lime_stage_get_dpi_scale(this->__handle);
 }
 
@@ -1773,13 +1777,13 @@ Float Stage_obj::get_dpiScale( ){
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_dpiScale,return )
 
 ::openfl::_v2::display::InteractiveObject Stage_obj::get_focus( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","get_focus",0xda5b9202,"openfl._v2.display.Stage.get_focus","openfl/_v2/display/Stage.hx",1229,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","get_focus",0xda5b9202,"openfl._v2.display.Stage.get_focus","openfl/_v2/display/Stage.hx",1235,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1231)
+	HX_STACK_LINE(1237)
 	int id = ::openfl::_v2::display::Stage_obj::lime_stage_get_focus_id(this->__handle);		HX_STACK_VAR(id,"id");
-	HX_STACK_LINE(1232)
+	HX_STACK_LINE(1238)
 	::openfl::_v2::display::DisplayObject object = this->__findByID(id);		HX_STACK_VAR(object,"object");
-	HX_STACK_LINE(1233)
+	HX_STACK_LINE(1239)
 	return object;
 }
 
@@ -1787,19 +1791,19 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_dpiScale,return )
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_focus,return )
 
 ::openfl::_v2::display::InteractiveObject Stage_obj::set_focus( ::openfl::_v2::display::InteractiveObject value){
-	HX_STACK_FRAME("openfl._v2.display.Stage","set_focus",0xbdac7e0e,"openfl._v2.display.Stage.set_focus","openfl/_v2/display/Stage.hx",1238,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","set_focus",0xbdac7e0e,"openfl._v2.display.Stage.set_focus","openfl/_v2/display/Stage.hx",1244,0xd25d2a60)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(1240)
+	HX_STACK_LINE(1246)
 	if (((value == null()))){
-		HX_STACK_LINE(1242)
+		HX_STACK_LINE(1248)
 		::openfl::_v2::display::Stage_obj::lime_stage_set_focus(this->__handle,null(),(int)0);
 	}
 	else{
-		HX_STACK_LINE(1246)
+		HX_STACK_LINE(1252)
 		::openfl::_v2::display::Stage_obj::lime_stage_set_focus(this->__handle,value->__handle,(int)0);
 	}
-	HX_STACK_LINE(1250)
+	HX_STACK_LINE(1256)
 	return value;
 }
 
@@ -1807,23 +1811,23 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_focus,return )
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_focus,return )
 
 Float Stage_obj::set_frameRate( Float value){
-	HX_STACK_FRAME("openfl._v2.display.Stage","set_frameRate",0xdcd282e3,"openfl._v2.display.Stage.set_frameRate","openfl/_v2/display/Stage.hx",1255,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","set_frameRate",0xdcd282e3,"openfl._v2.display.Stage.set_frameRate","openfl/_v2/display/Stage.hx",1261,0xd25d2a60)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(1257)
+	HX_STACK_LINE(1263)
 	this->frameRate = value;
-	HX_STACK_LINE(1258)
+	HX_STACK_LINE(1264)
 	if (((this->frameRate <= (int)0))){
-		HX_STACK_LINE(1258)
+		HX_STACK_LINE(1264)
 		this->__framePeriod = this->frameRate;
 	}
 	else{
-		HX_STACK_LINE(1258)
+		HX_STACK_LINE(1264)
 		this->__framePeriod = (Float(1.0) / Float(this->frameRate));
 	}
-	HX_STACK_LINE(1259)
+	HX_STACK_LINE(1265)
 	this->__nextRender = (this->__lastRender + this->__framePeriod);
-	HX_STACK_LINE(1260)
+	HX_STACK_LINE(1266)
 	return value;
 }
 
@@ -1831,9 +1835,9 @@ Float Stage_obj::set_frameRate( Float value){
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_frameRate,return )
 
 bool Stage_obj::get_isOpenGL( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","get_isOpenGL",0xbbd9e80f,"openfl._v2.display.Stage.get_isOpenGL","openfl/_v2/display/Stage.hx",1267,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","get_isOpenGL",0xbbd9e80f,"openfl._v2.display.Stage.get_isOpenGL","openfl/_v2/display/Stage.hx",1273,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1267)
+	HX_STACK_LINE(1273)
 	return ::openfl::_v2::display::Stage_obj::lime_stage_is_opengl(this->__handle);
 }
 
@@ -1841,11 +1845,11 @@ bool Stage_obj::get_isOpenGL( ){
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_isOpenGL,return )
 
 ::openfl::_v2::display::StageQuality Stage_obj::get_quality( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","get_quality",0xd8ae9569,"openfl._v2.display.Stage.get_quality","openfl/_v2/display/Stage.hx",1272,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","get_quality",0xd8ae9569,"openfl._v2.display.Stage.get_quality","openfl/_v2/display/Stage.hx",1278,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1274)
+	HX_STACK_LINE(1280)
 	int i = ::openfl::_v2::display::Stage_obj::lime_stage_get_quality(this->__handle);		HX_STACK_VAR(i,"i");
-	HX_STACK_LINE(1275)
+	HX_STACK_LINE(1281)
 	return ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::_v2::display::StageQuality >(),i,null());
 }
 
@@ -1853,14 +1857,14 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_isOpenGL,return )
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_quality,return )
 
 ::openfl::_v2::display::StageQuality Stage_obj::set_quality( ::openfl::_v2::display::StageQuality value){
-	HX_STACK_FRAME("openfl._v2.display.Stage","set_quality",0xe31b9c75,"openfl._v2.display.Stage.set_quality","openfl/_v2/display/Stage.hx",1280,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","set_quality",0xe31b9c75,"openfl._v2.display.Stage.set_quality","openfl/_v2/display/Stage.hx",1286,0xd25d2a60)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(1282)
+	HX_STACK_LINE(1288)
 	int _g = value->__Index();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(1282)
+	HX_STACK_LINE(1288)
 	::openfl::_v2::display::Stage_obj::lime_stage_set_quality(this->__handle,_g);
-	HX_STACK_LINE(1283)
+	HX_STACK_LINE(1289)
 	return value;
 }
 
@@ -1868,11 +1872,11 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_quality,return )
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_quality,return )
 
 ::openfl::display::StageScaleMode Stage_obj::get_scaleMode( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","get_scaleMode",0x8a7b6a37,"openfl._v2.display.Stage.get_scaleMode","openfl/_v2/display/Stage.hx",1288,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","get_scaleMode",0x8a7b6a37,"openfl._v2.display.Stage.get_scaleMode","openfl/_v2/display/Stage.hx",1294,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1290)
+	HX_STACK_LINE(1296)
 	int i = ::openfl::_v2::display::Stage_obj::lime_stage_get_scale_mode(this->__handle);		HX_STACK_VAR(i,"i");
-	HX_STACK_LINE(1291)
+	HX_STACK_LINE(1297)
 	return ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::display::StageScaleMode >(),i,null());
 }
 
@@ -1880,14 +1884,14 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_quality,return )
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_scaleMode,return )
 
 ::openfl::display::StageScaleMode Stage_obj::set_scaleMode( ::openfl::display::StageScaleMode value){
-	HX_STACK_FRAME("openfl._v2.display.Stage","set_scaleMode",0xcf814c43,"openfl._v2.display.Stage.set_scaleMode","openfl/_v2/display/Stage.hx",1296,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","set_scaleMode",0xcf814c43,"openfl._v2.display.Stage.set_scaleMode","openfl/_v2/display/Stage.hx",1302,0xd25d2a60)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(1298)
+	HX_STACK_LINE(1304)
 	int _g = value->__Index();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(1298)
+	HX_STACK_LINE(1304)
 	::openfl::_v2::display::Stage_obj::lime_stage_set_scale_mode(this->__handle,_g);
-	HX_STACK_LINE(1299)
+	HX_STACK_LINE(1305)
 	return value;
 }
 
@@ -1895,17 +1899,17 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_scaleMode,return )
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_scaleMode,return )
 
 ::openfl::_v2::display::Stage Stage_obj::get_stage( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","get_stage",0x59dd9ce8,"openfl._v2.display.Stage.get_stage","openfl/_v2/display/Stage.hx",1306,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","get_stage",0x59dd9ce8,"openfl._v2.display.Stage.get_stage","openfl/_v2/display/Stage.hx",1312,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1306)
+	HX_STACK_LINE(1312)
 	return hx::ObjectPtr<OBJ_>(this);
 }
 
 
 bool Stage_obj::get_stageFocusRect( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","get_stageFocusRect",0x6c110b14,"openfl._v2.display.Stage.get_stageFocusRect","openfl/_v2/display/Stage.hx",1311,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","get_stageFocusRect",0x6c110b14,"openfl._v2.display.Stage.get_stageFocusRect","openfl/_v2/display/Stage.hx",1317,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1311)
+	HX_STACK_LINE(1317)
 	return ::openfl::_v2::display::Stage_obj::lime_stage_get_focus_rect(this->__handle);
 }
 
@@ -1913,12 +1917,12 @@ bool Stage_obj::get_stageFocusRect( ){
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_stageFocusRect,return )
 
 bool Stage_obj::set_stageFocusRect( bool value){
-	HX_STACK_FRAME("openfl._v2.display.Stage","set_stageFocusRect",0x48c03d88,"openfl._v2.display.Stage.set_stageFocusRect","openfl/_v2/display/Stage.hx",1312,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","set_stageFocusRect",0x48c03d88,"openfl._v2.display.Stage.set_stageFocusRect","openfl/_v2/display/Stage.hx",1318,0xd25d2a60)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(1314)
+	HX_STACK_LINE(1320)
 	::openfl::_v2::display::Stage_obj::lime_stage_set_focus_rect(this->__handle,value);
-	HX_STACK_LINE(1315)
+	HX_STACK_LINE(1321)
 	return value;
 }
 
@@ -1926,9 +1930,9 @@ bool Stage_obj::set_stageFocusRect( bool value){
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_stageFocusRect,return )
 
 bool Stage_obj::get_autos3d( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","get_autos3d",0x31f7309f,"openfl._v2.display.Stage.get_autos3d","openfl/_v2/display/Stage.hx",1320,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","get_autos3d",0x31f7309f,"openfl._v2.display.Stage.get_autos3d","openfl/_v2/display/Stage.hx",1326,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1320)
+	HX_STACK_LINE(1326)
 	return ::openfl::_v2::display::Stage_obj::lime_stage_get_autos3d(this->__handle);
 }
 
@@ -1936,12 +1940,12 @@ bool Stage_obj::get_autos3d( ){
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_autos3d,return )
 
 bool Stage_obj::set_autos3d( bool value){
-	HX_STACK_FRAME("openfl._v2.display.Stage","set_autos3d",0x3c6437ab,"openfl._v2.display.Stage.set_autos3d","openfl/_v2/display/Stage.hx",1321,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","set_autos3d",0x3c6437ab,"openfl._v2.display.Stage.set_autos3d","openfl/_v2/display/Stage.hx",1327,0xd25d2a60)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(1323)
+	HX_STACK_LINE(1329)
 	::openfl::_v2::display::Stage_obj::lime_stage_set_autos3d(this->__handle,value);
-	HX_STACK_LINE(1324)
+	HX_STACK_LINE(1330)
 	return value;
 }
 
@@ -1949,13 +1953,13 @@ bool Stage_obj::set_autos3d( bool value){
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_autos3d,return )
 
 int Stage_obj::get_stageHeight( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","get_stageHeight",0x984eb6ef,"openfl._v2.display.Stage.get_stageHeight","openfl/_v2/display/Stage.hx",1329,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","get_stageHeight",0x984eb6ef,"openfl._v2.display.Stage.get_stageHeight","openfl/_v2/display/Stage.hx",1335,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1331)
+	HX_STACK_LINE(1337)
 	Float _g;		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(1331)
+	HX_STACK_LINE(1337)
 	_g = hx::TCast< Float >::cast(::openfl::_v2::display::Stage_obj::lime_stage_get_stage_height(this->__handle));
-	HX_STACK_LINE(1331)
+	HX_STACK_LINE(1337)
 	return ::Std_obj::_int(_g);
 }
 
@@ -1963,13 +1967,13 @@ int Stage_obj::get_stageHeight( ){
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_stageHeight,return )
 
 int Stage_obj::get_stageWidth( ){
-	HX_STACK_FRAME("openfl._v2.display.Stage","get_stageWidth",0x91a8bffe,"openfl._v2.display.Stage.get_stageWidth","openfl/_v2/display/Stage.hx",1336,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","get_stageWidth",0x91a8bffe,"openfl._v2.display.Stage.get_stageWidth","openfl/_v2/display/Stage.hx",1342,0xd25d2a60)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(1338)
+	HX_STACK_LINE(1344)
 	Float _g;		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(1338)
+	HX_STACK_LINE(1344)
 	_g = hx::TCast< Float >::cast(::openfl::_v2::display::Stage_obj::lime_stage_get_stage_width(this->__handle));
-	HX_STACK_LINE(1338)
+	HX_STACK_LINE(1344)
 	return ::Std_obj::_int(_g);
 }
 
@@ -1991,6 +1995,12 @@ int Stage_obj::OrientationLandscapeLeft;
 int Stage_obj::OrientationFaceUp;
 
 int Stage_obj::OrientationFaceDown;
+
+int Stage_obj::OrientationPortraitAny;
+
+int Stage_obj::OrientationLandscapeAny;
+
+int Stage_obj::OrientationAny;
 
 int Stage_obj::efLeftDown;
 
@@ -2018,8 +2028,8 @@ Array< ::String > Stage_obj::__touchChanges;
 
 HX_BEGIN_DEFAULT_FUNC(__default_getOrientation,Stage_obj)
 int run(){
-	HX_STACK_FRAME("openfl._v2.display.Stage","getOrientation",0x839d6f27,"openfl._v2.display.Stage.getOrientation","openfl/_v2/display/Stage.hx",131,0xd25d2a60)
-	HX_STACK_LINE(131)
+	HX_STACK_FRAME("openfl._v2.display.Stage","getOrientation",0x839d6f27,"openfl._v2.display.Stage.getOrientation","openfl/_v2/display/Stage.hx",134,0xd25d2a60)
+	HX_STACK_LINE(134)
 	return ::openfl::_v2::display::Stage_obj::lime_stage_get_orientation();
 }
 HX_END_LOCAL_FUNC0(return )
@@ -2029,8 +2039,8 @@ Dynamic Stage_obj::getOrientation;
 
 HX_BEGIN_DEFAULT_FUNC(__default_getNormalOrientation,Stage_obj)
 int run(){
-	HX_STACK_FRAME("openfl._v2.display.Stage","getNormalOrientation",0x58ace380,"openfl._v2.display.Stage.getNormalOrientation","openfl/_v2/display/Stage.hx",138,0xd25d2a60)
-	HX_STACK_LINE(138)
+	HX_STACK_FRAME("openfl._v2.display.Stage","getNormalOrientation",0x58ace380,"openfl._v2.display.Stage.getNormalOrientation","openfl/_v2/display/Stage.hx",141,0xd25d2a60)
+	HX_STACK_LINE(141)
 	return ::openfl::_v2::display::Stage_obj::lime_stage_get_normal_orientation();
 }
 HX_END_LOCAL_FUNC0(return )
@@ -2040,9 +2050,9 @@ Dynamic Stage_obj::getNormalOrientation;
 
 Void Stage_obj::setFixedOrientation( int orientation){
 {
-		HX_STACK_FRAME("openfl._v2.display.Stage","setFixedOrientation",0xe108b111,"openfl._v2.display.Stage.setFixedOrientation","openfl/_v2/display/Stage.hx",175,0xd25d2a60)
+		HX_STACK_FRAME("openfl._v2.display.Stage","setFixedOrientation",0xe108b111,"openfl._v2.display.Stage.setFixedOrientation","openfl/_v2/display/Stage.hx",178,0xd25d2a60)
 		HX_STACK_ARG(orientation,"orientation")
-		HX_STACK_LINE(175)
+		HX_STACK_LINE(178)
 		::openfl::_v2::display::Stage_obj::lime_stage_set_fixed_orientation(orientation);
 	}
 return null();
@@ -2053,9 +2063,9 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,setFixedOrientation,(void))
 
 HX_BEGIN_DEFAULT_FUNC(__default_shouldRotateInterface,Stage_obj)
 bool run(int orientation){
-	HX_STACK_FRAME("openfl._v2.display.Stage","shouldRotateInterface",0x277aff3e,"openfl._v2.display.Stage.shouldRotateInterface","openfl/_v2/display/Stage.hx",182,0xd25d2a60)
+	HX_STACK_FRAME("openfl._v2.display.Stage","shouldRotateInterface",0x277aff3e,"openfl._v2.display.Stage.shouldRotateInterface","openfl/_v2/display/Stage.hx",185,0xd25d2a60)
 	HX_STACK_ARG(orientation,"orientation")
-	HX_STACK_LINE(182)
+	HX_STACK_LINE(185)
 	return (orientation == ::openfl::_v2::display::Stage_obj::OrientationPortrait);
 }
 HX_END_LOCAL_FUNC1(return )
@@ -2287,6 +2297,7 @@ Dynamic Stage_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"set_scaleMode") ) { return set_scaleMode_dyn(); }
 		break;
 	case 14:
+		if (HX_FIELD_EQ(inName,"OrientationAny") ) { return OrientationAny; }
 		if (HX_FIELD_EQ(inName,"__mouseChanges") ) { return __mouseChanges; }
 		if (HX_FIELD_EQ(inName,"__touchChanges") ) { return __touchChanges; }
 		if (HX_FIELD_EQ(inName,"getOrientation") ) { return getOrientation; }
@@ -2337,6 +2348,7 @@ Dynamic Stage_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"__doProcessStageEvent") ) { return __doProcessStageEvent_dyn(); }
 		break;
 	case 22:
+		if (HX_FIELD_EQ(inName,"OrientationPortraitAny") ) { return OrientationPortraitAny; }
 		if (HX_FIELD_EQ(inName,"lime_set_stage_handler") ) { return lime_set_stage_handler; }
 		if (HX_FIELD_EQ(inName,"lime_stage_get_autos3d") ) { return lime_stage_get_autos3d; }
 		if (HX_FIELD_EQ(inName,"lime_stage_set_autos3d") ) { return lime_stage_set_autos3d; }
@@ -2345,6 +2357,7 @@ Dynamic Stage_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"lime_stage_show_cursor") ) { return lime_stage_show_cursor; }
 		break;
 	case 23:
+		if (HX_FIELD_EQ(inName,"OrientationLandscapeAny") ) { return OrientationLandscapeAny; }
 		if (HX_FIELD_EQ(inName,"lime_stage_get_focus_id") ) { return lime_stage_get_focus_id; }
 		break;
 	case 24:
@@ -2446,6 +2459,7 @@ Dynamic Stage_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool
 		if (HX_FIELD_EQ(inName,"__framePeriod") ) { __framePeriod=inValue.Cast< Float >(); return inValue; }
 		break;
 	case 14:
+		if (HX_FIELD_EQ(inName,"OrientationAny") ) { OrientationAny=inValue.Cast< int >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"__mouseChanges") ) { __mouseChanges=inValue.Cast< Array< ::String > >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"__touchChanges") ) { __touchChanges=inValue.Cast< Array< ::String > >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"getOrientation") ) { getOrientation=inValue.Cast< Dynamic >(); return inValue; }
@@ -2454,7 +2468,7 @@ Dynamic Stage_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool
 	case 15:
 		if (HX_FIELD_EQ(inName,"efLocationRight") ) { efLocationRight=inValue.Cast< int >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"efNoNativeClick") ) { efNoNativeClick=inValue.Cast< int >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"__lastClickTime") ) { __lastClickTime=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"__lastClickTime") ) { __lastClickTime=inValue.Cast< int >(); return inValue; }
 		break;
 	case 16:
 		if (HX_FIELD_EQ(inName,"allowsFullScreen") ) { allowsFullScreen=inValue.Cast< bool >(); return inValue; }
@@ -2483,6 +2497,7 @@ Dynamic Stage_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool
 		if (HX_FIELD_EQ(inName,"shouldRotateInterface") ) { shouldRotateInterface=inValue.Cast< Dynamic >(); return inValue; }
 		break;
 	case 22:
+		if (HX_FIELD_EQ(inName,"OrientationPortraitAny") ) { OrientationPortraitAny=inValue.Cast< int >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"lime_set_stage_handler") ) { lime_set_stage_handler=inValue.Cast< Dynamic >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"lime_stage_get_autos3d") ) { lime_stage_get_autos3d=inValue.Cast< Dynamic >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"lime_stage_set_autos3d") ) { lime_stage_set_autos3d=inValue.Cast< Dynamic >(); return inValue; }
@@ -2491,6 +2506,7 @@ Dynamic Stage_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool
 		if (HX_FIELD_EQ(inName,"lime_stage_show_cursor") ) { lime_stage_show_cursor=inValue.Cast< Dynamic >(); return inValue; }
 		break;
 	case 23:
+		if (HX_FIELD_EQ(inName,"OrientationLandscapeAny") ) { OrientationLandscapeAny=inValue.Cast< int >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"lime_stage_get_focus_id") ) { lime_stage_get_focus_id=inValue.Cast< Dynamic >(); return inValue; }
 		break;
 	case 24:
@@ -2577,6 +2593,9 @@ static ::String sStaticFields[] = {
 	HX_CSTRING("OrientationLandscapeLeft"),
 	HX_CSTRING("OrientationFaceUp"),
 	HX_CSTRING("OrientationFaceDown"),
+	HX_CSTRING("OrientationPortraitAny"),
+	HX_CSTRING("OrientationLandscapeAny"),
+	HX_CSTRING("OrientationAny"),
 	HX_CSTRING("efLeftDown"),
 	HX_CSTRING("efShiftDown"),
 	HX_CSTRING("efCtrlDown"),
@@ -2646,7 +2665,7 @@ static hx::StorageInfo sMemberStorageInfo[] = {
 	{hx::fsObject /*Array< ::Dynamic >*/ ,(int)offsetof(Stage_obj,__focusOverObjects),HX_CSTRING("__focusOverObjects")},
 	{hx::fsFloat,(int)offsetof(Stage_obj,__framePeriod),HX_CSTRING("__framePeriod")},
 	{hx::fsBool,(int)offsetof(Stage_obj,__invalid),HX_CSTRING("__invalid")},
-	{hx::fsFloat,(int)offsetof(Stage_obj,__lastClickTime),HX_CSTRING("__lastClickTime")},
+	{hx::fsInt,(int)offsetof(Stage_obj,__lastClickTime),HX_CSTRING("__lastClickTime")},
 	{hx::fsObject /*Array< ::Dynamic >*/ ,(int)offsetof(Stage_obj,__lastDown),HX_CSTRING("__lastDown")},
 	{hx::fsFloat,(int)offsetof(Stage_obj,__lastRender),HX_CSTRING("__lastRender")},
 	{hx::fsObject /*Array< ::Dynamic >*/ ,(int)offsetof(Stage_obj,__mouseOverObjects),HX_CSTRING("__mouseOverObjects")},
@@ -2744,6 +2763,9 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(Stage_obj::OrientationLandscapeLeft,"OrientationLandscapeLeft");
 	HX_MARK_MEMBER_NAME(Stage_obj::OrientationFaceUp,"OrientationFaceUp");
 	HX_MARK_MEMBER_NAME(Stage_obj::OrientationFaceDown,"OrientationFaceDown");
+	HX_MARK_MEMBER_NAME(Stage_obj::OrientationPortraitAny,"OrientationPortraitAny");
+	HX_MARK_MEMBER_NAME(Stage_obj::OrientationLandscapeAny,"OrientationLandscapeAny");
+	HX_MARK_MEMBER_NAME(Stage_obj::OrientationAny,"OrientationAny");
 	HX_MARK_MEMBER_NAME(Stage_obj::efLeftDown,"efLeftDown");
 	HX_MARK_MEMBER_NAME(Stage_obj::efShiftDown,"efShiftDown");
 	HX_MARK_MEMBER_NAME(Stage_obj::efCtrlDown,"efCtrlDown");
@@ -2802,6 +2824,9 @@ static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(Stage_obj::OrientationLandscapeLeft,"OrientationLandscapeLeft");
 	HX_VISIT_MEMBER_NAME(Stage_obj::OrientationFaceUp,"OrientationFaceUp");
 	HX_VISIT_MEMBER_NAME(Stage_obj::OrientationFaceDown,"OrientationFaceDown");
+	HX_VISIT_MEMBER_NAME(Stage_obj::OrientationPortraitAny,"OrientationPortraitAny");
+	HX_VISIT_MEMBER_NAME(Stage_obj::OrientationLandscapeAny,"OrientationLandscapeAny");
+	HX_VISIT_MEMBER_NAME(Stage_obj::OrientationAny,"OrientationAny");
 	HX_VISIT_MEMBER_NAME(Stage_obj::efLeftDown,"efLeftDown");
 	HX_VISIT_MEMBER_NAME(Stage_obj::efShiftDown,"efShiftDown");
 	HX_VISIT_MEMBER_NAME(Stage_obj::efCtrlDown,"efCtrlDown");
@@ -2877,6 +2902,9 @@ void Stage_obj::__boot()
 	OrientationLandscapeLeft= (int)4;
 	OrientationFaceUp= (int)5;
 	OrientationFaceDown= (int)6;
+	OrientationPortraitAny= (int)7;
+	OrientationLandscapeAny= (int)8;
+	OrientationAny= (int)9;
 	efLeftDown= (int)1;
 	efShiftDown= (int)2;
 	efCtrlDown= (int)4;

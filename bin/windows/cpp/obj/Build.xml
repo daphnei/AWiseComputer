@@ -286,21 +286,6 @@
   <file name="src/openfl/_v2/text/FontStyle.cpp">
    <depend name="include/openfl/_v2/text/FontStyle.h"/>
   </file>
-  <file name="src/openfl/_v2/text/Font.cpp">
-   <depend name="include/Reflect.h"/>
-   <depend name="include/Std.h"/>
-   <depend name="include/Type.h"/>
-   <depend name="include/haxe/Resource.h"/>
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/openfl/_v2/Lib.h"/>
-   <depend name="include/openfl/_v2/text/Font.h"/>
-   <depend name="include/openfl/_v2/text/FontStyle.h"/>
-   <depend name="include/openfl/_v2/text/FontType.h"/>
-   <depend name="include/openfl/_v2/utils/ByteArray.h"/>
-   <depend name="include/openfl/_v2/utils/IDataInput.h"/>
-   <depend name="include/openfl/_v2/utils/IDataOutput.h"/>
-   <depend name="include/openfl/_v2/utils/IMemoryRange.h"/>
-  </file>
   <file name="src/openfl/_v2/system/System.cpp">
    <depend name="include/cpp/vm/Gc.h"/>
    <depend name="include/openfl/_v2/Lib.h"/>
@@ -497,11 +482,9 @@
    <depend name="include/openfl/_v2/events/HTTPStatusEvent.h"/>
    <depend name="include/openfl/net/URLRequestHeader.h"/>
   </file>
-  <file name="src/openfl/_v2/events/Listener.cpp">
+  <file name="src/openfl/_v2/events/_EventDispatcher/Listener.cpp">
    <depend name="include/Reflect.h"/>
-   <depend name="include/openfl/_v2/events/Event.h"/>
-   <depend name="include/openfl/_v2/events/Listener.h"/>
-   <depend name="include/openfl/_v2/utils/WeakRef.h"/>
+   <depend name="include/openfl/_v2/events/_EventDispatcher/Listener.h"/>
   </file>
   <file name="src/openfl/_v2/display/TriangleCulling.cpp">
    <depend name="include/openfl/_v2/display/TriangleCulling.h"/>
@@ -754,6 +737,8 @@
    <depend name="include/openfl/_v2/utils/IMemoryRange.h"/>
   </file>
   <file name="src/openfl/_v2/display/Bitmap.cpp">
+   <depend name="include/Type.h"/>
+   <depend name="include/openfl/_v2/Lib.h"/>
    <depend name="include/openfl/_v2/display/Bitmap.h"/>
    <depend name="include/openfl/_v2/display/BitmapData.h"/>
    <depend name="include/openfl/_v2/display/DisplayObject.h"/>
@@ -934,6 +919,8 @@
    <depend name="include/com/text/attack/utiltiies/Assert.h"/>
    <depend name="include/com/text/attack/world/Cell.h"/>
    <depend name="include/com/text/attack/world/CellType.h"/>
+   <depend name="include/com/text/attack/world/Comet.h"/>
+   <depend name="include/com/text/attack/world/Empty.h"/>
    <depend name="include/com/text/attack/world/WorldGrid.h"/>
    <depend name="include/haxe/Log.h"/>
    <depend name="include/openfl/_v2/display/DisplayObject.h"/>
@@ -955,27 +942,31 @@
    <depend name="include/com/text/attack/levels/Level6.h"/>
    <depend name="include/com/text/attack/levels/Level7.h"/>
    <depend name="include/com/text/attack/levels/Level8.h"/>
+   <depend name="include/com/text/attack/levels/Level9.h"/>
    <depend name="include/com/text/attack/utiltiies/KeyManager.h"/>
+   <depend name="include/com/text/attack/utiltiies/SoundManager.h"/>
+   <depend name="include/com/text/attack/world/Bouncer.h"/>
    <depend name="include/com/text/attack/world/Bullet.h"/>
    <depend name="include/com/text/attack/world/Cell.h"/>
    <depend name="include/com/text/attack/world/CellType.h"/>
    <depend name="include/com/text/attack/world/Comet.h"/>
-   <depend name="include/com/text/attack/world/Direction.h"/>
+   <depend name="include/com/text/attack/world/Empty.h"/>
    <depend name="include/com/text/attack/world/GameState.h"/>
    <depend name="include/com/text/attack/world/Player.h"/>
    <depend name="include/com/text/attack/world/World.h"/>
    <depend name="include/com/text/attack/world/WorldGrid.h"/>
    <depend name="include/haxe/Log.h"/>
+   <depend name="include/openfl/_v2/Assets.h"/>
    <depend name="include/openfl/_v2/display/DisplayObject.h"/>
    <depend name="include/openfl/_v2/display/DisplayObjectContainer.h"/>
    <depend name="include/openfl/_v2/display/IBitmapDrawable.h"/>
    <depend name="include/openfl/_v2/display/InteractiveObject.h"/>
    <depend name="include/openfl/_v2/display/MovieClip.h"/>
    <depend name="include/openfl/_v2/display/Sprite.h"/>
-   <depend name="include/openfl/_v2/display/Stage.h"/>
    <depend name="include/openfl/_v2/events/Event.h"/>
    <depend name="include/openfl/_v2/events/EventDispatcher.h"/>
    <depend name="include/openfl/_v2/events/IEventDispatcher.h"/>
+   <depend name="include/openfl/_v2/text/Font.h"/>
    <depend name="include/openfl/_v2/text/TextField.h"/>
    <depend name="include/openfl/_v2/text/TextFormat.h"/>
    <depend name="include/openfl/_v2/text/TextFormatAlign.h"/>
@@ -997,6 +988,7 @@
    <depend name="include/com/text/attack/world/Cell.h"/>
    <depend name="include/com/text/attack/world/CellType.h"/>
    <depend name="include/com/text/attack/world/Player.h"/>
+   <depend name="include/com/text/attack/world/Wall.h"/>
    <depend name="include/com/text/attack/world/World.h"/>
    <depend name="include/openfl/_v2/display/DisplayObject.h"/>
    <depend name="include/openfl/_v2/display/DisplayObjectContainer.h"/>
@@ -1007,8 +999,18 @@
    <depend name="include/openfl/_v2/events/EventDispatcher.h"/>
    <depend name="include/openfl/_v2/events/IEventDispatcher.h"/>
   </file>
+  <file name="src/com/text/attack/world/Wall.cpp">
+   <depend name="include/com/text/attack/world/Wall.h"/>
+  </file>
   <file name="src/com/text/attack/world/GameState.cpp">
    <depend name="include/com/text/attack/world/GameState.h"/>
+  </file>
+  <file name="src/com/text/attack/world/Empty.cpp">
+   <depend name="include/com/text/attack/world/Cell.h"/>
+   <depend name="include/com/text/attack/world/CellType.h"/>
+   <depend name="include/com/text/attack/world/Empty.h"/>
+   <depend name="include/openfl/_v2/events/EventDispatcher.h"/>
+   <depend name="include/openfl/_v2/events/IEventDispatcher.h"/>
   </file>
   <file name="src/com/text/attack/world/Comet.cpp">
    <depend name="include/com/text/attack/utiltiies/Assert.h"/>
@@ -1031,12 +1033,13 @@
    <depend name="include/com/text/attack/world/CellType.h"/>
   </file>
   <file name="src/com/text/attack/world/Bullet.cpp">
+   <depend name="include/com/text/attack/utiltiies/Point.h"/>
    <depend name="include/com/text/attack/world/Bullet.h"/>
    <depend name="include/com/text/attack/world/Cell.h"/>
    <depend name="include/com/text/attack/world/CellType.h"/>
    <depend name="include/com/text/attack/world/Comet.h"/>
-   <depend name="include/com/text/attack/world/Direction.h"/>
    <depend name="include/com/text/attack/world/Player.h"/>
+   <depend name="include/com/text/attack/world/Wall.h"/>
    <depend name="include/com/text/attack/world/World.h"/>
    <depend name="include/com/text/attack/world/WorldGrid.h"/>
    <depend name="include/openfl/_v2/display/DisplayObject.h"/>
@@ -1045,6 +1048,13 @@
    <depend name="include/openfl/_v2/display/InteractiveObject.h"/>
    <depend name="include/openfl/_v2/display/MovieClip.h"/>
    <depend name="include/openfl/_v2/display/Sprite.h"/>
+   <depend name="include/openfl/_v2/events/EventDispatcher.h"/>
+   <depend name="include/openfl/_v2/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/com/text/attack/world/Bouncer.cpp">
+   <depend name="include/com/text/attack/world/Bouncer.h"/>
+   <depend name="include/com/text/attack/world/Cell.h"/>
+   <depend name="include/com/text/attack/world/CellType.h"/>
    <depend name="include/openfl/_v2/events/EventDispatcher.h"/>
    <depend name="include/openfl/_v2/events/IEventDispatcher.h"/>
   </file>
@@ -1062,12 +1072,23 @@
    <depend name="include/openfl/_v2/events/EventDispatcher.h"/>
    <depend name="include/openfl/_v2/events/IEventDispatcher.h"/>
   </file>
-  <file name="src/com/text/attack/world/Direction.cpp">
-   <depend name="include/com/text/attack/world/Direction.h"/>
+  <file name="src/com/text/attack/utiltiies/SoundManager.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/com/text/attack/utiltiies/SoundManager.h"/>
+   <depend name="include/openfl/_v2/Assets.h"/>
+   <depend name="include/openfl/_v2/events/EventDispatcher.h"/>
+   <depend name="include/openfl/_v2/events/IEventDispatcher.h"/>
+   <depend name="include/openfl/_v2/media/Sound.h"/>
+   <depend name="include/openfl/_v2/media/SoundChannel.h"/>
+   <depend name="include/openfl/media/SoundTransform.h"/>
+  </file>
+  <file name="src/com/text/attack/utiltiies/Point.cpp">
+   <depend name="include/com/text/attack/utiltiies/Point.h"/>
   </file>
   <file name="src/com/text/attack/utiltiies/KeyManager.cpp">
    <depend name="include/com/text/attack/utiltiies/KeyManager.h"/>
    <depend name="include/com/text/attack/world/World.h"/>
+   <depend name="include/haxe/Log.h"/>
    <depend name="include/openfl/_v2/display/DisplayObject.h"/>
    <depend name="include/openfl/_v2/display/DisplayObjectContainer.h"/>
    <depend name="include/openfl/_v2/display/IBitmapDrawable.h"/>
@@ -1088,6 +1109,10 @@
    <depend name="include/com/text/attack/utiltiies/Assert.h"/>
    <depend name="include/haxe/Log.h"/>
    <depend name="include/openfl/_v2/system/System.h"/>
+  </file>
+  <file name="src/com/text/attack/levels/Level9.cpp">
+   <depend name="include/com/text/attack/levels/Level.h"/>
+   <depend name="include/com/text/attack/levels/Level9.h"/>
   </file>
   <file name="src/com/text/attack/levels/Level8.cpp">
    <depend name="include/com/text/attack/levels/Level.h"/>
@@ -1148,6 +1173,45 @@
   <file name="src/Lambda.cpp">
    <depend name="include/Lambda.h"/>
   </file>
+  <file name="src/__ASSET__fonts_original_me_ttf.cpp">
+   <depend name="include/__ASSET__fonts_original_me_ttf.h"/>
+   <depend name="include/openfl/_v2/text/Font.h"/>
+   <depend name="include/openfl/_v2/text/FontStyle.h"/>
+   <depend name="include/openfl/_v2/text/FontType.h"/>
+  </file>
+  <file name="src/__ASSET__fonts_mycourier_ttf.cpp">
+   <depend name="include/__ASSET__fonts_mycourier_ttf.h"/>
+   <depend name="include/openfl/_v2/text/Font.h"/>
+   <depend name="include/openfl/_v2/text/FontStyle.h"/>
+   <depend name="include/openfl/_v2/text/FontType.h"/>
+  </file>
+  <file name="src/__ASSET__fonts_me2_ttf.cpp">
+   <depend name="include/__ASSET__fonts_me2_ttf.h"/>
+   <depend name="include/openfl/_v2/text/Font.h"/>
+   <depend name="include/openfl/_v2/text/FontStyle.h"/>
+   <depend name="include/openfl/_v2/text/FontType.h"/>
+  </file>
+  <file name="src/__ASSET__fonts_me_ttf.cpp">
+   <depend name="include/__ASSET__fonts_me_ttf.h"/>
+   <depend name="include/openfl/_v2/text/Font.h"/>
+   <depend name="include/openfl/_v2/text/FontStyle.h"/>
+   <depend name="include/openfl/_v2/text/FontType.h"/>
+  </file>
+  <file name="src/openfl/_v2/text/Font.cpp">
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/haxe/Resource.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/_v2/Lib.h"/>
+   <depend name="include/openfl/_v2/text/Font.h"/>
+   <depend name="include/openfl/_v2/text/FontStyle.h"/>
+   <depend name="include/openfl/_v2/text/FontType.h"/>
+   <depend name="include/openfl/_v2/utils/ByteArray.h"/>
+   <depend name="include/openfl/_v2/utils/IDataInput.h"/>
+   <depend name="include/openfl/_v2/utils/IDataOutput.h"/>
+   <depend name="include/openfl/_v2/utils/IMemoryRange.h"/>
+  </file>
   <file name="src/DefaultAssetLibrary.cpp">
    <depend name="include/Date.h"/>
    <depend name="include/DefaultAssetLibrary.h"/>
@@ -1155,6 +1219,10 @@
    <depend name="include/Std.h"/>
    <depend name="include/Sys.h"/>
    <depend name="include/Type.h"/>
+   <depend name="include/__ASSET__fonts_me2_ttf.h"/>
+   <depend name="include/__ASSET__fonts_me_ttf.h"/>
+   <depend name="include/__ASSET__fonts_mycourier_ttf.h"/>
+   <depend name="include/__ASSET__fonts_original_me_ttf.h"/>
    <depend name="include/haxe/Log.h"/>
    <depend name="include/haxe/Timer.h"/>
    <depend name="include/haxe/Unserializer.h"/>
@@ -1231,7 +1299,6 @@
    <depend name="include/openfl/_v2/events/EventDispatcher.h"/>
    <depend name="include/openfl/_v2/events/IEventDispatcher.h"/>
    <depend name="include/openfl/display/StageAlign.h"/>
-   <depend name="include/openfl/display/StageDisplayState.h"/>
    <depend name="include/openfl/display/StageScaleMode.h"/>
   </file>
   <file name="src/openfl/_v2/display/Sprite.cpp">
@@ -1292,7 +1359,6 @@
    <depend name="include/openfl/_v2/geom/Rectangle.h"/>
    <depend name="include/openfl/_v2/geom/Transform.h"/>
    <depend name="include/openfl/_v2/net/URLLoader.h"/>
-   <depend name="include/openfl/display/PixelSnapping.h"/>
    <depend name="include/openfl/events/EventPhase.h"/>
   </file>
   <file name="src/openfl/_v2/Lib.cpp">
@@ -1388,14 +1454,13 @@
   </file>
   <file name="src/openfl/_v2/events/EventDispatcher.cpp">
    <depend name="include/IMap.h"/>
+   <depend name="include/Reflect.h"/>
    <depend name="include/Type.h"/>
-   <depend name="include/haxe/Log.h"/>
    <depend name="include/haxe/ds/StringMap.h"/>
    <depend name="include/openfl/_v2/events/Event.h"/>
    <depend name="include/openfl/_v2/events/EventDispatcher.h"/>
    <depend name="include/openfl/_v2/events/IEventDispatcher.h"/>
-   <depend name="include/openfl/_v2/events/Listener.h"/>
-   <depend name="include/openfl/_v2/utils/WeakRef.h"/>
+   <depend name="include/openfl/_v2/events/_EventDispatcher/Listener.h"/>
    <depend name="include/openfl/events/ErrorEvent.h"/>
    <depend name="include/openfl/events/EventPhase.h"/>
    <depend name="include/openfl/events/IOErrorEvent.h"/>
@@ -1431,6 +1496,7 @@
    <depend name="include/openfl/_v2/net/URLLoader.h"/>
    <depend name="include/openfl/display/StageAlign.h"/>
    <depend name="include/openfl/display/StageScaleMode.h"/>
+   <depend name="include/sys/FileSystem.h"/>
   </file>
   <file name="src/__boot__.cpp">
   </file>

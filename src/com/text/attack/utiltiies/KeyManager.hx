@@ -35,6 +35,8 @@ class KeyManager
 	
 	public function onKeyUp(event:KeyboardEvent):Void
 	{
+		trace("KEY LIFTED");
+		
 		if (this.isKeyDown(Keyboard.ESCAPE)) {
 			System.exit(0);
 		}

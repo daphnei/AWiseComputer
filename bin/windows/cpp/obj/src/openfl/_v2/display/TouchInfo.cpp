@@ -24,10 +24,10 @@ namespace display{
 
 Void TouchInfo_obj::__construct()
 {
-HX_STACK_FRAME("openfl._v2.display.TouchInfo","new",0x554fa402,"openfl._v2.display.TouchInfo.new","openfl/_v2/display/Stage.hx",1393,0xd25d2a60)
+HX_STACK_FRAME("openfl._v2.display.TouchInfo","new",0x554fa402,"openfl._v2.display.TouchInfo.new","openfl/_v2/display/Stage.hx",1399,0xd25d2a60)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(1393)
+	HX_STACK_LINE(1399)
 	this->touchOverObjects = Array_obj< ::Dynamic >::__new();
 }
 ;

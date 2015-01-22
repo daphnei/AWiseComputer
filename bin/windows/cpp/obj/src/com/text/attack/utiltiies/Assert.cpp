@@ -39,8 +39,23 @@ Void Assert_obj::_assert( bool cond,Dynamic pos){
 		HX_STACK_ARG(pos,"pos")
 		HX_STACK_LINE(11)
 		if ((!(cond))){
+			struct _Function_2_1{
+				inline static Dynamic Block( Dynamic &pos){
+					HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","com/text/attack/utiltiies/Assert.hx",12,0x5d45de56)
+					{
+						hx::Anon __result = hx::Anon_obj::Create();
+						__result->Add(HX_CSTRING("fileName") , HX_CSTRING("Assert.hx"),false);
+						__result->Add(HX_CSTRING("lineNumber") , (int)12,false);
+						__result->Add(HX_CSTRING("className") , HX_CSTRING("com.text.attack.utiltiies.Assert"),false);
+						__result->Add(HX_CSTRING("methodName") , HX_CSTRING("assert"),false);
+						__result->Add(HX_CSTRING("customParams") , Dynamic( Array_obj<Dynamic>::__new().Add(pos)),false);
+						return __result;
+					}
+					return null();
+				}
+			};
 			HX_STACK_LINE(12)
-			::haxe::Log_obj::trace((((HX_CSTRING("Assert in ") + pos->__Field(HX_CSTRING("className"),true)) + HX_CSTRING("::")) + pos->__Field(HX_CSTRING("methodName"),true)),pos);
+			::haxe::Log_obj::trace((((HX_CSTRING("Assert in ") + pos->__Field(HX_CSTRING("className"),true)) + HX_CSTRING("::")) + pos->__Field(HX_CSTRING("methodName"),true)),_Function_2_1::Block(pos));
 			HX_STACK_LINE(13)
 			::openfl::_v2::system::System_obj::exit((int)1);
 		}

@@ -8,6 +8,8 @@
 #include <openfl/_v2/display/MovieClip.h>
 HX_DECLARE_CLASS4(com,text,attack,levels,Level)
 HX_DECLARE_CLASS4(com,text,attack,utiltiies,KeyManager)
+HX_DECLARE_CLASS4(com,text,attack,utiltiies,SoundManager)
+HX_DECLARE_CLASS4(com,text,attack,world,Bouncer)
 HX_DECLARE_CLASS4(com,text,attack,world,Bullet)
 HX_DECLARE_CLASS4(com,text,attack,world,Cell)
 HX_DECLARE_CLASS4(com,text,attack,world,Comet)
@@ -57,12 +59,15 @@ class HXCPP_CLASS_ATTRIBUTES  World_obj : public ::openfl::_v2::display::MovieCl
 		::com::text::attack::world::Player player;
 		Array< ::Dynamic > comets;
 		Array< ::Dynamic > bullets;
+		Array< ::Dynamic > bouncers;
 		Array< ::Dynamic > cometsToRemove;
 		Array< ::Dynamic > bulletsToAdd;
 		::com::text::attack::world::WorldGrid grid;
 		::com::text::attack::utiltiies::KeyManager keyManager;
+		::com::text::attack::utiltiies::SoundManager soundManager;
 		::openfl::_v2::text::TextField worldVisual;
 		::openfl::_v2::text::TextFormat textFormat;
+		::openfl::_v2::text::TextField helpText;
 		::com::text::attack::world::GameState gameState;
 		int numBulletsAvail;
 		int levelIndex;
@@ -85,17 +90,17 @@ class HXCPP_CLASS_ATTRIBUTES  World_obj : public ::openfl::_v2::display::MovieCl
 		virtual Void endGame( bool success);
 		Dynamic endGame_dyn();
 
+		virtual Void setWorldVisualFormat( bool forText);
+		Dynamic setWorldVisualFormat_dyn();
+
 		virtual Void centerWorldVisual( );
 		Dynamic centerWorldVisual_dyn();
 
 		virtual Void resetWorldVisual( );
 		Dynamic resetWorldVisual_dyn();
 
-		virtual Void collideBulletComet( ::com::text::attack::world::Bullet bullet,::com::text::attack::world::Comet comet);
-		Dynamic collideBulletComet_dyn();
-
-		virtual Void collidePlayerComet( ::com::text::attack::world::Comet comet);
-		Dynamic collidePlayerComet_dyn();
+		virtual bool okToWallWalk( );
+		Dynamic okToWallWalk_dyn();
 
 		virtual bool playingKeyDown( );
 		Dynamic playingKeyDown_dyn();
@@ -106,8 +111,20 @@ class HXCPP_CLASS_ATTRIBUTES  World_obj : public ::openfl::_v2::display::MovieCl
 		virtual bool switchToLevelCheat( );
 		Dynamic switchToLevelCheat_dyn();
 
+		virtual Void splitComet( ::com::text::attack::world::Comet comet,::com::text::attack::world::Bouncer bouncer);
+		Dynamic splitComet_dyn();
+
+		virtual Void rotate( int amount);
+		Dynamic rotate_dyn();
+
 		virtual Void update( );
 		Dynamic update_dyn();
+
+		virtual Void resolveBulletCollision( );
+		Dynamic resolveBulletCollision_dyn();
+
+		virtual Void resolveCometCollision( );
+		Dynamic resolveCometCollision_dyn();
 
 		static Array< ::Dynamic > LEVELS;
 		static int LEADING_IN_GAME;

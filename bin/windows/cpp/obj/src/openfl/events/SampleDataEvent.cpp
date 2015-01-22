@@ -39,6 +39,12 @@ bool cancelable = __o_cancelable.Default(false);
 {
 	HX_STACK_LINE(18)
 	super::__construct(type,bubbles,cancelable);
+	HX_STACK_LINE(20)
+	::openfl::_v2::utils::ByteArray _g = ::openfl::_v2::utils::ByteArray_obj::__new(null());		HX_STACK_VAR(_g,"_g");
+	HX_STACK_LINE(20)
+	this->data = _g;
+	HX_STACK_LINE(21)
+	this->data->set_endian(HX_CSTRING("littleEndian"));
 	HX_STACK_LINE(22)
 	this->position = 0.0;
 }

@@ -21,7 +21,7 @@ namespace display{
 
 Void OptimizedPerlin_obj::__construct(hx::Null< int >  __o_seed,hx::Null< int >  __o_numOctaves,hx::Null< Float >  __o_falloff)
 {
-HX_STACK_FRAME("openfl._v2.display.OptimizedPerlin","new",0x553ce250,"openfl._v2.display.OptimizedPerlin.new","openfl/_v2/display/BitmapData.hx",838,0xebe9fb05)
+HX_STACK_FRAME("openfl._v2.display.OptimizedPerlin","new",0x553ce250,"openfl._v2.display.OptimizedPerlin.new","openfl/_v2/display/BitmapData.hx",844,0xebe9fb05)
 HX_STACK_THIS(this)
 HX_STACK_ARG(__o_seed,"seed")
 HX_STACK_ARG(__o_numOctaves,"numOctaves")
@@ -30,13 +30,13 @@ int seed = __o_seed.Default(123);
 int numOctaves = __o_numOctaves.Default(4);
 Float falloff = __o_falloff.Default(0.5);
 {
-	HX_STACK_LINE(840)
+	HX_STACK_LINE(846)
 	this->baseFactor = 0.015625;
-	HX_STACK_LINE(841)
+	HX_STACK_LINE(847)
 	this->octaves = numOctaves;
-	HX_STACK_LINE(842)
+	HX_STACK_LINE(848)
 	this->seedOffset(seed);
-	HX_STACK_LINE(843)
+	HX_STACK_LINE(849)
 	this->octFreqPers(falloff);
 }
 ;
@@ -58,217 +58,217 @@ Dynamic OptimizedPerlin_obj::__Create(hx::DynamicArray inArgs)
 
 Void OptimizedPerlin_obj::fill( ::openfl::_v2::display::BitmapData bitmap,Float _x,Float _y,Float _z,Dynamic _){
 {
-		HX_STACK_FRAME("openfl._v2.display.OptimizedPerlin","fill",0x3ac26e93,"openfl._v2.display.OptimizedPerlin.fill","openfl/_v2/display/BitmapData.hx",848,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.OptimizedPerlin","fill",0x3ac26e93,"openfl._v2.display.OptimizedPerlin.fill","openfl/_v2/display/BitmapData.hx",854,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(bitmap,"bitmap")
 		HX_STACK_ARG(_x,"_x")
 		HX_STACK_ARG(_y,"_y")
 		HX_STACK_ARG(_z,"_z")
 		HX_STACK_ARG(_,"_")
-		HX_STACK_LINE(850)
-		Float baseX;		HX_STACK_VAR(baseX,"baseX");
-		HX_STACK_LINE(852)
-		baseX = ((_x * this->baseFactor) + this->iXoffset);
-		HX_STACK_LINE(853)
-		_y = ((_y * this->baseFactor) + this->iYoffset);
-		HX_STACK_LINE(854)
-		_z = ((_z * this->baseFactor) + this->iZoffset);
 		HX_STACK_LINE(856)
-		int width = bitmap->get_width();		HX_STACK_VAR(width,"width");
-		HX_STACK_LINE(857)
-		int height = bitmap->get_height();		HX_STACK_VAR(height,"height");
+		Float baseX;		HX_STACK_VAR(baseX,"baseX");
+		HX_STACK_LINE(858)
+		baseX = ((_x * this->baseFactor) + this->iXoffset);
 		HX_STACK_LINE(859)
-		Array< int > p = ::openfl::_v2::display::OptimizedPerlin_obj::P;		HX_STACK_VAR(p,"p");
+		_y = ((_y * this->baseFactor) + this->iYoffset);
 		HX_STACK_LINE(860)
-		int octaves = this->octaves;		HX_STACK_VAR(octaves,"octaves");
-		HX_STACK_LINE(861)
-		Array< Float > aOctFreq = this->aOctFreq;		HX_STACK_VAR(aOctFreq,"aOctFreq");
+		_z = ((_z * this->baseFactor) + this->iZoffset);
 		HX_STACK_LINE(862)
-		Array< Float > aOctPers = this->aOctPers;		HX_STACK_VAR(aOctPers,"aOctPers");
-		HX_STACK_LINE(864)
-		Float s;		HX_STACK_VAR(s,"s");
-		HX_STACK_LINE(864)
-		Float fFreq;		HX_STACK_VAR(fFreq,"fFreq");
-		HX_STACK_LINE(864)
-		Float fPers;		HX_STACK_VAR(fPers,"fPers");
-		HX_STACK_LINE(864)
-		Float x;		HX_STACK_VAR(x,"x");
-		HX_STACK_LINE(864)
-		Float y;		HX_STACK_VAR(y,"y");
-		HX_STACK_LINE(864)
-		Float z;		HX_STACK_VAR(z,"z");
-		HX_STACK_LINE(864)
-		Float xf;		HX_STACK_VAR(xf,"xf");
-		HX_STACK_LINE(864)
-		Float yf;		HX_STACK_VAR(yf,"yf");
-		HX_STACK_LINE(864)
-		Float zf;		HX_STACK_VAR(zf,"zf");
-		HX_STACK_LINE(864)
-		int X;		HX_STACK_VAR(X,"X");
-		HX_STACK_LINE(864)
-		int Y;		HX_STACK_VAR(Y,"Y");
-		HX_STACK_LINE(864)
-		int Z;		HX_STACK_VAR(Z,"Z");
-		HX_STACK_LINE(864)
-		Float u;		HX_STACK_VAR(u,"u");
-		HX_STACK_LINE(864)
-		Float v;		HX_STACK_VAR(v,"v");
-		HX_STACK_LINE(864)
-		Float w;		HX_STACK_VAR(w,"w");
-		HX_STACK_LINE(864)
-		int A;		HX_STACK_VAR(A,"A");
-		HX_STACK_LINE(864)
-		int AA;		HX_STACK_VAR(AA,"AA");
-		HX_STACK_LINE(864)
-		int AB;		HX_STACK_VAR(AB,"AB");
-		HX_STACK_LINE(864)
-		int B;		HX_STACK_VAR(B,"B");
-		HX_STACK_LINE(864)
-		int BA;		HX_STACK_VAR(BA,"BA");
-		HX_STACK_LINE(864)
-		int BB;		HX_STACK_VAR(BB,"BB");
-		HX_STACK_LINE(864)
-		Float x1;		HX_STACK_VAR(x1,"x1");
-		HX_STACK_LINE(864)
-		Float y1;		HX_STACK_VAR(y1,"y1");
-		HX_STACK_LINE(864)
-		Float z1;		HX_STACK_VAR(z1,"z1");
-		HX_STACK_LINE(864)
-		int hash;		HX_STACK_VAR(hash,"hash");
-		HX_STACK_LINE(864)
-		Float g1;		HX_STACK_VAR(g1,"g1");
-		HX_STACK_LINE(864)
-		Float g2;		HX_STACK_VAR(g2,"g2");
-		HX_STACK_LINE(864)
-		Float g3;		HX_STACK_VAR(g3,"g3");
-		HX_STACK_LINE(864)
-		Float g4;		HX_STACK_VAR(g4,"g4");
-		HX_STACK_LINE(864)
-		Float g5;		HX_STACK_VAR(g5,"g5");
-		HX_STACK_LINE(864)
-		Float g6;		HX_STACK_VAR(g6,"g6");
-		HX_STACK_LINE(864)
-		Float g7;		HX_STACK_VAR(g7,"g7");
-		HX_STACK_LINE(864)
-		Float g8;		HX_STACK_VAR(g8,"g8");
-		HX_STACK_LINE(864)
-		int color;		HX_STACK_VAR(color,"color");
-		HX_STACK_LINE(864)
-		int pixel;		HX_STACK_VAR(pixel,"pixel");
+		int width = bitmap->get_width();		HX_STACK_VAR(width,"width");
+		HX_STACK_LINE(863)
+		int height = bitmap->get_height();		HX_STACK_VAR(height,"height");
+		HX_STACK_LINE(865)
+		Array< int > p = ::openfl::_v2::display::OptimizedPerlin_obj::P;		HX_STACK_VAR(p,"p");
 		HX_STACK_LINE(866)
+		int octaves = this->octaves;		HX_STACK_VAR(octaves,"octaves");
+		HX_STACK_LINE(867)
+		Array< Float > aOctFreq = this->aOctFreq;		HX_STACK_VAR(aOctFreq,"aOctFreq");
+		HX_STACK_LINE(868)
+		Array< Float > aOctPers = this->aOctPers;		HX_STACK_VAR(aOctPers,"aOctPers");
+		HX_STACK_LINE(870)
+		Float s;		HX_STACK_VAR(s,"s");
+		HX_STACK_LINE(870)
+		Float fFreq;		HX_STACK_VAR(fFreq,"fFreq");
+		HX_STACK_LINE(870)
+		Float fPers;		HX_STACK_VAR(fPers,"fPers");
+		HX_STACK_LINE(870)
+		Float x;		HX_STACK_VAR(x,"x");
+		HX_STACK_LINE(870)
+		Float y;		HX_STACK_VAR(y,"y");
+		HX_STACK_LINE(870)
+		Float z;		HX_STACK_VAR(z,"z");
+		HX_STACK_LINE(870)
+		Float xf;		HX_STACK_VAR(xf,"xf");
+		HX_STACK_LINE(870)
+		Float yf;		HX_STACK_VAR(yf,"yf");
+		HX_STACK_LINE(870)
+		Float zf;		HX_STACK_VAR(zf,"zf");
+		HX_STACK_LINE(870)
+		int X;		HX_STACK_VAR(X,"X");
+		HX_STACK_LINE(870)
+		int Y;		HX_STACK_VAR(Y,"Y");
+		HX_STACK_LINE(870)
+		int Z;		HX_STACK_VAR(Z,"Z");
+		HX_STACK_LINE(870)
+		Float u;		HX_STACK_VAR(u,"u");
+		HX_STACK_LINE(870)
+		Float v;		HX_STACK_VAR(v,"v");
+		HX_STACK_LINE(870)
+		Float w;		HX_STACK_VAR(w,"w");
+		HX_STACK_LINE(870)
+		int A;		HX_STACK_VAR(A,"A");
+		HX_STACK_LINE(870)
+		int AA;		HX_STACK_VAR(AA,"AA");
+		HX_STACK_LINE(870)
+		int AB;		HX_STACK_VAR(AB,"AB");
+		HX_STACK_LINE(870)
+		int B;		HX_STACK_VAR(B,"B");
+		HX_STACK_LINE(870)
+		int BA;		HX_STACK_VAR(BA,"BA");
+		HX_STACK_LINE(870)
+		int BB;		HX_STACK_VAR(BB,"BB");
+		HX_STACK_LINE(870)
+		Float x1;		HX_STACK_VAR(x1,"x1");
+		HX_STACK_LINE(870)
+		Float y1;		HX_STACK_VAR(y1,"y1");
+		HX_STACK_LINE(870)
+		Float z1;		HX_STACK_VAR(z1,"z1");
+		HX_STACK_LINE(870)
+		int hash;		HX_STACK_VAR(hash,"hash");
+		HX_STACK_LINE(870)
+		Float g1;		HX_STACK_VAR(g1,"g1");
+		HX_STACK_LINE(870)
+		Float g2;		HX_STACK_VAR(g2,"g2");
+		HX_STACK_LINE(870)
+		Float g3;		HX_STACK_VAR(g3,"g3");
+		HX_STACK_LINE(870)
+		Float g4;		HX_STACK_VAR(g4,"g4");
+		HX_STACK_LINE(870)
+		Float g5;		HX_STACK_VAR(g5,"g5");
+		HX_STACK_LINE(870)
+		Float g6;		HX_STACK_VAR(g6,"g6");
+		HX_STACK_LINE(870)
+		Float g7;		HX_STACK_VAR(g7,"g7");
+		HX_STACK_LINE(870)
+		Float g8;		HX_STACK_VAR(g8,"g8");
+		HX_STACK_LINE(870)
+		int color;		HX_STACK_VAR(color,"color");
+		HX_STACK_LINE(870)
+		int pixel;		HX_STACK_VAR(pixel,"pixel");
+		HX_STACK_LINE(872)
 		{
-			HX_STACK_LINE(866)
+			HX_STACK_LINE(872)
 			int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(866)
+			HX_STACK_LINE(872)
 			while((true)){
-				HX_STACK_LINE(866)
+				HX_STACK_LINE(872)
 				if ((!(((_g < height))))){
-					HX_STACK_LINE(866)
+					HX_STACK_LINE(872)
 					break;
 				}
-				HX_STACK_LINE(866)
+				HX_STACK_LINE(872)
 				int py = (_g)++;		HX_STACK_VAR(py,"py");
-				HX_STACK_LINE(868)
+				HX_STACK_LINE(874)
 				_x = baseX;
-				HX_STACK_LINE(870)
+				HX_STACK_LINE(876)
 				{
-					HX_STACK_LINE(870)
+					HX_STACK_LINE(876)
 					int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
-					HX_STACK_LINE(870)
+					HX_STACK_LINE(876)
 					while((true)){
-						HX_STACK_LINE(870)
+						HX_STACK_LINE(876)
 						if ((!(((_g1 < width))))){
-							HX_STACK_LINE(870)
+							HX_STACK_LINE(876)
 							break;
 						}
-						HX_STACK_LINE(870)
+						HX_STACK_LINE(876)
 						int px = (_g1)++;		HX_STACK_VAR(px,"px");
-						HX_STACK_LINE(872)
+						HX_STACK_LINE(878)
 						s = 0.;
-						HX_STACK_LINE(874)
+						HX_STACK_LINE(880)
 						{
-							HX_STACK_LINE(874)
+							HX_STACK_LINE(880)
 							int _g2 = (int)0;		HX_STACK_VAR(_g2,"_g2");
-							HX_STACK_LINE(874)
+							HX_STACK_LINE(880)
 							while((true)){
-								HX_STACK_LINE(874)
+								HX_STACK_LINE(880)
 								if ((!(((_g2 < octaves))))){
-									HX_STACK_LINE(874)
+									HX_STACK_LINE(880)
 									break;
 								}
-								HX_STACK_LINE(874)
-								int i = (_g2)++;		HX_STACK_VAR(i,"i");
-								HX_STACK_LINE(876)
-								fFreq = aOctFreq->__get(i);
-								HX_STACK_LINE(877)
-								fPers = aOctPers->__get(i);
-								HX_STACK_LINE(879)
-								x = (_x * fFreq);
 								HX_STACK_LINE(880)
-								y = (_y * fFreq);
-								HX_STACK_LINE(881)
-								z = (_z * fFreq);
+								int i = (_g2)++;		HX_STACK_VAR(i,"i");
+								HX_STACK_LINE(882)
+								fFreq = aOctFreq->__get(i);
 								HX_STACK_LINE(883)
-								xf = (x - hx::Mod(x,(int)1));
-								HX_STACK_LINE(884)
-								yf = (y - hx::Mod(y,(int)1));
+								fPers = aOctPers->__get(i);
 								HX_STACK_LINE(885)
-								zf = (z - hx::Mod(z,(int)1));
+								x = (_x * fFreq);
+								HX_STACK_LINE(886)
+								y = (_y * fFreq);
 								HX_STACK_LINE(887)
-								int _g3 = ::Std_obj::_int(xf);		HX_STACK_VAR(_g3,"_g3");
-								HX_STACK_LINE(887)
-								int _g11 = (int(_g3) & int((int)255));		HX_STACK_VAR(_g11,"_g11");
-								HX_STACK_LINE(887)
-								X = _g11;
-								HX_STACK_LINE(888)
-								int _g21 = ::Std_obj::_int(yf);		HX_STACK_VAR(_g21,"_g21");
-								HX_STACK_LINE(888)
-								int _g31 = (int(_g21) & int((int)255));		HX_STACK_VAR(_g31,"_g31");
-								HX_STACK_LINE(888)
-								Y = _g31;
+								z = (_z * fFreq);
 								HX_STACK_LINE(889)
-								int _g4 = ::Std_obj::_int(zf);		HX_STACK_VAR(_g4,"_g4");
-								HX_STACK_LINE(889)
-								int _g5 = (int(_g4) & int((int)255));		HX_STACK_VAR(_g5,"_g5");
-								HX_STACK_LINE(889)
-								Z = _g5;
+								xf = (x - hx::Mod(x,(int)1));
+								HX_STACK_LINE(890)
+								yf = (y - hx::Mod(y,(int)1));
 								HX_STACK_LINE(891)
-								hx::SubEq(x,xf);
-								HX_STACK_LINE(892)
-								hx::SubEq(y,yf);
+								zf = (z - hx::Mod(z,(int)1));
 								HX_STACK_LINE(893)
-								hx::SubEq(z,zf);
+								int _g3 = ::Std_obj::_int(xf);		HX_STACK_VAR(_g3,"_g3");
+								HX_STACK_LINE(893)
+								int _g11 = (int(_g3) & int((int)255));		HX_STACK_VAR(_g11,"_g11");
+								HX_STACK_LINE(893)
+								X = _g11;
+								HX_STACK_LINE(894)
+								int _g21 = ::Std_obj::_int(yf);		HX_STACK_VAR(_g21,"_g21");
+								HX_STACK_LINE(894)
+								int _g31 = (int(_g21) & int((int)255));		HX_STACK_VAR(_g31,"_g31");
+								HX_STACK_LINE(894)
+								Y = _g31;
 								HX_STACK_LINE(895)
-								u = (((x * x) * x) * (((x * (((x * (int)6) - (int)15))) + (int)10)));
-								HX_STACK_LINE(896)
-								v = (((y * y) * y) * (((y * (((y * (int)6) - (int)15))) + (int)10)));
+								int _g4 = ::Std_obj::_int(zf);		HX_STACK_VAR(_g4,"_g4");
+								HX_STACK_LINE(895)
+								int _g5 = (int(_g4) & int((int)255));		HX_STACK_VAR(_g5,"_g5");
+								HX_STACK_LINE(895)
+								Z = _g5;
 								HX_STACK_LINE(897)
-								w = (((z * z) * z) * (((z * (((z * (int)6) - (int)15))) + (int)10)));
+								hx::SubEq(x,xf);
+								HX_STACK_LINE(898)
+								hx::SubEq(y,yf);
 								HX_STACK_LINE(899)
-								A = (p->__get(X) + Y);
-								HX_STACK_LINE(900)
-								AA = (p->__get(A) + Z);
+								hx::SubEq(z,zf);
 								HX_STACK_LINE(901)
-								AB = (p->__get((A + (int)1)) + Z);
+								u = (((x * x) * x) * (((x * (((x * (int)6) - (int)15))) + (int)10)));
 								HX_STACK_LINE(902)
-								B = (p->__get((X + (int)1)) + Y);
+								v = (((y * y) * y) * (((y * (((y * (int)6) - (int)15))) + (int)10)));
 								HX_STACK_LINE(903)
-								BA = (p->__get(B) + Z);
-								HX_STACK_LINE(904)
-								BB = (p->__get((B + (int)1)) + Z);
+								w = (((z * z) * z) * (((z * (((z * (int)6) - (int)15))) + (int)10)));
+								HX_STACK_LINE(905)
+								A = (p->__get(X) + Y);
 								HX_STACK_LINE(906)
-								x1 = (x - (int)1);
+								AA = (p->__get(A) + Z);
 								HX_STACK_LINE(907)
-								y1 = (y - (int)1);
+								AB = (p->__get((A + (int)1)) + Z);
 								HX_STACK_LINE(908)
-								z1 = (z - (int)1);
+								B = (p->__get((X + (int)1)) + Y);
+								HX_STACK_LINE(909)
+								BA = (p->__get(B) + Z);
 								HX_STACK_LINE(910)
+								BB = (p->__get((B + (int)1)) + Z);
+								HX_STACK_LINE(912)
+								x1 = (x - (int)1);
+								HX_STACK_LINE(913)
+								y1 = (y - (int)1);
+								HX_STACK_LINE(914)
+								z1 = (z - (int)1);
+								HX_STACK_LINE(916)
 								hash = (int(p->__get((BB + (int)1))) & int((int)15));
 								struct _Function_7_1{
 									inline static Float Block( int &hash,Float &x1,Float &y1){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",911,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",917,0xebe9fb05)
 										{
-											HX_STACK_LINE(911)
+											HX_STACK_LINE(917)
 											return (  (((hash < (int)8))) ? Float(x1) : Float(y1) );
 										}
 										return null();
@@ -276,23 +276,23 @@ Void OptimizedPerlin_obj::fill( ::openfl::_v2::display::BitmapData bitmap,Float 
 								};
 								struct _Function_7_2{
 									inline static Float Block( int &hash,Float &x1,Float &z1,Float &y1){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",911,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",917,0xebe9fb05)
 										{
-											HX_STACK_LINE(911)
+											HX_STACK_LINE(917)
 											return (  (((hash < (int)4))) ? Float(y1) : Float((  (((hash == (int)12))) ? Float(x1) : Float(z1) )) );
 										}
 										return null();
 									}
 								};
-								HX_STACK_LINE(911)
+								HX_STACK_LINE(917)
 								g1 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_1::Block(hash,x1,y1)) : Float((  (((hash < (int)8))) ? Float(-(x1)) : Float(-(y1)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_2::Block(hash,x1,z1,y1)) : Float((  (((hash < (int)4))) ? Float(-(y1)) : Float((  (((hash == (int)14))) ? Float(-(x1)) : Float(-(z1)) )) )) )));
-								HX_STACK_LINE(913)
+								HX_STACK_LINE(919)
 								hash = (int(p->__get((AB + (int)1))) & int((int)15));
 								struct _Function_7_3{
 									inline static Float Block( int &hash,Float &x,Float &y1){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",914,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",920,0xebe9fb05)
 										{
-											HX_STACK_LINE(914)
+											HX_STACK_LINE(920)
 											return (  (((hash < (int)8))) ? Float(x) : Float(y1) );
 										}
 										return null();
@@ -300,23 +300,23 @@ Void OptimizedPerlin_obj::fill( ::openfl::_v2::display::BitmapData bitmap,Float 
 								};
 								struct _Function_7_4{
 									inline static Float Block( int &hash,Float &x,Float &z1,Float &y1){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",914,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",920,0xebe9fb05)
 										{
-											HX_STACK_LINE(914)
+											HX_STACK_LINE(920)
 											return (  (((hash < (int)4))) ? Float(y1) : Float((  (((hash == (int)12))) ? Float(x) : Float(z1) )) );
 										}
 										return null();
 									}
 								};
-								HX_STACK_LINE(914)
+								HX_STACK_LINE(920)
 								g2 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_3::Block(hash,x,y1)) : Float((  (((hash < (int)8))) ? Float(-(x)) : Float(-(y1)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_4::Block(hash,x,z1,y1)) : Float((  (((hash < (int)4))) ? Float(-(y1)) : Float((  (((hash == (int)14))) ? Float(-(x)) : Float(-(z1)) )) )) )));
-								HX_STACK_LINE(916)
+								HX_STACK_LINE(922)
 								hash = (int(p->__get((BA + (int)1))) & int((int)15));
 								struct _Function_7_5{
 									inline static Float Block( int &hash,Float &x1,Float &y){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",917,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",923,0xebe9fb05)
 										{
-											HX_STACK_LINE(917)
+											HX_STACK_LINE(923)
 											return (  (((hash < (int)8))) ? Float(x1) : Float(y) );
 										}
 										return null();
@@ -324,23 +324,23 @@ Void OptimizedPerlin_obj::fill( ::openfl::_v2::display::BitmapData bitmap,Float 
 								};
 								struct _Function_7_6{
 									inline static Float Block( int &hash,Float &x1,Float &y,Float &z1){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",917,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",923,0xebe9fb05)
 										{
-											HX_STACK_LINE(917)
+											HX_STACK_LINE(923)
 											return (  (((hash < (int)4))) ? Float(y) : Float((  (((hash == (int)12))) ? Float(x1) : Float(z1) )) );
 										}
 										return null();
 									}
 								};
-								HX_STACK_LINE(917)
+								HX_STACK_LINE(923)
 								g3 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_5::Block(hash,x1,y)) : Float((  (((hash < (int)8))) ? Float(-(x1)) : Float(-(y)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_6::Block(hash,x1,y,z1)) : Float((  (((hash < (int)4))) ? Float(-(y)) : Float((  (((hash == (int)14))) ? Float(-(x1)) : Float(-(z1)) )) )) )));
-								HX_STACK_LINE(919)
+								HX_STACK_LINE(925)
 								hash = (int(p->__get((AA + (int)1))) & int((int)15));
 								struct _Function_7_7{
 									inline static Float Block( int &hash,Float &x,Float &y){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",920,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",926,0xebe9fb05)
 										{
-											HX_STACK_LINE(920)
+											HX_STACK_LINE(926)
 											return (  (((hash < (int)8))) ? Float(x) : Float(y) );
 										}
 										return null();
@@ -348,23 +348,23 @@ Void OptimizedPerlin_obj::fill( ::openfl::_v2::display::BitmapData bitmap,Float 
 								};
 								struct _Function_7_8{
 									inline static Float Block( int &hash,Float &x,Float &y,Float &z1){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",920,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",926,0xebe9fb05)
 										{
-											HX_STACK_LINE(920)
+											HX_STACK_LINE(926)
 											return (  (((hash < (int)4))) ? Float(y) : Float((  (((hash == (int)12))) ? Float(x) : Float(z1) )) );
 										}
 										return null();
 									}
 								};
-								HX_STACK_LINE(920)
+								HX_STACK_LINE(926)
 								g4 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_7::Block(hash,x,y)) : Float((  (((hash < (int)8))) ? Float(-(x)) : Float(-(y)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_8::Block(hash,x,y,z1)) : Float((  (((hash < (int)4))) ? Float(-(y)) : Float((  (((hash == (int)14))) ? Float(-(x)) : Float(-(z1)) )) )) )));
-								HX_STACK_LINE(922)
+								HX_STACK_LINE(928)
 								hash = (int(p->__get(BB)) & int((int)15));
 								struct _Function_7_9{
 									inline static Float Block( int &hash,Float &x1,Float &y1){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",923,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",929,0xebe9fb05)
 										{
-											HX_STACK_LINE(923)
+											HX_STACK_LINE(929)
 											return (  (((hash < (int)8))) ? Float(x1) : Float(y1) );
 										}
 										return null();
@@ -372,23 +372,23 @@ Void OptimizedPerlin_obj::fill( ::openfl::_v2::display::BitmapData bitmap,Float 
 								};
 								struct _Function_7_10{
 									inline static Float Block( int &hash,Float &x1,Float &z,Float &y1){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",923,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",929,0xebe9fb05)
 										{
-											HX_STACK_LINE(923)
+											HX_STACK_LINE(929)
 											return (  (((hash < (int)4))) ? Float(y1) : Float((  (((hash == (int)12))) ? Float(x1) : Float(z) )) );
 										}
 										return null();
 									}
 								};
-								HX_STACK_LINE(923)
+								HX_STACK_LINE(929)
 								g5 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_9::Block(hash,x1,y1)) : Float((  (((hash < (int)8))) ? Float(-(x1)) : Float(-(y1)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_10::Block(hash,x1,z,y1)) : Float((  (((hash < (int)4))) ? Float(-(y1)) : Float((  (((hash == (int)14))) ? Float(-(x1)) : Float(-(z)) )) )) )));
-								HX_STACK_LINE(925)
+								HX_STACK_LINE(931)
 								hash = (int(p->__get(AB)) & int((int)15));
 								struct _Function_7_11{
 									inline static Float Block( int &hash,Float &x,Float &y1){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",926,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",932,0xebe9fb05)
 										{
-											HX_STACK_LINE(926)
+											HX_STACK_LINE(932)
 											return (  (((hash < (int)8))) ? Float(x) : Float(y1) );
 										}
 										return null();
@@ -396,23 +396,23 @@ Void OptimizedPerlin_obj::fill( ::openfl::_v2::display::BitmapData bitmap,Float 
 								};
 								struct _Function_7_12{
 									inline static Float Block( int &hash,Float &x,Float &z,Float &y1){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",926,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",932,0xebe9fb05)
 										{
-											HX_STACK_LINE(926)
+											HX_STACK_LINE(932)
 											return (  (((hash < (int)4))) ? Float(y1) : Float((  (((hash == (int)12))) ? Float(x) : Float(z) )) );
 										}
 										return null();
 									}
 								};
-								HX_STACK_LINE(926)
+								HX_STACK_LINE(932)
 								g6 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_11::Block(hash,x,y1)) : Float((  (((hash < (int)8))) ? Float(-(x)) : Float(-(y1)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_12::Block(hash,x,z,y1)) : Float((  (((hash < (int)4))) ? Float(-(y1)) : Float((  (((hash == (int)14))) ? Float(-(x)) : Float(-(z)) )) )) )));
-								HX_STACK_LINE(928)
+								HX_STACK_LINE(934)
 								hash = (int(p->__get(BA)) & int((int)15));
 								struct _Function_7_13{
 									inline static Float Block( int &hash,Float &x1,Float &y){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",929,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",935,0xebe9fb05)
 										{
-											HX_STACK_LINE(929)
+											HX_STACK_LINE(935)
 											return (  (((hash < (int)8))) ? Float(x1) : Float(y) );
 										}
 										return null();
@@ -420,23 +420,23 @@ Void OptimizedPerlin_obj::fill( ::openfl::_v2::display::BitmapData bitmap,Float 
 								};
 								struct _Function_7_14{
 									inline static Float Block( int &hash,Float &x1,Float &y,Float &z){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",929,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",935,0xebe9fb05)
 										{
-											HX_STACK_LINE(929)
+											HX_STACK_LINE(935)
 											return (  (((hash < (int)4))) ? Float(y) : Float((  (((hash == (int)12))) ? Float(x1) : Float(z) )) );
 										}
 										return null();
 									}
 								};
-								HX_STACK_LINE(929)
+								HX_STACK_LINE(935)
 								g7 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_13::Block(hash,x1,y)) : Float((  (((hash < (int)8))) ? Float(-(x1)) : Float(-(y)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_14::Block(hash,x1,y,z)) : Float((  (((hash < (int)4))) ? Float(-(y)) : Float((  (((hash == (int)14))) ? Float(-(x1)) : Float(-(z)) )) )) )));
-								HX_STACK_LINE(931)
+								HX_STACK_LINE(937)
 								hash = (int(p->__get(AA)) & int((int)15));
 								struct _Function_7_15{
 									inline static Float Block( int &hash,Float &x,Float &y){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",932,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",938,0xebe9fb05)
 										{
-											HX_STACK_LINE(932)
+											HX_STACK_LINE(938)
 											return (  (((hash < (int)8))) ? Float(x) : Float(y) );
 										}
 										return null();
@@ -444,45 +444,45 @@ Void OptimizedPerlin_obj::fill( ::openfl::_v2::display::BitmapData bitmap,Float 
 								};
 								struct _Function_7_16{
 									inline static Float Block( int &hash,Float &x,Float &y,Float &z){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",932,0xebe9fb05)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",938,0xebe9fb05)
 										{
-											HX_STACK_LINE(932)
+											HX_STACK_LINE(938)
 											return (  (((hash < (int)4))) ? Float(y) : Float((  (((hash == (int)12))) ? Float(x) : Float(z) )) );
 										}
 										return null();
 									}
 								};
-								HX_STACK_LINE(932)
+								HX_STACK_LINE(938)
 								g8 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_15::Block(hash,x,y)) : Float((  (((hash < (int)8))) ? Float(-(x)) : Float(-(y)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_16::Block(hash,x,y,z)) : Float((  (((hash < (int)4))) ? Float(-(y)) : Float((  (((hash == (int)14))) ? Float(-(x)) : Float(-(z)) )) )) )));
-								HX_STACK_LINE(934)
-								hx::AddEq(g2,(u * ((g1 - g2))));
-								HX_STACK_LINE(935)
-								hx::AddEq(g4,(u * ((g3 - g4))));
-								HX_STACK_LINE(936)
-								hx::AddEq(g6,(u * ((g5 - g6))));
-								HX_STACK_LINE(937)
-								hx::AddEq(g8,(u * ((g7 - g8))));
-								HX_STACK_LINE(939)
-								hx::AddEq(g4,(v * ((g2 - g4))));
 								HX_STACK_LINE(940)
-								hx::AddEq(g8,(v * ((g6 - g8))));
+								hx::AddEq(g2,(u * ((g1 - g2))));
+								HX_STACK_LINE(941)
+								hx::AddEq(g4,(u * ((g3 - g4))));
 								HX_STACK_LINE(942)
+								hx::AddEq(g6,(u * ((g5 - g6))));
+								HX_STACK_LINE(943)
+								hx::AddEq(g8,(u * ((g7 - g8))));
+								HX_STACK_LINE(945)
+								hx::AddEq(g4,(v * ((g2 - g4))));
+								HX_STACK_LINE(946)
+								hx::AddEq(g8,(v * ((g6 - g8))));
+								HX_STACK_LINE(948)
 								hx::AddEq(s,(((g8 + (w * ((g4 - g8))))) * fPers));
 							}
 						}
-						HX_STACK_LINE(946)
+						HX_STACK_LINE(952)
 						int _g6 = ::Std_obj::_int(((((s * this->fPersMax) + (int)1)) * (int)128));		HX_STACK_VAR(_g6,"_g6");
-						HX_STACK_LINE(946)
+						HX_STACK_LINE(952)
 						color = _g6;
-						HX_STACK_LINE(947)
+						HX_STACK_LINE(953)
 						pixel = (int((int((int((int)-16777216) | int((int(color) << int((int)16))))) | int((int(color) << int((int)8))))) | int(color));
-						HX_STACK_LINE(949)
+						HX_STACK_LINE(955)
 						bitmap->setPixel32(px,py,pixel);
-						HX_STACK_LINE(951)
+						HX_STACK_LINE(957)
 						hx::AddEq(_x,this->baseFactor);
 					}
 				}
-				HX_STACK_LINE(955)
+				HX_STACK_LINE(961)
 				hx::AddEq(_y,this->baseFactor);
 			}
 		}
@@ -495,51 +495,51 @@ HX_DEFINE_DYNAMIC_FUNC5(OptimizedPerlin_obj,fill,(void))
 
 Void OptimizedPerlin_obj::octFreqPers( Float fPersistence){
 {
-		HX_STACK_FRAME("openfl._v2.display.OptimizedPerlin","octFreqPers",0x52b020be,"openfl._v2.display.OptimizedPerlin.octFreqPers","openfl/_v2/display/BitmapData.hx",962,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.OptimizedPerlin","octFreqPers",0x52b020be,"openfl._v2.display.OptimizedPerlin.octFreqPers","openfl/_v2/display/BitmapData.hx",968,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(fPersistence,"fPersistence")
-		HX_STACK_LINE(964)
-		Float fFreq;		HX_STACK_VAR(fFreq,"fFreq");
-		HX_STACK_LINE(964)
-		Float fPers;		HX_STACK_VAR(fPers,"fPers");
-		HX_STACK_LINE(966)
-		this->aOctFreq = Array_obj< Float >::__new();
-		HX_STACK_LINE(967)
-		this->aOctPers = Array_obj< Float >::__new();
-		HX_STACK_LINE(968)
-		this->fPersMax = (int)0;
 		HX_STACK_LINE(970)
+		Float fFreq;		HX_STACK_VAR(fFreq,"fFreq");
+		HX_STACK_LINE(970)
+		Float fPers;		HX_STACK_VAR(fPers,"fPers");
+		HX_STACK_LINE(972)
+		this->aOctFreq = Array_obj< Float >::__new();
+		HX_STACK_LINE(973)
+		this->aOctPers = Array_obj< Float >::__new();
+		HX_STACK_LINE(974)
+		this->fPersMax = (int)0;
+		HX_STACK_LINE(976)
 		{
-			HX_STACK_LINE(970)
+			HX_STACK_LINE(976)
 			int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
-			HX_STACK_LINE(970)
+			HX_STACK_LINE(976)
 			int _g = this->octaves;		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(970)
+			HX_STACK_LINE(976)
 			while((true)){
-				HX_STACK_LINE(970)
+				HX_STACK_LINE(976)
 				if ((!(((_g1 < _g))))){
-					HX_STACK_LINE(970)
+					HX_STACK_LINE(976)
 					break;
 				}
-				HX_STACK_LINE(970)
-				int i = (_g1)++;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(972)
-				Float _g2 = ::Math_obj::pow((int)2,i);		HX_STACK_VAR(_g2,"_g2");
-				HX_STACK_LINE(972)
-				fFreq = _g2;
-				HX_STACK_LINE(973)
-				Float _g11 = ::Math_obj::pow(fPersistence,i);		HX_STACK_VAR(_g11,"_g11");
-				HX_STACK_LINE(973)
-				fPers = _g11;
-				HX_STACK_LINE(974)
-				hx::AddEq(this->fPersMax,fPers);
-				HX_STACK_LINE(975)
-				this->aOctFreq->push(fFreq);
 				HX_STACK_LINE(976)
+				int i = (_g1)++;		HX_STACK_VAR(i,"i");
+				HX_STACK_LINE(978)
+				Float _g2 = ::Math_obj::pow((int)2,i);		HX_STACK_VAR(_g2,"_g2");
+				HX_STACK_LINE(978)
+				fFreq = _g2;
+				HX_STACK_LINE(979)
+				Float _g11 = ::Math_obj::pow(fPersistence,i);		HX_STACK_VAR(_g11,"_g11");
+				HX_STACK_LINE(979)
+				fPers = _g11;
+				HX_STACK_LINE(980)
+				hx::AddEq(this->fPersMax,fPers);
+				HX_STACK_LINE(981)
+				this->aOctFreq->push(fFreq);
+				HX_STACK_LINE(982)
 				this->aOctPers->push(fPers);
 			}
 		}
-		HX_STACK_LINE(980)
+		HX_STACK_LINE(986)
 		this->fPersMax = (Float((int)1) / Float(this->fPersMax));
 	}
 return null();
@@ -550,26 +550,26 @@ HX_DEFINE_DYNAMIC_FUNC1(OptimizedPerlin_obj,octFreqPers,(void))
 
 Void OptimizedPerlin_obj::seedOffset( int iSeed){
 {
-		HX_STACK_FRAME("openfl._v2.display.OptimizedPerlin","seedOffset",0x01e5c7f4,"openfl._v2.display.OptimizedPerlin.seedOffset","openfl/_v2/display/BitmapData.hx",985,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.OptimizedPerlin","seedOffset",0x01e5c7f4,"openfl._v2.display.OptimizedPerlin.seedOffset","openfl/_v2/display/BitmapData.hx",991,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(iSeed,"iSeed")
-		HX_STACK_LINE(987)
+		HX_STACK_LINE(993)
 		int _g = ::Std_obj::_int(hx::Mod((iSeed * 16807.),(int)2147483647));		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(987)
+		HX_STACK_LINE(993)
 		int _g1 = iSeed = _g;		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(987)
+		HX_STACK_LINE(993)
 		this->iXoffset = _g1;
-		HX_STACK_LINE(988)
+		HX_STACK_LINE(994)
 		int _g2 = ::Std_obj::_int(hx::Mod((iSeed * 16807.),(int)2147483647));		HX_STACK_VAR(_g2,"_g2");
-		HX_STACK_LINE(988)
+		HX_STACK_LINE(994)
 		int _g3 = iSeed = _g2;		HX_STACK_VAR(_g3,"_g3");
-		HX_STACK_LINE(988)
+		HX_STACK_LINE(994)
 		this->iYoffset = _g3;
-		HX_STACK_LINE(989)
+		HX_STACK_LINE(995)
 		int _g4 = ::Std_obj::_int(hx::Mod((iSeed * 16807.),(int)2147483647));		HX_STACK_VAR(_g4,"_g4");
-		HX_STACK_LINE(989)
+		HX_STACK_LINE(995)
 		int _g5 = iSeed = _g4;		HX_STACK_VAR(_g5,"_g5");
-		HX_STACK_LINE(989)
+		HX_STACK_LINE(995)
 		this->iZoffset = _g5;
 	}
 return null();

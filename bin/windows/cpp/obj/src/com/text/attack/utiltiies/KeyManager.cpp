@@ -6,6 +6,9 @@
 #ifndef INCLUDED_com_text_attack_world_World
 #include <com/text/attack/world/World.h>
 #endif
+#ifndef INCLUDED_haxe_Log
+#include <haxe/Log.h>
+#endif
 #ifndef INCLUDED_openfl__v2_display_DisplayObject
 #include <openfl/_v2/display/DisplayObject.h>
 #endif
@@ -111,11 +114,13 @@ Void KeyManager_obj::onKeyUp( ::openfl::_v2::events::KeyboardEvent event){
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
 		HX_STACK_LINE(38)
+		::haxe::Log_obj::trace(HX_CSTRING("KEY LIFTED"),hx::SourceInfo(HX_CSTRING("KeyManager.hx"),38,HX_CSTRING("com.text.attack.utiltiies.KeyManager"),HX_CSTRING("onKeyUp")));
+		HX_STACK_LINE(40)
 		if ((this->isKeyDown((int)27))){
-			HX_STACK_LINE(39)
+			HX_STACK_LINE(41)
 			::openfl::_v2::system::System_obj::exit((int)0);
 		}
-		HX_STACK_LINE(41)
+		HX_STACK_LINE(43)
 		::com::text::attack::world::World_obj::instance->update();
 	}
 return null();
@@ -125,12 +130,12 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(KeyManager_obj,onKeyUp,(void))
 
 bool KeyManager_obj::isKeyDown( int keyCode){
-	HX_STACK_FRAME("com.text.attack.utiltiies.KeyManager","isKeyDown",0xb8370737,"com.text.attack.utiltiies.KeyManager.isKeyDown","com/text/attack/utiltiies/KeyManager.hx",45,0x6060268e)
+	HX_STACK_FRAME("com.text.attack.utiltiies.KeyManager","isKeyDown",0xb8370737,"com.text.attack.utiltiies.KeyManager.isKeyDown","com/text/attack/utiltiies/KeyManager.hx",47,0x6060268e)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(keyCode,"keyCode")
-	HX_STACK_LINE(46)
+	HX_STACK_LINE(48)
 	int _g = this->keysDown->indexOf(keyCode,null());		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(46)
+	HX_STACK_LINE(48)
 	return (_g >= (int)0);
 }
 
@@ -138,33 +143,33 @@ bool KeyManager_obj::isKeyDown( int keyCode){
 HX_DEFINE_DYNAMIC_FUNC1(KeyManager_obj,isKeyDown,return )
 
 int KeyManager_obj::getNumberKeyDown( ){
-	HX_STACK_FRAME("com.text.attack.utiltiies.KeyManager","getNumberKeyDown",0xff34bb02,"com.text.attack.utiltiies.KeyManager.getNumberKeyDown","com/text/attack/utiltiies/KeyManager.hx",50,0x6060268e)
+	HX_STACK_FRAME("com.text.attack.utiltiies.KeyManager","getNumberKeyDown",0xff34bb02,"com.text.attack.utiltiies.KeyManager.getNumberKeyDown","com/text/attack/utiltiies/KeyManager.hx",52,0x6060268e)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(51)
+	HX_STACK_LINE(53)
 	Array< int > keys = Array_obj< int >::__new().Add((int)48).Add((int)49).Add((int)50).Add((int)51).Add((int)52).Add((int)53).Add((int)54).Add((int)55).Add((int)56).Add((int)57);		HX_STACK_VAR(keys,"keys");
-	HX_STACK_LINE(55)
+	HX_STACK_LINE(57)
 	{
-		HX_STACK_LINE(55)
+		HX_STACK_LINE(57)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(55)
+		HX_STACK_LINE(57)
 		while((true)){
-			HX_STACK_LINE(55)
+			HX_STACK_LINE(57)
 			if ((!(((_g < keys->length))))){
-				HX_STACK_LINE(55)
+				HX_STACK_LINE(57)
 				break;
 			}
-			HX_STACK_LINE(55)
+			HX_STACK_LINE(57)
 			int key = keys->__get(_g);		HX_STACK_VAR(key,"key");
-			HX_STACK_LINE(55)
+			HX_STACK_LINE(57)
 			++(_g);
-			HX_STACK_LINE(56)
+			HX_STACK_LINE(58)
 			if ((this->isKeyDown(key))){
-				HX_STACK_LINE(57)
+				HX_STACK_LINE(59)
 				return key;
 			}
 		}
 	}
-	HX_STACK_LINE(60)
+	HX_STACK_LINE(62)
 	return (int)-1;
 }
 

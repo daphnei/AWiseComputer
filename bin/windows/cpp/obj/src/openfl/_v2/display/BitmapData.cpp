@@ -440,23 +440,23 @@ HX_DEFINE_DYNAMIC_FUNC2(BitmapData_obj,getPixel32,return )
 HX_DEFINE_DYNAMIC_FUNC1(BitmapData_obj,getPixels,return )
 
 Array< int > BitmapData_obj::getVector( ::openfl::_v2::geom::Rectangle rect){
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","getVector",0x191558a1,"openfl._v2.display.BitmapData.getVector","openfl/_v2/display/BitmapData.hx",272,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","getVector",0x191558a1,"openfl._v2.display.BitmapData.getVector","openfl/_v2/display/BitmapData.hx",267,0xebe9fb05)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(rect,"rect")
-	HX_STACK_LINE(274)
+	HX_STACK_LINE(269)
 	int pixels = ::Std_obj::_int((rect->width * rect->height));		HX_STACK_VAR(pixels,"pixels");
-	HX_STACK_LINE(275)
+	HX_STACK_LINE(270)
 	if (((pixels < (int)1))){
-		HX_STACK_LINE(275)
+		HX_STACK_LINE(270)
 		return Array_obj< int >::__new();
 	}
-	HX_STACK_LINE(277)
+	HX_STACK_LINE(272)
 	Array< int > result = Array_obj< int >::__new();		HX_STACK_VAR(result,"result");
-	HX_STACK_LINE(278)
+	HX_STACK_LINE(273)
 	result[(pixels - (int)1)] = (int)0;
-	HX_STACK_LINE(281)
+	HX_STACK_LINE(276)
 	::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_get_array(this->__handle,rect,result);
-	HX_STACK_LINE(288)
+	HX_STACK_LINE(283)
 	return result;
 }
 
@@ -465,7 +465,7 @@ HX_DEFINE_DYNAMIC_FUNC1(BitmapData_obj,getVector,return )
 
 Void BitmapData_obj::lock( ){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","lock",0xb03afe43,"openfl._v2.display.BitmapData.lock","openfl/_v2/display/BitmapData.hx",318,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","lock",0xb03afe43,"openfl._v2.display.BitmapData.lock","openfl/_v2/display/BitmapData.hx",313,0xebe9fb05)
 		HX_STACK_THIS(this)
 	}
 return null();
@@ -476,9 +476,9 @@ HX_DEFINE_DYNAMIC_FUNC0(BitmapData_obj,lock,(void))
 
 Void BitmapData_obj::multiplyAlpha( ){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","multiplyAlpha",0xf5b68542,"openfl._v2.display.BitmapData.multiplyAlpha","openfl/_v2/display/BitmapData.hx",327,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","multiplyAlpha",0xf5b68542,"openfl._v2.display.BitmapData.multiplyAlpha","openfl/_v2/display/BitmapData.hx",322,0xebe9fb05)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(327)
+		HX_STACK_LINE(322)
 		::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_multiply_alpha(this->__handle);
 	}
 return null();
@@ -492,7 +492,7 @@ int low = __o_low.Default(0);
 int high = __o_high.Default(255);
 int channelOptions = __o_channelOptions.Default(7);
 bool grayScale = __o_grayScale.Default(false);
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","noise",0xaa353a42,"openfl._v2.display.BitmapData.noise","openfl/_v2/display/BitmapData.hx",334,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","noise",0xaa353a42,"openfl._v2.display.BitmapData.noise","openfl/_v2/display/BitmapData.hx",329,0xebe9fb05)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(randomSeed,"randomSeed")
 	HX_STACK_ARG(low,"low")
@@ -500,7 +500,7 @@ bool grayScale = __o_grayScale.Default(false);
 	HX_STACK_ARG(channelOptions,"channelOptions")
 	HX_STACK_ARG(grayScale,"grayScale")
 {
-		HX_STACK_LINE(334)
+		HX_STACK_LINE(329)
 		::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_noise(this->__handle,randomSeed,low,high,channelOptions,grayScale);
 	}
 return null();
@@ -511,7 +511,7 @@ HX_DEFINE_DYNAMIC_FUNC5(BitmapData_obj,noise,(void))
 
 Void BitmapData_obj::paletteMap( ::openfl::_v2::display::BitmapData sourceBitmapData,::openfl::_v2::geom::Rectangle sourceRect,::openfl::_v2::geom::Point destPoint,Array< int > redArray,Array< int > greenArray,Array< int > blueArray,Array< int > alphaArray){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","paletteMap",0xb5c56339,"openfl._v2.display.BitmapData.paletteMap","openfl/_v2/display/BitmapData.hx",339,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","paletteMap",0xb5c56339,"openfl._v2.display.BitmapData.paletteMap","openfl/_v2/display/BitmapData.hx",334,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(sourceBitmapData,"sourceBitmapData")
 		HX_STACK_ARG(sourceRect,"sourceRect")
@@ -520,80 +520,131 @@ Void BitmapData_obj::paletteMap( ::openfl::_v2::display::BitmapData sourceBitmap
 		HX_STACK_ARG(greenArray,"greenArray")
 		HX_STACK_ARG(blueArray,"blueArray")
 		HX_STACK_ARG(alphaArray,"alphaArray")
-		HX_STACK_LINE(340)
-		::openfl::_v2::utils::ByteArray memory = ::openfl::_v2::utils::ByteArray_obj::__new(null());		HX_STACK_VAR(memory,"memory");
-		HX_STACK_LINE(341)
+		HX_STACK_LINE(336)
 		int sw = ::Std_obj::_int(sourceRect->width);		HX_STACK_VAR(sw,"sw");
-		HX_STACK_LINE(342)
+		HX_STACK_LINE(337)
 		int sh = ::Std_obj::_int(sourceRect->height);		HX_STACK_VAR(sh,"sh");
-		HX_STACK_LINE(343)
-		memory->setLength(((sw * sh) * (int)4));
-		HX_STACK_LINE(344)
-		::openfl::_v2::utils::ByteArray _g = this->getPixels(sourceRect);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(344)
-		memory = _g;
-		HX_STACK_LINE(345)
-		memory->position = (int)0;
-		HX_STACK_LINE(346)
-		::openfl::_v2::Memory_obj::select(memory);
-		HX_STACK_LINE(348)
-		int position;		HX_STACK_VAR(position,"position");
-		HX_STACK_LINE(348)
+		HX_STACK_LINE(339)
+		::openfl::_v2::utils::ByteArray pixels = this->getPixels(sourceRect);		HX_STACK_VAR(pixels,"pixels");
+		HX_STACK_LINE(340)
+		pixels->position = (int)0;
+		HX_STACK_LINE(342)
 		int pixelValue;		HX_STACK_VAR(pixelValue,"pixelValue");
-		HX_STACK_LINE(348)
+		HX_STACK_LINE(342)
 		int r;		HX_STACK_VAR(r,"r");
-		HX_STACK_LINE(348)
+		HX_STACK_LINE(342)
 		int g;		HX_STACK_VAR(g,"g");
-		HX_STACK_LINE(348)
+		HX_STACK_LINE(342)
 		int b;		HX_STACK_VAR(b,"b");
-		HX_STACK_LINE(348)
+		HX_STACK_LINE(342)
+		int a;		HX_STACK_VAR(a,"a");
+		HX_STACK_LINE(342)
 		int color;		HX_STACK_VAR(color,"color");
-		HX_STACK_LINE(350)
+		HX_STACK_LINE(342)
+		int c1;		HX_STACK_VAR(c1,"c1");
+		HX_STACK_LINE(342)
+		int c2;		HX_STACK_VAR(c2,"c2");
+		HX_STACK_LINE(342)
+		int c3;		HX_STACK_VAR(c3,"c3");
+		HX_STACK_LINE(342)
+		int c4;		HX_STACK_VAR(c4,"c4");
+		HX_STACK_LINE(344)
 		{
-			HX_STACK_LINE(350)
+			HX_STACK_LINE(344)
 			int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
-			HX_STACK_LINE(350)
-			int _g2 = (sh * sw);		HX_STACK_VAR(_g2,"_g2");
-			HX_STACK_LINE(350)
+			HX_STACK_LINE(344)
+			int _g = (sh * sw);		HX_STACK_VAR(_g,"_g");
+			HX_STACK_LINE(344)
 			while((true)){
-				HX_STACK_LINE(350)
-				if ((!(((_g1 < _g2))))){
-					HX_STACK_LINE(350)
+				HX_STACK_LINE(344)
+				if ((!(((_g1 < _g))))){
+					HX_STACK_LINE(344)
 					break;
 				}
-				HX_STACK_LINE(350)
+				HX_STACK_LINE(344)
 				int i = (_g1)++;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(351)
-				position = (i * (int)4);
-				HX_STACK_LINE(352)
-				int _g11 = ::openfl::_v2::Memory_obj::getI32(position);		HX_STACK_VAR(_g11,"_g11");
-				HX_STACK_LINE(352)
-				pixelValue = _g11;
-				HX_STACK_LINE(354)
-				r = (int((int(pixelValue) >> int((int)8))) & int((int)255));
-				HX_STACK_LINE(355)
-				g = (int((int(pixelValue) >> int((int)16))) & int((int)255));
-				HX_STACK_LINE(356)
-				b = (int((int(pixelValue) >> int((int)24))) & int((int)255));
-				HX_STACK_LINE(358)
-				{
-					HX_STACK_LINE(358)
-					int pixel = (int((int((int((int)-16777216) | int(redArray->__get(r)))) | int(greenArray->__get(g)))) | int(blueArray->__get(b)));		HX_STACK_VAR(pixel,"pixel");
-					HX_STACK_LINE(358)
-					color = (int((int((int((int(((int(pixel) & int((int)255)))) << int((int)24))) | int((int(((int((int(pixel) >> int((int)8))) & int((int)255)))) << int((int)16))))) | int((int(((int((int(pixel) >> int((int)16))) & int((int)255)))) << int((int)8))))) | int((int((int(pixel) >> int((int)24))) & int((int)255))));
+				HX_STACK_LINE(346)
+				int _g2 = pixels->readUnsignedInt();		HX_STACK_VAR(_g2,"_g2");
+				HX_STACK_LINE(346)
+				pixelValue = _g2;
+				HX_STACK_LINE(348)
+				if (((alphaArray == null()))){
+					HX_STACK_LINE(348)
+					c1 = (int(pixelValue) & int((int)-16777216));
 				}
+				else{
+					HX_STACK_LINE(348)
+					c1 = alphaArray->__get((int((int(pixelValue) >> int((int)24))) & int((int)255)));
+				}
+				HX_STACK_LINE(349)
+				if (((redArray == null()))){
+					HX_STACK_LINE(349)
+					c2 = (int(pixelValue) & int((int)16711680));
+				}
+				else{
+					HX_STACK_LINE(349)
+					c2 = redArray->__get((int((int(pixelValue) >> int((int)16))) & int((int)255)));
+				}
+				HX_STACK_LINE(350)
+				if (((greenArray == null()))){
+					HX_STACK_LINE(350)
+					c3 = (int(pixelValue) & int((int)65280));
+				}
+				else{
+					HX_STACK_LINE(350)
+					c3 = greenArray->__get((int((int(pixelValue) >> int((int)8))) & int((int)255)));
+				}
+				HX_STACK_LINE(351)
+				if (((blueArray == null()))){
+					HX_STACK_LINE(351)
+					c4 = (int(pixelValue) & int((int)255));
+				}
+				else{
+					HX_STACK_LINE(351)
+					c4 = blueArray->__get((int(pixelValue) & int((int)255)));
+				}
+				HX_STACK_LINE(353)
+				a = (((((int((int(c1) >> int((int)24))) & int((int)255))) + ((int((int(c2) >> int((int)24))) & int((int)255)))) + ((int((int(c3) >> int((int)24))) & int((int)255)))) + ((int((int(c4) >> int((int)24))) & int((int)255))));
+				HX_STACK_LINE(354)
+				if (((a > (int)255))){
+					HX_STACK_LINE(354)
+					(a == (int)255);
+				}
+				HX_STACK_LINE(356)
+				r = (((((int((int(c1) >> int((int)16))) & int((int)255))) + ((int((int(c2) >> int((int)16))) & int((int)255)))) + ((int((int(c3) >> int((int)16))) & int((int)255)))) + ((int((int(c4) >> int((int)16))) & int((int)255))));
+				HX_STACK_LINE(357)
+				if (((r > (int)255))){
+					HX_STACK_LINE(357)
+					(r == (int)255);
+				}
+				HX_STACK_LINE(359)
+				g = (((((int((int(c1) >> int((int)8))) & int((int)255))) + ((int((int(c2) >> int((int)8))) & int((int)255)))) + ((int((int(c3) >> int((int)8))) & int((int)255)))) + ((int((int(c4) >> int((int)8))) & int((int)255))));
+				HX_STACK_LINE(360)
+				if (((g > (int)255))){
+					HX_STACK_LINE(360)
+					(g == (int)255);
+				}
+				HX_STACK_LINE(362)
+				b = (((((int(c1) & int((int)255))) + ((int(c2) & int((int)255)))) + ((int(c3) & int((int)255)))) + ((int(c4) & int((int)255))));
 				HX_STACK_LINE(363)
-				::openfl::_v2::Memory_obj::setI32(position,color);
+				if (((b > (int)255))){
+					HX_STACK_LINE(363)
+					(b == (int)255);
+				}
+				HX_STACK_LINE(365)
+				color = (int((int((int((int(a) << int((int)24))) | int((int(r) << int((int)16))))) | int((int(g) << int((int)8))))) | int(b));
+				HX_STACK_LINE(367)
+				pixels->position = (i * (int)4);
+				HX_STACK_LINE(368)
+				pixels->writeUnsignedInt(color);
 			}
 		}
-		HX_STACK_LINE(366)
-		memory->position = (int)0;
-		HX_STACK_LINE(367)
+		HX_STACK_LINE(372)
+		pixels->position = (int)0;
+		HX_STACK_LINE(373)
 		::openfl::_v2::geom::Rectangle destRect = ::openfl::_v2::geom::Rectangle_obj::__new(destPoint->x,destPoint->y,sw,sh);		HX_STACK_VAR(destRect,"destRect");
-		HX_STACK_LINE(368)
-		this->setPixels(destRect,memory);
-		HX_STACK_LINE(369)
-		::openfl::_v2::Memory_obj::select(null());
+		HX_STACK_LINE(374)
+		this->setPixels(destRect,pixels);
 	}
 return null();
 }
@@ -604,7 +655,7 @@ HX_DEFINE_DYNAMIC_FUNC7(BitmapData_obj,paletteMap,(void))
 Void BitmapData_obj::perlinNoise( Float baseX,Float baseY,int numOctaves,int randomSeed,bool stitch,bool fractalNoise,hx::Null< int >  __o_channelOptions,hx::Null< bool >  __o_grayScale,Array< ::Dynamic > offsets){
 int channelOptions = __o_channelOptions.Default(7);
 bool grayScale = __o_grayScale.Default(false);
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","perlinNoise",0x82dc9d0e,"openfl._v2.display.BitmapData.perlinNoise","openfl/_v2/display/BitmapData.hx",373,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","perlinNoise",0x82dc9d0e,"openfl._v2.display.BitmapData.perlinNoise","openfl/_v2/display/BitmapData.hx",379,0xebe9fb05)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(baseX,"baseX")
 	HX_STACK_ARG(baseY,"baseY")
@@ -616,9 +667,9 @@ bool grayScale = __o_grayScale.Default(false);
 	HX_STACK_ARG(grayScale,"grayScale")
 	HX_STACK_ARG(offsets,"offsets")
 {
-		HX_STACK_LINE(375)
+		HX_STACK_LINE(381)
 		::openfl::_v2::display::OptimizedPerlin perlin = ::openfl::_v2::display::OptimizedPerlin_obj::__new(randomSeed,numOctaves,null());		HX_STACK_VAR(perlin,"perlin");
-		HX_STACK_LINE(376)
+		HX_STACK_LINE(382)
 		perlin->fill(hx::ObjectPtr<OBJ_>(this),baseX,baseY,(int)0,null());
 	}
 return null();
@@ -629,11 +680,11 @@ HX_DEFINE_DYNAMIC_FUNC9(BitmapData_obj,perlinNoise,(void))
 
 Void BitmapData_obj::scroll( int x,int y){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","scroll",0x61478065,"openfl._v2.display.BitmapData.scroll","openfl/_v2/display/BitmapData.hx",390,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","scroll",0x61478065,"openfl._v2.display.BitmapData.scroll","openfl/_v2/display/BitmapData.hx",396,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(x,"x")
 		HX_STACK_ARG(y,"y")
-		HX_STACK_LINE(390)
+		HX_STACK_LINE(396)
 		::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_scroll(this->__handle,x,y);
 	}
 return null();
@@ -644,10 +695,10 @@ HX_DEFINE_DYNAMIC_FUNC2(BitmapData_obj,scroll,(void))
 
 Void BitmapData_obj::setFlags( int flags){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","setFlags",0x66e0029d,"openfl._v2.display.BitmapData.setFlags","openfl/_v2/display/BitmapData.hx",398,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","setFlags",0x66e0029d,"openfl._v2.display.BitmapData.setFlags","openfl/_v2/display/BitmapData.hx",404,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(flags,"flags")
-		HX_STACK_LINE(398)
+		HX_STACK_LINE(404)
 		::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_set_flags(this->__handle,flags);
 	}
 return null();
@@ -658,10 +709,10 @@ HX_DEFINE_DYNAMIC_FUNC1(BitmapData_obj,setFlags,(void))
 
 Void BitmapData_obj::setFormat( int format){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","setFormat",0x62972321,"openfl._v2.display.BitmapData.setFormat","openfl/_v2/display/BitmapData.hx",405,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","setFormat",0x62972321,"openfl._v2.display.BitmapData.setFormat","openfl/_v2/display/BitmapData.hx",411,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(format,"format")
-		HX_STACK_LINE(405)
+		HX_STACK_LINE(411)
 		::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_set_format(this->__handle,format);
 	}
 return null();
@@ -672,12 +723,12 @@ HX_DEFINE_DYNAMIC_FUNC1(BitmapData_obj,setFormat,(void))
 
 Void BitmapData_obj::setPixel( int x,int y,int color){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","setPixel",0x26f79ddc,"openfl._v2.display.BitmapData.setPixel","openfl/_v2/display/BitmapData.hx",412,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","setPixel",0x26f79ddc,"openfl._v2.display.BitmapData.setPixel","openfl/_v2/display/BitmapData.hx",418,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(x,"x")
 		HX_STACK_ARG(y,"y")
 		HX_STACK_ARG(color,"color")
-		HX_STACK_LINE(412)
+		HX_STACK_LINE(418)
 		::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_set_pixel(this->__handle,x,y,color);
 	}
 return null();
@@ -688,12 +739,12 @@ HX_DEFINE_DYNAMIC_FUNC3(BitmapData_obj,setPixel,(void))
 
 Void BitmapData_obj::setPixel32( int x,int y,int color){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","setPixel32",0x8a7ff97b,"openfl._v2.display.BitmapData.setPixel32","openfl/_v2/display/BitmapData.hx",419,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","setPixel32",0x8a7ff97b,"openfl._v2.display.BitmapData.setPixel32","openfl/_v2/display/BitmapData.hx",425,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(x,"x")
 		HX_STACK_ARG(y,"y")
 		HX_STACK_ARG(color,"color")
-		HX_STACK_LINE(419)
+		HX_STACK_LINE(425)
 		::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_set_pixel32(this->__handle,x,y,color);
 	}
 return null();
@@ -704,19 +755,19 @@ HX_DEFINE_DYNAMIC_FUNC3(BitmapData_obj,setPixel32,(void))
 
 Void BitmapData_obj::setPixels( ::openfl::_v2::geom::Rectangle rect,::openfl::_v2::utils::ByteArray pixels){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","setPixels",0xf1b28317,"openfl._v2.display.BitmapData.setPixels","openfl/_v2/display/BitmapData.hx",424,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","setPixels",0xf1b28317,"openfl._v2.display.BitmapData.setPixels","openfl/_v2/display/BitmapData.hx",430,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(rect,"rect")
 		HX_STACK_ARG(pixels,"pixels")
-		HX_STACK_LINE(426)
+		HX_STACK_LINE(432)
 		int size = ::Std_obj::_int(((rect->width * rect->height) * (int)4));		HX_STACK_VAR(size,"size");
-		HX_STACK_LINE(427)
+		HX_STACK_LINE(433)
 		int _g = ::Std_obj::_int(size);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(427)
+		HX_STACK_LINE(433)
 		pixels->checkData(_g);
-		HX_STACK_LINE(428)
+		HX_STACK_LINE(434)
 		::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_set_bytes(this->__handle,rect,pixels,pixels->position);
-		HX_STACK_LINE(429)
+		HX_STACK_LINE(435)
 		hx::AddEq(pixels->position,size);
 	}
 return null();
@@ -727,18 +778,18 @@ HX_DEFINE_DYNAMIC_FUNC2(BitmapData_obj,setPixels,(void))
 
 Void BitmapData_obj::setVector( ::openfl::_v2::geom::Rectangle rect,Array< int > pixels){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","setVector",0xfc6644ad,"openfl._v2.display.BitmapData.setVector","openfl/_v2/display/BitmapData.hx",434,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","setVector",0xfc6644ad,"openfl._v2.display.BitmapData.setVector","openfl/_v2/display/BitmapData.hx",440,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(rect,"rect")
 		HX_STACK_ARG(pixels,"pixels")
-		HX_STACK_LINE(436)
+		HX_STACK_LINE(442)
 		int count = ::Std_obj::_int((rect->width * rect->height));		HX_STACK_VAR(count,"count");
-		HX_STACK_LINE(437)
+		HX_STACK_LINE(443)
 		if (((pixels->length < count))){
-			HX_STACK_LINE(437)
+			HX_STACK_LINE(443)
 			return null();
 		}
-		HX_STACK_LINE(440)
+		HX_STACK_LINE(446)
 		::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_set_array(this->__handle,rect,pixels);
 	}
 return null();
@@ -751,7 +802,7 @@ int BitmapData_obj::threshold( ::openfl::_v2::display::BitmapData sourceBitmapDa
 int color = __o_color.Default(0);
 int mask = __o_mask.Default(-1);
 bool copySource = __o_copySource.Default(false);
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","threshold",0x3a04e253,"openfl._v2.display.BitmapData.threshold","openfl/_v2/display/BitmapData.hx",458,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","threshold",0x3a04e253,"openfl._v2.display.BitmapData.threshold","openfl/_v2/display/BitmapData.hx",464,0xebe9fb05)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(sourceBitmapData,"sourceBitmapData")
 	HX_STACK_ARG(sourceRect,"sourceRect")
@@ -764,143 +815,143 @@ bool copySource = __o_copySource.Default(false);
 {
 		struct _Function_1_1{
 			inline static bool Block( hx::ObjectPtr< ::openfl::_v2::display::BitmapData_obj > __this,::openfl::_v2::geom::Rectangle &sourceRect){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",458,0xebe9fb05)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/display/BitmapData.hx",464,0xebe9fb05)
 				{
-					HX_STACK_LINE(458)
+					HX_STACK_LINE(464)
 					::openfl::_v2::geom::Rectangle _g = __this->get_rect();		HX_STACK_VAR(_g,"_g");
-					HX_STACK_LINE(458)
+					HX_STACK_LINE(464)
 					return sourceRect->equals(_g);
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(458)
+		HX_STACK_LINE(464)
 		if (((  (((  (((  (((sourceBitmapData == hx::ObjectPtr<OBJ_>(this)))) ? bool(_Function_1_1::Block(this,sourceRect)) : bool(false) ))) ? bool((destPoint->x == (int)0)) : bool(false) ))) ? bool((destPoint->y == (int)0)) : bool(false) ))){
-			HX_STACK_LINE(460)
+			HX_STACK_LINE(466)
 			int hits = (int)0;		HX_STACK_VAR(hits,"hits");
-			HX_STACK_LINE(462)
-			threshold = (int((int((int((int(((int(threshold) & int((int)255)))) << int((int)24))) | int((int(((int((int(threshold) >> int((int)8))) & int((int)255)))) << int((int)16))))) | int((int(((int((int(threshold) >> int((int)16))) & int((int)255)))) << int((int)8))))) | int((int((int(threshold) >> int((int)24))) & int((int)255))));
-			HX_STACK_LINE(463)
-			color = (int((int((int((int(((int(color) & int((int)255)))) << int((int)24))) | int((int(((int((int(color) >> int((int)8))) & int((int)255)))) << int((int)16))))) | int((int(((int((int(color) >> int((int)16))) & int((int)255)))) << int((int)8))))) | int((int((int(color) >> int((int)24))) & int((int)255))));
-			HX_STACK_LINE(465)
-			::openfl::_v2::utils::ByteArray memory = ::openfl::_v2::utils::ByteArray_obj::__new(null());		HX_STACK_VAR(memory,"memory");
-			HX_STACK_LINE(466)
-			int _g1 = this->get_width();		HX_STACK_VAR(_g1,"_g1");
-			HX_STACK_LINE(466)
-			int _g2 = this->get_height();		HX_STACK_VAR(_g2,"_g2");
-			HX_STACK_LINE(466)
-			int _g3 = (_g1 * _g2);		HX_STACK_VAR(_g3,"_g3");
-			HX_STACK_LINE(466)
-			int _g4 = (_g3 * (int)4);		HX_STACK_VAR(_g4,"_g4");
-			HX_STACK_LINE(466)
-			memory->setLength(_g4);
-			HX_STACK_LINE(467)
-			::openfl::_v2::geom::Rectangle _g5 = this->get_rect();		HX_STACK_VAR(_g5,"_g5");
-			HX_STACK_LINE(467)
-			::openfl::_v2::utils::ByteArray _g6 = this->getPixels(_g5);		HX_STACK_VAR(_g6,"_g6");
-			HX_STACK_LINE(467)
-			memory = _g6;
 			HX_STACK_LINE(468)
-			memory->position = (int)0;
+			threshold = (int((int((int((int(((int(threshold) & int((int)255)))) << int((int)24))) | int((int(((int((int(threshold) >> int((int)8))) & int((int)255)))) << int((int)16))))) | int((int(((int((int(threshold) >> int((int)16))) & int((int)255)))) << int((int)8))))) | int((int((int(threshold) >> int((int)24))) & int((int)255))));
 			HX_STACK_LINE(469)
-			::openfl::_v2::Memory_obj::select(memory);
+			color = (int((int((int((int(((int(color) & int((int)255)))) << int((int)24))) | int((int(((int((int(color) >> int((int)8))) & int((int)255)))) << int((int)16))))) | int((int(((int((int(color) >> int((int)16))) & int((int)255)))) << int((int)8))))) | int((int((int(color) >> int((int)24))) & int((int)255))));
 			HX_STACK_LINE(471)
-			int thresholdMask = (int(threshold) & int(mask));		HX_STACK_VAR(thresholdMask,"thresholdMask");
+			::openfl::_v2::utils::ByteArray memory = ::openfl::_v2::utils::ByteArray_obj::__new(null());		HX_STACK_VAR(memory,"memory");
+			HX_STACK_LINE(472)
+			int _g1 = this->get_width();		HX_STACK_VAR(_g1,"_g1");
+			HX_STACK_LINE(472)
+			int _g2 = this->get_height();		HX_STACK_VAR(_g2,"_g2");
+			HX_STACK_LINE(472)
+			int _g3 = (_g1 * _g2);		HX_STACK_VAR(_g3,"_g3");
+			HX_STACK_LINE(472)
+			int _g4 = (_g3 * (int)4);		HX_STACK_VAR(_g4,"_g4");
+			HX_STACK_LINE(472)
+			memory->setLength(_g4);
 			HX_STACK_LINE(473)
-			int width_yy;		HX_STACK_VAR(width_yy,"width_yy");
+			::openfl::_v2::geom::Rectangle _g5 = this->get_rect();		HX_STACK_VAR(_g5,"_g5");
 			HX_STACK_LINE(473)
-			int position;		HX_STACK_VAR(position,"position");
+			::openfl::_v2::utils::ByteArray _g6 = this->getPixels(_g5);		HX_STACK_VAR(_g6,"_g6");
 			HX_STACK_LINE(473)
-			int pixelMask;		HX_STACK_VAR(pixelMask,"pixelMask");
-			HX_STACK_LINE(473)
-			int pixelValue;		HX_STACK_VAR(pixelValue,"pixelValue");
-			HX_STACK_LINE(473)
-			int i;		HX_STACK_VAR(i,"i");
-			HX_STACK_LINE(473)
-			bool test;		HX_STACK_VAR(test,"test");
+			memory = _g6;
+			HX_STACK_LINE(474)
+			memory->position = (int)0;
 			HX_STACK_LINE(475)
+			::openfl::_v2::Memory_obj::select(memory);
+			HX_STACK_LINE(477)
+			int thresholdMask = (int(threshold) & int(mask));		HX_STACK_VAR(thresholdMask,"thresholdMask");
+			HX_STACK_LINE(479)
+			int width_yy;		HX_STACK_VAR(width_yy,"width_yy");
+			HX_STACK_LINE(479)
+			int position;		HX_STACK_VAR(position,"position");
+			HX_STACK_LINE(479)
+			int pixelMask;		HX_STACK_VAR(pixelMask,"pixelMask");
+			HX_STACK_LINE(479)
+			int pixelValue;		HX_STACK_VAR(pixelValue,"pixelValue");
+			HX_STACK_LINE(479)
+			int i;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(479)
+			bool test;		HX_STACK_VAR(test,"test");
+			HX_STACK_LINE(481)
 			{
-				HX_STACK_LINE(475)
+				HX_STACK_LINE(481)
 				int _g11 = (int)0;		HX_STACK_VAR(_g11,"_g11");
-				HX_STACK_LINE(475)
+				HX_STACK_LINE(481)
 				int _g = this->get_height();		HX_STACK_VAR(_g,"_g");
-				HX_STACK_LINE(475)
+				HX_STACK_LINE(481)
 				while((true)){
-					HX_STACK_LINE(475)
+					HX_STACK_LINE(481)
 					if ((!(((_g11 < _g))))){
-						HX_STACK_LINE(475)
+						HX_STACK_LINE(481)
 						break;
 					}
-					HX_STACK_LINE(475)
+					HX_STACK_LINE(481)
 					int yy = (_g11)++;		HX_STACK_VAR(yy,"yy");
-					HX_STACK_LINE(477)
+					HX_STACK_LINE(483)
 					int _g7 = this->get_width();		HX_STACK_VAR(_g7,"_g7");
-					HX_STACK_LINE(477)
+					HX_STACK_LINE(483)
 					int _g8 = (_g7 * yy);		HX_STACK_VAR(_g8,"_g8");
-					HX_STACK_LINE(477)
+					HX_STACK_LINE(483)
 					width_yy = _g8;
-					HX_STACK_LINE(479)
+					HX_STACK_LINE(485)
 					{
-						HX_STACK_LINE(479)
+						HX_STACK_LINE(485)
 						int _g31 = (int)0;		HX_STACK_VAR(_g31,"_g31");
-						HX_STACK_LINE(479)
+						HX_STACK_LINE(485)
 						int _g21 = this->get_width();		HX_STACK_VAR(_g21,"_g21");
-						HX_STACK_LINE(479)
+						HX_STACK_LINE(485)
 						while((true)){
-							HX_STACK_LINE(479)
+							HX_STACK_LINE(485)
 							if ((!(((_g31 < _g21))))){
-								HX_STACK_LINE(479)
+								HX_STACK_LINE(485)
 								break;
 							}
-							HX_STACK_LINE(479)
+							HX_STACK_LINE(485)
 							int xx = (_g31)++;		HX_STACK_VAR(xx,"xx");
-							HX_STACK_LINE(481)
+							HX_STACK_LINE(487)
 							position = (((width_yy + xx)) * (int)4);
-							HX_STACK_LINE(482)
-							int _g9 = ::openfl::_v2::Memory_obj::getI32(position);		HX_STACK_VAR(_g9,"_g9");
-							HX_STACK_LINE(482)
-							pixelValue = _g9;
-							HX_STACK_LINE(483)
-							pixelMask = (int(pixelValue) & int(mask));
-							HX_STACK_LINE(485)
-							int _g10 = ::openfl::_v2::display::BitmapData_obj::__ucompare(pixelMask,thresholdMask);		HX_STACK_VAR(_g10,"_g10");
-							HX_STACK_LINE(485)
-							i = _g10;
-							HX_STACK_LINE(486)
-							test = false;
 							HX_STACK_LINE(488)
+							int _g9 = ::openfl::_v2::Memory_obj::getI32(position);		HX_STACK_VAR(_g9,"_g9");
+							HX_STACK_LINE(488)
+							pixelValue = _g9;
+							HX_STACK_LINE(489)
+							pixelMask = (int(pixelValue) & int(mask));
+							HX_STACK_LINE(491)
+							int _g10 = ::openfl::_v2::display::BitmapData_obj::__ucompare(pixelMask,thresholdMask);		HX_STACK_VAR(_g10,"_g10");
+							HX_STACK_LINE(491)
+							i = _g10;
+							HX_STACK_LINE(492)
+							test = false;
+							HX_STACK_LINE(494)
 							if (((operation == HX_CSTRING("==")))){
-								HX_STACK_LINE(488)
+								HX_STACK_LINE(494)
 								test = (i == (int)0);
 							}
 							else{
-								HX_STACK_LINE(489)
+								HX_STACK_LINE(495)
 								if (((operation == HX_CSTRING("<")))){
-									HX_STACK_LINE(489)
+									HX_STACK_LINE(495)
 									test = (i == (int)-1);
 								}
 								else{
-									HX_STACK_LINE(490)
+									HX_STACK_LINE(496)
 									if (((operation == HX_CSTRING(">")))){
-										HX_STACK_LINE(490)
+										HX_STACK_LINE(496)
 										test = (i == (int)1);
 									}
 									else{
-										HX_STACK_LINE(491)
+										HX_STACK_LINE(497)
 										if (((operation == HX_CSTRING("!=")))){
-											HX_STACK_LINE(491)
+											HX_STACK_LINE(497)
 											test = (i != (int)0);
 										}
 										else{
-											HX_STACK_LINE(492)
+											HX_STACK_LINE(498)
 											if (((operation == HX_CSTRING("<=")))){
-												HX_STACK_LINE(492)
+												HX_STACK_LINE(498)
 												test = (bool((i == (int)0)) || bool((i == (int)-1)));
 											}
 											else{
-												HX_STACK_LINE(493)
+												HX_STACK_LINE(499)
 												if (((operation == HX_CSTRING(">=")))){
-													HX_STACK_LINE(493)
+													HX_STACK_LINE(499)
 													test = (bool((i == (int)0)) || bool((i == (int)1)));
 												}
 											}
@@ -908,216 +959,216 @@ bool copySource = __o_copySource.Default(false);
 									}
 								}
 							}
-							HX_STACK_LINE(495)
+							HX_STACK_LINE(501)
 							if ((test)){
-								HX_STACK_LINE(497)
+								HX_STACK_LINE(503)
 								::openfl::_v2::Memory_obj::setI32(position,color);
-								HX_STACK_LINE(498)
+								HX_STACK_LINE(504)
 								(hits)++;
 							}
 						}
 					}
 				}
 			}
-			HX_STACK_LINE(506)
+			HX_STACK_LINE(512)
 			memory->position = (int)0;
-			HX_STACK_LINE(507)
+			HX_STACK_LINE(513)
 			::openfl::_v2::geom::Rectangle _g11 = this->get_rect();		HX_STACK_VAR(_g11,"_g11");
-			HX_STACK_LINE(507)
+			HX_STACK_LINE(513)
 			this->setPixels(_g11,memory);
-			HX_STACK_LINE(508)
+			HX_STACK_LINE(514)
 			::openfl::_v2::Memory_obj::select(null());
-			HX_STACK_LINE(509)
+			HX_STACK_LINE(515)
 			return hits;
 		}
 		else{
-			HX_STACK_LINE(513)
-			int sx = ::Std_obj::_int(sourceRect->x);		HX_STACK_VAR(sx,"sx");
-			HX_STACK_LINE(514)
-			int sy = ::Std_obj::_int(sourceRect->y);		HX_STACK_VAR(sy,"sy");
-			HX_STACK_LINE(515)
-			int _g12 = sourceBitmapData->get_width();		HX_STACK_VAR(_g12,"_g12");
-			HX_STACK_LINE(515)
-			int sw = ::Std_obj::_int(_g12);		HX_STACK_VAR(sw,"sw");
-			HX_STACK_LINE(516)
-			int _g13 = sourceBitmapData->get_height();		HX_STACK_VAR(_g13,"_g13");
-			HX_STACK_LINE(516)
-			int sh = ::Std_obj::_int(_g13);		HX_STACK_VAR(sh,"sh");
-			HX_STACK_LINE(518)
-			int dx = ::Std_obj::_int(destPoint->x);		HX_STACK_VAR(dx,"dx");
 			HX_STACK_LINE(519)
+			int sx = ::Std_obj::_int(sourceRect->x);		HX_STACK_VAR(sx,"sx");
+			HX_STACK_LINE(520)
+			int sy = ::Std_obj::_int(sourceRect->y);		HX_STACK_VAR(sy,"sy");
+			HX_STACK_LINE(521)
+			int _g12 = sourceBitmapData->get_width();		HX_STACK_VAR(_g12,"_g12");
+			HX_STACK_LINE(521)
+			int sw = ::Std_obj::_int(_g12);		HX_STACK_VAR(sw,"sw");
+			HX_STACK_LINE(522)
+			int _g13 = sourceBitmapData->get_height();		HX_STACK_VAR(_g13,"_g13");
+			HX_STACK_LINE(522)
+			int sh = ::Std_obj::_int(_g13);		HX_STACK_VAR(sh,"sh");
+			HX_STACK_LINE(524)
+			int dx = ::Std_obj::_int(destPoint->x);		HX_STACK_VAR(dx,"dx");
+			HX_STACK_LINE(525)
 			int dy = ::Std_obj::_int(destPoint->y);		HX_STACK_VAR(dy,"dy");
-			HX_STACK_LINE(521)
+			HX_STACK_LINE(527)
 			int _g14 = this->get_width();		HX_STACK_VAR(_g14,"_g14");
-			HX_STACK_LINE(521)
+			HX_STACK_LINE(527)
 			int _g15 = (_g14 - sw);		HX_STACK_VAR(_g15,"_g15");
-			HX_STACK_LINE(521)
+			HX_STACK_LINE(527)
 			int bw = (_g15 - dx);		HX_STACK_VAR(bw,"bw");
-			HX_STACK_LINE(522)
+			HX_STACK_LINE(528)
 			int _g16 = this->get_height();		HX_STACK_VAR(_g16,"_g16");
-			HX_STACK_LINE(522)
+			HX_STACK_LINE(528)
 			int _g17 = (_g16 - sh);		HX_STACK_VAR(_g17,"_g17");
-			HX_STACK_LINE(522)
+			HX_STACK_LINE(528)
 			int bh = (_g17 - dy);		HX_STACK_VAR(bh,"bh");
-			HX_STACK_LINE(524)
+			HX_STACK_LINE(530)
 			int dw;		HX_STACK_VAR(dw,"dw");
-			HX_STACK_LINE(524)
+			HX_STACK_LINE(530)
 			if (((bw < (int)0))){
-				HX_STACK_LINE(524)
+				HX_STACK_LINE(530)
 				int _g18 = this->get_width();		HX_STACK_VAR(_g18,"_g18");
-				HX_STACK_LINE(524)
+				HX_STACK_LINE(530)
 				int _g19 = (_g18 - sw);		HX_STACK_VAR(_g19,"_g19");
-				HX_STACK_LINE(524)
+				HX_STACK_LINE(530)
 				int _g20 = (_g19 - dx);		HX_STACK_VAR(_g20,"_g20");
-				HX_STACK_LINE(524)
+				HX_STACK_LINE(530)
 				dw = (sw + _g20);
 			}
 			else{
-				HX_STACK_LINE(524)
+				HX_STACK_LINE(530)
 				dw = sw;
 			}
-			HX_STACK_LINE(525)
+			HX_STACK_LINE(531)
 			int dh;		HX_STACK_VAR(dh,"dh");
-			HX_STACK_LINE(525)
+			HX_STACK_LINE(531)
 			if (((bw < (int)0))){
-				HX_STACK_LINE(525)
+				HX_STACK_LINE(531)
 				int _g21 = this->get_height();		HX_STACK_VAR(_g21,"_g21");
-				HX_STACK_LINE(525)
+				HX_STACK_LINE(531)
 				int _g22 = (_g21 - sh);		HX_STACK_VAR(_g22,"_g22");
-				HX_STACK_LINE(525)
+				HX_STACK_LINE(531)
 				int _g23 = (_g22 - dy);		HX_STACK_VAR(_g23,"_g23");
-				HX_STACK_LINE(525)
+				HX_STACK_LINE(531)
 				dh = (sh + _g23);
 			}
 			else{
-				HX_STACK_LINE(525)
+				HX_STACK_LINE(531)
 				dh = sh;
 			}
-			HX_STACK_LINE(527)
-			int hits = (int)0;		HX_STACK_VAR(hits,"hits");
-			HX_STACK_LINE(529)
-			threshold = (int((int((int((int(((int(threshold) & int((int)255)))) << int((int)24))) | int((int(((int((int(threshold) >> int((int)8))) & int((int)255)))) << int((int)16))))) | int((int(((int((int(threshold) >> int((int)16))) & int((int)255)))) << int((int)8))))) | int((int((int(threshold) >> int((int)24))) & int((int)255))));
-			HX_STACK_LINE(530)
-			color = (int((int((int((int(((int(color) & int((int)255)))) << int((int)24))) | int((int(((int((int(color) >> int((int)8))) & int((int)255)))) << int((int)16))))) | int((int(((int((int(color) >> int((int)16))) & int((int)255)))) << int((int)8))))) | int((int((int(color) >> int((int)24))) & int((int)255))));
-			HX_STACK_LINE(532)
-			int canvasMemory = ((sw * sh) * (int)4);		HX_STACK_VAR(canvasMemory,"canvasMemory");
 			HX_STACK_LINE(533)
-			int sourceMemory = (int)0;		HX_STACK_VAR(sourceMemory,"sourceMemory");
+			int hits = (int)0;		HX_STACK_VAR(hits,"hits");
 			HX_STACK_LINE(535)
+			threshold = (int((int((int((int(((int(threshold) & int((int)255)))) << int((int)24))) | int((int(((int((int(threshold) >> int((int)8))) & int((int)255)))) << int((int)16))))) | int((int(((int((int(threshold) >> int((int)16))) & int((int)255)))) << int((int)8))))) | int((int((int(threshold) >> int((int)24))) & int((int)255))));
+			HX_STACK_LINE(536)
+			color = (int((int((int((int(((int(color) & int((int)255)))) << int((int)24))) | int((int(((int((int(color) >> int((int)8))) & int((int)255)))) << int((int)16))))) | int((int(((int((int(color) >> int((int)16))) & int((int)255)))) << int((int)8))))) | int((int((int(color) >> int((int)24))) & int((int)255))));
+			HX_STACK_LINE(538)
+			int canvasMemory = ((sw * sh) * (int)4);		HX_STACK_VAR(canvasMemory,"canvasMemory");
+			HX_STACK_LINE(539)
+			int sourceMemory = (int)0;		HX_STACK_VAR(sourceMemory,"sourceMemory");
+			HX_STACK_LINE(541)
 			if ((copySource)){
-				HX_STACK_LINE(537)
+				HX_STACK_LINE(543)
 				sourceMemory = ((sw * sh) * (int)4);
 			}
-			HX_STACK_LINE(541)
-			int totalMemory = (canvasMemory + sourceMemory);		HX_STACK_VAR(totalMemory,"totalMemory");
-			HX_STACK_LINE(542)
-			::openfl::_v2::utils::ByteArray memory = ::openfl::_v2::utils::ByteArray_obj::__new(null());		HX_STACK_VAR(memory,"memory");
-			HX_STACK_LINE(543)
-			memory->setLength(totalMemory);
-			HX_STACK_LINE(544)
-			memory->position = (int)0;
-			HX_STACK_LINE(545)
-			::openfl::_v2::display::BitmapData bitmapData = sourceBitmapData->clone();		HX_STACK_VAR(bitmapData,"bitmapData");
-			HX_STACK_LINE(546)
-			::openfl::_v2::utils::ByteArray pixels = bitmapData->getPixels(sourceRect);		HX_STACK_VAR(pixels,"pixels");
 			HX_STACK_LINE(547)
-			memory->writeBytes(pixels,null(),null());
+			int totalMemory = (canvasMemory + sourceMemory);		HX_STACK_VAR(totalMemory,"totalMemory");
 			HX_STACK_LINE(548)
-			memory->position = canvasMemory;
+			::openfl::_v2::utils::ByteArray memory = ::openfl::_v2::utils::ByteArray_obj::__new(null());		HX_STACK_VAR(memory,"memory");
+			HX_STACK_LINE(549)
+			memory->setLength(totalMemory);
 			HX_STACK_LINE(550)
+			memory->position = (int)0;
+			HX_STACK_LINE(551)
+			::openfl::_v2::display::BitmapData bitmapData = sourceBitmapData->clone();		HX_STACK_VAR(bitmapData,"bitmapData");
+			HX_STACK_LINE(552)
+			::openfl::_v2::utils::ByteArray pixels = bitmapData->getPixels(sourceRect);		HX_STACK_VAR(pixels,"pixels");
+			HX_STACK_LINE(553)
+			memory->writeBytes(pixels,null(),null());
+			HX_STACK_LINE(554)
+			memory->position = canvasMemory;
+			HX_STACK_LINE(556)
 			if ((copySource)){
-				HX_STACK_LINE(552)
+				HX_STACK_LINE(558)
 				memory->writeBytes(pixels,null(),null());
 			}
-			HX_STACK_LINE(556)
+			HX_STACK_LINE(562)
 			memory->position = (int)0;
-			HX_STACK_LINE(557)
-			::openfl::_v2::Memory_obj::select(memory);
-			HX_STACK_LINE(559)
-			int thresholdMask = (int(threshold) & int(mask));		HX_STACK_VAR(thresholdMask,"thresholdMask");
-			HX_STACK_LINE(561)
-			int position;		HX_STACK_VAR(position,"position");
-			HX_STACK_LINE(561)
-			int pixelMask;		HX_STACK_VAR(pixelMask,"pixelMask");
-			HX_STACK_LINE(561)
-			int pixelValue;		HX_STACK_VAR(pixelValue,"pixelValue");
-			HX_STACK_LINE(561)
-			int i;		HX_STACK_VAR(i,"i");
-			HX_STACK_LINE(561)
-			bool test;		HX_STACK_VAR(test,"test");
 			HX_STACK_LINE(563)
+			::openfl::_v2::Memory_obj::select(memory);
+			HX_STACK_LINE(565)
+			int thresholdMask = (int(threshold) & int(mask));		HX_STACK_VAR(thresholdMask,"thresholdMask");
+			HX_STACK_LINE(567)
+			int position;		HX_STACK_VAR(position,"position");
+			HX_STACK_LINE(567)
+			int pixelMask;		HX_STACK_VAR(pixelMask,"pixelMask");
+			HX_STACK_LINE(567)
+			int pixelValue;		HX_STACK_VAR(pixelValue,"pixelValue");
+			HX_STACK_LINE(567)
+			int i;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(567)
+			bool test;		HX_STACK_VAR(test,"test");
+			HX_STACK_LINE(569)
 			{
-				HX_STACK_LINE(563)
+				HX_STACK_LINE(569)
 				int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-				HX_STACK_LINE(563)
+				HX_STACK_LINE(569)
 				while((true)){
-					HX_STACK_LINE(563)
+					HX_STACK_LINE(569)
 					if ((!(((_g < dh))))){
-						HX_STACK_LINE(563)
+						HX_STACK_LINE(569)
 						break;
 					}
-					HX_STACK_LINE(563)
+					HX_STACK_LINE(569)
 					int yy = (_g)++;		HX_STACK_VAR(yy,"yy");
-					HX_STACK_LINE(565)
+					HX_STACK_LINE(571)
 					{
-						HX_STACK_LINE(565)
+						HX_STACK_LINE(571)
 						int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
-						HX_STACK_LINE(565)
+						HX_STACK_LINE(571)
 						while((true)){
-							HX_STACK_LINE(565)
+							HX_STACK_LINE(571)
 							if ((!(((_g1 < dw))))){
-								HX_STACK_LINE(565)
+								HX_STACK_LINE(571)
 								break;
 							}
-							HX_STACK_LINE(565)
+							HX_STACK_LINE(571)
 							int xx = (_g1)++;		HX_STACK_VAR(xx,"xx");
-							HX_STACK_LINE(567)
+							HX_STACK_LINE(573)
 							position = ((((xx + sx) + (((yy + sy)) * sw))) * (int)4);
-							HX_STACK_LINE(568)
-							int _g24 = ::openfl::_v2::Memory_obj::getI32(position);		HX_STACK_VAR(_g24,"_g24");
-							HX_STACK_LINE(568)
-							pixelValue = _g24;
-							HX_STACK_LINE(569)
-							pixelMask = (int(pixelValue) & int(mask));
-							HX_STACK_LINE(571)
-							int _g25 = ::openfl::_v2::display::BitmapData_obj::__ucompare(pixelMask,thresholdMask);		HX_STACK_VAR(_g25,"_g25");
-							HX_STACK_LINE(571)
-							i = _g25;
-							HX_STACK_LINE(572)
-							test = false;
 							HX_STACK_LINE(574)
+							int _g24 = ::openfl::_v2::Memory_obj::getI32(position);		HX_STACK_VAR(_g24,"_g24");
+							HX_STACK_LINE(574)
+							pixelValue = _g24;
+							HX_STACK_LINE(575)
+							pixelMask = (int(pixelValue) & int(mask));
+							HX_STACK_LINE(577)
+							int _g25 = ::openfl::_v2::display::BitmapData_obj::__ucompare(pixelMask,thresholdMask);		HX_STACK_VAR(_g25,"_g25");
+							HX_STACK_LINE(577)
+							i = _g25;
+							HX_STACK_LINE(578)
+							test = false;
+							HX_STACK_LINE(580)
 							if (((operation == HX_CSTRING("==")))){
-								HX_STACK_LINE(574)
+								HX_STACK_LINE(580)
 								test = (i == (int)0);
 							}
 							else{
-								HX_STACK_LINE(575)
+								HX_STACK_LINE(581)
 								if (((operation == HX_CSTRING("<")))){
-									HX_STACK_LINE(575)
+									HX_STACK_LINE(581)
 									test = (i == (int)-1);
 								}
 								else{
-									HX_STACK_LINE(576)
+									HX_STACK_LINE(582)
 									if (((operation == HX_CSTRING(">")))){
-										HX_STACK_LINE(576)
+										HX_STACK_LINE(582)
 										test = (i == (int)1);
 									}
 									else{
-										HX_STACK_LINE(577)
+										HX_STACK_LINE(583)
 										if (((operation == HX_CSTRING("!=")))){
-											HX_STACK_LINE(577)
+											HX_STACK_LINE(583)
 											test = (i != (int)0);
 										}
 										else{
-											HX_STACK_LINE(578)
+											HX_STACK_LINE(584)
 											if (((operation == HX_CSTRING("<=")))){
-												HX_STACK_LINE(578)
+												HX_STACK_LINE(584)
 												test = (bool((i == (int)0)) || bool((i == (int)-1)));
 											}
 											else{
-												HX_STACK_LINE(579)
+												HX_STACK_LINE(585)
 												if (((operation == HX_CSTRING(">=")))){
-													HX_STACK_LINE(579)
+													HX_STACK_LINE(585)
 													test = (bool((i == (int)0)) || bool((i == (int)1)));
 												}
 											}
@@ -1125,19 +1176,19 @@ bool copySource = __o_copySource.Default(false);
 									}
 								}
 							}
-							HX_STACK_LINE(581)
+							HX_STACK_LINE(587)
 							if ((test)){
-								HX_STACK_LINE(583)
+								HX_STACK_LINE(589)
 								::openfl::_v2::Memory_obj::setI32(position,color);
-								HX_STACK_LINE(584)
+								HX_STACK_LINE(590)
 								(hits)++;
 							}
 							else{
-								HX_STACK_LINE(586)
+								HX_STACK_LINE(592)
 								if ((copySource)){
-									HX_STACK_LINE(588)
+									HX_STACK_LINE(594)
 									int _g26 = ::openfl::_v2::Memory_obj::getI32((canvasMemory + position));		HX_STACK_VAR(_g26,"_g26");
-									HX_STACK_LINE(588)
+									HX_STACK_LINE(594)
 									::openfl::_v2::Memory_obj::setI32(position,_g26);
 								}
 							}
@@ -1145,20 +1196,20 @@ bool copySource = __o_copySource.Default(false);
 					}
 				}
 			}
-			HX_STACK_LINE(596)
+			HX_STACK_LINE(602)
 			memory->position = (int)0;
-			HX_STACK_LINE(597)
+			HX_STACK_LINE(603)
 			bitmapData->setPixels(sourceRect,memory);
-			HX_STACK_LINE(598)
+			HX_STACK_LINE(604)
 			::openfl::_v2::geom::Rectangle _g27 = bitmapData->get_rect();		HX_STACK_VAR(_g27,"_g27");
-			HX_STACK_LINE(598)
+			HX_STACK_LINE(604)
 			this->copyPixels(bitmapData,_g27,destPoint,null(),null(),null());
-			HX_STACK_LINE(599)
+			HX_STACK_LINE(605)
 			::openfl::_v2::Memory_obj::select(null());
-			HX_STACK_LINE(600)
+			HX_STACK_LINE(606)
 			return hits;
 		}
-		HX_STACK_LINE(458)
+		HX_STACK_LINE(464)
 		return (int)0;
 	}
 }
@@ -1168,7 +1219,7 @@ HX_DEFINE_DYNAMIC_FUNC8(BitmapData_obj,threshold,return )
 
 Void BitmapData_obj::unlock( ::openfl::_v2::geom::Rectangle changeRect){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","unlock",0x7f6f4b1c,"openfl._v2.display.BitmapData.unlock","openfl/_v2/display/BitmapData.hx",607,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","unlock",0x7f6f4b1c,"openfl._v2.display.BitmapData.unlock","openfl/_v2/display/BitmapData.hx",613,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(changeRect,"changeRect")
 	}
@@ -1180,9 +1231,9 @@ HX_DEFINE_DYNAMIC_FUNC1(BitmapData_obj,unlock,(void))
 
 Void BitmapData_obj::unmultiplyAlpha( ){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","unmultiplyAlpha",0xbab85549,"openfl._v2.display.BitmapData.unmultiplyAlpha","openfl/_v2/display/BitmapData.hx",616,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","unmultiplyAlpha",0xbab85549,"openfl._v2.display.BitmapData.unmultiplyAlpha","openfl/_v2/display/BitmapData.hx",622,0xebe9fb05)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(616)
+		HX_STACK_LINE(622)
 		::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_unmultiply_alpha(this->__handle);
 	}
 return null();
@@ -1193,7 +1244,7 @@ HX_DEFINE_DYNAMIC_FUNC0(BitmapData_obj,unmultiplyAlpha,(void))
 
 Void BitmapData_obj::__drawToSurface( Dynamic surface,::openfl::_v2::geom::Matrix matrix,::openfl::_v2::geom::ColorTransform colorTransform,::String blendMode,::openfl::_v2::geom::Rectangle clipRect,bool smoothing){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","__drawToSurface",0x05d876d6,"openfl._v2.display.BitmapData.__drawToSurface","openfl/_v2/display/BitmapData.hx",623,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","__drawToSurface",0x05d876d6,"openfl._v2.display.BitmapData.__drawToSurface","openfl/_v2/display/BitmapData.hx",629,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(surface,"surface")
 		HX_STACK_ARG(matrix,"matrix")
@@ -1201,7 +1252,7 @@ Void BitmapData_obj::__drawToSurface( Dynamic surface,::openfl::_v2::geom::Matri
 		HX_STACK_ARG(blendMode,"blendMode")
 		HX_STACK_ARG(clipRect,"clipRect")
 		HX_STACK_ARG(smoothing,"smoothing")
-		HX_STACK_LINE(623)
+		HX_STACK_LINE(629)
 		::openfl::_v2::display::BitmapData_obj::lime_render_surface_to_surface(surface,this->__handle,matrix,colorTransform,blendMode,clipRect,smoothing);
 	}
 return null();
@@ -1212,13 +1263,13 @@ HX_DEFINE_DYNAMIC_FUNC6(BitmapData_obj,__drawToSurface,(void))
 
 Void BitmapData_obj::__loadFromBytes( ::openfl::_v2::utils::ByteArray bytes,::openfl::_v2::utils::ByteArray rawAlpha){
 {
-		HX_STACK_FRAME("openfl._v2.display.BitmapData","__loadFromBytes",0x0e5a8923,"openfl._v2.display.BitmapData.__loadFromBytes","openfl/_v2/display/BitmapData.hx",635,0xebe9fb05)
+		HX_STACK_FRAME("openfl._v2.display.BitmapData","__loadFromBytes",0x0e5a8923,"openfl._v2.display.BitmapData.__loadFromBytes","openfl/_v2/display/BitmapData.hx",641,0xebe9fb05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(bytes,"bytes")
 		HX_STACK_ARG(rawAlpha,"rawAlpha")
-		HX_STACK_LINE(637)
+		HX_STACK_LINE(643)
 		Dynamic _g = ::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_from_bytes(bytes,rawAlpha);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(637)
+		HX_STACK_LINE(643)
 		this->__handle = _g;
 	}
 return null();
@@ -1228,9 +1279,9 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC2(BitmapData_obj,__loadFromBytes,(void))
 
 bool BitmapData_obj::get_premultipliedAlpha( ){
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","get_premultipliedAlpha",0xf773dfc9,"openfl._v2.display.BitmapData.get_premultipliedAlpha","openfl/_v2/display/BitmapData.hx",703,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","get_premultipliedAlpha",0xf773dfc9,"openfl._v2.display.BitmapData.get_premultipliedAlpha","openfl/_v2/display/BitmapData.hx",709,0xebe9fb05)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(703)
+	HX_STACK_LINE(709)
 	return ::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_get_prem_alpha(this->__handle);
 }
 
@@ -1238,12 +1289,12 @@ bool BitmapData_obj::get_premultipliedAlpha( ){
 HX_DEFINE_DYNAMIC_FUNC0(BitmapData_obj,get_premultipliedAlpha,return )
 
 bool BitmapData_obj::set_premultipliedAlpha( bool value){
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","set_premultipliedAlpha",0x2b1f5c3d,"openfl._v2.display.BitmapData.set_premultipliedAlpha","openfl/_v2/display/BitmapData.hx",704,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","set_premultipliedAlpha",0x2b1f5c3d,"openfl._v2.display.BitmapData.set_premultipliedAlpha","openfl/_v2/display/BitmapData.hx",710,0xebe9fb05)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(704)
+	HX_STACK_LINE(710)
 	::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_set_prem_alpha(this->__handle,value);
-	HX_STACK_LINE(704)
+	HX_STACK_LINE(710)
 	return value;
 }
 
@@ -1251,13 +1302,13 @@ bool BitmapData_obj::set_premultipliedAlpha( bool value){
 HX_DEFINE_DYNAMIC_FUNC1(BitmapData_obj,set_premultipliedAlpha,return )
 
 ::openfl::_v2::geom::Rectangle BitmapData_obj::get_rect( ){
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","get_rect",0x21817705,"openfl._v2.display.BitmapData.get_rect","openfl/_v2/display/BitmapData.hx",705,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","get_rect",0x21817705,"openfl._v2.display.BitmapData.get_rect","openfl/_v2/display/BitmapData.hx",711,0xebe9fb05)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(705)
+	HX_STACK_LINE(711)
 	int _g = this->get_width();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(705)
+	HX_STACK_LINE(711)
 	int _g1 = this->get_height();		HX_STACK_VAR(_g1,"_g1");
-	HX_STACK_LINE(705)
+	HX_STACK_LINE(711)
 	return ::openfl::_v2::geom::Rectangle_obj::__new((int)0,(int)0,_g,_g1);
 }
 
@@ -1265,9 +1316,9 @@ HX_DEFINE_DYNAMIC_FUNC1(BitmapData_obj,set_premultipliedAlpha,return )
 HX_DEFINE_DYNAMIC_FUNC0(BitmapData_obj,get_rect,return )
 
 int BitmapData_obj::get_width( ){
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","get_width",0x136d3105,"openfl._v2.display.BitmapData.get_width","openfl/_v2/display/BitmapData.hx",706,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","get_width",0x136d3105,"openfl._v2.display.BitmapData.get_width","openfl/_v2/display/BitmapData.hx",712,0xebe9fb05)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(706)
+	HX_STACK_LINE(712)
 	return ::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_width(this->__handle);
 }
 
@@ -1275,9 +1326,9 @@ int BitmapData_obj::get_width( ){
 HX_DEFINE_DYNAMIC_FUNC0(BitmapData_obj,get_width,return )
 
 int BitmapData_obj::get_height( ){
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","get_height",0xa26d2c08,"openfl._v2.display.BitmapData.get_height","openfl/_v2/display/BitmapData.hx",707,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","get_height",0xa26d2c08,"openfl._v2.display.BitmapData.get_height","openfl/_v2/display/BitmapData.hx",713,0xebe9fb05)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(707)
+	HX_STACK_LINE(713)
 	return ::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_height(this->__handle);
 }
 
@@ -1285,9 +1336,9 @@ int BitmapData_obj::get_height( ){
 HX_DEFINE_DYNAMIC_FUNC0(BitmapData_obj,get_height,return )
 
 bool BitmapData_obj::get_transparent( ){
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","get_transparent",0x75bd6f91,"openfl._v2.display.BitmapData.get_transparent","openfl/_v2/display/BitmapData.hx",708,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","get_transparent",0x75bd6f91,"openfl._v2.display.BitmapData.get_transparent","openfl/_v2/display/BitmapData.hx",714,0xebe9fb05)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(708)
+	HX_STACK_LINE(714)
 	return this->__transparent;
 }
 
@@ -1371,46 +1422,34 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(BitmapData_obj,extractColor,return )
 	int _g4 = bitmapData->get_height();		HX_STACK_VAR(_g4,"_g4");
 	HX_STACK_LINE(249)
 	int size = (_g3 * _g4);		HX_STACK_VAR(size,"size");
-	HX_STACK_LINE(251)
-	int alpha;		HX_STACK_VAR(alpha,"alpha");
-	HX_STACK_LINE(251)
-	int red;		HX_STACK_VAR(red,"red");
-	HX_STACK_LINE(251)
-	int green;		HX_STACK_VAR(green,"green");
-	HX_STACK_LINE(251)
-	int blue;		HX_STACK_VAR(blue,"blue");
-	HX_STACK_LINE(253)
+	HX_STACK_LINE(250)
+	int v;		HX_STACK_VAR(v,"v");
+	HX_STACK_LINE(252)
+	data->position = (int)0;
+	HX_STACK_LINE(254)
 	{
-		HX_STACK_LINE(253)
+		HX_STACK_LINE(254)
 		int _g5 = (int)0;		HX_STACK_VAR(_g5,"_g5");
-		HX_STACK_LINE(253)
+		HX_STACK_LINE(254)
 		while((true)){
-			HX_STACK_LINE(253)
+			HX_STACK_LINE(254)
 			if ((!(((_g5 < size))))){
-				HX_STACK_LINE(253)
+				HX_STACK_LINE(254)
 				break;
 			}
-			HX_STACK_LINE(253)
+			HX_STACK_LINE(254)
 			int i = (_g5)++;		HX_STACK_VAR(i,"i");
-			HX_STACK_LINE(255)
-			alpha = data->__get((i * (int)4));
 			HX_STACK_LINE(256)
-			red = data->__get(((i * (int)4) + (int)1));
+			int _g51 = data->readInt();		HX_STACK_VAR(_g51,"_g51");
+			HX_STACK_LINE(256)
+			v = _g51;
 			HX_STACK_LINE(257)
-			green = data->__get(((i * (int)4) + (int)2));
+			data->position = (int(i) << int((int)2));
 			HX_STACK_LINE(258)
-			blue = data->__get(((i * (int)4) + (int)3));
-			HX_STACK_LINE(260)
-			hx::__ArrayImplRef(data,(i * (int)4)) = red;
-			HX_STACK_LINE(261)
-			hx::__ArrayImplRef(data,((i * (int)4) + (int)1)) = green;
-			HX_STACK_LINE(262)
-			hx::__ArrayImplRef(data,((i * (int)4) + (int)2)) = blue;
-			HX_STACK_LINE(263)
-			hx::__ArrayImplRef(data,((i * (int)4) + (int)3)) = alpha;
+			data->writeInt((int((int((int((int(hx::UShr(v,(int)8)) & int((int)255))) | int((int(((int(hx::UShr(v,(int)16)) & int((int)255)))) << int((int)8))))) | int((int(((int(hx::UShr(v,(int)24)) & int((int)255)))) << int((int)16))))) | int((int(((int(hx::UShr(v,(int)0)) & int((int)255)))) << int((int)24)))));
 		}
 	}
-	HX_STACK_LINE(267)
+	HX_STACK_LINE(262)
 	return data;
 }
 
@@ -1419,17 +1458,17 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(BitmapData_obj,getRGBAPixels,return )
 
 ::openfl::_v2::display::BitmapData BitmapData_obj::load( ::String filename,hx::Null< int >  __o_format){
 int format = __o_format.Default(0);
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","load",0xb03afc7e,"openfl._v2.display.BitmapData.load","openfl/_v2/display/BitmapData.hx",293,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","load",0xb03afc7e,"openfl._v2.display.BitmapData.load","openfl/_v2/display/BitmapData.hx",288,0xebe9fb05)
 	HX_STACK_ARG(filename,"filename")
 	HX_STACK_ARG(format,"format")
 {
-		HX_STACK_LINE(295)
+		HX_STACK_LINE(290)
 		::openfl::_v2::display::BitmapData result = ::openfl::_v2::display::BitmapData_obj::__new((int)0,(int)0,null(),null(),null());		HX_STACK_VAR(result,"result");
-		HX_STACK_LINE(296)
+		HX_STACK_LINE(291)
 		Dynamic _g = ::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_load(filename,format);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(296)
+		HX_STACK_LINE(291)
 		result->__handle = _g;
-		HX_STACK_LINE(297)
+		HX_STACK_LINE(292)
 		return result;
 	}
 }
@@ -1438,19 +1477,19 @@ int format = __o_format.Default(0);
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(BitmapData_obj,load,return )
 
 ::openfl::_v2::display::BitmapData BitmapData_obj::loadFromBytes( ::openfl::_v2::utils::ByteArray bytes,::openfl::_v2::utils::ByteArray rawAlpha){
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","loadFromBytes",0x7f205643,"openfl._v2.display.BitmapData.loadFromBytes","openfl/_v2/display/BitmapData.hx",302,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","loadFromBytes",0x7f205643,"openfl._v2.display.BitmapData.loadFromBytes","openfl/_v2/display/BitmapData.hx",297,0xebe9fb05)
 	HX_STACK_ARG(bytes,"bytes")
 	HX_STACK_ARG(rawAlpha,"rawAlpha")
-	HX_STACK_LINE(304)
+	HX_STACK_LINE(299)
 	::openfl::_v2::display::BitmapData result = ::openfl::_v2::display::BitmapData_obj::__new((int)0,(int)0,true,null(),null());		HX_STACK_VAR(result,"result");
-	HX_STACK_LINE(305)
+	HX_STACK_LINE(300)
 	{
-		HX_STACK_LINE(305)
+		HX_STACK_LINE(300)
 		Dynamic _g = ::openfl::_v2::display::BitmapData_obj::lime_bitmap_data_from_bytes(bytes,rawAlpha);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(305)
+		HX_STACK_LINE(300)
 		result->__handle = _g;
 	}
-	HX_STACK_LINE(306)
+	HX_STACK_LINE(301)
 	return result;
 }
 
@@ -1458,23 +1497,23 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(BitmapData_obj,load,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(BitmapData_obj,loadFromBytes,return )
 
 ::openfl::_v2::display::BitmapData BitmapData_obj::loadFromHaxeBytes( ::haxe::io::Bytes bytes,::haxe::io::Bytes rawAlpha){
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","loadFromHaxeBytes",0xedd0943d,"openfl._v2.display.BitmapData.loadFromHaxeBytes","openfl/_v2/display/BitmapData.hx",311,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","loadFromHaxeBytes",0xedd0943d,"openfl._v2.display.BitmapData.loadFromHaxeBytes","openfl/_v2/display/BitmapData.hx",306,0xebe9fb05)
 	HX_STACK_ARG(bytes,"bytes")
 	HX_STACK_ARG(rawAlpha,"rawAlpha")
-	HX_STACK_LINE(313)
+	HX_STACK_LINE(308)
 	::openfl::_v2::utils::ByteArray _g = ::openfl::_v2::utils::ByteArray_obj::fromBytes(bytes);		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(313)
+	HX_STACK_LINE(308)
 	::openfl::_v2::utils::ByteArray _g1;		HX_STACK_VAR(_g1,"_g1");
-	HX_STACK_LINE(313)
+	HX_STACK_LINE(308)
 	if (((rawAlpha == null()))){
-		HX_STACK_LINE(313)
+		HX_STACK_LINE(308)
 		_g1 = null();
 	}
 	else{
-		HX_STACK_LINE(313)
+		HX_STACK_LINE(308)
 		_g1 = ::openfl::_v2::utils::ByteArray_obj::fromBytes(rawAlpha);
 	}
-	HX_STACK_LINE(313)
+	HX_STACK_LINE(308)
 	return ::openfl::_v2::display::BitmapData_obj::loadFromBytes(_g,_g1);
 }
 
@@ -1482,10 +1521,10 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(BitmapData_obj,loadFromBytes,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(BitmapData_obj,loadFromHaxeBytes,return )
 
 bool BitmapData_obj::sameValue( int a,int b){
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","sameValue",0x4f8578d3,"openfl._v2.display.BitmapData.sameValue","openfl/_v2/display/BitmapData.hx",383,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","sameValue",0x4f8578d3,"openfl._v2.display.BitmapData.sameValue","openfl/_v2/display/BitmapData.hx",389,0xebe9fb05)
 	HX_STACK_ARG(a,"a")
 	HX_STACK_ARG(b,"b")
-	HX_STACK_LINE(383)
+	HX_STACK_LINE(389)
 	return (a == b);
 }
 
@@ -1493,9 +1532,9 @@ bool BitmapData_obj::sameValue( int a,int b){
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(BitmapData_obj,sameValue,return )
 
 int BitmapData_obj::__flipPixel( int pixel){
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","__flipPixel",0x7e9fb221,"openfl._v2.display.BitmapData.__flipPixel","openfl/_v2/display/BitmapData.hx",630,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","__flipPixel",0x7e9fb221,"openfl._v2.display.BitmapData.__flipPixel","openfl/_v2/display/BitmapData.hx",636,0xebe9fb05)
 	HX_STACK_ARG(pixel,"pixel")
-	HX_STACK_LINE(630)
+	HX_STACK_LINE(636)
 	return (int((int((int((int(((int(pixel) & int((int)255)))) << int((int)24))) | int((int(((int((int(pixel) >> int((int)8))) & int((int)255)))) << int((int)16))))) | int((int(((int((int(pixel) >> int((int)16))) & int((int)255)))) << int((int)8))))) | int((int((int(pixel) >> int((int)24))) & int((int)255))));
 }
 
@@ -1503,88 +1542,88 @@ int BitmapData_obj::__flipPixel( int pixel){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(BitmapData_obj,__flipPixel,return )
 
 int BitmapData_obj::__ucompare( int n1,int n2){
-	HX_STACK_FRAME("openfl._v2.display.BitmapData","__ucompare",0xfa496848,"openfl._v2.display.BitmapData.__ucompare","openfl/_v2/display/BitmapData.hx",642,0xebe9fb05)
+	HX_STACK_FRAME("openfl._v2.display.BitmapData","__ucompare",0xfa496848,"openfl._v2.display.BitmapData.__ucompare","openfl/_v2/display/BitmapData.hx",648,0xebe9fb05)
 	HX_STACK_ARG(n1,"n1")
 	HX_STACK_ARG(n2,"n2")
-	HX_STACK_LINE(644)
-	int tmp1;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(645)
-	int tmp2;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(647)
-	tmp1 = (int((int(n1) >> int((int)24))) & int((int)255));
-	HX_STACK_LINE(648)
-	tmp2 = (int((int(n2) >> int((int)24))) & int((int)255));
 	HX_STACK_LINE(650)
+	int tmp1;		HX_STACK_VAR(tmp1,"tmp1");
+	HX_STACK_LINE(651)
+	int tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+	HX_STACK_LINE(653)
+	tmp1 = (int((int(n1) >> int((int)24))) & int((int)255));
+	HX_STACK_LINE(654)
+	tmp2 = (int((int(n2) >> int((int)24))) & int((int)255));
+	HX_STACK_LINE(656)
 	if (((tmp1 != tmp2))){
-		HX_STACK_LINE(652)
+		HX_STACK_LINE(658)
 		if (((tmp1 > tmp2))){
-			HX_STACK_LINE(652)
+			HX_STACK_LINE(658)
 			return (int)1;
 		}
 		else{
-			HX_STACK_LINE(652)
+			HX_STACK_LINE(658)
 			return (int)-1;
 		}
 	}
 	else{
-		HX_STACK_LINE(656)
+		HX_STACK_LINE(662)
 		tmp1 = (int((int(n1) >> int((int)16))) & int((int)255));
-		HX_STACK_LINE(657)
+		HX_STACK_LINE(663)
 		tmp2 = (int((int(n2) >> int((int)16))) & int((int)255));
-		HX_STACK_LINE(659)
+		HX_STACK_LINE(665)
 		if (((tmp1 != tmp2))){
-			HX_STACK_LINE(661)
+			HX_STACK_LINE(667)
 			if (((tmp1 > tmp2))){
-				HX_STACK_LINE(661)
+				HX_STACK_LINE(667)
 				return (int)1;
 			}
 			else{
-				HX_STACK_LINE(661)
+				HX_STACK_LINE(667)
 				return (int)-1;
 			}
 		}
 		else{
-			HX_STACK_LINE(665)
+			HX_STACK_LINE(671)
 			tmp1 = (int((int(n1) >> int((int)8))) & int((int)255));
-			HX_STACK_LINE(666)
+			HX_STACK_LINE(672)
 			tmp2 = (int((int(n2) >> int((int)8))) & int((int)255));
-			HX_STACK_LINE(668)
+			HX_STACK_LINE(674)
 			if (((tmp1 != tmp2))){
-				HX_STACK_LINE(670)
+				HX_STACK_LINE(676)
 				if (((tmp1 > tmp2))){
-					HX_STACK_LINE(670)
+					HX_STACK_LINE(676)
 					return (int)1;
 				}
 				else{
-					HX_STACK_LINE(670)
+					HX_STACK_LINE(676)
 					return (int)-1;
 				}
 			}
 			else{
-				HX_STACK_LINE(674)
+				HX_STACK_LINE(680)
 				tmp1 = (int(n1) & int((int)255));
-				HX_STACK_LINE(675)
+				HX_STACK_LINE(681)
 				tmp2 = (int(n2) & int((int)255));
-				HX_STACK_LINE(677)
+				HX_STACK_LINE(683)
 				if (((tmp1 != tmp2))){
-					HX_STACK_LINE(679)
+					HX_STACK_LINE(685)
 					if (((tmp1 > tmp2))){
-						HX_STACK_LINE(679)
+						HX_STACK_LINE(685)
 						return (int)1;
 					}
 					else{
-						HX_STACK_LINE(679)
+						HX_STACK_LINE(685)
 						return (int)-1;
 					}
 				}
 				else{
-					HX_STACK_LINE(683)
+					HX_STACK_LINE(689)
 					return (int)0;
 				}
 			}
 		}
 	}
-	HX_STACK_LINE(650)
+	HX_STACK_LINE(656)
 	return (int)0;
 }
 

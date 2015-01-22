@@ -58,7 +58,6 @@
 #include <openfl/_v2/text/TextField.h>
 #include <openfl/_v2/text/FontType.h>
 #include <openfl/_v2/text/FontStyle.h>
-#include <openfl/_v2/text/Font.h>
 #include <openfl/_v2/system/System.h>
 #include <openfl/_v2/system/ScreenMode.h>
 #include <openfl/_v2/system/PixelFormat.h>
@@ -85,7 +84,7 @@
 #include <openfl/_v2/events/SystemEvent.h>
 #include <openfl/_v2/events/KeyboardEvent.h>
 #include <openfl/_v2/events/HTTPStatusEvent.h>
-#include <openfl/_v2/events/Listener.h>
+#include <openfl/_v2/events/_EventDispatcher/Listener.h>
 #include <openfl/_v2/display/TriangleCulling.h>
 #include <openfl/_v2/display/Tilesheet.h>
 #include <openfl/_v2/geom/Point.h>
@@ -144,15 +143,20 @@
 #include <com/text/attack/world/World.h>
 #include <openfl/_v2/display/MovieClip.h>
 #include <com/text/attack/world/Player.h>
+#include <com/text/attack/world/Wall.h>
 #include <com/text/attack/world/GameState.h>
+#include <com/text/attack/world/Empty.h>
 #include <com/text/attack/world/Comet.h>
 #include <com/text/attack/world/CellType.h>
 #include <com/text/attack/world/Bullet.h>
+#include <com/text/attack/world/Bouncer.h>
 #include <com/text/attack/world/Cell.h>
-#include <com/text/attack/world/Direction.h>
+#include <com/text/attack/utiltiies/SoundManager.h>
+#include <com/text/attack/utiltiies/Point.h>
 #include <com/text/attack/utiltiies/KeyManager.h>
 #include <com/text/attack/utiltiies/GameColors.h>
 #include <com/text/attack/utiltiies/Assert.h>
+#include <com/text/attack/levels/Level9.h>
 #include <com/text/attack/levels/Level8.h>
 #include <com/text/attack/levels/Level7.h>
 #include <com/text/attack/levels/Level6.h>
@@ -169,6 +173,11 @@
 #include <IMap.h>
 #include <List.h>
 #include <Lambda.h>
+#include <__ASSET__fonts_original_me_ttf.h>
+#include <__ASSET__fonts_mycourier_ttf.h>
+#include <__ASSET__fonts_me2_ttf.h>
+#include <__ASSET__fonts_me_ttf.h>
+#include <openfl/_v2/text/Font.h>
 #include <DefaultAssetLibrary.h>
 #include <openfl/_v2/AssetLibrary.h>
 #include <Date.h>
@@ -257,7 +266,6 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::_v2::text::TextField_obj::__register();
 ::openfl::_v2::text::FontType_obj::__register();
 ::openfl::_v2::text::FontStyle_obj::__register();
-::openfl::_v2::text::Font_obj::__register();
 ::openfl::_v2::system::System_obj::__register();
 ::openfl::_v2::system::ScreenMode_obj::__register();
 ::openfl::_v2::system::PixelFormat_obj::__register();
@@ -284,7 +292,7 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::_v2::events::SystemEvent_obj::__register();
 ::openfl::_v2::events::KeyboardEvent_obj::__register();
 ::openfl::_v2::events::HTTPStatusEvent_obj::__register();
-::openfl::_v2::events::Listener_obj::__register();
+::openfl::_v2::events::_EventDispatcher::Listener_obj::__register();
 ::openfl::_v2::display::TriangleCulling_obj::__register();
 ::openfl::_v2::display::Tilesheet_obj::__register();
 ::openfl::_v2::geom::Point_obj::__register();
@@ -343,15 +351,20 @@ hx::RegisterResources( hx::GetResources() );
 ::com::text::attack::world::World_obj::__register();
 ::openfl::_v2::display::MovieClip_obj::__register();
 ::com::text::attack::world::Player_obj::__register();
+::com::text::attack::world::Wall_obj::__register();
 ::com::text::attack::world::GameState_obj::__register();
+::com::text::attack::world::Empty_obj::__register();
 ::com::text::attack::world::Comet_obj::__register();
 ::com::text::attack::world::CellType_obj::__register();
 ::com::text::attack::world::Bullet_obj::__register();
+::com::text::attack::world::Bouncer_obj::__register();
 ::com::text::attack::world::Cell_obj::__register();
-::com::text::attack::world::Direction_obj::__register();
+::com::text::attack::utiltiies::SoundManager_obj::__register();
+::com::text::attack::utiltiies::Point_obj::__register();
 ::com::text::attack::utiltiies::KeyManager_obj::__register();
 ::com::text::attack::utiltiies::GameColors_obj::__register();
 ::com::text::attack::utiltiies::Assert_obj::__register();
+::com::text::attack::levels::Level9_obj::__register();
 ::com::text::attack::levels::Level8_obj::__register();
 ::com::text::attack::levels::Level7_obj::__register();
 ::com::text::attack::levels::Level6_obj::__register();
@@ -368,6 +381,11 @@ hx::RegisterResources( hx::GetResources() );
 ::IMap_obj::__register();
 ::List_obj::__register();
 ::Lambda_obj::__register();
+::__ASSET__fonts_original_me_ttf_obj::__register();
+::__ASSET__fonts_mycourier_ttf_obj::__register();
+::__ASSET__fonts_me2_ttf_obj::__register();
+::__ASSET__fonts_me_ttf_obj::__register();
+::openfl::_v2::text::Font_obj::__register();
 ::DefaultAssetLibrary_obj::__register();
 ::openfl::_v2::AssetLibrary_obj::__register();
 ::Date_obj::__register();
@@ -420,6 +438,11 @@ hx::RegisterResources( hx::GetResources() );
 ::Date_obj::__boot();
 ::openfl::_v2::AssetLibrary_obj::__boot();
 ::DefaultAssetLibrary_obj::__boot();
+::openfl::_v2::text::Font_obj::__boot();
+::__ASSET__fonts_me_ttf_obj::__boot();
+::__ASSET__fonts_me2_ttf_obj::__boot();
+::__ASSET__fonts_mycourier_ttf_obj::__boot();
+::__ASSET__fonts_original_me_ttf_obj::__boot();
 ::Lambda_obj::__boot();
 ::List_obj::__boot();
 ::IMap_obj::__boot();
@@ -436,15 +459,20 @@ hx::RegisterResources( hx::GetResources() );
 ::com::text::attack::levels::Level6_obj::__boot();
 ::com::text::attack::levels::Level7_obj::__boot();
 ::com::text::attack::levels::Level8_obj::__boot();
+::com::text::attack::levels::Level9_obj::__boot();
 ::com::text::attack::utiltiies::Assert_obj::__boot();
 ::com::text::attack::utiltiies::GameColors_obj::__boot();
 ::com::text::attack::utiltiies::KeyManager_obj::__boot();
-::com::text::attack::world::Direction_obj::__boot();
+::com::text::attack::utiltiies::Point_obj::__boot();
+::com::text::attack::utiltiies::SoundManager_obj::__boot();
 ::com::text::attack::world::Cell_obj::__boot();
+::com::text::attack::world::Bouncer_obj::__boot();
 ::com::text::attack::world::Bullet_obj::__boot();
 ::com::text::attack::world::CellType_obj::__boot();
 ::com::text::attack::world::Comet_obj::__boot();
+::com::text::attack::world::Empty_obj::__boot();
 ::com::text::attack::world::GameState_obj::__boot();
+::com::text::attack::world::Wall_obj::__boot();
 ::com::text::attack::world::Player_obj::__boot();
 ::openfl::_v2::display::MovieClip_obj::__boot();
 ::com::text::attack::world::World_obj::__boot();
@@ -498,7 +526,7 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::_v2::geom::Point_obj::__boot();
 ::openfl::_v2::display::Tilesheet_obj::__boot();
 ::openfl::_v2::display::TriangleCulling_obj::__boot();
-::openfl::_v2::events::Listener_obj::__boot();
+::openfl::_v2::events::_EventDispatcher::Listener_obj::__boot();
 ::openfl::_v2::events::HTTPStatusEvent_obj::__boot();
 ::openfl::_v2::events::KeyboardEvent_obj::__boot();
 ::openfl::_v2::events::SystemEvent_obj::__boot();
@@ -525,7 +553,6 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::_v2::system::PixelFormat_obj::__boot();
 ::openfl::_v2::system::ScreenMode_obj::__boot();
 ::openfl::_v2::system::System_obj::__boot();
-::openfl::_v2::text::Font_obj::__boot();
 ::openfl::_v2::text::FontStyle_obj::__boot();
 ::openfl::_v2::text::FontType_obj::__boot();
 ::openfl::_v2::text::TextField_obj::__boot();

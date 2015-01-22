@@ -46,14 +46,218 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		path.set ("fonts/me.ttf", "fonts/me.ttf");
+		type.set ("fonts/me.ttf", AssetType.FONT);
+		path.set ("fonts/me.ttf.bak", "fonts/me.ttf.bak");
+		type.set ("fonts/me.ttf.bak", AssetType.BINARY);
+		path.set ("fonts/me2.ttf", "fonts/me2.ttf");
+		type.set ("fonts/me2.ttf", AssetType.FONT);
+		path.set ("fonts/me2.ttf.bf", "fonts/me2.ttf.bf");
+		type.set ("fonts/me2.ttf.bf", AssetType.TEXT);
+		path.set ("fonts/MyCourier.ttf", "fonts/MyCourier.ttf");
+		type.set ("fonts/MyCourier.ttf", AssetType.FONT);
+		path.set ("fonts/Original me.ttf", "fonts/Original me.ttf");
+		type.set ("fonts/Original me.ttf", AssetType.FONT);
+		path.set ("audio/end.wav", "audio/end.wav");
+		type.set ("audio/end.wav", AssetType.SOUND);
+		path.set ("audio/end.wav.asd", "audio/end.wav.asd");
+		type.set ("audio/end.wav.asd", AssetType.BINARY);
+		path.set ("audio/ma_01.wav", "audio/ma_01.wav");
+		type.set ("audio/ma_01.wav", AssetType.SOUND);
+		path.set ("audio/ma_01.wav.asd", "audio/ma_01.wav.asd");
+		type.set ("audio/ma_01.wav.asd", AssetType.BINARY);
+		path.set ("audio/ma_02.wav", "audio/ma_02.wav");
+		type.set ("audio/ma_02.wav", AssetType.SOUND);
+		path.set ("audio/ma_02.wav.asd", "audio/ma_02.wav.asd");
+		type.set ("audio/ma_02.wav.asd", AssetType.BINARY);
+		path.set ("audio/ma_03.wav", "audio/ma_03.wav");
+		type.set ("audio/ma_03.wav", AssetType.SOUND);
+		path.set ("audio/ma_03.wav.asd", "audio/ma_03.wav.asd");
+		type.set ("audio/ma_03.wav.asd", AssetType.BINARY);
+		path.set ("audio/ma_04.wav", "audio/ma_04.wav");
+		type.set ("audio/ma_04.wav", AssetType.SOUND);
+		path.set ("audio/ma_04.wav.asd", "audio/ma_04.wav.asd");
+		type.set ("audio/ma_04.wav.asd", AssetType.BINARY);
+		path.set ("audio/ma_05.wav", "audio/ma_05.wav");
+		type.set ("audio/ma_05.wav", AssetType.SOUND);
+		path.set ("audio/ma_05.wav.asd", "audio/ma_05.wav.asd");
+		type.set ("audio/ma_05.wav.asd", AssetType.BINARY);
+		path.set ("audio/m_01.wav", "audio/m_01.wav");
+		type.set ("audio/m_01.wav", AssetType.SOUND);
+		path.set ("audio/m_01.wav.asd", "audio/m_01.wav.asd");
+		type.set ("audio/m_01.wav.asd", AssetType.BINARY);
+		path.set ("audio/m_02.wav", "audio/m_02.wav");
+		type.set ("audio/m_02.wav", AssetType.SOUND);
+		path.set ("audio/m_02.wav.asd", "audio/m_02.wav.asd");
+		type.set ("audio/m_02.wav.asd", AssetType.BINARY);
+		path.set ("audio/m_03.wav", "audio/m_03.wav");
+		type.set ("audio/m_03.wav", AssetType.SOUND);
+		path.set ("audio/m_03.wav.asd", "audio/m_03.wav.asd");
+		type.set ("audio/m_03.wav.asd", AssetType.BINARY);
+		path.set ("audio/m_04.wav", "audio/m_04.wav");
+		type.set ("audio/m_04.wav", AssetType.SOUND);
+		path.set ("audio/m_04.wav.asd", "audio/m_04.wav.asd");
+		type.set ("audio/m_04.wav.asd", AssetType.BINARY);
+		path.set ("audio/m_05.wav", "audio/m_05.wav");
+		type.set ("audio/m_05.wav", AssetType.SOUND);
+		path.set ("audio/m_05.wav.asd", "audio/m_05.wav.asd");
+		type.set ("audio/m_05.wav.asd", AssetType.BINARY);
+		path.set ("audio/m_06.wav", "audio/m_06.wav");
+		type.set ("audio/m_06.wav", AssetType.SOUND);
+		path.set ("audio/m_06.wav.asd", "audio/m_06.wav.asd");
+		type.set ("audio/m_06.wav.asd", AssetType.BINARY);
+		path.set ("audio/m_07.wav", "audio/m_07.wav");
+		type.set ("audio/m_07.wav", AssetType.SOUND);
+		path.set ("audio/m_07.wav.asd", "audio/m_07.wav.asd");
+		type.set ("audio/m_07.wav.asd", AssetType.BINARY);
+		path.set ("audio/m_08.wav", "audio/m_08.wav");
+		type.set ("audio/m_08.wav", AssetType.SOUND);
+		path.set ("audio/m_08.wav.asd", "audio/m_08.wav.asd");
+		type.set ("audio/m_08.wav.asd", AssetType.BINARY);
 		
 		
 		#elseif html5
 		
 		var id;
+		id = "fonts/me.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "fonts/me.ttf.bak";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "fonts/me2.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "fonts/me2.ttf.bf";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "fonts/MyCourier.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "fonts/Original me.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "audio/end.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/end.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "audio/ma_01.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/ma_01.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "audio/ma_02.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/ma_02.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "audio/ma_03.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/ma_03.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "audio/ma_04.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/ma_04.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "audio/ma_05.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/ma_05.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "audio/m_01.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/m_01.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "audio/m_02.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/m_02.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "audio/m_03.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/m_03.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "audio/m_04.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/m_04.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "audio/m_05.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/m_05.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "audio/m_06.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/m_06.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "audio/m_07.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/m_07.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "audio/m_08.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/m_08.wav.asd";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		
 		
 		#else
+		
+		
+		Font.registerFont (__ASSET__fonts_me_ttf);
+		
+		Font.registerFont (__ASSET__fonts_me2_ttf);
+		
+		Font.registerFont (__ASSET__fonts_mycourier_ttf);
+		Font.registerFont (__ASSET__fonts_original_me_ttf);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -61,6 +265,40 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		
 		
 		if (useManifest) {
@@ -680,7 +918,75 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #elseif html5
+
+@:keep #if display private #end class __ASSET__fonts_me_ttf extends flash.text.Font { #if (!openfl_html5_dom) public function new () { super (); fontName = "MyCourier"; } #end }
+
+@:keep #if display private #end class __ASSET__fonts_me2_ttf extends flash.text.Font { #if (!openfl_html5_dom) public function new () { super (); fontName = "MyCourier"; } #end }
+
+@:keep #if display private #end class __ASSET__fonts_mycourier_ttf extends flash.text.Font { #if (!openfl_html5_dom) public function new () { super (); fontName = "MyCourier"; } #end }
+@:keep #if display private #end class __ASSET__fonts_original_me_ttf extends flash.text.Font { #if (!openfl_html5_dom) public function new () { super (); fontName = "Courier"; } #end }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -692,11 +998,19 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+class __ASSET__fonts_me_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/me.ttf"; fontName = "MyCourier"; }}
+class __ASSET__fonts_me2_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/me2.ttf"; fontName = "MyCourier"; }}
+class __ASSET__fonts_mycourier_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/MyCourier.ttf"; fontName = "MyCourier"; }}
+class __ASSET__fonts_original_me_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/Original me.ttf"; fontName = "Courier"; }}
 
 
 #else
 
 
+class __ASSET__fonts_me_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/me.ttf"; fontName = "MyCourier";  }}
+class __ASSET__fonts_me2_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/me2.ttf"; fontName = "MyCourier";  }}
+class __ASSET__fonts_mycourier_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/MyCourier.ttf"; fontName = "MyCourier";  }}
+class __ASSET__fonts_original_me_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/Original me.ttf"; fontName = "Courier";  }}
 
 
 #end

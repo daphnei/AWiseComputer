@@ -75,7 +75,7 @@ class HXCPP_CLASS_ATTRIBUTES  Stage_obj : public ::openfl::_v2::display::Display
 		Array< ::Dynamic > __focusOverObjects;
 		Float __framePeriod;
 		bool __invalid;
-		Float __lastClickTime;
+		int __lastClickTime;
 		Array< ::Dynamic > __lastDown;
 		Float __lastRender;
 		Array< ::Dynamic > __mouseOverObjects;
@@ -238,6 +238,9 @@ class HXCPP_CLASS_ATTRIBUTES  Stage_obj : public ::openfl::_v2::display::Display
 		static int OrientationLandscapeLeft;
 		static int OrientationFaceUp;
 		static int OrientationFaceDown;
+		static int OrientationPortraitAny;
+		static int OrientationLandscapeAny;
+		static int OrientationAny;
 		static int efLeftDown;
 		static int efShiftDown;
 		static int efCtrlDown;

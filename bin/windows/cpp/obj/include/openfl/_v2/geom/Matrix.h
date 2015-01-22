@@ -70,6 +70,9 @@ class HXCPP_CLASS_ATTRIBUTES  Matrix_obj : public hx::Object{
 		virtual ::openfl::_v2::geom::Point deltaTransformPoint( ::openfl::_v2::geom::Point point);
 		Dynamic deltaTransformPoint_dyn();
 
+		virtual bool equals( Dynamic matrix);
+		Dynamic equals_dyn();
+
 		virtual Void identity( );
 		Dynamic identity_dyn();
 

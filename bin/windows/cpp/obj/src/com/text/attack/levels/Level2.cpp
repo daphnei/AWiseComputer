@@ -17,12 +17,14 @@ HX_STACK_FRAME("com.text.attack.levels.Level2","new",0xd9b322ad,"com.text.attack
 HX_STACK_THIS(this)
 {
 	HX_STACK_LINE(43)
-	::String p1 = HX_CSTRING("He said, \"The beginning of wisdom is to call things by their proper name.\"");		HX_STACK_VAR(p1,"p1");
+	::String p1 = HX_CSTRING("He declared, \"I hear and I forget. I see and I remember. I do and I understand.\"");		HX_STACK_VAR(p1,"p1");
 	HX_STACK_LINE(44)
-	::String p2 = HX_CSTRING("I only have the name you gave me.");		HX_STACK_VAR(p2,"p2");
+	::String p2 = HX_CSTRING("The enemy is numerous.");		HX_STACK_VAR(p2,"p2");
 	HX_STACK_LINE(45)
-	Array< ::String > preamble = Array_obj< ::String >::__new().Add(p1).Add(p2);		HX_STACK_VAR(preamble,"preamble");
-	HX_STACK_LINE(47)
+	::String p3 = HX_CSTRING("If he reaches the edge of our world, I will die.");		HX_STACK_VAR(p3,"p3");
+	HX_STACK_LINE(46)
+	Array< ::String > preamble = Array_obj< ::String >::__new().Add(p1).Add(p2).Add(p3);		HX_STACK_VAR(preamble,"preamble");
+	HX_STACK_LINE(48)
 	super::__construct(HX_CSTRING(".........V.........................................................................................................................................................V........................................................................................................................................................................................V..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................P............................"),preamble,(int)3);
 }
 ;

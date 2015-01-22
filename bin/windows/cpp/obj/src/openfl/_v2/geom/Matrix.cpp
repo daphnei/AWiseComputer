@@ -319,15 +319,34 @@ Float ty = __o_ty.Default(0);
 	HX_STACK_ARG(tx,"tx")
 	HX_STACK_ARG(ty,"ty")
 {
-		HX_STACK_LINE(177)
-		this->a = scaleX;
-		HX_STACK_LINE(178)
-		this->d = scaleY;
-		HX_STACK_LINE(179)
-		this->b = rotation;
-		HX_STACK_LINE(180)
+		HX_STACK_LINE(182)
+		if (((rotation != (int)0))){
+			HX_STACK_LINE(184)
+			Float cos = ::Math_obj::cos(rotation);		HX_STACK_VAR(cos,"cos");
+			HX_STACK_LINE(185)
+			Float sin = ::Math_obj::sin(rotation);		HX_STACK_VAR(sin,"sin");
+			HX_STACK_LINE(187)
+			this->a = (cos * scaleX);
+			HX_STACK_LINE(188)
+			this->b = (sin * scaleY);
+			HX_STACK_LINE(189)
+			this->c = (-(sin) * scaleX);
+			HX_STACK_LINE(190)
+			this->d = (cos * scaleY);
+		}
+		else{
+			HX_STACK_LINE(194)
+			this->a = scaleX;
+			HX_STACK_LINE(195)
+			this->b = (int)0;
+			HX_STACK_LINE(196)
+			this->c = (int)0;
+			HX_STACK_LINE(197)
+			this->d = scaleY;
+		}
+		HX_STACK_LINE(201)
 		this->tx = tx;
-		HX_STACK_LINE(181)
+		HX_STACK_LINE(202)
 		this->ty = ty;
 	}
 return null();
@@ -340,7 +359,7 @@ Void Matrix_obj::createGradientBox( Float width,Float height,hx::Null< Float >  
 Float rotation = __o_rotation.Default(0);
 Float tx = __o_tx.Default(0);
 Float ty = __o_ty.Default(0);
-	HX_STACK_FRAME("openfl._v2.geom.Matrix","createGradientBox",0x5c882e13,"openfl._v2.geom.Matrix.createGradientBox","openfl/_v2/geom/Matrix.hx",186,0x64646abd)
+	HX_STACK_FRAME("openfl._v2.geom.Matrix","createGradientBox",0x5c882e13,"openfl._v2.geom.Matrix.createGradientBox","openfl/_v2/geom/Matrix.hx",207,0x64646abd)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(width,"width")
 	HX_STACK_ARG(height,"height")
@@ -348,34 +367,34 @@ Float ty = __o_ty.Default(0);
 	HX_STACK_ARG(tx,"tx")
 	HX_STACK_ARG(ty,"ty")
 {
-		HX_STACK_LINE(188)
+		HX_STACK_LINE(209)
 		this->a = (Float(width) / Float(1638.4));
-		HX_STACK_LINE(189)
+		HX_STACK_LINE(210)
 		this->d = (Float(height) / Float(1638.4));
-		HX_STACK_LINE(191)
+		HX_STACK_LINE(212)
 		if (((rotation != 0.0))){
-			HX_STACK_LINE(193)
+			HX_STACK_LINE(214)
 			Float cos = ::Math_obj::cos(rotation);		HX_STACK_VAR(cos,"cos");
-			HX_STACK_LINE(194)
+			HX_STACK_LINE(215)
 			Float sin = ::Math_obj::sin(rotation);		HX_STACK_VAR(sin,"sin");
-			HX_STACK_LINE(195)
+			HX_STACK_LINE(216)
 			this->b = (sin * this->d);
-			HX_STACK_LINE(196)
+			HX_STACK_LINE(217)
 			this->c = (-(sin) * this->a);
-			HX_STACK_LINE(197)
+			HX_STACK_LINE(218)
 			hx::MultEq(this->a,cos);
-			HX_STACK_LINE(198)
+			HX_STACK_LINE(219)
 			hx::MultEq(this->d,cos);
 		}
 		else{
-			HX_STACK_LINE(202)
+			HX_STACK_LINE(223)
 			Float _g = this->c = (int)0;		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(202)
+			HX_STACK_LINE(223)
 			this->b = _g;
 		}
-		HX_STACK_LINE(206)
+		HX_STACK_LINE(227)
 		this->tx = (tx + (Float(width) / Float((int)2)));
-		HX_STACK_LINE(207)
+		HX_STACK_LINE(228)
 		this->ty = (ty + (Float(height) / Float((int)2)));
 	}
 return null();
@@ -385,31 +404,42 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC5(Matrix_obj,createGradientBox,(void))
 
 ::openfl::_v2::geom::Point Matrix_obj::deltaTransformPoint( ::openfl::_v2::geom::Point point){
-	HX_STACK_FRAME("openfl._v2.geom.Matrix","deltaTransformPoint",0xfe596410,"openfl._v2.geom.Matrix.deltaTransformPoint","openfl/_v2/geom/Matrix.hx",214,0x64646abd)
+	HX_STACK_FRAME("openfl._v2.geom.Matrix","deltaTransformPoint",0xfe596410,"openfl._v2.geom.Matrix.deltaTransformPoint","openfl/_v2/geom/Matrix.hx",235,0x64646abd)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(point,"point")
-	HX_STACK_LINE(214)
+	HX_STACK_LINE(235)
 	return ::openfl::_v2::geom::Point_obj::__new(((point->x * this->a) + (point->y * this->c)),((point->x * this->b) + (point->y * this->d)));
 }
 
 
 HX_DEFINE_DYNAMIC_FUNC1(Matrix_obj,deltaTransformPoint,return )
 
+bool Matrix_obj::equals( Dynamic matrix){
+	HX_STACK_FRAME("openfl._v2.geom.Matrix","equals",0x7d6fa80b,"openfl._v2.geom.Matrix.equals","openfl/_v2/geom/Matrix.hx",242,0x64646abd)
+	HX_STACK_THIS(this)
+	HX_STACK_ARG(matrix,"matrix")
+	HX_STACK_LINE(242)
+	return (bool((bool((bool((bool((bool((bool((matrix != null())) && bool((this->tx == matrix->__Field(HX_CSTRING("tx"),true))))) && bool((this->ty == matrix->__Field(HX_CSTRING("ty"),true))))) && bool((this->a == matrix->__Field(HX_CSTRING("a"),true))))) && bool((this->b == matrix->__Field(HX_CSTRING("b"),true))))) && bool((this->c == matrix->__Field(HX_CSTRING("c"),true))))) && bool((this->d == matrix->__Field(HX_CSTRING("d"),true))));
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(Matrix_obj,equals,return )
+
 Void Matrix_obj::identity( ){
 {
-		HX_STACK_FRAME("openfl._v2.geom.Matrix","identity",0x5aa70a0a,"openfl._v2.geom.Matrix.identity","openfl/_v2/geom/Matrix.hx",219,0x64646abd)
+		HX_STACK_FRAME("openfl._v2.geom.Matrix","identity",0x5aa70a0a,"openfl._v2.geom.Matrix.identity","openfl/_v2/geom/Matrix.hx",247,0x64646abd)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(221)
+		HX_STACK_LINE(249)
 		this->a = (int)1;
-		HX_STACK_LINE(222)
+		HX_STACK_LINE(250)
 		this->b = (int)0;
-		HX_STACK_LINE(223)
+		HX_STACK_LINE(251)
 		this->c = (int)0;
-		HX_STACK_LINE(224)
+		HX_STACK_LINE(252)
 		this->d = (int)1;
-		HX_STACK_LINE(225)
+		HX_STACK_LINE(253)
 		this->tx = (int)0;
-		HX_STACK_LINE(226)
+		HX_STACK_LINE(254)
 		this->ty = (int)0;
 	}
 return null();
@@ -419,46 +449,46 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(Matrix_obj,identity,(void))
 
 ::openfl::_v2::geom::Matrix Matrix_obj::invert( ){
-	HX_STACK_FRAME("openfl._v2.geom.Matrix","invert",0x5d55a0e2,"openfl._v2.geom.Matrix.invert","openfl/_v2/geom/Matrix.hx",231,0x64646abd)
+	HX_STACK_FRAME("openfl._v2.geom.Matrix","invert",0x5d55a0e2,"openfl._v2.geom.Matrix.invert","openfl/_v2/geom/Matrix.hx",259,0x64646abd)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(233)
+	HX_STACK_LINE(261)
 	Float norm = ((this->a * this->d) - (this->b * this->c));		HX_STACK_VAR(norm,"norm");
-	HX_STACK_LINE(235)
+	HX_STACK_LINE(263)
 	if (((norm == (int)0))){
-		HX_STACK_LINE(237)
+		HX_STACK_LINE(265)
 		Float _g = this->d = (int)0;		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(237)
+		HX_STACK_LINE(265)
 		Float _g1 = this->c = _g;		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(237)
+		HX_STACK_LINE(265)
 		Float _g2 = this->b = _g1;		HX_STACK_VAR(_g2,"_g2");
-		HX_STACK_LINE(237)
+		HX_STACK_LINE(265)
 		this->a = _g2;
-		HX_STACK_LINE(238)
+		HX_STACK_LINE(266)
 		this->tx = -(this->tx);
-		HX_STACK_LINE(239)
+		HX_STACK_LINE(267)
 		this->ty = -(this->ty);
 	}
 	else{
-		HX_STACK_LINE(243)
+		HX_STACK_LINE(271)
 		norm = (Float(1.0) / Float(norm));
-		HX_STACK_LINE(244)
+		HX_STACK_LINE(272)
 		Float a1 = (this->d * norm);		HX_STACK_VAR(a1,"a1");
-		HX_STACK_LINE(245)
+		HX_STACK_LINE(273)
 		this->d = (this->a * norm);
-		HX_STACK_LINE(246)
+		HX_STACK_LINE(274)
 		this->a = a1;
-		HX_STACK_LINE(247)
+		HX_STACK_LINE(275)
 		hx::MultEq(this->b,-(norm));
-		HX_STACK_LINE(248)
+		HX_STACK_LINE(276)
 		hx::MultEq(this->c,-(norm));
-		HX_STACK_LINE(250)
+		HX_STACK_LINE(278)
 		Float tx1 = ((-(this->a) * this->tx) - (this->c * this->ty));		HX_STACK_VAR(tx1,"tx1");
-		HX_STACK_LINE(251)
+		HX_STACK_LINE(279)
 		this->ty = ((-(this->b) * this->tx) - (this->d * this->ty));
-		HX_STACK_LINE(252)
+		HX_STACK_LINE(280)
 		this->tx = tx1;
 	}
-	HX_STACK_LINE(256)
+	HX_STACK_LINE(284)
 	return hx::ObjectPtr<OBJ_>(this);
 }
 
@@ -466,24 +496,24 @@ HX_DEFINE_DYNAMIC_FUNC0(Matrix_obj,identity,(void))
 HX_DEFINE_DYNAMIC_FUNC0(Matrix_obj,invert,return )
 
 ::openfl::_v2::geom::Matrix Matrix_obj::mult( ::openfl::_v2::geom::Matrix m){
-	HX_STACK_FRAME("openfl._v2.geom.Matrix","mult",0xa34fd6bc,"openfl._v2.geom.Matrix.mult","openfl/_v2/geom/Matrix.hx",261,0x64646abd)
+	HX_STACK_FRAME("openfl._v2.geom.Matrix","mult",0xa34fd6bc,"openfl._v2.geom.Matrix.mult","openfl/_v2/geom/Matrix.hx",289,0x64646abd)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(m,"m")
-	HX_STACK_LINE(263)
+	HX_STACK_LINE(291)
 	::openfl::_v2::geom::Matrix result = ::openfl::_v2::geom::Matrix_obj::__new(null(),null(),null(),null(),null(),null());		HX_STACK_VAR(result,"result");
-	HX_STACK_LINE(265)
+	HX_STACK_LINE(293)
 	result->a = ((this->a * m->a) + (this->b * m->c));
-	HX_STACK_LINE(266)
+	HX_STACK_LINE(294)
 	result->b = ((this->a * m->b) + (this->b * m->d));
-	HX_STACK_LINE(267)
+	HX_STACK_LINE(295)
 	result->c = ((this->c * m->a) + (this->d * m->c));
-	HX_STACK_LINE(268)
+	HX_STACK_LINE(296)
 	result->d = ((this->c * m->b) + (this->d * m->d));
-	HX_STACK_LINE(270)
+	HX_STACK_LINE(298)
 	result->tx = (((this->tx * m->a) + (this->ty * m->c)) + m->tx);
-	HX_STACK_LINE(271)
+	HX_STACK_LINE(299)
 	result->ty = (((this->tx * m->b) + (this->ty * m->d)) + m->ty);
-	HX_STACK_LINE(273)
+	HX_STACK_LINE(301)
 	return result;
 }
 
@@ -492,30 +522,30 @@ HX_DEFINE_DYNAMIC_FUNC1(Matrix_obj,mult,return )
 
 Void Matrix_obj::rotate( Float angle){
 {
-		HX_STACK_FRAME("openfl._v2.geom.Matrix","rotate",0x889d0027,"openfl._v2.geom.Matrix.rotate","openfl/_v2/geom/Matrix.hx",278,0x64646abd)
+		HX_STACK_FRAME("openfl._v2.geom.Matrix","rotate",0x889d0027,"openfl._v2.geom.Matrix.rotate","openfl/_v2/geom/Matrix.hx",306,0x64646abd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(angle,"angle")
-		HX_STACK_LINE(280)
+		HX_STACK_LINE(308)
 		Float cos = ::Math_obj::cos(angle);		HX_STACK_VAR(cos,"cos");
-		HX_STACK_LINE(281)
+		HX_STACK_LINE(309)
 		Float sin = ::Math_obj::sin(angle);		HX_STACK_VAR(sin,"sin");
-		HX_STACK_LINE(283)
+		HX_STACK_LINE(311)
 		Float a1 = ((this->a * cos) - (this->b * sin));		HX_STACK_VAR(a1,"a1");
-		HX_STACK_LINE(284)
+		HX_STACK_LINE(312)
 		this->b = ((this->a * sin) + (this->b * cos));
-		HX_STACK_LINE(285)
+		HX_STACK_LINE(313)
 		this->a = a1;
-		HX_STACK_LINE(287)
+		HX_STACK_LINE(315)
 		Float c1 = ((this->c * cos) - (this->d * sin));		HX_STACK_VAR(c1,"c1");
-		HX_STACK_LINE(288)
+		HX_STACK_LINE(316)
 		this->d = ((this->c * sin) + (this->d * cos));
-		HX_STACK_LINE(289)
+		HX_STACK_LINE(317)
 		this->c = c1;
-		HX_STACK_LINE(291)
+		HX_STACK_LINE(319)
 		Float tx1 = ((this->tx * cos) - (this->ty * sin));		HX_STACK_VAR(tx1,"tx1");
-		HX_STACK_LINE(292)
+		HX_STACK_LINE(320)
 		this->ty = ((this->tx * sin) + (this->ty * cos));
-		HX_STACK_LINE(293)
+		HX_STACK_LINE(321)
 		this->tx = tx1;
 	}
 return null();
@@ -526,21 +556,21 @@ HX_DEFINE_DYNAMIC_FUNC1(Matrix_obj,rotate,(void))
 
 Void Matrix_obj::scale( Float x,Float y){
 {
-		HX_STACK_FRAME("openfl._v2.geom.Matrix","scale",0xab05523e,"openfl._v2.geom.Matrix.scale","openfl/_v2/geom/Matrix.hx",298,0x64646abd)
+		HX_STACK_FRAME("openfl._v2.geom.Matrix","scale",0xab05523e,"openfl._v2.geom.Matrix.scale","openfl/_v2/geom/Matrix.hx",326,0x64646abd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(x,"x")
 		HX_STACK_ARG(y,"y")
-		HX_STACK_LINE(300)
+		HX_STACK_LINE(328)
 		hx::MultEq(this->a,x);
-		HX_STACK_LINE(301)
+		HX_STACK_LINE(329)
 		hx::MultEq(this->b,y);
-		HX_STACK_LINE(303)
+		HX_STACK_LINE(331)
 		hx::MultEq(this->c,x);
-		HX_STACK_LINE(304)
+		HX_STACK_LINE(332)
 		hx::MultEq(this->d,y);
-		HX_STACK_LINE(306)
+		HX_STACK_LINE(334)
 		hx::MultEq(this->tx,x);
-		HX_STACK_LINE(307)
+		HX_STACK_LINE(335)
 		hx::MultEq(this->ty,y);
 	}
 return null();
@@ -551,26 +581,26 @@ HX_DEFINE_DYNAMIC_FUNC2(Matrix_obj,scale,(void))
 
 Void Matrix_obj::setRotation( Float angle,hx::Null< Float >  __o_scale){
 Float scale = __o_scale.Default(1);
-	HX_STACK_FRAME("openfl._v2.geom.Matrix","setRotation",0xb07949b4,"openfl._v2.geom.Matrix.setRotation","openfl/_v2/geom/Matrix.hx",312,0x64646abd)
+	HX_STACK_FRAME("openfl._v2.geom.Matrix","setRotation",0xb07949b4,"openfl._v2.geom.Matrix.setRotation","openfl/_v2/geom/Matrix.hx",340,0x64646abd)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(angle,"angle")
 	HX_STACK_ARG(scale,"scale")
 {
-		HX_STACK_LINE(314)
+		HX_STACK_LINE(342)
 		Float _g = ::Math_obj::cos(angle);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(314)
+		HX_STACK_LINE(342)
 		Float _g1 = (_g * scale);		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(314)
+		HX_STACK_LINE(342)
 		this->a = _g1;
-		HX_STACK_LINE(315)
+		HX_STACK_LINE(343)
 		Float _g2 = ::Math_obj::sin(angle);		HX_STACK_VAR(_g2,"_g2");
-		HX_STACK_LINE(315)
+		HX_STACK_LINE(343)
 		Float _g3 = (_g2 * scale);		HX_STACK_VAR(_g3,"_g3");
-		HX_STACK_LINE(315)
+		HX_STACK_LINE(343)
 		this->c = _g3;
-		HX_STACK_LINE(316)
+		HX_STACK_LINE(344)
 		this->b = -(this->c);
-		HX_STACK_LINE(317)
+		HX_STACK_LINE(345)
 		this->d = this->a;
 	}
 return null();
@@ -581,7 +611,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Matrix_obj,setRotation,(void))
 
 Void Matrix_obj::setTo( Float a,Float b,Float c,Float d,Float tx,Float ty){
 {
-		HX_STACK_FRAME("openfl._v2.geom.Matrix","setTo",0xac661571,"openfl._v2.geom.Matrix.setTo","openfl/_v2/geom/Matrix.hx",322,0x64646abd)
+		HX_STACK_FRAME("openfl._v2.geom.Matrix","setTo",0xac661571,"openfl._v2.geom.Matrix.setTo","openfl/_v2/geom/Matrix.hx",350,0x64646abd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(a,"a")
 		HX_STACK_ARG(b,"b")
@@ -589,17 +619,17 @@ Void Matrix_obj::setTo( Float a,Float b,Float c,Float d,Float tx,Float ty){
 		HX_STACK_ARG(d,"d")
 		HX_STACK_ARG(tx,"tx")
 		HX_STACK_ARG(ty,"ty")
-		HX_STACK_LINE(324)
+		HX_STACK_LINE(352)
 		this->a = a;
-		HX_STACK_LINE(325)
+		HX_STACK_LINE(353)
 		this->b = b;
-		HX_STACK_LINE(326)
+		HX_STACK_LINE(354)
 		this->c = c;
-		HX_STACK_LINE(327)
+		HX_STACK_LINE(355)
 		this->d = d;
-		HX_STACK_LINE(328)
+		HX_STACK_LINE(356)
 		this->tx = tx;
-		HX_STACK_LINE(329)
+		HX_STACK_LINE(357)
 		this->ty = ty;
 	}
 return null();
@@ -609,9 +639,9 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC6(Matrix_obj,setTo,(void))
 
 ::String Matrix_obj::toString( ){
-	HX_STACK_FRAME("openfl._v2.geom.Matrix","toString",0xd9e69578,"openfl._v2.geom.Matrix.toString","openfl/_v2/geom/Matrix.hx",336,0x64646abd)
+	HX_STACK_FRAME("openfl._v2.geom.Matrix","toString",0xd9e69578,"openfl._v2.geom.Matrix.toString","openfl/_v2/geom/Matrix.hx",364,0x64646abd)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(336)
+	HX_STACK_LINE(364)
 	return ((((((((((((HX_CSTRING("(a=") + this->a) + HX_CSTRING(", b=")) + this->b) + HX_CSTRING(", c=")) + this->c) + HX_CSTRING(", d=")) + this->d) + HX_CSTRING(", tx=")) + this->tx) + HX_CSTRING(", ty=")) + this->ty) + HX_CSTRING(")"));
 }
 
@@ -619,10 +649,10 @@ HX_DEFINE_DYNAMIC_FUNC6(Matrix_obj,setTo,(void))
 HX_DEFINE_DYNAMIC_FUNC0(Matrix_obj,toString,return )
 
 ::openfl::_v2::geom::Point Matrix_obj::transformPoint( ::openfl::_v2::geom::Point point){
-	HX_STACK_FRAME("openfl._v2.geom.Matrix","transformPoint",0x63cf3510,"openfl._v2.geom.Matrix.transformPoint","openfl/_v2/geom/Matrix.hx",343,0x64646abd)
+	HX_STACK_FRAME("openfl._v2.geom.Matrix","transformPoint",0x63cf3510,"openfl._v2.geom.Matrix.transformPoint","openfl/_v2/geom/Matrix.hx",371,0x64646abd)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(point,"point")
-	HX_STACK_LINE(343)
+	HX_STACK_LINE(371)
 	return ::openfl::_v2::geom::Point_obj::__new((((point->x * this->a) + (point->y * this->c)) + this->tx),(((point->x * this->b) + (point->y * this->d)) + this->ty));
 }
 
@@ -631,13 +661,13 @@ HX_DEFINE_DYNAMIC_FUNC1(Matrix_obj,transformPoint,return )
 
 Void Matrix_obj::translate( Float x,Float y){
 {
-		HX_STACK_FRAME("openfl._v2.geom.Matrix","translate",0xf0d44502,"openfl._v2.geom.Matrix.translate","openfl/_v2/geom/Matrix.hx",348,0x64646abd)
+		HX_STACK_FRAME("openfl._v2.geom.Matrix","translate",0xf0d44502,"openfl._v2.geom.Matrix.translate","openfl/_v2/geom/Matrix.hx",376,0x64646abd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(x,"x")
 		HX_STACK_ARG(y,"y")
-		HX_STACK_LINE(350)
+		HX_STACK_LINE(378)
 		hx::AddEq(this->tx,x);
-		HX_STACK_LINE(351)
+		HX_STACK_LINE(379)
 		hx::AddEq(this->ty,y);
 	}
 return null();
@@ -674,6 +704,7 @@ Dynamic Matrix_obj::__Field(const ::String &inName,bool inCallProp)
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"concat") ) { return concat_dyn(); }
+		if (HX_FIELD_EQ(inName,"equals") ) { return equals_dyn(); }
 		if (HX_FIELD_EQ(inName,"invert") ) { return invert_dyn(); }
 		if (HX_FIELD_EQ(inName,"rotate") ) { return rotate_dyn(); }
 		break;
@@ -723,6 +754,7 @@ static int __id_copyRowTo = __hxcpp_field_to_id("copyRowTo");
 static int __id_createBox = __hxcpp_field_to_id("createBox");
 static int __id_createGradientBox = __hxcpp_field_to_id("createGradientBox");
 static int __id_deltaTransformPoint = __hxcpp_field_to_id("deltaTransformPoint");
+static int __id_equals = __hxcpp_field_to_id("equals");
 static int __id_identity = __hxcpp_field_to_id("identity");
 static int __id_invert = __hxcpp_field_to_id("invert");
 static int __id_mult = __hxcpp_field_to_id("mult");
@@ -805,6 +837,7 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("createBox"),
 	HX_CSTRING("createGradientBox"),
 	HX_CSTRING("deltaTransformPoint"),
+	HX_CSTRING("equals"),
 	HX_CSTRING("identity"),
 	HX_CSTRING("invert"),
 	HX_CSTRING("mult"),

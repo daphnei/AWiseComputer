@@ -75,6 +75,9 @@
 #ifndef INCLUDED_openfl_display_StageScaleMode
 #include <openfl/display/StageScaleMode.h>
 #endif
+#ifndef INCLUDED_sys_FileSystem
+#include <sys/FileSystem.h>
+#endif
 
 Void ApplicationMain_obj::__construct()
 {
@@ -129,6 +132,11 @@ Void ApplicationMain_obj::main( ){
 					::String currentPath = ::haxe::io::Path_obj::directory(::Sys_obj::executablePath());		HX_STACK_VAR(currentPath,"currentPath");
 					HX_STACK_LINE(67)
 					::Sys_obj::setCwd(currentPath);
+					HX_STACK_LINE(69)
+					if ((::sys::FileSystem_obj::sys_exists(::haxe::io::Path_obj::removeTrailingSlashes(HX_CSTRING("icon.png"))))){
+						HX_STACK_LINE(71)
+						::openfl::_v2::Lib_obj::setIcon(HX_CSTRING("icon.png"));
+					}
 				}
 				}
 				catch(Dynamic __e){
@@ -138,42 +146,42 @@ Void ApplicationMain_obj::main( ){
 						}
 					}
 				}
-				HX_STACK_LINE(84)
+				HX_STACK_LINE(90)
 				::openfl::_v2::Assets_obj::initialize();
-				HX_STACK_LINE(86)
+				HX_STACK_LINE(92)
 				bool hasMain = false;		HX_STACK_VAR(hasMain,"hasMain");
-				HX_STACK_LINE(88)
+				HX_STACK_LINE(94)
 				{
-					HX_STACK_LINE(88)
+					HX_STACK_LINE(94)
 					int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-					HX_STACK_LINE(88)
+					HX_STACK_LINE(94)
 					Array< ::String > _g1 = ::Type_obj::getClassFields(hx::ClassOf< ::com::text::attack::Main >());		HX_STACK_VAR(_g1,"_g1");
-					HX_STACK_LINE(88)
+					HX_STACK_LINE(94)
 					while(((_g < _g1->length))){
-						HX_STACK_LINE(88)
+						HX_STACK_LINE(94)
 						::String methodName = _g1->__get(_g);		HX_STACK_VAR(methodName,"methodName");
-						HX_STACK_LINE(88)
+						HX_STACK_LINE(94)
 						++(_g);
-						HX_STACK_LINE(90)
+						HX_STACK_LINE(96)
 						if (((methodName == HX_CSTRING("main")))){
-							HX_STACK_LINE(92)
+							HX_STACK_LINE(98)
 							hasMain = true;
-							HX_STACK_LINE(93)
+							HX_STACK_LINE(99)
 							break;
 						}
 					}
 				}
-				HX_STACK_LINE(99)
+				HX_STACK_LINE(105)
 				if ((hasMain)){
-					HX_STACK_LINE(101)
+					HX_STACK_LINE(107)
 					::Reflect_obj::callMethod(hx::ClassOf< ::com::text::attack::Main >(),::Reflect_obj::field(hx::ClassOf< ::com::text::attack::Main >(),HX_CSTRING("main")),Dynamic( Array_obj<Dynamic>::__new()));
 				}
 				else{
-					HX_STACK_LINE(105)
+					HX_STACK_LINE(111)
 					::DocumentClass instance = ::Type_obj::createInstance(hx::ClassOf< ::DocumentClass >(),Dynamic( Array_obj<Dynamic>::__new()));		HX_STACK_VAR(instance,"instance");
-					HX_STACK_LINE(107)
+					HX_STACK_LINE(113)
 					if ((::Std_obj::is(instance,hx::ClassOf< ::openfl::_v2::display::DisplayObject >()))){
-						HX_STACK_LINE(109)
+						HX_STACK_LINE(115)
 						::openfl::_v2::Lib_obj::get_current()->addChild(instance);
 					}
 				}
@@ -183,7 +191,7 @@ Void ApplicationMain_obj::main( ){
 		HX_END_LOCAL_FUNC0((void))
 
 		HX_STACK_LINE(38)
-		::openfl::_v2::Lib_obj::create( Dynamic(new _Function_1_1()),(int)800,(int)600,(int)60,(int)0,(int((int((int((int((int((int((int((int((int((int(::openfl::_v2::Lib_obj::HARDWARE) | int(::openfl::_v2::Lib_obj::ALLOW_SHADERS))) | int((int)0))) | int((int)0))) | int((int)0))) | int(::openfl::_v2::Lib_obj::RESIZABLE))) | int((int)0))) | int((int)0))) | int(::openfl::_v2::Lib_obj::FULLSCREEN))) | int((int)0))) | int((int)0)),HX_CSTRING("TextAttack"),null(),null());
+		::openfl::_v2::Lib_obj::create( Dynamic(new _Function_1_1()),(int)1200,(int)800,(int)60,(int)0,(int((int((int((int((int((int((int((int((int((int(::openfl::_v2::Lib_obj::HARDWARE) | int(::openfl::_v2::Lib_obj::ALLOW_SHADERS))) | int((int)0))) | int((int)0))) | int((int)0))) | int(::openfl::_v2::Lib_obj::RESIZABLE))) | int((int)0))) | int((int)0))) | int(::openfl::_v2::Lib_obj::FULLSCREEN))) | int((int)0))) | int((int)0)),HX_CSTRING("TextAttack"),null(),null());
 	}
 return null();
 }

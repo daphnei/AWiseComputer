@@ -1,4 +1,5 @@
 package com.text.attack.world;
+import com.text.attack.utiltiies.Point;
 import com.text.attack.world.Player.Wall;
 import openfl.display.FrameLabel;
 
@@ -19,6 +20,20 @@ class Bullet extends Cell
 		this.justAdded = false;
 		this.dirX = dirX;
 		this.dirY = dirY;
+		
+		this.addCellsInBulletSight();
+	}
+	
+	private function  addCellsInBulletSight():Void
+	{
+		var p:Point = new Point(this.x, this.y);
+		haxe.Log.trace("fkeggrhie");
+		while (p.isInRange(World.WIDTH, World.HEIGHT)) {
+			World.instance.grid.markForBullet(p.x, p.y);
+			
+			p.x += this.dirX;
+			p.y += this.dirY;
+		}
 	}
 	
 	public override function update():Void 
@@ -86,7 +101,7 @@ class Bullet extends Cell
 		else if (this.dirY == 0)
 			return '-'.charCodeAt(0);
 		else if (this.dirY * this.dirX > 0)
-			return '`'.charCodeAt(0);
+			return '\\'.charCodeAt(0);
 		else
 			return '/'.charCodeAt(0);
 	}

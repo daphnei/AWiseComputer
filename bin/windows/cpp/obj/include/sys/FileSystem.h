@@ -35,6 +35,8 @@ class HXCPP_CLASS_ATTRIBUTES  FileSystem_obj : public hx::Object{
 		static ::String fullPath( ::String relPath);
 		static Dynamic fullPath_dyn();
 
+		static Dynamic sys_exists;
+		static Dynamic &sys_exists_dyn() { return sys_exists;}
 		static Dynamic sys_stat;
 		static Dynamic &sys_stat_dyn() { return sys_stat;}
 		static Dynamic file_full_path;

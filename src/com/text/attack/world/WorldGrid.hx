@@ -18,16 +18,23 @@ class WorldGrid
 {
 	private var grid:Vector<Vector<Cell>>;
 
+	private var inBulletsWay:Vector<Vector<Bool>>;
+	
 	public function new() 
 	{
 		trace("HERE!");
 		
 		//Initalize the entire grid to empty cells.
 		this.grid = new Vector<Vector<Cell>>(World.HEIGHT);
+		this.inBulletsWay = new Vector<Vector<Bool>>(World.HEIGHT);
+		
 		for (y in 0...World.HEIGHT) {
 			this.grid[y] = new Vector<Cell>(World.WIDTH);
+			this.inBulletsWay[y] = new Vector<Bool>(World.WIDTH);
+			
 			for (x in 0...World.WIDTH) {
 				this.set(x, y, new Empty(x, y));
+				this.inBulletsWay[y][x] = false;
 			}
 		}
 	}
@@ -105,5 +112,10 @@ class WorldGrid
 	public function printCell(x:Int, y:Int):Void
 	{
 		Log.trace(this.grid[y][x].toString());
+	}
+	
+	public function markForBullet(x:Int, y:Int) 
+	{
+		this.inBulletsWay[y][x] = true;
 	}
 }

@@ -3,11 +3,11 @@
 #ifndef INCLUDED_IMap
 #include <IMap.h>
 #endif
+#ifndef INCLUDED_Reflect
+#include <Reflect.h>
+#endif
 #ifndef INCLUDED_Type
 #include <Type.h>
-#endif
-#ifndef INCLUDED_haxe_Log
-#include <haxe/Log.h>
 #endif
 #ifndef INCLUDED_haxe_ds_StringMap
 #include <haxe/ds/StringMap.h>
@@ -21,11 +21,8 @@
 #ifndef INCLUDED_openfl__v2_events_IEventDispatcher
 #include <openfl/_v2/events/IEventDispatcher.h>
 #endif
-#ifndef INCLUDED_openfl__v2_events_Listener
-#include <openfl/_v2/events/Listener.h>
-#endif
-#ifndef INCLUDED_openfl__v2_utils_WeakRef
-#include <openfl/_v2/utils/WeakRef.h>
+#ifndef INCLUDED_openfl__v2_events__EventDispatcher_Listener
+#include <openfl/_v2/events/_EventDispatcher/Listener.h>
 #endif
 #ifndef INCLUDED_openfl_events_ErrorEvent
 #include <openfl/events/ErrorEvent.h>
@@ -45,21 +42,15 @@ namespace events{
 
 Void EventDispatcher_obj::__construct(::openfl::_v2::events::IEventDispatcher target)
 {
-HX_STACK_FRAME("openfl._v2.events.EventDispatcher","new",0x8d197b6f,"openfl._v2.events.EventDispatcher.new","openfl/_v2/events/EventDispatcher.hx",18,0x3e68c260)
+HX_STACK_FRAME("openfl._v2.events.EventDispatcher","new",0x8d197b6f,"openfl._v2.events.EventDispatcher.new","openfl/_v2/events/EventDispatcher.hx",22,0x3e68c260)
 HX_STACK_THIS(this)
 HX_STACK_ARG(target,"target")
 {
-	HX_STACK_LINE(20)
-	if (((target == null()))){
-		HX_STACK_LINE(20)
-		this->__target = hx::ObjectPtr<OBJ_>(this);
+	HX_STACK_LINE(22)
+	if (((target != null()))){
+		HX_STACK_LINE(24)
+		this->__targetDispatcher = target;
 	}
-	else{
-		HX_STACK_LINE(20)
-		this->__target = target;
-	}
-	HX_STACK_LINE(21)
-	this->__eventMap = null();
 }
 ;
 	return null();
@@ -87,7 +78,7 @@ Void EventDispatcher_obj::addEventListener( ::String type,Dynamic listener,hx::N
 bool useCapture = __o_useCapture.Default(false);
 int priority = __o_priority.Default(0);
 bool useWeakReference = __o_useWeakReference.Default(false);
-	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","addEventListener",0x3c57635e,"openfl._v2.events.EventDispatcher.addEventListener","openfl/_v2/events/EventDispatcher.hx",26,0x3e68c260)
+	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","addEventListener",0x3c57635e,"openfl._v2.events.EventDispatcher.addEventListener","openfl/_v2/events/EventDispatcher.hx",31,0x3e68c260)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(type,"type")
 	HX_STACK_ARG(listener,"listener")
@@ -95,39 +86,56 @@ bool useWeakReference = __o_useWeakReference.Default(false);
 	HX_STACK_ARG(priority,"priority")
 	HX_STACK_ARG(useWeakReference,"useWeakReference")
 {
-		HX_STACK_LINE(28)
-		if ((useWeakReference)){
-			HX_STACK_LINE(30)
-			::haxe::Log_obj::trace(HX_CSTRING("WARNING: Weak listener not supported for native (using hard reference)"),hx::SourceInfo(HX_CSTRING("EventDispatcher.hx"),30,HX_CSTRING("openfl._v2.events.EventDispatcher"),HX_CSTRING("addEventListener")));
-			HX_STACK_LINE(31)
-			useWeakReference = false;
-		}
-		HX_STACK_LINE(35)
+		HX_STACK_LINE(33)
 		if (((this->__eventMap == null()))){
-			HX_STACK_LINE(37)
+			HX_STACK_LINE(35)
 			::haxe::ds::StringMap _g = ::haxe::ds::StringMap_obj::__new();		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(37)
+			HX_STACK_LINE(35)
 			this->__eventMap = _g;
 		}
-		HX_STACK_LINE(41)
-		Array< ::Dynamic > list = this->__eventMap->get(type);		HX_STACK_VAR(list,"list");
-		HX_STACK_LINE(43)
-		if (((list == null()))){
-			HX_STACK_LINE(45)
-			Array< ::Dynamic > _g1 = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(_g1,"_g1");
-			HX_STACK_LINE(45)
-			list = _g1;
-			HX_STACK_LINE(46)
+		HX_STACK_LINE(39)
+		if ((!(this->__eventMap->exists(type)))){
+			HX_STACK_LINE(41)
+			Array< ::Dynamic > list = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(list,"list");
+			HX_STACK_LINE(42)
+			::openfl::_v2::events::_EventDispatcher::Listener _g1 = ::openfl::_v2::events::_EventDispatcher::Listener_obj::__new(listener,useCapture,priority);		HX_STACK_VAR(_g1,"_g1");
+			HX_STACK_LINE(42)
+			list->push(_g1);
+			HX_STACK_LINE(43)
 			this->__eventMap->set(type,list);
 		}
-		HX_STACK_LINE(50)
-		::openfl::_v2::utils::WeakRef _g2 = ::openfl::_v2::utils::WeakRef_obj::__new(listener,useWeakReference);		HX_STACK_VAR(_g2,"_g2");
-		HX_STACK_LINE(50)
-		::openfl::_v2::events::Listener _g3 = ::openfl::_v2::events::Listener_obj::__new(_g2,useCapture,priority);		HX_STACK_VAR(_g3,"_g3");
-		HX_STACK_LINE(50)
-		list->push(_g3);
-		HX_STACK_LINE(51)
-		list->sort(::openfl::_v2::events::EventDispatcher_obj::__sortEvents_dyn());
+		else{
+			HX_STACK_LINE(47)
+			Array< ::Dynamic > list = this->__eventMap->get(type);		HX_STACK_VAR(list,"list");
+			HX_STACK_LINE(49)
+			{
+				HX_STACK_LINE(49)
+				int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
+				HX_STACK_LINE(49)
+				int _g = list->length;		HX_STACK_VAR(_g,"_g");
+				HX_STACK_LINE(49)
+				while((true)){
+					HX_STACK_LINE(49)
+					if ((!(((_g1 < _g))))){
+						HX_STACK_LINE(49)
+						break;
+					}
+					HX_STACK_LINE(49)
+					int i = (_g1)++;		HX_STACK_VAR(i,"i");
+					HX_STACK_LINE(51)
+					if ((::Reflect_obj::compareMethods(list->__get(i).StaticCast< ::openfl::_v2::events::_EventDispatcher::Listener >()->callback,listener))){
+						HX_STACK_LINE(51)
+						return null();
+					}
+				}
+			}
+			HX_STACK_LINE(55)
+			::openfl::_v2::events::_EventDispatcher::Listener _g2 = ::openfl::_v2::events::_EventDispatcher::Listener_obj::__new(listener,useCapture,priority);		HX_STACK_VAR(_g2,"_g2");
+			HX_STACK_LINE(55)
+			list->push(_g2);
+			HX_STACK_LINE(56)
+			list->sort(::openfl::_v2::events::EventDispatcher_obj::__sortByPriority_dyn());
+		}
 	}
 return null();
 }
@@ -136,147 +144,95 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC5(EventDispatcher_obj,addEventListener,(void))
 
 bool EventDispatcher_obj::dispatchEvent( ::openfl::_v2::events::Event event){
-	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","dispatchEvent",0xfa167acf,"openfl._v2.events.EventDispatcher.dispatchEvent","openfl/_v2/events/EventDispatcher.hx",56,0x3e68c260)
+	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","dispatchEvent",0xfa167acf,"openfl._v2.events.EventDispatcher.dispatchEvent","openfl/_v2/events/EventDispatcher.hx",63,0x3e68c260)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(event,"event")
-	HX_STACK_LINE(58)
-	if (((this->__eventMap == null()))){
-		HX_STACK_LINE(60)
+	HX_STACK_LINE(65)
+	if (((bool((this->__eventMap == null())) || bool((event == null()))))){
+		HX_STACK_LINE(65)
 		return false;
 	}
-	HX_STACK_LINE(64)
+	HX_STACK_LINE(67)
+	Array< ::Dynamic > list;		HX_STACK_VAR(list,"list");
+	HX_STACK_LINE(67)
+	{
+		HX_STACK_LINE(67)
+		::String key = event->get_type();		HX_STACK_VAR(key,"key");
+		HX_STACK_LINE(67)
+		list = this->__eventMap->get(key);
+	}
+	HX_STACK_LINE(69)
+	if (((list == null()))){
+		HX_STACK_LINE(69)
+		return false;
+	}
+	HX_STACK_LINE(71)
 	Dynamic _g = event->get_target();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(64)
+	HX_STACK_LINE(71)
 	if (((_g == null()))){
-		HX_STACK_LINE(66)
-		event->set_target(this->__target);
+		HX_STACK_LINE(73)
+		if (((this->__targetDispatcher != null()))){
+			HX_STACK_LINE(75)
+			event->set_target(this->__targetDispatcher);
+		}
+		else{
+			HX_STACK_LINE(79)
+			event->set_target(hx::ObjectPtr<OBJ_>(this));
+		}
 	}
-	HX_STACK_LINE(70)
-	Dynamic _g1 = event->get_currentTarget();		HX_STACK_VAR(_g1,"_g1");
-	HX_STACK_LINE(70)
-	if (((_g1 == null()))){
-		HX_STACK_LINE(72)
-		event->set_currentTarget(this->__target);
-	}
-	HX_STACK_LINE(76)
-	::String _g2 = event->get_type();		HX_STACK_VAR(_g2,"_g2");
-	HX_STACK_LINE(76)
-	Array< ::Dynamic > list = this->__eventMap->get(_g2);		HX_STACK_VAR(list,"list");
-	HX_STACK_LINE(77)
-	::openfl::events::EventPhase _g3 = event->get_eventPhase();		HX_STACK_VAR(_g3,"_g3");
-	HX_STACK_LINE(77)
-	bool capture = (_g3 == ::openfl::events::EventPhase_obj::CAPTURING_PHASE);		HX_STACK_VAR(capture,"capture");
-	HX_STACK_LINE(79)
-	if (((list != null()))){
-		HX_STACK_LINE(81)
-		int index = (int)0;		HX_STACK_VAR(index,"index");
-		HX_STACK_LINE(82)
-		int length = list->length;		HX_STACK_VAR(length,"length");
-		HX_STACK_LINE(84)
-		::openfl::_v2::events::Listener listItem;		HX_STACK_VAR(listItem,"listItem");
-		HX_STACK_LINE(84)
-		::openfl::_v2::events::Listener listener;		HX_STACK_VAR(listener,"listener");
-		HX_STACK_LINE(86)
-		while((true)){
-			HX_STACK_LINE(86)
-			if ((!(((index < length))))){
-				HX_STACK_LINE(86)
-				break;
-			}
-			HX_STACK_LINE(88)
-			listItem = list->__get(index).StaticCast< ::openfl::_v2::events::Listener >();
-			HX_STACK_LINE(89)
-			::openfl::_v2::events::Listener _g5;		HX_STACK_VAR(_g5,"_g5");
-			struct _Function_3_1{
-				inline static bool Block( ::openfl::_v2::events::Listener &listItem){
-					HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","openfl/_v2/events/EventDispatcher.hx",89,0x3e68c260)
-					{
-						HX_STACK_LINE(89)
-						Dynamic _g4 = listItem->listener->get();		HX_STACK_VAR(_g4,"_g4");
-						HX_STACK_LINE(89)
-						return (_g4 != null());
-					}
-					return null();
-				}
-			};
-			HX_STACK_LINE(89)
-			if (((  (((listItem != null()))) ? bool(_Function_3_1::Block(listItem)) : bool(false) ))){
-				HX_STACK_LINE(89)
-				_g5 = listItem;
-			}
-			else{
-				HX_STACK_LINE(89)
-				_g5 = null();
-			}
-			HX_STACK_LINE(89)
-			listener = _g5;
+	HX_STACK_LINE(85)
+	event->set_currentTarget(hx::ObjectPtr<OBJ_>(this));
+	HX_STACK_LINE(87)
+	::openfl::events::EventPhase _g1 = event->get_eventPhase();		HX_STACK_VAR(_g1,"_g1");
+	HX_STACK_LINE(87)
+	bool capture = (_g1 == ::openfl::events::EventPhase_obj::CAPTURING_PHASE);		HX_STACK_VAR(capture,"capture");
+	HX_STACK_LINE(88)
+	int index = (int)0;		HX_STACK_VAR(index,"index");
+	HX_STACK_LINE(89)
+	::openfl::_v2::events::_EventDispatcher::Listener listener;		HX_STACK_VAR(listener,"listener");
+	HX_STACK_LINE(91)
+	while((true)){
+		HX_STACK_LINE(91)
+		if ((!(((index < list->length))))){
 			HX_STACK_LINE(91)
-			if (((listener == null()))){
-				HX_STACK_LINE(93)
-				list->splice(index,(int)1);
-				HX_STACK_LINE(94)
-				(length)--;
-			}
-			else{
-				HX_STACK_LINE(98)
-				if (((listener->useCapture == capture))){
-					HX_STACK_LINE(100)
-					listener->dispatchEvent(event);
-					HX_STACK_LINE(102)
-					if ((event->__getIsCancelledNow())){
-						HX_STACK_LINE(104)
-						return true;
-					}
-				}
-				HX_STACK_LINE(110)
-				(index)++;
+			break;
+		}
+		HX_STACK_LINE(93)
+		listener = list->__get(index).StaticCast< ::openfl::_v2::events::_EventDispatcher::Listener >();
+		HX_STACK_LINE(95)
+		if (((listener->useCapture == capture))){
+			HX_STACK_LINE(98)
+			listener->callback(event);
+			HX_STACK_LINE(100)
+			if ((event->__isCancelledNow)){
+				HX_STACK_LINE(102)
+				return true;
 			}
 		}
-		HX_STACK_LINE(116)
-		return true;
+		HX_STACK_LINE(108)
+		if (((listener == list->__get(index).StaticCast< ::openfl::_v2::events::_EventDispatcher::Listener >()))){
+			HX_STACK_LINE(110)
+			(index)++;
+		}
 	}
-	HX_STACK_LINE(120)
-	return false;
+	HX_STACK_LINE(116)
+	return true;
 }
 
 
 HX_DEFINE_DYNAMIC_FUNC1(EventDispatcher_obj,dispatchEvent,return )
 
 bool EventDispatcher_obj::hasEventListener( ::String type){
-	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","hasEventListener",0x57dd8685,"openfl._v2.events.EventDispatcher.hasEventListener","openfl/_v2/events/EventDispatcher.hx",125,0x3e68c260)
+	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","hasEventListener",0x57dd8685,"openfl._v2.events.EventDispatcher.hasEventListener","openfl/_v2/events/EventDispatcher.hx",121,0x3e68c260)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(type,"type")
-	HX_STACK_LINE(127)
+	HX_STACK_LINE(123)
 	if (((this->__eventMap == null()))){
-		HX_STACK_LINE(129)
+		HX_STACK_LINE(123)
 		return false;
 	}
-	HX_STACK_LINE(133)
-	Array< ::Dynamic > list = this->__eventMap->get(type);		HX_STACK_VAR(list,"list");
-	HX_STACK_LINE(135)
-	if (((list != null()))){
-		HX_STACK_LINE(137)
-		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(137)
-		while((true)){
-			HX_STACK_LINE(137)
-			if ((!(((_g < list->length))))){
-				HX_STACK_LINE(137)
-				break;
-			}
-			HX_STACK_LINE(137)
-			::openfl::_v2::events::Listener item = list->__get(_g).StaticCast< ::openfl::_v2::events::Listener >();		HX_STACK_VAR(item,"item");
-			HX_STACK_LINE(137)
-			++(_g);
-			HX_STACK_LINE(139)
-			if (((item != null()))){
-				HX_STACK_LINE(139)
-				return true;
-			}
-		}
-	}
-	HX_STACK_LINE(145)
-	return false;
+	HX_STACK_LINE(124)
+	return this->__eventMap->exists(type);
 }
 
 
@@ -284,49 +240,57 @@ HX_DEFINE_DYNAMIC_FUNC1(EventDispatcher_obj,hasEventListener,return )
 
 Void EventDispatcher_obj::removeEventListener( ::String type,Dynamic listener,hx::Null< bool >  __o_capture){
 bool capture = __o_capture.Default(false);
-	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","removeEventListener",0x05ca80d9,"openfl._v2.events.EventDispatcher.removeEventListener","openfl/_v2/events/EventDispatcher.hx",150,0x3e68c260)
+	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","removeEventListener",0x05ca80d9,"openfl._v2.events.EventDispatcher.removeEventListener","openfl/_v2/events/EventDispatcher.hx",129,0x3e68c260)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(type,"type")
 	HX_STACK_ARG(listener,"listener")
 	HX_STACK_ARG(capture,"capture")
 {
-		HX_STACK_LINE(152)
-		if (((  ((!(((this->__eventMap == null()))))) ? bool(!(this->__eventMap->exists(type))) : bool(true) ))){
-			HX_STACK_LINE(154)
+		HX_STACK_LINE(131)
+		if (((this->__eventMap == null()))){
+			HX_STACK_LINE(131)
 			return null();
 		}
-		HX_STACK_LINE(158)
+		HX_STACK_LINE(133)
 		Array< ::Dynamic > list = this->__eventMap->get(type);		HX_STACK_VAR(list,"list");
-		HX_STACK_LINE(159)
-		::openfl::_v2::events::Listener item;		HX_STACK_VAR(item,"item");
-		HX_STACK_LINE(161)
+		HX_STACK_LINE(135)
+		if (((list == null()))){
+			HX_STACK_LINE(135)
+			return null();
+		}
+		HX_STACK_LINE(137)
 		{
-			HX_STACK_LINE(161)
+			HX_STACK_LINE(137)
 			int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
-			HX_STACK_LINE(161)
+			HX_STACK_LINE(137)
 			int _g = list->length;		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(161)
+			HX_STACK_LINE(137)
 			while((true)){
-				HX_STACK_LINE(161)
+				HX_STACK_LINE(137)
 				if ((!(((_g1 < _g))))){
-					HX_STACK_LINE(161)
+					HX_STACK_LINE(137)
 					break;
 				}
-				HX_STACK_LINE(161)
+				HX_STACK_LINE(137)
 				int i = (_g1)++;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(163)
-				if (((list->__get(i).StaticCast< ::openfl::_v2::events::Listener >() != null()))){
-					HX_STACK_LINE(165)
-					item = list->__get(i).StaticCast< ::openfl::_v2::events::Listener >();
-					HX_STACK_LINE(166)
-					if (((  (((item != null()))) ? bool(item->is(listener,capture)) : bool(false) ))){
-						HX_STACK_LINE(168)
-						list[i] = null();
-						HX_STACK_LINE(169)
-						return null();
-					}
+				HX_STACK_LINE(139)
+				if ((list->__get(i).StaticCast< ::openfl::_v2::events::_EventDispatcher::Listener >()->match(listener,capture))){
+					HX_STACK_LINE(141)
+					list->splice(i,(int)1);
+					HX_STACK_LINE(142)
+					break;
 				}
 			}
+		}
+		HX_STACK_LINE(148)
+		if (((list->length == (int)0))){
+			HX_STACK_LINE(150)
+			this->__eventMap->remove(type);
+		}
+		HX_STACK_LINE(154)
+		if ((!(this->__eventMap->iterator()->__Field(HX_CSTRING("hasNext"),true)()))){
+			HX_STACK_LINE(156)
+			this->__eventMap = null();
 		}
 	}
 return null();
@@ -336,32 +300,27 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC3(EventDispatcher_obj,removeEventListener,(void))
 
 ::String EventDispatcher_obj::toString( ){
-	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","toString",0x4797af3d,"openfl._v2.events.EventDispatcher.toString","openfl/_v2/events/EventDispatcher.hx",180,0x3e68c260)
+	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","toString",0x4797af3d,"openfl._v2.events.EventDispatcher.toString","openfl/_v2/events/EventDispatcher.hx",163,0x3e68c260)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(182)
+	HX_STACK_LINE(165)
 	::Class _g = ::Type_obj::getClass(hx::ObjectPtr<OBJ_>(this));		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(182)
-	::String _g1 = ::Type_obj::getClassName(_g);		HX_STACK_VAR(_g1,"_g1");
-	HX_STACK_LINE(182)
-	::String _g2 = (HX_CSTRING("[object ") + _g1);		HX_STACK_VAR(_g2,"_g2");
-	HX_STACK_LINE(182)
-	return (_g2 + HX_CSTRING("]"));
+	HX_STACK_LINE(165)
+	::String full = ::Type_obj::getClassName(_g);		HX_STACK_VAR(full,"full");
+	HX_STACK_LINE(166)
+	::String _short = full.split(HX_CSTRING("."))->pop();		HX_STACK_VAR(_short,"short");
+	HX_STACK_LINE(168)
+	return ((HX_CSTRING("[object ") + _short) + HX_CSTRING("]"));
 }
 
 
 HX_DEFINE_DYNAMIC_FUNC0(EventDispatcher_obj,toString,return )
 
 bool EventDispatcher_obj::willTrigger( ::String type){
-	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","willTrigger",0xcf4dc655,"openfl._v2.events.EventDispatcher.willTrigger","openfl/_v2/events/EventDispatcher.hx",187,0x3e68c260)
+	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","willTrigger",0xcf4dc655,"openfl._v2.events.EventDispatcher.willTrigger","openfl/_v2/events/EventDispatcher.hx",175,0x3e68c260)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(type,"type")
-	HX_STACK_LINE(189)
-	if (((this->__eventMap == null()))){
-		HX_STACK_LINE(191)
-		return false;
-	}
-	HX_STACK_LINE(195)
-	return this->__eventMap->exists(type);
+	HX_STACK_LINE(175)
+	return this->hasEventListener(type);
 }
 
 
@@ -369,11 +328,11 @@ HX_DEFINE_DYNAMIC_FUNC1(EventDispatcher_obj,willTrigger,return )
 
 Void EventDispatcher_obj::__dispatchCompleteEvent( ){
 {
-		HX_STACK_FRAME("openfl._v2.events.EventDispatcher","__dispatchCompleteEvent",0x9e9092f6,"openfl._v2.events.EventDispatcher.__dispatchCompleteEvent","openfl/_v2/events/EventDispatcher.hx",200,0x3e68c260)
+		HX_STACK_FRAME("openfl._v2.events.EventDispatcher","__dispatchCompleteEvent",0x9e9092f6,"openfl._v2.events.EventDispatcher.__dispatchCompleteEvent","openfl/_v2/events/EventDispatcher.hx",180,0x3e68c260)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(202)
+		HX_STACK_LINE(182)
 		::openfl::_v2::events::Event _g = ::openfl::_v2::events::Event_obj::__new(::openfl::_v2::events::Event_obj::COMPLETE,null(),null());		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(202)
+		HX_STACK_LINE(182)
 		this->dispatchEvent(_g);
 	}
 return null();
@@ -384,11 +343,11 @@ HX_DEFINE_DYNAMIC_FUNC0(EventDispatcher_obj,__dispatchCompleteEvent,(void))
 
 Void EventDispatcher_obj::__dispatchIOErrorEvent( ){
 {
-		HX_STACK_FRAME("openfl._v2.events.EventDispatcher","__dispatchIOErrorEvent",0x434e91e3,"openfl._v2.events.EventDispatcher.__dispatchIOErrorEvent","openfl/_v2/events/EventDispatcher.hx",207,0x3e68c260)
+		HX_STACK_FRAME("openfl._v2.events.EventDispatcher","__dispatchIOErrorEvent",0x434e91e3,"openfl._v2.events.EventDispatcher.__dispatchIOErrorEvent","openfl/_v2/events/EventDispatcher.hx",187,0x3e68c260)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(209)
+		HX_STACK_LINE(189)
 		::openfl::events::IOErrorEvent _g = ::openfl::events::IOErrorEvent_obj::__new(::openfl::events::IOErrorEvent_obj::IO_ERROR,null(),null(),null(),null());		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(209)
+		HX_STACK_LINE(189)
 		this->dispatchEvent(_g);
 	}
 return null();
@@ -397,60 +356,32 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC0(EventDispatcher_obj,__dispatchIOErrorEvent,(void))
 
-int EventDispatcher_obj::__sortEvents( ::openfl::_v2::events::Listener a,::openfl::_v2::events::Listener b){
-	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","__sortEvents",0x60ed3b48,"openfl._v2.events.EventDispatcher.__sortEvents","openfl/_v2/events/EventDispatcher.hx",214,0x3e68c260)
-	HX_STACK_ARG(a,"a")
-	HX_STACK_ARG(b,"b")
-	HX_STACK_LINE(216)
-	if (((bool((a == null())) || bool((b == null()))))){
-		HX_STACK_LINE(218)
+int EventDispatcher_obj::__sortByPriority( ::openfl::_v2::events::_EventDispatcher::Listener l1,::openfl::_v2::events::_EventDispatcher::Listener l2){
+	HX_STACK_FRAME("openfl._v2.events.EventDispatcher","__sortByPriority",0xb9caec0a,"openfl._v2.events.EventDispatcher.__sortByPriority","openfl/_v2/events/EventDispatcher.hx",196,0x3e68c260)
+	HX_STACK_ARG(l1,"l1")
+	HX_STACK_ARG(l2,"l2")
+	HX_STACK_LINE(196)
+	if (((l1->priority == l2->priority))){
+		HX_STACK_LINE(196)
 		return (int)0;
-	}
-	HX_STACK_LINE(222)
-	::openfl::_v2::events::Listener al = a;		HX_STACK_VAR(al,"al");
-	HX_STACK_LINE(223)
-	::openfl::_v2::events::Listener bl = b;		HX_STACK_VAR(bl,"bl");
-	HX_STACK_LINE(225)
-	if (((bool((al == null())) || bool((bl == null()))))){
-		HX_STACK_LINE(227)
-		return (int)0;
-	}
-	HX_STACK_LINE(231)
-	if (((al->priority == bl->priority))){
-		HX_STACK_LINE(233)
-		if (((al->id == bl->id))){
-			HX_STACK_LINE(233)
-			return (int)0;
-		}
-		else{
-			HX_STACK_LINE(233)
-			if (((al->id > bl->id))){
-				HX_STACK_LINE(233)
-				return (int)1;
-			}
-			else{
-				HX_STACK_LINE(233)
-				return (int)-1;
-			}
-		}
 	}
 	else{
-		HX_STACK_LINE(237)
-		if (((al->priority < bl->priority))){
-			HX_STACK_LINE(237)
-			return (int)1;
-		}
-		else{
-			HX_STACK_LINE(237)
+		HX_STACK_LINE(196)
+		if (((l1->priority > l2->priority))){
+			HX_STACK_LINE(196)
 			return (int)-1;
 		}
+		else{
+			HX_STACK_LINE(196)
+			return (int)1;
+		}
 	}
-	HX_STACK_LINE(231)
+	HX_STACK_LINE(196)
 	return (int)0;
 }
 
 
-STATIC_HX_DEFINE_DYNAMIC_FUNC2(EventDispatcher_obj,__sortEvents,return )
+STATIC_HX_DEFINE_DYNAMIC_FUNC2(EventDispatcher_obj,__sortByPriority,return )
 
 
 EventDispatcher_obj::EventDispatcher_obj()
@@ -460,22 +391,21 @@ EventDispatcher_obj::EventDispatcher_obj()
 void EventDispatcher_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(EventDispatcher);
+	HX_MARK_MEMBER_NAME(__targetDispatcher,"__targetDispatcher");
 	HX_MARK_MEMBER_NAME(__eventMap,"__eventMap");
-	HX_MARK_MEMBER_NAME(__target,"__target");
 	HX_MARK_END_CLASS();
 }
 
 void EventDispatcher_obj::__Visit(HX_VISIT_PARAMS)
 {
+	HX_VISIT_MEMBER_NAME(__targetDispatcher,"__targetDispatcher");
 	HX_VISIT_MEMBER_NAME(__eventMap,"__eventMap");
-	HX_VISIT_MEMBER_NAME(__target,"__target");
 }
 
 Dynamic EventDispatcher_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 8:
-		if (HX_FIELD_EQ(inName,"__target") ) { return __target; }
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
 		break;
 	case 10:
@@ -484,15 +414,16 @@ Dynamic EventDispatcher_obj::__Field(const ::String &inName,bool inCallProp)
 	case 11:
 		if (HX_FIELD_EQ(inName,"willTrigger") ) { return willTrigger_dyn(); }
 		break;
-	case 12:
-		if (HX_FIELD_EQ(inName,"__sortEvents") ) { return __sortEvents_dyn(); }
-		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"dispatchEvent") ) { return dispatchEvent_dyn(); }
 		break;
 	case 16:
+		if (HX_FIELD_EQ(inName,"__sortByPriority") ) { return __sortByPriority_dyn(); }
 		if (HX_FIELD_EQ(inName,"addEventListener") ) { return addEventListener_dyn(); }
 		if (HX_FIELD_EQ(inName,"hasEventListener") ) { return hasEventListener_dyn(); }
+		break;
+	case 18:
+		if (HX_FIELD_EQ(inName,"__targetDispatcher") ) { return __targetDispatcher; }
 		break;
 	case 19:
 		if (HX_FIELD_EQ(inName,"removeEventListener") ) { return removeEventListener_dyn(); }
@@ -509,37 +440,37 @@ Dynamic EventDispatcher_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic EventDispatcher_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 8:
-		if (HX_FIELD_EQ(inName,"__target") ) { __target=inValue.Cast< ::openfl::_v2::events::IEventDispatcher >(); return inValue; }
-		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"__eventMap") ) { __eventMap=inValue.Cast< ::haxe::ds::StringMap >(); return inValue; }
+		break;
+	case 18:
+		if (HX_FIELD_EQ(inName,"__targetDispatcher") ) { __targetDispatcher=inValue.Cast< ::openfl::_v2::events::IEventDispatcher >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
 void EventDispatcher_obj::__GetFields(Array< ::String> &outFields)
 {
+	outFields->push(HX_CSTRING("__targetDispatcher"));
 	outFields->push(HX_CSTRING("__eventMap"));
-	outFields->push(HX_CSTRING("__target"));
 	super::__GetFields(outFields);
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("__sortEvents"),
+	HX_CSTRING("__sortByPriority"),
 	String(null()) };
 
 #if HXCPP_SCRIPTABLE
 static hx::StorageInfo sMemberStorageInfo[] = {
+	{hx::fsObject /*::openfl::_v2::events::IEventDispatcher*/ ,(int)offsetof(EventDispatcher_obj,__targetDispatcher),HX_CSTRING("__targetDispatcher")},
 	{hx::fsObject /*::haxe::ds::StringMap*/ ,(int)offsetof(EventDispatcher_obj,__eventMap),HX_CSTRING("__eventMap")},
-	{hx::fsObject /*::openfl::_v2::events::IEventDispatcher*/ ,(int)offsetof(EventDispatcher_obj,__target),HX_CSTRING("__target")},
 	{ hx::fsUnknown, 0, null()}
 };
 #endif
 
 static ::String sMemberFields[] = {
+	HX_CSTRING("__targetDispatcher"),
 	HX_CSTRING("__eventMap"),
-	HX_CSTRING("__target"),
 	HX_CSTRING("addEventListener"),
 	HX_CSTRING("dispatchEvent"),
 	HX_CSTRING("hasEventListener"),

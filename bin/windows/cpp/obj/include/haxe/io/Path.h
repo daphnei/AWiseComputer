@@ -39,6 +39,9 @@ class HXCPP_CLASS_ATTRIBUTES  Path_obj : public hx::Object{
 		static ::String directory( ::String path);
 		static Dynamic directory_dyn();
 
+		static ::String removeTrailingSlashes( ::String path);
+		static Dynamic removeTrailingSlashes_dyn();
+
 };
 
 } // end namespace haxe

@@ -43,6 +43,7 @@ class HXCPP_CLASS_ATTRIBUTES  WorldGrid_obj : public hx::Object{
 		::String __ToString() const { return HX_CSTRING("WorldGrid"); }
 
 		Array< ::Dynamic > grid;
+		Array< ::Dynamic > inBulletsWay;
 		virtual Void clear( int x,int y);
 		Dynamic clear_dyn();
 
@@ -60,6 +61,9 @@ class HXCPP_CLASS_ATTRIBUTES  WorldGrid_obj : public hx::Object{
 
 		virtual Void printCell( int x,int y);
 		Dynamic printCell_dyn();
+
+		virtual Void markForBullet( int x,int y);
+		Dynamic markForBullet_dyn();
 
 };
 

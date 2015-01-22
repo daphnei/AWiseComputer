@@ -20,7 +20,6 @@
 	
 	<!-- assets -->
 	<icon path="Assets/openfl.svg" />
-	<assets path="Assets/img" rename="img" />
 	<assets path="Assets/fonts" rename="fonts" include="*.ttf" />
 	<assets path="Assets/audio" rename="audio" type="audio" />
 

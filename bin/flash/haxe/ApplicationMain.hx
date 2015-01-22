@@ -35,8 +35,16 @@ class ApplicationMain {
 		types.push (AssetType.BINARY);
 		
 		
+		urls.push ("MyCourier");
+		types.push (AssetType.FONT);
+		
+		
 		urls.push ("fonts/me2.ttf.bf");
 		types.push (AssetType.TEXT);
+		
+		
+		urls.push ("MyCourier");
+		types.push (AssetType.FONT);
 		
 		
 		urls.push ("Courier");
@@ -48,6 +56,46 @@ class ApplicationMain {
 		
 		
 		urls.push ("audio/end.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_01.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_01.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_02.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_02.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_03.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_03.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_04.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_04.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_05.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_05.wav.asd");
 		types.push (AssetType.BINARY);
 		
 		
@@ -112,46 +160,6 @@ class ApplicationMain {
 		
 		
 		urls.push ("audio/m_08.wav.asd");
-		types.push (AssetType.BINARY);
-		
-		
-		urls.push ("audio/ma_01.wav");
-		types.push (AssetType.SOUND);
-		
-		
-		urls.push ("audio/ma_01.wav.asd");
-		types.push (AssetType.BINARY);
-		
-		
-		urls.push ("audio/ma_02.wav");
-		types.push (AssetType.SOUND);
-		
-		
-		urls.push ("audio/ma_02.wav.asd");
-		types.push (AssetType.BINARY);
-		
-		
-		urls.push ("audio/ma_03.wav");
-		types.push (AssetType.SOUND);
-		
-		
-		urls.push ("audio/ma_03.wav.asd");
-		types.push (AssetType.BINARY);
-		
-		
-		urls.push ("audio/ma_04.wav");
-		types.push (AssetType.SOUND);
-		
-		
-		urls.push ("audio/ma_04.wav.asd");
-		types.push (AssetType.BINARY);
-		
-		
-		urls.push ("audio/ma_05.wav");
-		types.push (AssetType.SOUND);
-		
-		
-		urls.push ("audio/ma_05.wav.asd");
 		types.push (AssetType.BINARY);
 		
 		
