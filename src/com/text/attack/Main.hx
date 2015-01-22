@@ -41,8 +41,8 @@ class Main extends Sprite
 		#end
 		
 		this.world = new World();
-		this.world.x = this.stage.stageWidth / 2;
-		this.world.y = this.stage.stageHeight / 2;
+		//this.world.x = this.stage.stageWidth / 2;
+		//this.world.y = this.stage.stageHeight / 2;
 		this.addChild(world);
 		
 		// Stage:

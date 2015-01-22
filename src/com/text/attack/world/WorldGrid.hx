@@ -8,7 +8,8 @@ import openfl.text.TextFormat;
 import com.text.attack.utiltiies.GameColors;
 import openfl.utils.Object;
 import openfl.utils.ByteArray;
-
+import openfl.display.Shape;
+import openfl.geom.Rectangle;
 
 /**
  * ...
@@ -102,6 +103,23 @@ class WorldGrid
 				}*/
 
 				textFormat.color = color;
+
+				if (this.inBulletsWay[y][x]) {
+					var rect:Rectangle = textField.getCharBoundaries(textField.text.length - 1);
+					var charWidth:Float = rect.width;
+					var charHeight:Float = rect.height;
+
+					var shape:Shape = new Shape();
+					shape.graphics.beginFill(0xff0000);
+					shape.graphics.drawRect(0, 0, rect.width, rect.height);
+					shape.graphics.endFill();
+					
+					shape.x = Math.floor(charWidth * x) - 230;
+					shape.y = Math.floor(charHeight * y);
+
+					World.instance.addChild(shape);
+				}
+
 				textField.appendText(String.fromCharCode(cell.getSymbol()));
 				textField.setTextFormat(textFormat, textField.text.length - 1, textField.text.length);
 			}
@@ -114,7 +132,7 @@ class WorldGrid
 		Log.trace(this.grid[y][x].toString());
 	}
 	
-	public function markForBullet(x:Int, y:Int) 
+	public function markForBullet(x:Int, y:Int):Void
 	{
 		this.inBulletsWay[y][x] = true;
 	}

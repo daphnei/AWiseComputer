@@ -4,7 +4,7 @@ package com.text.attack.utiltiies;
  * ...
  * @author Daphne
  */
-class Point
+class Point  
 {
 	public var x:Int;
 	public var y:Int;
@@ -18,5 +18,9 @@ class Point
 	
 	public function isInRange(xMax:Int, yMax:Int):Bool {
 		return this.x >= 0 && this.x < xMax && this.y >= 0 && this.y < yMax;
+	}
+
+	public function toString():String {
+		return "[" + this.x + ", " + this.y + "]";
 	}
 }

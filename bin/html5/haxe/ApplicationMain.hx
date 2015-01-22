@@ -27,6 +27,142 @@ class ApplicationMain {
 		var types = [];
 		
 		
+		urls.push ("MyCourier");
+		types.push (AssetType.FONT);
+		
+		
+		urls.push ("fonts/me.ttf.bak");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("MyCourier");
+		types.push (AssetType.FONT);
+		
+		
+		urls.push ("fonts/me2.ttf.bf");
+		types.push (AssetType.TEXT);
+		
+		
+		urls.push ("MyCourier");
+		types.push (AssetType.FONT);
+		
+		
+		urls.push ("Courier");
+		types.push (AssetType.FONT);
+		
+		
+		urls.push ("audio/end.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/end.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/m_01.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/m_01.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/m_02.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/m_02.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/m_03.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/m_03.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/m_04.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/m_04.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/m_05.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/m_05.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/m_06.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/m_06.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/m_07.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/m_07.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/m_08.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/m_08.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_01.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_01.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_02.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_02.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_03.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_03.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_04.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_04.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_05.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_05.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
 		
 		preloader.load (urls, types);
 		#end
@@ -78,20 +214,20 @@ class ApplicationMain {
 			borderless: false,
 			depthBuffer: false,
 			fps: Std.int (60),
-			fullscreen: false,
-			height: Std.int (600),
+			fullscreen: true,
+			height: Std.int (800),
 			orientation: "",
 			resizable: true,
 			stencilBuffer: false,
 			title: "TextAttack",
 			vsync: false,
-			width: Std.int (800),
+			width: Std.int (1200),
 			
 		}
 		
 		#if js
 		#if munit
-		flash.Lib.embed (null, 800, 600, "000000");
+		flash.Lib.embed (null, 1200, 800, "000000");
 		#end
 		#else
 		create ();
@@ -126,11 +262,11 @@ class ApplicationMain {
 			
 			var instance:DocumentClass = Type.createInstance (DocumentClass, []);
 			
-			if (Std.is (instance, openfl.display.DisplayObject)) {
+			/*if (Std.is (instance, openfl.display.DisplayObject)) {
 				
 				openfl.Lib.current.addChild (cast instance);
 				
-			}
+			}*/
 			
 		}
 		
@@ -154,8 +290,7 @@ class ApplicationMain {
 }
 
 
-#if flash @:build(DocumentClass.buildFlash())
-#else @:build(DocumentClass.build()) #end
+@:build(DocumentClass.build())
 @:keep class DocumentClass extends com.text.attack.Main {}
 
 
@@ -182,7 +317,7 @@ class DocumentClass {
 				
 				var method = macro {
 					
-					this.stage = flash.Lib.current.stage;
+					openfl.Lib.current.addChild (this);
 					super ();
 					dispatchEvent (new openfl.events.Event (openfl.events.Event.ADDED_TO_STAGE, false, false));
 					
@@ -190,34 +325,6 @@ class DocumentClass {
 				
 				fields.push ({ name: "new", access: [ APublic ], kind: FFun({ args: [], expr: method, params: [], ret: macro :Void }), pos: Context.currentPos () });
 				
-				return fields;
-				
-			}
-			
-			searchTypes = searchTypes.superClass.t.get ();
-			
-		}
-		
-		return null;
-		
-	}
-	
-	
-	macro public static function buildFlash ():Array<Field> {
-		
-		var classType = Context.getLocalClass ().get ();
-		var searchTypes = classType;
-		
-		while (searchTypes.superClass != null) {
-			
-			if (searchTypes.pack.length == 2 && searchTypes.pack[1] == "display" && searchTypes.name == "DisplayObject") {
-				
-				var fields = Context.getBuildFields ();
-				var method = macro {
-					return flash.Lib.current.stage;
-				}
-				
-				fields.push ({ name: "get_stage", access: [ APrivate ], meta: [ { name: ":getter", params: [ macro stage ], pos: Context.currentPos() } ], kind: FFun({ args: [], expr: method, params: [], ret: macro :flash.display.Stage }), pos: Context.currentPos() });
 				return fields;
 				
 			}

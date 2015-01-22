@@ -21,18 +21,20 @@ class Bullet extends Cell
 		this.dirX = dirX;
 		this.dirY = dirY;
 		
-		this.addCellsInBulletSight();
+		if (this.dirY != 0 || this.dirX != 0)
+			this.addCellsInBulletSight();
 	}
 	
 	private function  addCellsInBulletSight():Void
 	{
 		var p:Point = new Point(this.x, this.y);
-		haxe.Log.trace("fkeggrhie");
+
 		while (p.isInRange(World.WIDTH, World.HEIGHT)) {
+		//for (i in 1...7) {
+			trace("Point: " + p.toString());
 			World.instance.grid.markForBullet(p.x, p.y);
-			
-			p.x += this.dirX;
-			p.y += this.dirY;
+			p.x = p.x + this.dirX;
+			p.y = p.y + this.dirY;
 		}
 	}
 	

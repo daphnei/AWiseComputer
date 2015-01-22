@@ -59,46 +59,6 @@ class ApplicationMain {
 		types.push (AssetType.BINARY);
 		
 		
-		urls.push ("audio/ma_01.wav");
-		types.push (AssetType.SOUND);
-		
-		
-		urls.push ("audio/ma_01.wav.asd");
-		types.push (AssetType.BINARY);
-		
-		
-		urls.push ("audio/ma_02.wav");
-		types.push (AssetType.SOUND);
-		
-		
-		urls.push ("audio/ma_02.wav.asd");
-		types.push (AssetType.BINARY);
-		
-		
-		urls.push ("audio/ma_03.wav");
-		types.push (AssetType.SOUND);
-		
-		
-		urls.push ("audio/ma_03.wav.asd");
-		types.push (AssetType.BINARY);
-		
-		
-		urls.push ("audio/ma_04.wav");
-		types.push (AssetType.SOUND);
-		
-		
-		urls.push ("audio/ma_04.wav.asd");
-		types.push (AssetType.BINARY);
-		
-		
-		urls.push ("audio/ma_05.wav");
-		types.push (AssetType.SOUND);
-		
-		
-		urls.push ("audio/ma_05.wav.asd");
-		types.push (AssetType.BINARY);
-		
-		
 		urls.push ("audio/m_01.wav");
 		types.push (AssetType.SOUND);
 		
@@ -160,6 +120,46 @@ class ApplicationMain {
 		
 		
 		urls.push ("audio/m_08.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_01.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_01.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_02.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_02.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_03.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_03.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_04.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_04.wav.asd");
+		types.push (AssetType.BINARY);
+		
+		
+		urls.push ("audio/ma_05.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ma_05.wav.asd");
 		types.push (AssetType.BINARY);
 		
 		

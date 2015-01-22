@@ -68,7 +68,7 @@ class World extends MovieClip
 	public var keyManager:KeyManager;
 	public var soundManager:SoundManager;
 
-	private var worldVisual:TextField;
+	public var worldVisual:TextField;
 	private var textFormat:TextFormat;
 	
 	private var helpText:TextField;
@@ -80,7 +80,9 @@ class World extends MovieClip
 	public var levelIndex:Int;
 	
 	public var levelJumpString:String;
-		
+
+	public var stupid:Sprite;
+
 	public function new() 
 	{
 		super();
@@ -114,7 +116,8 @@ class World extends MovieClip
 		this.worldVisual.wordWrap = true;
 		this.worldVisual.selectable = false;
 		this.worldVisual.embedFonts = true;
-		
+		this.worldVisual.opaqueBackground = 0x222222;
+
 		this.helpText = new TextField();
 		this.helpText.defaultTextFormat = this.textFormat;
 		this.helpText.width = 400;
@@ -124,7 +127,11 @@ class World extends MovieClip
 
 		//this.worldVisual.background = true;
 		//this.worldVisual.backgroundColor = 0xff0000;
-		
+		//this.stupid = new Sprite();
+		this.x = this.parent.stage.stageWidth / 2;
+		this.y = this.parent.stage.stageHeight / 2;
+		//this.world.add(stupid);
+
 		this.addChild(this.worldVisual);
 				
 		this.levelIndex = BEGIN_LEVEL;

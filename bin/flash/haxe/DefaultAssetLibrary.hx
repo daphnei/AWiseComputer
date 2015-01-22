@@ -60,26 +60,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("audio/end.wav", AssetType.SOUND);
 		className.set ("audio/end.wav.asd", __ASSET__audio_end_wav_asd);
 		type.set ("audio/end.wav.asd", AssetType.BINARY);
-		className.set ("audio/ma_01.wav", __ASSET__audio_ma_01_wav);
-		type.set ("audio/ma_01.wav", AssetType.SOUND);
-		className.set ("audio/ma_01.wav.asd", __ASSET__audio_ma_01_wav_asd);
-		type.set ("audio/ma_01.wav.asd", AssetType.BINARY);
-		className.set ("audio/ma_02.wav", __ASSET__audio_ma_02_wav);
-		type.set ("audio/ma_02.wav", AssetType.SOUND);
-		className.set ("audio/ma_02.wav.asd", __ASSET__audio_ma_02_wav_asd);
-		type.set ("audio/ma_02.wav.asd", AssetType.BINARY);
-		className.set ("audio/ma_03.wav", __ASSET__audio_ma_03_wav);
-		type.set ("audio/ma_03.wav", AssetType.SOUND);
-		className.set ("audio/ma_03.wav.asd", __ASSET__audio_ma_03_wav_asd);
-		type.set ("audio/ma_03.wav.asd", AssetType.BINARY);
-		className.set ("audio/ma_04.wav", __ASSET__audio_ma_04_wav);
-		type.set ("audio/ma_04.wav", AssetType.SOUND);
-		className.set ("audio/ma_04.wav.asd", __ASSET__audio_ma_04_wav_asd);
-		type.set ("audio/ma_04.wav.asd", AssetType.BINARY);
-		className.set ("audio/ma_05.wav", __ASSET__audio_ma_05_wav);
-		type.set ("audio/ma_05.wav", AssetType.SOUND);
-		className.set ("audio/ma_05.wav.asd", __ASSET__audio_ma_05_wav_asd);
-		type.set ("audio/ma_05.wav.asd", AssetType.BINARY);
 		className.set ("audio/m_01.wav", __ASSET__audio_m_01_wav);
 		type.set ("audio/m_01.wav", AssetType.SOUND);
 		className.set ("audio/m_01.wav.asd", __ASSET__audio_m_01_wav_asd);
@@ -112,6 +92,26 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("audio/m_08.wav", AssetType.SOUND);
 		className.set ("audio/m_08.wav.asd", __ASSET__audio_m_08_wav_asd);
 		type.set ("audio/m_08.wav.asd", AssetType.BINARY);
+		className.set ("audio/ma_01.wav", __ASSET__audio_ma_01_wav);
+		type.set ("audio/ma_01.wav", AssetType.SOUND);
+		className.set ("audio/ma_01.wav.asd", __ASSET__audio_ma_01_wav_asd);
+		type.set ("audio/ma_01.wav.asd", AssetType.BINARY);
+		className.set ("audio/ma_02.wav", __ASSET__audio_ma_02_wav);
+		type.set ("audio/ma_02.wav", AssetType.SOUND);
+		className.set ("audio/ma_02.wav.asd", __ASSET__audio_ma_02_wav_asd);
+		type.set ("audio/ma_02.wav.asd", AssetType.BINARY);
+		className.set ("audio/ma_03.wav", __ASSET__audio_ma_03_wav);
+		type.set ("audio/ma_03.wav", AssetType.SOUND);
+		className.set ("audio/ma_03.wav.asd", __ASSET__audio_ma_03_wav_asd);
+		type.set ("audio/ma_03.wav.asd", AssetType.BINARY);
+		className.set ("audio/ma_04.wav", __ASSET__audio_ma_04_wav);
+		type.set ("audio/ma_04.wav", AssetType.SOUND);
+		className.set ("audio/ma_04.wav.asd", __ASSET__audio_ma_04_wav_asd);
+		type.set ("audio/ma_04.wav.asd", AssetType.BINARY);
+		className.set ("audio/ma_05.wav", __ASSET__audio_ma_05_wav);
+		type.set ("audio/ma_05.wav", AssetType.SOUND);
+		className.set ("audio/ma_05.wav.asd", __ASSET__audio_ma_05_wav_asd);
+		type.set ("audio/ma_05.wav.asd", AssetType.BINARY);
 		
 		
 		#elseif html5
@@ -146,46 +146,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.SOUND);
 		id = "audio/end.wav.asd";
-		path.set (id, id);
-		
-		type.set (id, AssetType.BINARY);
-		id = "audio/ma_01.wav";
-		path.set (id, id);
-		
-		type.set (id, AssetType.SOUND);
-		id = "audio/ma_01.wav.asd";
-		path.set (id, id);
-		
-		type.set (id, AssetType.BINARY);
-		id = "audio/ma_02.wav";
-		path.set (id, id);
-		
-		type.set (id, AssetType.SOUND);
-		id = "audio/ma_02.wav.asd";
-		path.set (id, id);
-		
-		type.set (id, AssetType.BINARY);
-		id = "audio/ma_03.wav";
-		path.set (id, id);
-		
-		type.set (id, AssetType.SOUND);
-		id = "audio/ma_03.wav.asd";
-		path.set (id, id);
-		
-		type.set (id, AssetType.BINARY);
-		id = "audio/ma_04.wav";
-		path.set (id, id);
-		
-		type.set (id, AssetType.SOUND);
-		id = "audio/ma_04.wav.asd";
-		path.set (id, id);
-		
-		type.set (id, AssetType.BINARY);
-		id = "audio/ma_05.wav";
-		path.set (id, id);
-		
-		type.set (id, AssetType.SOUND);
-		id = "audio/ma_05.wav.asd";
 		path.set (id, id);
 		
 		type.set (id, AssetType.BINARY);
@@ -250,6 +210,46 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.SOUND);
 		id = "audio/m_08.wav.asd";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "audio/ma_01.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/ma_01.wav.asd";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "audio/ma_02.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/ma_02.wav.asd";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "audio/ma_03.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/ma_03.wav.asd";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "audio/ma_04.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/ma_04.wav.asd";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "audio/ma_05.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/ma_05.wav.asd";
 		path.set (id, id);
 		
 		type.set (id, AssetType.BINARY);
@@ -324,36 +324,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("audio/end.wav.asd", __ASSET__audio_end_wav_asd);
 		type.set ("audio/end.wav.asd", AssetType.BINARY);
 		
-		className.set ("audio/ma_01.wav", __ASSET__audio_ma_01_wav);
-		type.set ("audio/ma_01.wav", AssetType.SOUND);
-		
-		className.set ("audio/ma_01.wav.asd", __ASSET__audio_ma_01_wav_asd);
-		type.set ("audio/ma_01.wav.asd", AssetType.BINARY);
-		
-		className.set ("audio/ma_02.wav", __ASSET__audio_ma_02_wav);
-		type.set ("audio/ma_02.wav", AssetType.SOUND);
-		
-		className.set ("audio/ma_02.wav.asd", __ASSET__audio_ma_02_wav_asd);
-		type.set ("audio/ma_02.wav.asd", AssetType.BINARY);
-		
-		className.set ("audio/ma_03.wav", __ASSET__audio_ma_03_wav);
-		type.set ("audio/ma_03.wav", AssetType.SOUND);
-		
-		className.set ("audio/ma_03.wav.asd", __ASSET__audio_ma_03_wav_asd);
-		type.set ("audio/ma_03.wav.asd", AssetType.BINARY);
-		
-		className.set ("audio/ma_04.wav", __ASSET__audio_ma_04_wav);
-		type.set ("audio/ma_04.wav", AssetType.SOUND);
-		
-		className.set ("audio/ma_04.wav.asd", __ASSET__audio_ma_04_wav_asd);
-		type.set ("audio/ma_04.wav.asd", AssetType.BINARY);
-		
-		className.set ("audio/ma_05.wav", __ASSET__audio_ma_05_wav);
-		type.set ("audio/ma_05.wav", AssetType.SOUND);
-		
-		className.set ("audio/ma_05.wav.asd", __ASSET__audio_ma_05_wav_asd);
-		type.set ("audio/ma_05.wav.asd", AssetType.BINARY);
-		
 		className.set ("audio/m_01.wav", __ASSET__audio_m_01_wav);
 		type.set ("audio/m_01.wav", AssetType.SOUND);
 		
@@ -401,6 +371,36 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("audio/m_08.wav.asd", __ASSET__audio_m_08_wav_asd);
 		type.set ("audio/m_08.wav.asd", AssetType.BINARY);
+		
+		className.set ("audio/ma_01.wav", __ASSET__audio_ma_01_wav);
+		type.set ("audio/ma_01.wav", AssetType.SOUND);
+		
+		className.set ("audio/ma_01.wav.asd", __ASSET__audio_ma_01_wav_asd);
+		type.set ("audio/ma_01.wav.asd", AssetType.BINARY);
+		
+		className.set ("audio/ma_02.wav", __ASSET__audio_ma_02_wav);
+		type.set ("audio/ma_02.wav", AssetType.SOUND);
+		
+		className.set ("audio/ma_02.wav.asd", __ASSET__audio_ma_02_wav_asd);
+		type.set ("audio/ma_02.wav.asd", AssetType.BINARY);
+		
+		className.set ("audio/ma_03.wav", __ASSET__audio_ma_03_wav);
+		type.set ("audio/ma_03.wav", AssetType.SOUND);
+		
+		className.set ("audio/ma_03.wav.asd", __ASSET__audio_ma_03_wav_asd);
+		type.set ("audio/ma_03.wav.asd", AssetType.BINARY);
+		
+		className.set ("audio/ma_04.wav", __ASSET__audio_ma_04_wav);
+		type.set ("audio/ma_04.wav", AssetType.SOUND);
+		
+		className.set ("audio/ma_04.wav.asd", __ASSET__audio_ma_04_wav_asd);
+		type.set ("audio/ma_04.wav.asd", AssetType.BINARY);
+		
+		className.set ("audio/ma_05.wav", __ASSET__audio_ma_05_wav);
+		type.set ("audio/ma_05.wav", AssetType.SOUND);
+		
+		className.set ("audio/ma_05.wav.asd", __ASSET__audio_ma_05_wav_asd);
+		type.set ("audio/ma_05.wav.asd", AssetType.BINARY);
 		*/
 		var useManifest = true;
 		
@@ -983,16 +983,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__fonts_original_me_ttf extends flash.text.Font { }
 @:keep @:bind #if display private #end class __ASSET__audio_end_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_end_wav_asd extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__audio_ma_01_wav extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__audio_ma_01_wav_asd extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__audio_ma_02_wav extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__audio_ma_02_wav_asd extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__audio_ma_03_wav extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__audio_ma_03_wav_asd extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__audio_ma_04_wav extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__audio_ma_04_wav_asd extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__audio_ma_05_wav extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__audio_ma_05_wav_asd extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__audio_m_01_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_m_01_wav_asd extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__audio_m_02_wav extends flash.media.Sound { }
@@ -1009,6 +999,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__audio_m_07_wav_asd extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__audio_m_08_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_m_08_wav_asd extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__audio_ma_01_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_ma_01_wav_asd extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__audio_ma_02_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_ma_02_wav_asd extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__audio_ma_03_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_ma_03_wav_asd extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__audio_ma_04_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_ma_04_wav_asd extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__audio_ma_05_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_ma_05_wav_asd extends flash.utils.ByteArray { }
 
 
 #elseif html5
@@ -1054,10 +1054,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 #else
 
 #if openfl
-@:keep class __ASSET__fonts_me_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/me.ttf"; fontName = "MyCourier"; }}
-@:keep class __ASSET__fonts_me2_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/me2.ttf"; fontName = "MyCourier"; }}
-@:keep class __ASSET__fonts_mycourier_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/MyCourier.ttf"; fontName = "MyCourier"; }}
-@:keep class __ASSET__fonts_original_me_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/Original me.ttf"; fontName = "Courier"; }}
+class __ASSET__fonts_me_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/me.ttf"; fontName = "MyCourier"; }}
+class __ASSET__fonts_me2_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/me2.ttf"; fontName = "MyCourier"; }}
+class __ASSET__fonts_mycourier_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/MyCourier.ttf"; fontName = "MyCourier"; }}
+class __ASSET__fonts_original_me_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/Original me.ttf"; fontName = "Courier"; }}
 
 #end
 
@@ -1072,16 +1072,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 //@:font("Assets/fonts/Original me.ttf") class __ASSET__fonts_original_me_ttf extends openfl.text.Font {}
 //@:sound("Assets/audio/end.wav") class __ASSET__audio_end_wav extends openfl.media.Sound {}
 //@:file("Assets/audio/end.wav.asd") class __ASSET__audio_end_wav_asd extends lime.utils.ByteArray {}
-//@:sound("Assets/audio/ma_01.wav") class __ASSET__audio_ma_01_wav extends openfl.media.Sound {}
-//@:file("Assets/audio/ma_01.wav.asd") class __ASSET__audio_ma_01_wav_asd extends lime.utils.ByteArray {}
-//@:sound("Assets/audio/ma_02.wav") class __ASSET__audio_ma_02_wav extends openfl.media.Sound {}
-//@:file("Assets/audio/ma_02.wav.asd") class __ASSET__audio_ma_02_wav_asd extends lime.utils.ByteArray {}
-//@:sound("Assets/audio/ma_03.wav") class __ASSET__audio_ma_03_wav extends openfl.media.Sound {}
-//@:file("Assets/audio/ma_03.wav.asd") class __ASSET__audio_ma_03_wav_asd extends lime.utils.ByteArray {}
-//@:sound("Assets/audio/ma_04.wav") class __ASSET__audio_ma_04_wav extends openfl.media.Sound {}
-//@:file("Assets/audio/ma_04.wav.asd") class __ASSET__audio_ma_04_wav_asd extends lime.utils.ByteArray {}
-//@:sound("Assets/audio/ma_05.wav") class __ASSET__audio_ma_05_wav extends openfl.media.Sound {}
-//@:file("Assets/audio/ma_05.wav.asd") class __ASSET__audio_ma_05_wav_asd extends lime.utils.ByteArray {}
 //@:sound("Assets/audio/m_01.wav") class __ASSET__audio_m_01_wav extends openfl.media.Sound {}
 //@:file("Assets/audio/m_01.wav.asd") class __ASSET__audio_m_01_wav_asd extends lime.utils.ByteArray {}
 //@:sound("Assets/audio/m_02.wav") class __ASSET__audio_m_02_wav extends openfl.media.Sound {}
@@ -1098,6 +1088,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 //@:file("Assets/audio/m_07.wav.asd") class __ASSET__audio_m_07_wav_asd extends lime.utils.ByteArray {}
 //@:sound("Assets/audio/m_08.wav") class __ASSET__audio_m_08_wav extends openfl.media.Sound {}
 //@:file("Assets/audio/m_08.wav.asd") class __ASSET__audio_m_08_wav_asd extends lime.utils.ByteArray {}
+//@:sound("Assets/audio/ma_01.wav") class __ASSET__audio_ma_01_wav extends openfl.media.Sound {}
+//@:file("Assets/audio/ma_01.wav.asd") class __ASSET__audio_ma_01_wav_asd extends lime.utils.ByteArray {}
+//@:sound("Assets/audio/ma_02.wav") class __ASSET__audio_ma_02_wav extends openfl.media.Sound {}
+//@:file("Assets/audio/ma_02.wav.asd") class __ASSET__audio_ma_02_wav_asd extends lime.utils.ByteArray {}
+//@:sound("Assets/audio/ma_03.wav") class __ASSET__audio_ma_03_wav extends openfl.media.Sound {}
+//@:file("Assets/audio/ma_03.wav.asd") class __ASSET__audio_ma_03_wav_asd extends lime.utils.ByteArray {}
+//@:sound("Assets/audio/ma_04.wav") class __ASSET__audio_ma_04_wav extends openfl.media.Sound {}
+//@:file("Assets/audio/ma_04.wav.asd") class __ASSET__audio_ma_04_wav_asd extends lime.utils.ByteArray {}
+//@:sound("Assets/audio/ma_05.wav") class __ASSET__audio_ma_05_wav extends openfl.media.Sound {}
+//@:file("Assets/audio/ma_05.wav.asd") class __ASSET__audio_ma_05_wav_asd extends lime.utils.ByteArray {}
 //
 //
 
